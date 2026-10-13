@@ -1,0 +1,23 @@
+[
+ {
+  "peca": "portico",
+  "arquivo": "portico/world-tennis-sprint-world-tennis.png",
+  "marca": "World Tennis",
+  "kit": "sprint-world-tennis",
+  "ambiente": "orla de praia"
+ },
+ {
+  "peca": "estande",
+  "arquivo": "estande/world-tennis-sprint-world-tennis.png",
+  "marca": "World Tennis",
+  "kit": "sprint-world-tennis",
+  "ambiente": "arena na orla"
+ },
+ {
+  "peca": "camisa",
+  "arquivo": "camisa/world-tennis-sprint-world-tennis.png",
+  "marca": "World Tennis",
+  "kit": "sprint-world-tennis",
+  "ambiente": "asfalto, estúdio"
+ }
+]

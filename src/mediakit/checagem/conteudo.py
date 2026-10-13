@@ -4,7 +4,7 @@ import re
 import fitz
 
 _NUM = re.compile(r"\d+(?:[./-]\d+)*%?")
-_TRAVESSAO = re.compile("(?s).{0,20}[—–].{0,20}")
+_TRAVESSAO = re.compile("(?s).{0,20}[\u2014\u2013].{0,20}")
 
 
 def numeros(texto):

@@ -27,6 +27,6 @@ def test_numero_fora_da_ficha_aparece(tmp_path):
 
 
 def test_travessao_aparece(tmp_path):
-    pdf = _pdf(tmp_path, ["Sem problema aqui.", "Largada — chegada"])
+    pdf = _pdf(tmp_path, ["Sem problema aqui.", "Largada \u2014 chegada"])
     r = conteudo.travessoes(pdf)
     assert len(r) == 1 and r[0]["pagina"] == 2

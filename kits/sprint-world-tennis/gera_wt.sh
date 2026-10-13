@@ -16,7 +16,7 @@ gera() { # id, arquivo-de-prompt, imagens...
     codex exec "${CODEX_SANDBOX[@]}" -C "$OUT" --skip-git-repo-check "${ARGS[@]}" -o "$OUT/.codex-$ID.log" "$PROMPT"
   echo "$ID -> $?"
 }
-D="$HOME/Developer/vectorcraft-mediakit/wt"
+D="$HOME/Developer/vectorcraft-mediakit/kits/sprint-world-tennis"
 gera c-portico-wt-gerada "$D/p-portico.txt" "$LIMPO/c-portico.png" "$LOGO" "$SPLOGO"
 gera c-estande-wt-gerada "$D/p-estande.txt" "$LIMPO/c-tendas.png" "$LOGO"
 gera camisa-wt-gerada "$D/p-camisa.txt" "$LOGO" "$SPLOGO"

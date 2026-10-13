@@ -2,22 +2,21 @@
 # Visual: Nike Shanghai Marathon 2024 (asfalto, raias brancas, painéis de cor, faixa inclinada, tríptico).
 # Estrutura: proposta Itaú (capa-convite, pergunta, objetivo, frase, 4 pilares, projeções, alcance, o que leva, investimento, convite).
 # Montado no VectorCraft sem tela (vch). Textos: ficha.md aprovada em 13/10/2026.
-import os, sys, math, json, time
+import os, sys, math, json, time, argparse
+from pathlib import Path
 import numpy as np
 from PIL import Image, ImageOps, ImageFilter, ImageEnhance
 
-sys.path.insert(0, os.path.expanduser("~/Developer/vectorcraft-mediakit"))
-import lib
-from vch import VC
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+from mediakit import kit, cenas, fotos
+from mediakit.pagina import Pagina as Page, bounds as _bounds
+from mediakit.vc import VC
 
 CL = os.path.expanduser("~/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT")
 KIT = os.path.join(CL, "sprint-world-tennis")
 AC = os.path.join(KIT, "acervo")
 SP = os.path.join(CL, "sprint-2027", "acervo")
-lib.ACERVO = SP
-OUT = os.path.join(KIT, "saida")
 ASSETS = os.path.join(KIT, "assets")
-os.makedirs(OUT, exist_ok=True)
 os.makedirs(ASSETS, exist_ok=True)
 
 PW, PH, GAP = 1920, 1080, 2000
@@ -29,9 +28,11 @@ MED = ("Helvetica Neue", "Medium")
 DIN = ("DIN Condensed", "Bold")
 
 vc = VC()
-lib.ex = vc.ex          # a biblioteca de páginas passa a falar com o VectorCraft sem tela
 ex = vc.ex
-Page, bounds = lib.Page, lib.bounds
+bounds = lambda oid: _bounds(ex, oid)
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "legado"))
+import lib  # só para o mapa da página 9 (lib.sp_shape), que lê kits/legado/sp.json
 
 
 # ------------------------------------------------------------ insumos raster (tratamento antes do vetor)
@@ -51,34 +52,8 @@ def asfalto():
 
 
 def foto(src, name, w, h, mode="bw", focus=(0.5, 0.5), blur=0, escuro=1.0, raiz=SP):
-    out = os.path.join(ASSETS, name + ".jpg")
-    im = Image.open(os.path.join(raiz, src)).convert("RGB")
-    ar = w / h
-    iw, ih = im.size
-    cw, ch = (ih * ar, ih) if iw / ih > ar else (iw, iw / ar)
-    cx = min(max(focus[0] * iw, cw / 2), iw - cw / 2)
-    cy = min(max(focus[1] * ih, ch / 2), ih - ch / 2)
-    im = im.crop((int(cx - cw / 2), int(cy - ch / 2), int(cx + cw / 2), int(cy + ch / 2)))
-    sc = min(1.0, max(w, h) * 1.2 / max(im.size))
-    im = im.resize((int(im.size[0] * sc), int(im.size[1] * sc)), Image.LANCZOS)
-    if blur:
-        a = np.asarray(im).astype("float32")
-        acc = np.zeros_like(a)
-        for k in range(-blur, blur + 1, 2):
-            acc += np.roll(a, k, axis=1)
-        n = len(range(-blur, blur + 1, 2))
-        mov = acc / n
-        mask = np.linspace(0, 1, a.shape[1])[None, :, None] ** 1.5      # nítido de um lado, rastro do outro
-        im = Image.fromarray((a * (1 - mask) + mov * mask).astype("uint8"))
-    if mode == "bw":
-        g = ImageOps.autocontrast(ImageOps.grayscale(im), cutoff=1)
-        im = g.convert("RGB")
-    elif mode == "warm":
-        im = ImageEnhance.Contrast(im).enhance(1.08)
-    if escuro != 1.0:
-        im = ImageEnhance.Brightness(im).enhance(escuro)
-    im.save(out, quality=86)
-    return out
+    r = fotos.preparar_foto(os.path.join(raiz, src), os.path.join(ASSETS, name + ".jpg"), w, h, mode, focus, blur, escuro)
+    return str(r["caminho"])
 
 
 # ------------------------------------------------------------ elementos do sistema
@@ -163,12 +138,8 @@ def head(P, x, y, s, size, cor=W, marca=None, mcor=R, font=COND, leading=None, t
 
 
 def cena(nome_compor, nome_gerada):
-    """Usa a cena gerada com o logo se ela existir e tiver sido aprovada no olho; senão, a composta."""
-    g = os.path.join(AC, nome_gerada)
-    escolha = json.load(open(os.path.join(AC, "escolha-cenas.json"))) if os.path.exists(os.path.join(AC, "escolha-cenas.json")) else {}
-    if escolha.get(nome_gerada) == "usar" and os.path.exists(g):
-        return g, "gerada"
-    return os.path.join(AC, nome_compor), "composta"
+    p, rota = cenas.escolher_cena(AC, nome_compor, nome_gerada)
+    return str(p), rota
 
 
 # ------------------------------------------------------------ páginas
@@ -269,9 +240,7 @@ def p_camisa(P):
     fundo(P)
     for x in (120, 380, 640):
         raia(P, x)
-    gerada = os.path.join(AC, "camisa-wt-gerada.png")
-    escolha = json.load(open(os.path.join(AC, "escolha-cenas.json"))) if os.path.exists(os.path.join(AC, "escolha-cenas.json")) else {}
-    if escolha.get("camisa-wt-gerada.png") == "usar" and os.path.exists(gerada):
+    if cenas.escolher_cena(AC, "", "camisa-wt-gerada.png")[1] == "gerada":
         P.image(foto("camisa-wt-gerada.png", "camisa-final", 820, 820, "none", (0.6, 0.5), raiz=AC), 40, 130, 820, 820)
         tag(P, 60, 1040, "Projeção ilustrativa", K, W)
         rota = "gerada"
@@ -389,21 +358,12 @@ PAGES = [p_capa, p_pergunta, p_objetivo, p_frase, p_pilares, p_portico, p_estand
          p_investimento, p_convite]
 
 if __name__ == "__main__":
-    t0 = time.time()
-    ex("file.new", {"name": "sprint-world-tennis", "width": PW, "height": PH, "units": "Pixels"})
-    rotas = {}
-    for n, fn in enumerate(PAGES):
-        P = Page(n)
-        r = fn(P)
-        if r:
-            rotas[fn.__name__] = r
-        print("página", n + 1, fn.__name__, round(time.time() - t0, 1), "s", flush=True)
-    for n in range(len(PAGES)):
-        ex("select.allOnArtboard", {"artboard": n})
-        ex("object.scale", {"sx": 75, "sy": 75, "origin": [n * GAP, 0], "strokes": True, "corners": True})
-        ex("select.none")
-        ex("artboard.setProps", {"index": n, "width": 1440, "height": 810})
-    print(ex("document.exportPdf", {"path": os.path.join(OUT, "kit-world-tennis.pdf"), "preserveEditing": False}))
-    print(ex("file.saveAs", {"path": os.path.join(OUT, "sprint-world-tennis.vectorcraft")}))
-    print("rotas das cenas:", rotas)
+    a = argparse.ArgumentParser()
+    a.add_argument("--saida", default=os.path.join(KIT, "saida"))
+    saida = a.parse_args().saida
+    r = kit.montar("sprint-world-tennis", PAGES, os.path.join(saida, "kit-world-tennis.pdf"),
+                   os.path.join(saida, "sprint-world-tennis.vectorcraft"), vc=vc)
     vc.close()
+    print(r["pdf"], r["segundos"], "s", "rotas:", {k: v for k, v in r["retornos"].items() if v})
+    for aviso in fotos.AVISOS:
+        print("aviso de foto:", aviso)

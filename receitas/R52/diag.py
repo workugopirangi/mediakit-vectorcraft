@@ -1,0 +1,21 @@
+import sys, os; sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from h5166 import *
+d = Doc("R52")
+d.rect(0, 0, 1440, 810, SEA)
+a = d.image(AM + "/tratado/c-noite.jpg", 40, 40, 600)
+m = d.rect(40, 40, 600, 338, "#000000")
+d.ex("select.set", {"ids": [m]})
+d.ex("paint.setFill", {"gradient": {"kind": "radial", "stops": [{"offset": 0, "color": "#FFFFFF"}, {"offset": 0.6, "color": "#FFFFFF"}, {"offset": 1, "color": "#000000"}]}})
+d.ex("select.set", {"ids": [a, m]})
+print(d.ex("transparency.makeOpacityMask", {}))
+print(d.ex("transparency.stopEditingOpacityMask", {})) if False else None
+d.ex("select.none")
+# B overlay gradient
+b = d.image(AM + "/tratado/c-noite.jpg", 760, 40, 600)
+o = d.rect(760, 40, 600, 338, SEA)
+d.ex("select.set", {"ids": [o]})
+d.ex("paint.setFill", {"gradient": {"kind": "linear", "angle": 0, "stops": [{"offset": 0, "color": SEA, "opacity": 100}, {"offset": 1, "color": SEA, "opacity": 0}]}})
+d.ex("select.none")
+f = d.rect(40, 440, 600, 300, CORAL)
+d.ex("select.set", {"ids": [f]}); d.ex("effect.apply", {"effect": "stylize.feather", "params": {"radius": 30}})
+d.export("diag.pdf"); d.close()

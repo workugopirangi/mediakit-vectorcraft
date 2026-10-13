@@ -1,0 +1,25 @@
+import sys, os; sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from h5166 import *
+d = Doc("R57", colorMode="cmyk", bleed=8.5)
+d.ex("document.rasterEffectsSettings", {"resolution": 300})
+# fundo amarelo marca em CMYK (inclui sangria)
+d.rect(-8.5, -8.5, 1457, 827, {"c": 0, "m": 8, "y": 96, "k": 0})
+ph = d.image(AM + "/tratado/c-master.jpg", 720, -8.5, 728.5, 410)
+d.rect(0, 0, 100, 100, "#000000") if False else None
+t = d.text(60, 270, "COPA AME", "Helvetica Neue", "Condensed Black", 150, {"c": 0, "m": 0, "y": 0, "k": 100})
+d.text(60, 330, "Versão impressa do kit de patrocínio", "Helvetica Neue", "Bold", 30, {"c": 0, "m": 0, "y": 0, "k": 100})
+c = d.rect(60, 420, 300, 260, "#FFFFFF", radius=16)
+d.ex("select.set", {"ids": [c]}); d.ex("effect.apply", {"effect": "stylize.dropShadow", "params": {"blur": 12, "x": 0, "y": 8, "opacity": 40, "color": "#000000", "mode": "multiply"}}); d.ex("select.none")
+d.text(85, 500, "COTA OURO", "Helvetica Neue", "Condensed Black", 44, {"c": 0, "m": 0, "y": 0, "k": 100})
+tr = d.rect(420, 420, 300, 260, {"c": 0, "m": 0, "y": 0, "k": 100}, opacity=70)
+d.text(445, 500, "TRANSPARÊNCIA", "Helvetica Neue", "Bold", 30, "#FFFFFF")
+# tinta direta (spot)
+print(d.ex("swatch.new", {"name": "Dourado Sprint", "color": {"c": 20, "m": 40, "y": 80, "k": 0}, "spot": True}))
+sp = d.rect(780, 440, 600, 240, "#000000"); d.ex("select.set", {"ids": [sp]}); d.ex("paint.setFill", {"swatch": "Dourado Sprint"}); d.ex("select.none")
+r = d.ex("document.exportPdf", {"path": d.dir + "/teste.pdf", "standard": "pdfX4", "preserveEditing": False,
+    "bleed": {"top": 8.5, "bottom": 8.5, "left": 8.5, "right": 8.5}, "marks": {"trim": True, "registration": True, "colorBars": False, "pageInfo": False, "weight": 0.25, "offset": 12},
+    "output": {"conversion": "destination", "outputIntent": "VectorCraft Generic CMYK (SWOP-like)", "outputCondition": "Generic CMYK (SWOP-like)", "trapped": False}})
+print(r)
+print(d.ex("document.pdfInfo", {"path": d.dir + "/teste.pdf"}))
+subprocess.run(["pdftoppm", "-r", "50", "-png", d.dir + "/teste.pdf", d.dir + "/preview"])
+report(d.dir + "/teste.pdf"); d.close()

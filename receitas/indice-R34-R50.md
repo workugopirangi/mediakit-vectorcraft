@@ -1,0 +1,17 @@
+| R34 | Gradiente linear de marca | FUNCIONA | Vetor puro (shading axial, 0 imagens), ângulo estilo Illustrator (stop 0 na base em 90 graus); setGradientGeom exige stroke:false. |
+| R35 | Gradiente radial como holofote | FUNCIONA | Radial vetor (shading tipo 3 + SMask + Screen), sem anel cinza, foco deslocado ok; mesmo resultado em pdftoppm e sips. |
+| R36 | Gradiente freeform | FUNCIONA | Bonito e liso em 3 leitores, mas vira imagem de 512 px no lado maior (26 ppi na página cheia); exige stroke:false e paint.editGradient. |
+| R37 | Malha de gradiente (mesh) | NAO FUNCIONA | Exporta como blocos de cor chapada com degraus e linhas de grade visíveis em poppler, sips e qlmanage (pior no macOS), inclusive em 2x2; usar R36 ou radial. |
+| R38 | Envelope warp em tipografia | FUNCIONA | Arco, bandeira, onda e inchaço saem limpos e viram contorno vetorial no PDF; só reposicionar depois, o box muda. |
+| R39 | Envelope por malha e perspectiva | FUNCIONA | distort projetivo em texto e foto e malha 3x4 com setMeshPoint saem limpos (vetor/JPEG original); pontos devem partir do bounds via document.inspect. |
+| R40 | Blend entre formas | FUNCIONA | Concêntricos, linhas de velocidade e spine curva saem vetoriais e regulares; cuidado com a ordem de criação (o maior por cima esconde tudo) e usar 60+ passos para efeito liso. |
+| R41 | Offset path e sticker | PARCIAL | Contorno uniforme e vetorial funciona (outlines, unite, offsetPath na seleção, bringToFront), mas vãos estreitos (C, entre P e A) deixam fenda; exige offset maior ou ajuste manual. |
+| R42 | Pathfinder em blocos geométricos | PARCIAL | divide/minusFront/intersect/exclude exatos e vetoriais; fatias vizinhas mostram fio de emenda sutil em poppler e sips; crop com foto falha (usar clippingMask). |
+| R43 | Marca-texto e sublinhado irregular | FUNCIONA | Retângulo+roughen+Multiply, traço round Multiply, scribble e pincel calligraphic ficam ótimos e vetoriais; roughen direto em traço grosso gera espinhos (usar em forma preenchida ou após outlineStroke). |
+| R44 | Largura variável (swoosh) | FUNCIONA | Presets taper/lens/wave saem lisos e vetoriais; perfil por pontos via widthProfile.set cria cantos, widthPoint.set com poucos pontos fica liso. |
+| R45 | Mapa coroplético 27 UFs | FUNCIONA | Malha IBGE vira 27 paths vetoriais (142 KB, 0,26 s); usar traço 0,6 pt na cor do fundo porque sem traço aparece fio de emenda no macOS. |
+| R46 | Mapa de pontos e de bolhas | FUNCIONA | 3.476 pontos num único path e bolhas com área proporcional, opacidade 70 e anel branco saem perfeitas e vetoriais; rótulos de cidades próximas exigem posicionamento manual. |
+| R47 | Linhas de rota | FUNCIONA | Pontilhado round [0,14], tracejado e setas (inclusive sobre traço pontilhado) e texto em curva saem limpos e vetoriais; marcadores precisam de pontos exatos da bezier. |
+| R48 | Gráfico nativo x barras desenhadas | PARCIAL | graph.create funciona e dá para recolorir por série via inspect, mas o visual é de planilha (fonte pequena, sem valores); adotar barras desenhadas por Python no kit. |
+| R49 | Donut e medidores (ring) | FUNCIONA | Arco SVG com cap round é exato no ângulo mas a ponta alonga o arco em w/2 (compensar ou usar butt); dash em elipse não parte do topo. |
+| R50 | Cartões de KPI e numerais gigantes | FUNCIONA | Numeral Condensed Black + unidade colorida/superscript via setRangeStyle e régua saem nítidos e em texto vivo; alinhamento ótico exige nudge por dígito (1 recua 7,5 pt em 150 pt). |

@@ -1,0 +1,367 @@
+[
+ {
+  "deck": "amazonia-niv",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "corrida",
+  "pecas": {},
+  "notas": "Trail na Amazônia, 14 páginas. Cotas só em texto, sem mockup de patrocinador."
+ },
+ {
+  "deck": "corre-por-elas",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "corrida",
+  "pecas": {
+   "portico-arco": 1,
+   "testeira": 1,
+   "banner-grade": 1,
+   "wind-banner-bandeira": 1,
+   "tenda-estande": 1,
+   "backdrop-podio-palco": 1,
+   "telao-led": 1,
+   "camisa": 2,
+   "kit-sacola": 2,
+   "copo-garrafa": 2,
+   "medalha": 2
+  },
+  "notas": "Referência forte: slides de 'SEU LOGO AQUI' sobre foto/render do evento, uma peça por slide, cotas com preço."
+ },
+ {
+  "deck": "levinrun",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "corrida",
+  "pecas": {},
+  "notas": "Só texto e cotas (R$50k/10k/5k). Lista de peças em texto, sem mockup."
+ },
+ {
+  "deck": "praia-delas",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "futevôlei",
+  "pecas": {},
+  "notas": "Site-like, só texto de cotas."
+ },
+ {
+  "deck": "saudade",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "música",
+  "pecas": {
+   "celular-post-feed": 1
+  },
+  "notas": "Réveillon. Slide final lista palco, wingflags, pórticos, backdrop, kit em texto; sem mockup."
+ },
+ {
+  "deck": "semjuizo",
+  "tipo": "deck de evento (festa), não patrocínio",
+  "esporte": "música",
+  "pecas": {},
+  "notas": "Informativo, sem espaço de marca."
+ },
+ {
+  "deck": "sprint",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "corrida",
+  "pecas": {},
+  "notas": "Matriz de benefícios em tabela; slide de logos de patrocinadores passados."
+ },
+ {
+  "deck": "territorio-em-percurso",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "corrida",
+  "pecas": {},
+  "notas": "Versão em verde do deck Ultra Trail Amazônica, só texto."
+ },
+ {
+  "deck": "web-bia-fernandes",
+  "tipo": "campanha/identidade de marca",
+  "esporte": "outro",
+  "pecas": {
+   "notebook-site": 1,
+   "celular-app": 1,
+   "copo-garrafa": 1,
+   "camisa": 1
+  },
+  "notas": "Identidade de dev web pessoal, mockups de monitor, copo e moletom."
+ },
+ {
+  "deck": "web-boat-mussoorie-25",
+  "tipo": "campanha/identidade de marca",
+  "esporte": "corrida",
+  "pecas": {
+   "wind-banner-bandeira": 1,
+   "celular-stories": 2,
+   "camisa": 1,
+   "backdrop-podio-palco": 1,
+   "poster-cartaz": 1,
+   "outro:pulseira": 1,
+   "outro:chaveiro": 1
+  },
+  "notas": "Identidade de ultra da boAt, muito mockup de evento (bandeiras, pulseira, stories)."
+ },
+ {
+  "deck": "web-caixa-nordeste",
+  "tipo": "campanha/identidade de marca",
+  "esporte": "corrida",
+  "pecas": {
+   "celular-post-feed": 10,
+   "camisa": 2,
+   "medalha": 5,
+   "kit-sacola": 2,
+   "portico-arco": 2,
+   "backdrop-podio-palco": 1,
+   "bone-viseira": 1,
+   "copo-garrafa": 1
+  },
+  "notas": "Série de corridas da CAIXA: feed, kit, arco e palco renderizados."
+ },
+ {
+  "deck": "web-catalogo-evento",
+  "tipo": "campanha/identidade de marca",
+  "esporte": "outro",
+  "pecas": {
+   "onibus-metro-midia": 2,
+   "outdoor-billboard": 1,
+   "ingresso-credencial": 1,
+   "notebook-site": 1,
+   "kit-sacola": 1,
+   "camisa": 1,
+   "copo-garrafa": 1,
+   "mascote": 3
+  },
+  "notas": "Evento literário. Campanhas em ônibus, outdoor e ingresso. Sem foco em patrocinador, mas cartela de parceiros no fim."
+ },
+ {
+  "deck": "web-chevere",
+  "tipo": "campanha/identidade de marca",
+  "esporte": "corporativo",
+  "pecas": {
+   "bone-viseira": 1,
+   "outdoor-billboard": 2,
+   "produto-embalagem": 1,
+   "outro:avental-cardapio": 2
+  },
+  "notas": "Marca de eventos gastronômicos."
+ },
+ {
+  "deck": "web-city-run-club",
+  "tipo": "campanha/identidade de marca",
+  "esporte": "corrida",
+  "pecas": {
+   "camisa": 2,
+   "bone-viseira": 2,
+   "copo-garrafa": 1,
+   "medalha": 1,
+   "mupi-abrigo-onibus": 2,
+   "poster-cartaz": 1,
+   "onibus-metro-midia": 1,
+   "celular-post-feed": 1,
+   "celular-stories": 1,
+   "outro:relogio": 1
+  },
+  "notas": "Identidade de clube de corrida, mupi e metrô em P&B."
+ },
+ {
+  "deck": "web-conebra",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "corporativo",
+  "pecas": {},
+  "notas": "Congresso de empreendedorismo. Cotas por metal (diamante, ouro etc.) com ilustração, sem mockup."
+ },
+ {
+  "deck": "web-convencao-vendas",
+  "tipo": "campanha/identidade de marca",
+  "esporte": "corporativo",
+  "pecas": {
+   "backdrop-podio-palco": 1,
+   "telao-led": 1,
+   "ingresso-credencial": 1,
+   "camisa": 1,
+   "banner-grade": 1,
+   "produto-embalagem": 2,
+   "outro:sinalizacao": 2
+  },
+  "notas": "Convenção de vendas, kit de brindes e sinalização de salão."
+ },
+ {
+  "deck": "web-corrida-integracao-26",
+  "tipo": "campanha/identidade de marca",
+  "esporte": "corrida",
+  "pecas": {
+   "camisa": 3,
+   "numero-de-peito": 1,
+   "bone-viseira": 1,
+   "kit-sacola": 1,
+   "veiculo": 1,
+   "medalha": 3,
+   "celular-stories": 1,
+   "copo-garrafa": 1
+  },
+  "notas": "Identidade da 41a Corrida Integração, fotos de estúdio com produto."
+ },
+ {
+  "deck": "web-corrida-sicredi-25",
+  "tipo": "campanha/identidade de marca",
+  "esporte": "corrida",
+  "pecas": {
+   "camisa": 1,
+   "numero-de-peito": 1,
+   "bone-viseira": 1,
+   "medalha": 2,
+   "copo-garrafa": 1,
+   "kit-sacola": 1,
+   "backdrop-podio-palco": 1,
+   "portico-arco": 2,
+   "outdoor-billboard": 1,
+   "poster-cartaz": 1,
+   "tenda-estande": 1,
+   "produto-embalagem": 1,
+   "outro:trofeu": 1
+  },
+  "notas": "Renders 3D de arco, pódio, arena de ativação; ótimo para peças do evento."
+ },
+ {
+  "deck": "web-coway-run-22",
+  "tipo": "campanha/identidade de marca",
+  "esporte": "corrida",
+  "pecas": {},
+  "notas": "Só ilustração de key visual, sem mockups."
+ },
+ {
+  "deck": "web-curitiba-24",
+  "tipo": "campanha/identidade de marca",
+  "esporte": "corrida",
+  "pecas": {
+   "kit-sacola": 1,
+   "copo-garrafa": 1,
+   "celular-post-feed": 1,
+   "celular-stories": 1,
+   "poster-cartaz": 1,
+   "camisa": 2,
+   "produto-embalagem": 1,
+   "notebook-site": 1,
+   "outdoor-billboard": 1
+  },
+  "notas": "Meia Maratona, kit, loja e outdoor."
+ },
+ {
+  "deck": "web-deck-256711557",
+  "tipo": "campanha/identidade de marca",
+  "esporte": "outro",
+  "pecas": {
+   "celular-app": 4,
+   "notebook-site": 2,
+   "produto-embalagem": 4,
+   "ingresso-credencial": 1
+  },
+  "notas": "Marca de produto tech (DECK), nada de esporte."
+ },
+ {
+  "deck": "web-deck-ai-startup",
+  "tipo": "apresentação de design (portfólio)",
+  "esporte": "outro",
+  "pecas": {
+   "notebook-site": 2,
+   "celular-app": 1
+  },
+  "notas": "Talk de IA, sem relação com patrocínio."
+ },
+ {
+  "deck": "web-deck-dc-united",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "futebol",
+  "pecas": {
+   "placa-beira-campo": 1,
+   "tenda-estande": 1,
+   "transmissao-lower-third": 1,
+   "celular-post-feed": 1,
+   "camarote-arena": 1
+  },
+  "notas": "Template MLS com lorem ipsum: slides por ativo (estádio, televisão, digital, hospitality)."
+ },
+ {
+  "deck": "web-deck-ggbeach",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "outro",
+  "pecas": {},
+  "notas": "Esports universitário, tiers em texto."
+ },
+ {
+  "deck": "web-deck-media-kit-245250053",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "corporativo",
+  "pecas": {
+   "notebook-site": 2
+  },
+  "notas": "Media kit de agro, só mockups de laptop do próprio deck."
+ },
+ {
+  "deck": "web-deck-nfl-noida",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "futebol",
+  "pecas": {
+   "produto-embalagem": 3
+  },
+  "notas": "Hierarquia título/associado/co patrocinador em texto; fotos com produto do patrocinador nas mãos."
+ },
+ {
+  "deck": "web-deck-philadelphia-pcc26",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "ciclismo",
+  "pecas": {},
+  "notas": "Contact sheet com páginas A4 pequenas, sem mockup."
+ },
+ {
+  "deck": "web-deck-rory-linkletter",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "corrida",
+  "pecas": {
+   "camisa": 1,
+   "celular-post-feed": 1
+  },
+  "notas": "Atleta: slide 'your logo here' sobre uniforme."
+ },
+ {
+  "deck": "web-deck-rugby-starzplay",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "outro",
+  "pecas": {
+   "celular-app": 2
+  },
+  "notas": "Rúgbi feminino, parceiro de mídia (streaming); slide de logos de marcas."
+ },
+ {
+  "deck": "web-deck-spurs",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "outro",
+  "pecas": {
+   "outdoor-billboard": 1,
+   "camarote-arena": 1,
+   "produto-embalagem": 1
+  },
+  "notas": "Basquete (NBA), parceria Ledger, outdoor com logo duplo."
+ },
+ {
+  "deck": "web-deck-strategic-partnership",
+  "tipo": "apresentação de design (portfólio)",
+  "esporte": "corporativo",
+  "pecas": {
+   "outdoor-billboard": 1,
+   "produto-embalagem": 2,
+   "notebook-site": 1
+  },
+  "notas": "Case de pitch deck; mockups de marcas alheias."
+ },
+ {
+  "deck": "web-deck-tomasello-tc2025",
+  "tipo": "deck de patrocínio/media kit",
+  "esporte": "outro",
+  "pecas": {
+   "veiculo": 4,
+   "transmissao-lower-third": 3,
+   "placa-beira-campo": 1,
+   "tenda-estande": 2,
+   "camisa": 1,
+   "celular-post-feed": 1,
+   "mascote": 1
+  },
+  "notas": "Automobilismo (TC Pista): carro com pontos de logo, cartelaria em pista, zócalo na TV."
+ }
+]

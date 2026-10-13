@@ -1,0 +1,10 @@
+import sys, os; sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from h5166 import *
+d = Doc("R52")
+d.rect(0, 0, 1440, 810, "#FFFFFF")
+d.image(AM + "/tratado/c-noite.jpg", 40, 40, 600)
+o = d.rect(40, 40, 600, 338, SEA)
+d.ex("select.set", {"ids": [o]})
+d.ex("paint.setFill", {"gradient": {"kind": "linear", "angle": 0, "stops": [{"offset": 0, "color": "#FF0000", "opacity": 0.9}, {"offset": 1, "color": "#FF0000", "opacity": 0.0}]}})
+print(d.ex("paint.editGradient", {"ids": [o], "stops": [{"offset": 0, "color": "#FF0000", "opacity": 1.0}, {"offset": 1, "color": "#FF0000", "opacity": 0.0}]}))
+d.export("diag2.pdf"); d.close()

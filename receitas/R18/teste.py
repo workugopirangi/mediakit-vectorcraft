@@ -1,0 +1,18 @@
+import sys; sys.path.insert(0, "/Users/ugopirangi/Developer/vectorcraft-mediakit/receitas")
+from rc import *
+p = P("R18")
+p.rect(0,0,1440,810,fill=CREAM)
+p.imgcover(SPT+"f5.jpg", 760, 0, 680, 810)
+p.rect(0,0,760,810,fill=SEA)
+ids=[]
+ids.append(p.text(70,200,"COTAS 2027",130,"Helvetica Neue","Condensed Black",color=GOLD))
+ids.append(p.text(70,290,"Patrocínio Ouro, Prata e Bronze",46,"Avenir Next","Demi Bold",color=CREAM))
+ids.append(p.text(70,380,"R$ 150.000  ★  ação 5 km",40,"Didot","Bold",color=W))
+ids.append(p.text(70,470,"Ubatuba · São Paulo · çãõéü",36,"Futura","Medium",color=MINT))
+print("fonts antes:", [(f['family'],f['style'],f['missingGlyphs']) for f in p.ex("text.fonts",{"selectionOnly":False})])
+p.ex("document.exportPdf",{"path":p.dir+"antes.pdf","preserveEditing":False})
+p.ex("select.set",{"ids":ids})
+r=p.ex("type.createOutlines",{}); print(r)
+p.ex("select.none")
+print("fonts depois:", p.ex("text.fonts",{"selectionOnly":False}))
+p.export()

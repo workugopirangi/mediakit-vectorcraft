@@ -1,0 +1,390 @@
+[
+ {
+  "deck": "web-engajamento-rainha",
+  "tipo": "campanha/identidade",
+  "esporte": "outro (marketing feminino)",
+  "pecas": {
+   "celular-post-feed": 1,
+   "camisa": 1,
+   "outro:rollup-banner": 1
+  },
+  "notas": "identidade de evento, sem patrocinador"
+ },
+ {
+  "deck": "web-eqc",
+  "tipo": "landing page de evento (nao e kit)",
+  "esporte": "corporativo",
+  "pecas": {
+   "ingresso-credencial": 1
+  },
+  "notas": "capturas de site, so ingresso"
+ },
+ {
+  "deck": "web-eurosport-tdf-dixonbaxi",
+  "tipo": "campanha/identidade broadcast",
+  "esporte": "outro (ciclismo)",
+  "pecas": {
+   "transmissao-lower-third": 3,
+   "poster-cartaz": 1,
+   "camisa": 1
+  },
+  "notas": "grafismos de TV Tour de France"
+ },
+ {
+  "deck": "web-fed25",
+  "tipo": "campanha/identidade",
+  "esporte": "outro (feira de livros)",
+  "pecas": {
+   "poster-cartaz": 3,
+   "celular-post-feed": 2,
+   "celular-stories": 1,
+   "celular-app": 2,
+   "notebook-site": 2,
+   "bone-viseira": 2,
+   "kit-sacola": 3,
+   "ingresso-credencial": 2,
+   "outro:adesivo-botton": 2
+  },
+  "notas": "identidade completa com bonus de brindes reais"
+ },
+ {
+  "deck": "web-feijoada-jacarezinho",
+  "tipo": "campanha de divulgacao",
+  "esporte": "musica",
+  "pecas": {
+   "celular-stories": 46,
+   "poster-cartaz": 3,
+   "produto-embalagem": 3
+  },
+  "notas": "stories de venda de ingresso; marcas de cerveja aparecem como produto"
+ },
+ {
+  "deck": "web-feira-abc",
+  "tipo": "campanha/identidade com patrocinio institucional",
+  "esporte": "outro (feira economia solidaria)",
+  "pecas": {
+   "camisa": 4,
+   "kit-sacola": 3,
+   "testeira": 8,
+   "backdrop-podio-palco": 2,
+   "wind-banner-bandeira": 2,
+   "tenda-estande": 5,
+   "ingresso-credencial": 1,
+   "celular-post-feed": 16,
+   "outro:botton-brinde": 5,
+   "outro:caneta": 1,
+   "outro:caderno": 1,
+   "outro:rollup-banner": 2
+  },
+  "notas": "melhor acervo de testeiras e tendas com logos de apoiadores; ~20 folhas vazias de fundo"
+ },
+ {
+  "deck": "web-floripa-26",
+  "tipo": "galeria de fotos de evento",
+  "esporte": "corrida",
+  "pecas": {
+   "portico-arco": 4,
+   "numero-de-peito": 3,
+   "placa-beira-campo": 4,
+   "wind-banner-bandeira": 3,
+   "tenda-estande": 1,
+   "camisa": 3
+  },
+  "notas": "fotos reais com HDI e apoiadores no portico"
+ },
+ {
+  "deck": "web-gerdau-40",
+  "tipo": "campanha/identidade de aniversario",
+  "esporte": "corporativo",
+  "pecas": {
+   "outdoor-billboard": 1,
+   "backdrop-podio-palco": 4,
+   "ingresso-credencial": 2,
+   "totem": 3,
+   "camisa": 1,
+   "outro:livro": 1,
+   "outro:cenografia-exposicao": 6,
+   "poster-cartaz": 1
+  },
+  "notas": "evento interno com fotos reais"
+ },
+ {
+  "deck": "web-ironman-manual-2019",
+  "tipo": "manual de marca",
+  "esporte": "corrida/triatlo",
+  "pecas": {
+   "portico-arco": 1,
+   "celular-post-feed": 1,
+   "poster-cartaz": 2
+  },
+  "notas": "so guia de uso de logo e tom"
+ },
+ {
+  "deck": "web-japa-2025",
+  "tipo": "midia kit de artista",
+  "esporte": "musica",
+  "pecas": {
+   "celular-post-feed": 2,
+   "notebook-site": 1,
+   "celular-app": 1
+  },
+  "notas": "formatos de patrocinio listados em texto"
+ },
+ {
+  "deck": "web-kit-media-integral",
+  "tipo": "campanha de divulgacao",
+  "esporte": "corrida",
+  "pecas": {
+   "camisa": 3,
+   "numero-de-peito": 2,
+   "medalha": 2,
+   "celular-stories": 6
+  },
+  "notas": "lista de kit do atleta (camisa, medalha, numero)"
+ },
+ {
+  "deck": "web-lambe-ironman-itau",
+  "tipo": "campanha/identidade com patrocinador (Itau BBA)",
+  "esporte": "corrida/triatlo",
+  "pecas": {
+   "poster-cartaz": 7
+  },
+  "notas": "lambe-lambe, co-branding Itau"
+ },
+ {
+  "deck": "web-like-the-wind-13",
+  "tipo": "revista",
+  "esporte": "corrida",
+  "pecas": {
+   "outro:revista": 6
+  },
+  "notas": "editorial, sem patrocinio"
+ },
+ {
+  "deck": "web-like-the-wind-magculture",
+  "tipo": "revista",
+  "esporte": "corrida",
+  "pecas": {
+   "outro:revista": 5
+  },
+  "notas": "editorial, sem patrocinio"
+ },
+ {
+  "deck": "web-logo-beach-tennis",
+  "tipo": "identidade de marca",
+  "esporte": "outro (beach tennis)",
+  "pecas": {
+   "camisa": 3,
+   "outro:raquete": 2
+  },
+  "notas": "so uniforme e raquete"
+ },
+ {
+  "deck": "web-lunetra-pitch",
+  "tipo": "identidade de marca/pitch",
+  "esporte": "corporativo (fintech ficticia)",
+  "pecas": {
+   "celular-post-feed": 2,
+   "celular-app": 1,
+   "notebook-site": 3,
+   "ingresso-credencial": 1,
+   "bone-viseira": 1
+  },
+  "notas": "sem esporte"
+ },
+ {
+  "deck": "web-maratona-rio-25-anos",
+  "tipo": "logo apenas",
+  "esporte": "corrida",
+  "pecas": {},
+  "notas": "5 paginas: logo e referencias soltas (Everton, Mercado Livre)"
+ },
+ {
+  "deck": "web-mc-daniel",
+  "tipo": "midia kit de artista",
+  "esporte": "musica",
+  "pecas": {
+   "celular-post-feed": 1
+  },
+  "notas": "slide de marcas parceiras com logos (p11)"
+ },
+ {
+  "deck": "web-mockup-running-bundle",
+  "tipo": "pacote de mockups",
+  "esporte": "corrida",
+  "pecas": {
+   "camisa": 3,
+   "bone-viseira": 1,
+   "numero-de-peito": 2,
+   "wind-banner-bandeira": 2,
+   "portico-arco": 3,
+   "outdoor-billboard": 1,
+   "celular-app": 1,
+   "outro:photobooth": 1,
+   "outro:meia": 1,
+   "outro:fita-chegada": 1
+  },
+  "notas": "melhor referencia de pecas de corrida"
+ },
+ {
+  "deck": "web-nexxus",
+  "tipo": "midia kit/proposta de patrocinio",
+  "esporte": "corrida",
+  "pecas": {
+   "camisa": 1
+  },
+  "notas": "cotas trimestral/semestral/anual com valor, logo na camisa"
+ },
+ {
+  "deck": "web-nike-by-you-paris",
+  "tipo": "campanha/identidade",
+  "esporte": "outro (marca esportiva)",
+  "pecas": {
+   "camisa": 2,
+   "outro:adesivo-patch": 10
+  },
+  "notas": "sistema de adesivos"
+ },
+ {
+  "deck": "web-nike-paris-24",
+  "tipo": "campanha/identidade",
+  "esporte": "corrida",
+  "pecas": {},
+  "notas": "sem mockups, so grafismo"
+ },
+ {
+  "deck": "web-nike-run-sp-25",
+  "tipo": "campanha/identidade",
+  "esporte": "corrida",
+  "pecas": {
+   "poster-cartaz": 8,
+   "celular-post-feed": 1,
+   "celular-stories": 1,
+   "outdoor-billboard": 1,
+   "mupi-abrigo-onibus": 1,
+   "outro:relogio": 1
+  },
+  "notas": "mockups de cartaz e outdoor"
+ },
+ {
+  "deck": "web-nike-shanghai-23",
+  "tipo": "campanha/identidade",
+  "esporte": "corrida",
+  "pecas": {
+   "camisa": 1,
+   "kit-sacola": 1,
+   "wind-banner-bandeira": 1,
+   "telao-led": 4,
+   "totem": 1,
+   "tenda-estande": 3,
+   "poster-cartaz": 2,
+   "banner-grade": 1
+  },
+  "notas": "expo e cenografia"
+ },
+ {
+  "deck": "web-nike-shanghai-24",
+  "tipo": "campanha/identidade",
+  "esporte": "corrida",
+  "pecas": {
+   "camisa": 4,
+   "kit-sacola": 2,
+   "placa-beira-campo": 5,
+   "wind-banner-bandeira": 3,
+   "totem": 3,
+   "telao-led": 2,
+   "numero-de-peito": 2,
+   "outdoor-billboard": 2,
+   "tenda-estande": 2,
+   "outro:fita-sinalizacao": 6,
+   "outro:bastao-inflavel": 2,
+   "outro:faixa-gigante": 2,
+   "outro:jaqueta": 1
+  },
+  "notas": "acervo mais rico de pecas em evento"
+ },
+ {
+  "deck": "web-north-experience",
+  "tipo": "identidade de evento",
+  "esporte": "corporativo",
+  "pecas": {
+   "backdrop-podio-palco": 1,
+   "totem": 2,
+   "telao-led": 1,
+   "ingresso-credencial": 1,
+   "outro:cardapio-impresso": 2
+  },
+  "notas": "fotos reais de evento B2B"
+ },
+ {
+  "deck": "web-paris2024-adsoftheworld",
+  "tipo": "identidade/look of the games",
+  "esporte": "outro (olimpico)",
+  "pecas": {
+   "placa-beira-campo": 1,
+   "tenda-estande": 1
+  },
+  "notas": "1 pagina aerea"
+ },
+ {
+  "deck": "web-paris2024-dandad",
+  "tipo": "identidade/look of the games",
+  "esporte": "outro (olimpico)",
+  "pecas": {
+   "placa-beira-campo": 5,
+   "backdrop-podio-palco": 1,
+   "camisa": 1,
+   "portico-arco": 1,
+   "camarote-arena": 1,
+   "outro:cenografia-overlay": 2
+  },
+  "notas": "look of the games"
+ },
+ {
+  "deck": "web-petropolis-25",
+  "tipo": "identidade de marca",
+  "esporte": "corrida",
+  "pecas": {
+   "portico-arco": 1,
+   "camisa": 1,
+   "medalha": 2,
+   "numero-de-peito": 1
+  },
+  "notas": "identidade de meia maratona"
+ },
+ {
+  "deck": "web-pitch-deck-saas",
+  "tipo": "pitch deck",
+  "esporte": "corporativo (SaaS)",
+  "pecas": {
+   "notebook-site": 2
+  },
+  "notas": "nao e esporte"
+ },
+ {
+  "deck": "web-premier-league-dixonbaxi",
+  "tipo": "identidade broadcast",
+  "esporte": "futebol",
+  "pecas": {
+   "transmissao-lower-third": 4
+  },
+  "notas": "grafismo de placar"
+ },
+ {
+  "deck": "web-prola",
+  "tipo": "identidade de marca",
+  "esporte": "corporativo (conferencia)",
+  "pecas": {
+   "backdrop-podio-palco": 2,
+   "telao-led": 1,
+   "copo-garrafa": 1,
+   "ingresso-credencial": 2,
+   "camisa": 1,
+   "kit-sacola": 1,
+   "outdoor-billboard": 1,
+   "celular-post-feed": 1,
+   "outro:caderno": 1
+  },
+  "notas": "bom exemplo de aplicacao de marca"
+ }
+]

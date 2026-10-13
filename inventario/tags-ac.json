@@ -1,0 +1,292 @@
+[
+ {
+  "deck": "web-proposta-itau",
+  "tipo": "proposta de patrocinio (social)",
+  "esporte": "outro (esports)",
+  "pecas": {
+   "veiculo": 1,
+   "notebook-site": 1
+  },
+  "notas": "Projeto Conexao esports itinerante; pouca mockup de marca, foco narrativo; carreta com logo Itau"
+ },
+ {
+  "deck": "web-proposta-patrocinio-9901637",
+  "tipo": "midia kit / proposta de patrocinio (template)",
+  "esporte": "futebol",
+  "pecas": {
+   "mascote": 1
+  },
+  "notas": "Template ACE com lorem ipsum, p&b; sem mockups de marca; so paginas de contrapartidas genericas"
+ },
+ {
+  "deck": "web-proposta-unimed",
+  "tipo": "midia kit / proposta de patrocinio",
+  "esporte": "corporativo (feijoada de cooperativa)",
+  "pecas": {
+   "backdrop-podio-palco": 2,
+   "camisa": 1,
+   "copo-garrafa": 1,
+   "tenda-estande": 1
+  },
+  "notas": "Cotas ouro/prata com preco; mockup de backdrop 3x3 com logos dos patrocinadores, camiseta e copo de chopp; fotos reais do espaco do patrocinador"
+ },
+ {
+  "deck": "web-rapha-six-frost",
+  "tipo": "identidade de marca (tipografia/posters)",
+  "esporte": "outro (ciclismo)",
+  "pecas": {
+   "poster-cartaz": 6
+  },
+  "notas": "Posters tipograficos Rapha; nenhum mockup de patrocinio"
+ },
+ {
+  "deck": "web-retro-caliente",
+  "tipo": "identidade de campanha/evento",
+  "esporte": "musica",
+  "pecas": {
+   "poster-cartaz": 6,
+   "mupi-abrigo-onibus": 2,
+   "bone-viseira": 2,
+   "celular-post-feed": 2,
+   "camisa": 1,
+   "kit-sacola": 1,
+   "produto-embalagem": 2,
+   "outro:vinil": 1,
+   "outro:isqueiro": 1
+  },
+  "notas": "Festa Retro Caliente; logo de apoio (e hoje?) e Shotgun no cartaz; mockups fotograficos de alto nivel"
+ },
+ {
+  "deck": "web-rima-studio",
+  "tipo": "identidade de marca",
+  "esporte": "outro (papelaria/estudio)",
+  "pecas": {
+   "kit-sacola": 1,
+   "notebook-site": 2,
+   "produto-embalagem": 3,
+   "celular-app": 1,
+   "outro:papelaria-selo": 12
+  },
+  "notas": "Studio Rima; mockups de papelaria, selos, caixa; nada de patrocinio"
+ },
+ {
+  "deck": "web-sama-beach-tennis",
+  "tipo": "identidade de marca",
+  "esporte": "outro (beach tennis)",
+  "pecas": {
+   "camisa": 3,
+   "bone-viseira": 1,
+   "kit-sacola": 1,
+   "copo-garrafa": 1,
+   "outro:fachada-placa": 1,
+   "outro:sinalizacao-parede": 1
+  },
+  "notas": "Marca de escola; uniformes, viseira, bolsa, garrafa; bom modelo de merchandising"
+ },
+ {
+  "deck": "web-samba-de-roda",
+  "tipo": "identidade de evento",
+  "esporte": "musica",
+  "pecas": {
+   "ingresso-credencial": 1,
+   "camisa": 1,
+   "outro:cards-redes": 1,
+   "outro:trofeu": 1
+  },
+  "notas": "I Encontro Samba de Roda; credencial e camiseta; faixa de apoiadores no rodape dos cards"
+ },
+ {
+  "deck": "web-scoop",
+  "tipo": "identidade de marca",
+  "esporte": "outro (sorveteria)",
+  "pecas": {
+   "produto-embalagem": 5,
+   "copo-garrafa": 3
+  },
+  "notas": "Scoop Geladas; embalagens, potes, picoles; sem patrocinio"
+ },
+ {
+  "deck": "web-seu-ze",
+  "tipo": "identidade de marca",
+  "esporte": "outro (acougue)",
+  "pecas": {
+   "camisa": 5,
+   "kit-sacola": 3,
+   "produto-embalagem": 8,
+   "poster-cartaz": 1,
+   "celular-app": 1,
+   "outro:fachada-toldo": 1,
+   "outro:cartao-visita": 2
+  },
+  "notas": "Casa de Carnes Seu Ze; sistema de identidade completo com muito mockup de embalagem e uniforme"
+ },
+ {
+  "deck": "web-soweto-never-run-alone",
+  "tipo": "campanha de marca/evento (patrocinador Africanbank)",
+  "esporte": "corrida",
+  "pecas": {
+   "portico-arco": 1,
+   "onibus-metro-midia": 1,
+   "outdoor-billboard": 1,
+   "numero-de-peito": 3,
+   "camisa": 2,
+   "notebook-site": 1,
+   "celular-post-feed": 3,
+   "veiculo": 1,
+   "poster-cartaz": 1,
+   "outro:placa-a-sinalizacao": 2
+  },
+  "notas": "Campanha de maratona com marca do banco; arco inflavel, bib, outdoor, onibus, posts com carro de premio"
+ },
+ {
+  "deck": "web-spotify-garmin-run-the-beat",
+  "tipo": "campanha de marca (ativacao em maratona)",
+  "esporte": "corrida",
+  "pecas": {
+   "outdoor-billboard": 2,
+   "mupi-abrigo-onibus": 6,
+   "poster-cartaz": 10,
+   "wind-banner-bandeira": 1,
+   "outro:relogio": 2,
+   "outro:cartazes-colados": 1
+  },
+  "notas": "Spotify + Garmin na Maratona de Paris; foco em midia exterior com dois logos lado a lado; bandeiras de poste KM"
+ },
+ {
+  "deck": "web-t100-matta-site",
+  "tipo": "identidade de marca (circuito)",
+  "esporte": "outro (triatlo)",
+  "pecas": {
+   "camisa": 1,
+   "copo-garrafa": 1,
+   "celular-post-feed": 1,
+   "portico-arco": 1,
+   "wind-banner-bandeira": 1,
+   "placa-beira-campo": 1,
+   "outro:touca-oculos": 1
+  },
+  "notas": "T100 Triathlon World Tour; sheet identica a web-t100-matta; fotos reais com bandeiras e pórtico de chegada"
+ },
+ {
+  "deck": "web-t100-matta",
+  "tipo": "identidade de marca (circuito)",
+  "esporte": "outro (triatlo)",
+  "pecas": {
+   "camisa": 1,
+   "copo-garrafa": 1,
+   "celular-post-feed": 1,
+   "portico-arco": 1,
+   "wind-banner-bandeira": 1,
+   "placa-beira-campo": 1,
+   "outro:touca-oculos": 1
+  },
+  "notas": "Duplicata aparente de web-t100-matta-site (mesmas 8 paginas)"
+ },
+ {
+  "deck": "web-tupa-fc-sponsor",
+  "tipo": "midia kit / proposta de patrocinio",
+  "esporte": "futebol",
+  "pecas": {
+   "camisa": 5,
+   "backdrop-podio-palco": 3,
+   "placa-beira-campo": 3,
+   "camarote-arena": 2,
+   "ingresso-credencial": 2,
+   "transmissao-lower-third": 2,
+   "celular-post-feed": 1,
+   "outro:camisa-personalizada-quadro": 2
+  },
+  "notas": "Cotas Campeao/Vibrante/Guerreiro/Comunidade; pecas aparecem como icones de lista, so uniforme e redes tem imagem; faixa de marcas parceiras na p10"
+ },
+ {
+  "deck": "web-ufc-rebrand",
+  "tipo": "identidade de campanha (motion graphics broadcast)",
+  "esporte": "luta",
+  "pecas": {
+   "transmissao-lower-third": 14
+  },
+  "notas": "Pacote grafico de TV do UFC 189; telas de abertura, VS, round; sem patrocinio"
+ },
+ {
+  "deck": "web-uniao-run-2025",
+  "tipo": "midia kit / proposta de patrocinio + identidade",
+  "esporte": "corrida",
+  "pecas": {
+   "outdoor-billboard": 1,
+   "banner-grade": 1,
+   "telao-led": 1,
+   "portico-arco": 1,
+   "backdrop-podio-palco": 1,
+   "camisa": 5,
+   "numero-de-peito": 3,
+   "medalha": 5,
+   "kit-sacola": 5,
+   "copo-garrafa": 5,
+   "bone-viseira": 5,
+   "poster-cartaz": 1,
+   "outro:meia": 3
+  },
+  "notas": "Melhor referencia: paginas dedicadas a cada ponto de patrocinio com slots vazios (outdoor, grade, telao, portico, backdrop) e cotas ouro/prata/bronze; kit completo do corredor"
+ },
+ {
+  "deck": "web-unimed-convencao",
+  "tipo": "identidade de evento corporativo",
+  "esporte": "corporativo",
+  "pecas": {
+   "ingresso-credencial": 2,
+   "kit-sacola": 3,
+   "backdrop-podio-palco": 3,
+   "telao-led": 1,
+   "totem": 1,
+   "email-newsletter": 1,
+   "tenda-estande": 1
+  },
+  "notas": "Convencao de vendas Unimed Fortaleza; fotos reais; logos de patrocinadores no backdrop da entrada (p10)"
+ },
+ {
+  "deck": "web-utmb-cartaz-26",
+  "tipo": "identidade de campanha",
+  "esporte": "corrida",
+  "pecas": {
+   "poster-cartaz": 1
+  },
+  "notas": "1 pagina so (paisagem de montanha com rosto); baixa confianca"
+ },
+ {
+  "deck": "web-utmb-mb26",
+  "tipo": "identidade de campanha",
+  "esporte": "corrida",
+  "pecas": {
+   "poster-cartaz": 1
+  },
+  "notas": "1 pagina so; mesma imagem de utmb-cartaz-26 na folha"
+ },
+ {
+  "deck": "web-utmb-parceiro",
+  "tipo": "identidade (logo)",
+  "esporte": "corrida",
+  "pecas": {},
+  "notas": "1 pagina so: logo M com montanha em fundo azul; sem mockups"
+ },
+ {
+  "deck": "web-vila-real-100",
+  "tipo": "identidade de campanha (cidade)",
+  "esporte": "outro (centenario de cidade)",
+  "pecas": {
+   "camisa": 1,
+   "bone-viseira": 1,
+   "wind-banner-bandeira": 1,
+   "poster-cartaz": 1,
+   "outro:tapume-mural": 1,
+   "outro:selos": 2
+  },
+  "notas": "Cidade de Vila Real 100 anos; bandeiras de poste, tapume, merch; sem patrocinadores"
+ },
+ {
+  "deck": "web-slideshare-patrocinio-corridas",
+  "tipo": "midia kit / antiexemplo",
+  "esporte": "corporativo (corrida)",
+  "pecas": {},
+  "notas": "Antiexemplo Eventbrite/Brite Running; 2 paginas de texto e foto, sem mockup"
+ }
+]

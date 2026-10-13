@@ -1,7 +1,7 @@
 import sys,os,json,math
 sys.path.insert(0,os.path.expanduser("~/Developer/vectorcraft-mediakit/receitas/_s34"))
 from h34 import *
-sp=json.load(open(os.path.expanduser("~/Developer/vectorcraft-mediakit/sp.json")))["features"][0]["geometry"]
+sp=json.load(open(os.path.expanduser("~/Developer/vectorcraft-mediakit/kits/legado/sp.json")))["features"][0]["geometry"]
 polys=sp["coordinates"] if sp["type"]=="MultiPolygon" else [sp["coordinates"]]
 pts=[c for poly in polys for ring in poly for c in ring]
 lon0=min(c[0] for c in pts); lon1=max(c[0] for c in pts); lat0=min(c[1] for c in pts); lat1=max(c[1] for c in pts)

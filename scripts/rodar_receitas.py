@@ -19,7 +19,9 @@ def rodar():
             res[t.parent.name] = False
         print(t.parent.name, "ok" if res[t.parent.name] else "FALHOU", flush=True)
     # As receitas regravam o PDF de prova; devolve os que o Ugo viu (os gerados agora são reproduzíveis).
-    subprocess.run(["git", "-C", str(RAIZ), "checkout", "--", "receitas"], check=False)
+    # Só os arquivos de saída: o código das receitas não pode voltar atrás.
+    subprocess.run(["git", "-C", str(RAIZ), "checkout", "--", ":(glob)receitas/**/*.pdf", ":(glob)receitas/**/*.png"],
+                   check=False)
     return res
 
 

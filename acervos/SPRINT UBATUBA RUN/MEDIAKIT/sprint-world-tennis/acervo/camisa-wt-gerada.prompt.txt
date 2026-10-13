@@ -1,0 +1,6 @@
+Create a NEW product photograph and save it exactly as /Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-world-tennis/acervo/camisa-wt-gerada.png, landscape 16:9, at the highest resolution available.
+A single gold (#D4A64A) running t-shirt, front view, floating centered over dark black asphalt texture with two thin bright white vertical lane lines on each side, studio light from the top left, crisp fabric texture, realistic mockup like a premium sportswear campaign.
+Print on the shirt: the Sprint Ubatuba Run winged logo (SECOND attached image) in black on the chest, centered; the World Tennis logo (FIRST attached image: the red and blue WORLD TENNIS logo) on the right sleeve, small, following the sleeve curve.
+Reproduce both logos EXACTLY as the attached files (same letters, proportions and colors; the Sprint logo recolored to black only). Do not redraw or restyle them. No other text, numbers or logos anywhere.
+Composition: shirt centered, empty asphalt space on the left third for a headline.
+After saving, open the image and check: (1) both logos are exact and correctly placed, (2) no other text appeared. Do NOT regenerate if a check fails (each generation spends the ChatGPT quota): keep the single image and list the defects in your final message.

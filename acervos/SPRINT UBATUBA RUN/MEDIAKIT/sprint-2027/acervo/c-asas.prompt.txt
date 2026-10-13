@@ -1,0 +1,7 @@
+Edit the attached image and save the result exactly as /Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/c-asas.png, landscape 16:9 (or the widest landscape size available), at the highest resolution available.
+Keep EVERYTHING else identical: same composition, camera, light, people, structures, sculpture, colors, crowd, sea, mountains.
+Remove ALL text, letters, numbers and logos from every surface (arch header and columns, stage screen, tent headers, flags, banners, signs, barriers, shirts, sculpture base, timer).
+Each cleaned surface must stay a smooth, flat, evenly lit panel in its original base color (black panels stay plain black, cream tents stay plain cream), facing the camera as before, ready for a logo to be composited later.
+Do not add any new element. Do not add text.
+The giant golden wing sculpture stays; remove the engraved words on the wings and the text on its black base, keeping the engraved mountain relief.
+After saving, open the image and check: (1) no letter, number or logo remains anywhere, (2) the panels are blank and flat, (3) the rest of the scene is unchanged. Do NOT regenerate if a check fails (each generation spends the ChatGPT quota): keep the single image and list the defects in your final message.

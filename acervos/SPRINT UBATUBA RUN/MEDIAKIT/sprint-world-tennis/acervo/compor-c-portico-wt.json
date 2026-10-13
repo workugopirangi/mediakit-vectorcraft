@@ -1,0 +1,41 @@
+[
+ {
+  "quad": [
+   600,
+   30,
+   1440,
+   30,
+   1440,
+   170,
+   600,
+   170
+  ],
+  "logo": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-world-tennis/acervo/lockup-testeira.png"
+ },
+ {
+  "quad": [
+   440,
+   230,
+   560,
+   230,
+   560,
+   640,
+   440,
+   640
+  ],
+  "logo": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-world-tennis/acervo/wt-vertical.png"
+ },
+ {
+  "quad": [
+   1452,
+   230,
+   1600,
+   230,
+   1600,
+   640,
+   1452,
+   640
+  ],
+  "logo": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-world-tennis/acervo/wt-vertical.png"
+ }
+]

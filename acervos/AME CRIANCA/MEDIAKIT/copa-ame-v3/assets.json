@@ -1,0 +1,262 @@
+{
+ "kit": "copa-ame-v2",
+ "_nota": "Âncoras e escalas de antes da maquete (09/10/2026). As que valem estão em mediakit.json > composicao; ver briefing.md, seção Estado final (12/10/2026).",
+ "_v3": "v3, 13/10/2026: teste da skill v9, só horizontal, 18 páginas. As entradas de `assets` abaixo são da v2 (09/10), preservadas; o orçamento novo da v3 está em `v3`.",
+ "regra": "cada asset nasce da composição da página (mediakit.json > composicao): área e proporção vêm da maquete; o objeto nasce inteiro e centrado e o corte é da página; luz da família objeto-sabado (sol baixo pela esquerda, sombra para a direita); só Codex",
+ "assets": [
+  {
+   "id": "apito-cartoes",
+   "pagina": "ativo:2",
+   "funcao": "foco",
+   "o_que": "apito de metal com cordão preto, cartão amarelo e cartão vermelho levemente abertos em leque",
+   "por_que": "a cota Oficial vende a camisa da arbitragem: o objeto é o instrumento de quem apita todos os jogos",
+   "ancora": "sobrepõe 1/3 da borda esquerda da foto, base na linha de base do título",
+   "escala": "1/4 da altura da página",
+   "proporcao": [
+    4,
+    3
+   ],
+   "aponta_para": "esquerda, para o título",
+   "detalhe_protegido": "o bocal do apito e as pontas dos cartões ficam à esquerda (a página não corta nada aqui)",
+   "origem": "codex",
+   "familia": "objeto-sabado"
+  },
+  {
+   "id": "bola-jogo",
+   "pagina": "ativo:3",
+   "funcao": "foco",
+   "o_que": "bola de futebol de campo clássica, gomos brancos e pretos, usada, com um pouco de terra vermelha, sem marca",
+   "por_que": "a beira do campo é onde a bola sai e a família está: a bola parada na linha do título",
+   "ancora": "pousa na linha de base do título, à direita dele",
+   "escala": "2 alturas de maiúscula do título",
+   "proporcao": [
+    1,
+    1
+   ],
+   "aponta_para": "frente",
+   "detalhe_protegido": "a bola inteira, com sombra de contato curta à direita",
+   "origem": "codex",
+   "familia": "objeto-sabado"
+  },
+  {
+   "id": "trofeu-dourado",
+   "pagina": "ativo:5",
+   "funcao": "foco",
+   "o_que": "troféu de campeonato de futebol infantil, taça dourada com duas alças e base preta, sem texto",
+   "por_que": "a Noite das Estrelas é a premiação: o único dourado do kit",
+   "ancora": "sobrepõe 1/3 da borda esquerda da foto do palco, base na linha de base do título",
+   "escala": "1/2 da altura da página",
+   "proporcao": [
+    2,
+    3
+   ],
+   "aponta_para": "frente, levemente para a esquerda",
+   "detalhe_protegido": "a taça e as alças inteiras; a base pode encostar na margem",
+   "origem": "codex",
+   "familia": "objeto-sabado"
+  },
+  {
+   "id": "c-noite",
+   "pagina": "ativo:5",
+   "funcao": "cena",
+   "o_que": "palco de teatro municipal na noite de premiação: mesa com troféus dourados em primeiro plano desfocado, backdrop escuro liso ao fundo, luz quente de refletor pela esquerda, plateia escura, sem rostos em destaque, sem texto",
+   "por_que": "não há foto horizontal real da Noite das Estrelas (só um post vertical do Instagram)",
+   "ancora": "foto 7/12 da página de ativo; o troféu recortado entra pela borda esquerda",
+   "escala": "bloco de foto 1120 × 1080",
+   "proporcao": [
+    16,
+    9
+   ],
+   "detalhe_protegido": "backdrop liso no terço direito (zona onde o compor.py pode pôr SEU LOGO AQUI)",
+   "origem": "codex",
+   "rotulo": "Imagem ilustrativa"
+  },
+  {
+   "id": "c-capa-sabado",
+   "pagina": "capa",
+   "funcao": "contexto",
+   "o_que": "campo de futebol infantil num sábado de manhã, jogo no terço esquerdo, famílias na grade, árvores e terra vermelha",
+   "por_que": "a gramática exige imagem na capa; o campo de sábado é o lugar onde a marca entra junto com a família",
+   "zonas_calmas": "centro (escudo e tese) e direita (goleiro)",
+   "origem": "codex",
+   "prompt": "acervo/c-capa-sabado.prompt.txt",
+   "gerado_em": "2026-10-09"
+  },
+  {
+   "id": "c-master",
+   "pagina": "cota:Master",
+   "funcao": "contexto",
+   "o_que": "as duas equipes perfiladas antes da final, de amarelo e de preto, famílias aplaudindo atrás da grade",
+   "por_que": "a Master dá nome à copa: a foto é o momento em que a copa com o nome da marca começa",
+   "zonas_calmas": "esquerda (painel de texto) e base central (troféu)",
+   "origem": "codex",
+   "prompt": "acervo/c-master.prompt.txt",
+   "gerado_em": "2026-10-09"
+  },
+  {
+   "id": "c-apoio",
+   "pagina": "cota:Apoio",
+   "funcao": "contexto",
+   "o_que": "quatro placas brancas lisas na linha do campo, famílias encostadas na grade logo atrás",
+   "por_que": "a Apoio compra a beira do campo; as placas recebem 'SEU LOGO AQUI' pelo compor.py (compor-apoio.json)",
+   "zonas_calmas": "esquerda (painel de texto) e gramado da frente (bola)",
+   "origem": "codex",
+   "prompt": "acervo/c-apoio.prompt.txt",
+   "gerado_em": "2026-10-09"
+  },
+  {
+   "id": "c-contato",
+   "pagina": "contato",
+   "funcao": "contexto",
+   "o_que": "campo vazio no fim da manhã, o gol com a rede no terço direito, uma bola no gramado",
+   "por_que": "o fechamento convida a marca a entrar no campo que espera; o goleiro da capa volta pela base",
+   "zonas_calmas": "centro (título e contatos) e canto inferior esquerdo (goleiro)",
+   "origem": "codex",
+   "prompt": "acervo/c-contato.prompt.txt",
+   "gerado_em": "2026-10-09"
+  },
+  {
+   "id": "jogo-pattern",
+   "pagina": "divisor",
+   "funcao": "acabamento",
+   "o_que": "pattern sem emenda dos objetos do jogo vistos de cima: bolas, apitos com cordão, cartões amarelos e estrelas douradas",
+   "por_que": "a regra pede um pattern novo por kit; os objetos dos heróis viram textura (um motivo em vários papéis)",
+   "escala": "tile de 420 px a 10% de opacidade",
+   "origem": "codex",
+   "familia": "objeto-sabado",
+   "prompt": "acervo/elementos/jogo-pattern.prompt.txt",
+   "gerado_em": "2026-10-09"
+  }
+ ],
+ "v3": {
+  "_nota": "Orçamento de imagens novas da v3 (13/10/2026, preparo). Previsto pela Parte E do plano; páginas e famílias vêm da matriz de criterios-aceite.md e são hipótese até a consulta ao repertório (etapa 3b) confirmar ou trocar. Imagem fora do orçamento não se gera; regerar conta no orçamento. Descrição sempre por arquivo; cada imagem passa por padrao.py texto, padrao.py checar (as texturas) e familia.py pertence.",
+  "orcamento_imagens": 8,
+  "geradas": 0,
+  "imagens": [
+   {
+    "id": "fita-advertencia-torcida",
+    "o_que": "fita de advertência preta e amarela, longa, torcida, objeto físico",
+    "familia": "a decidir na 3b",
+    "familia_candidatas": [
+     "ornamento-identidade",
+     "profundidade-3d"
+    ],
+    "fio_ou_motivo": "F1",
+    "paginas_previstas": [
+     1,
+     7,
+     14,
+     18
+    ],
+    "material": "plastico-fosco",
+    "rota": "objeto com sombra de contato, montado por código",
+    "origem": "codex",
+    "estado": "previsto",
+    "nota": "F1 precisa de 6 páginas ou mais; as outras saem da composição; a imagem é um objeto 3D; a família do recurso decide se OI fecha 3 páginas (criterios-aceite.md, conferência da matriz)"
+   },
+   {
+    "id": "fita-advertencia-curva",
+    "o_que": "fita de advertência preta e amarela em curva, objeto físico",
+    "familia": "a decidir na 3b",
+    "familia_candidatas": [
+     "ornamento-identidade",
+     "profundidade-3d"
+    ],
+    "fio_ou_motivo": "F1",
+    "paginas_previstas": [
+     1,
+     7,
+     14,
+     18
+    ],
+    "material": "plastico-fosco",
+    "rota": "objeto com sombra de contato, montado por código",
+    "origem": "codex",
+    "estado": "previsto",
+    "nota": "par da torcida: a mesma fita em outro papel; a imagem é um objeto 3D; a família do recurso decide se OI fecha 3 páginas (criterios-aceite.md, conferência da matriz)"
+   },
+   {
+    "id": "estrela-dourada",
+    "o_que": "estrela de cinco pontas dourada, metálica, objeto físico",
+    "familia": "a decidir na 3b",
+    "familia_candidatas": [
+     "ornamento-identidade",
+     "profundidade-3d"
+    ],
+    "fio_ou_motivo": "M3",
+    "paginas_previstas": [
+     12,
+     15,
+     18
+    ],
+    "material": "ouro",
+    "rota": "objeto repetido 5 vezes por código (as 5 estrelas do escudo)",
+    "origem": "codex",
+    "estado": "previsto",
+    "nota": "a imagem é um objeto 3D; a família do recurso decide se OI fecha 3 páginas (criterios-aceite.md, conferência da matriz)"
+   },
+   {
+    "id": "bandeirinha-escanteio",
+    "o_que": "bandeirinha de escanteio com haste, objeto físico",
+    "familia": "profundidade-3d",
+    "paginas_previstas": [
+     5
+    ],
+    "material": "tecido",
+    "rota": "objeto usado como pino no mapa das sedes",
+    "origem": "codex",
+    "estado": "previsto"
+   },
+   {
+    "id": "cal-sobre-grama",
+    "o_que": "linha de cal branca sobre grama, vista de cima",
+    "familia": "pattern-textura",
+    "fio_ou_motivo": "F2",
+    "paginas_previstas": [
+     3,
+     4,
+     5
+    ],
+    "material": "grama",
+    "rota": "textura única (tratar.py textura), nunca ladrilhada",
+    "origem": "codex",
+    "estado": "previsto",
+    "nota": "F2 precisa de 6 páginas ou mais; as outras saem da composição"
+   },
+   {
+    "id": "terra-vermelha",
+    "o_que": "terra vermelha batida, vista de cima",
+    "familia": "pattern-textura",
+    "paginas_previstas": [
+     5
+    ],
+    "rota": "textura única (tratar.py textura), nunca ladrilhada",
+    "origem": "codex",
+    "estado": "previsto",
+    "nota": "material fora do vocabulário (terra): vai na descrição"
+   },
+   {
+    "id": "placa-campo-lisa",
+    "o_que": "placa de campo lisa, sem marca, em perspectiva",
+    "familia": "composicao-hibrida",
+    "material": "plastico-fosco",
+    "rota": "placa do Codex com lettering ou SEU LOGO AQUI pelo compor.py",
+    "origem": "codex",
+    "estado": "previsto",
+    "nota": "página a decidir na composição"
+   },
+   {
+    "id": "papel-sumula",
+    "o_que": "papel de súmula de jogo, sem texto legível",
+    "familia": "pattern-textura",
+    "paginas_previstas": [
+     13
+    ],
+    "material": "papel",
+    "rota": "textura única (tratar.py textura); o texto da página é vivo, por código",
+    "origem": "codex",
+    "estado": "previsto"
+   }
+  ]
+ }
+}

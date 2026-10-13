@@ -1,0 +1,52 @@
+{
+ "id": "cronometro-gravura",
+ "tipo": "ilustracao",
+ "familia": "gravura-ouro",
+ "motivo": "pista",
+ "estilo": "fine gold line engraving, single weight 2px strokes, no fills, no shading, flat metallic gold ink on transparent background",
+ "paleta": [
+  "#D4A64A"
+ ],
+ "paleta_nomes": [
+  "antique gold"
+ ],
+ "aspecto": "quadrado",
+ "luz": null,
+ "descricao": "a classic mechanical stopwatch with crown and side button, the dial shown with tick marks only and no numerals, fine engraving lines",
+ "ref": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/penas-asa-traco.png",
+ "ref_sha256": "9819814c29865f504d36782ce0f9e232a00d079ae7921914b4adfdf3ed949c62",
+ "rota": "codex-alfa",
+ "arquivo": "cronometro-gravura.png",
+ "bruto": "cronometro-gravura.bruto.png",
+ "sha256": "0b701a42c0b1b76f13105da81c901741f5715101475efd35ddee64aaf921470a",
+ "sha256_bruto": "0b701a42c0b1b76f13105da81c901741f5715101475efd35ddee64aaf921470a",
+ "dims": [
+  1254,
+  1254
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.993,
+  "opaco": 0.153
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.993,
+  "opaco": 0.153
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/cronometro-gravura.prompt.txt",
+ "gerado": true,
+ "data": "2026-10-09T14:02:00-03:00",
+ "ocr_revisado": {
+  "lido": "AN NS",
+  "sha256": "0b701a42c0b1b76f13105da81c901741f5715101475efd35ddee64aaf921470a",
+  "veredito": "sem texto",
+  "por": "Claude",
+  "em": "2026-10-09",
+  "evidencia": "recortes ampliados nas 3 caixas de 'AN' e 'NS' (passadas giradas): marcas do mostrador e aro, sem numerais, nenhuma letra"
+ }
+}

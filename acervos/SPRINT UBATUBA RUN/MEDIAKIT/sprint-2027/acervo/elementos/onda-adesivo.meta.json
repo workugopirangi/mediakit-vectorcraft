@@ -1,0 +1,54 @@
+{
+ "id": "onda-adesivo",
+ "tipo": "adesivo",
+ "familia": "meio-tom-mar",
+ "motivo": "ondas-serra",
+ "estilo": "two-tone halftone print, coarse dot screen, sea blue ink on transparent background, beach poster feel, die-cut sticker with a thin cream border",
+ "paleta": [
+  "#2067AA",
+  "#F4EADB"
+ ],
+ "paleta_nomes": [
+  "sea blue",
+  "off-white"
+ ],
+ "aspecto": "quadrado",
+ "luz": null,
+ "descricao": "one curling ocean wave breaking, foam at the crest",
+ "ref": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/ondas-serra-adesivo.png",
+ "ref_sha256": "1b399b11ad2c74cffb09ae3a9e5e3f9174e2ce31c125dd239ff5f9838b2240f7",
+ "rota": "codex-alfa",
+ "arquivo": "onda-adesivo.png",
+ "bruto": "onda-adesivo.bruto.png",
+ "sha256": "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451",
+ "sha256_bruto": "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451",
+ "dims": [
+  1254,
+  1254
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.537,
+  "opaco": 0.475
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.537,
+  "opaco": 0.475
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/onda-adesivo.prompt.txt",
+ "gerado": true,
+ "data": "2026-10-09T14:03:48-03:00",
+ "ocr_revisado": {
+  "lido": "WEN",
+  "sha256": "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451",
+  "veredito": "sem texto",
+  "por": "Claude",
+  "em": "2026-10-09",
+  "evidencia": "recorte ampliado na caixa de 'WEN' (passada girada): espuma da onda em retícula, nenhuma letra"
+ }
+}

@@ -1,0 +1,24 @@
+/* A.M.E: fontes por direção. Inter (OFL) e TeX Gyre Heros Cn (GUST) convertidas para TTF; RocGrotesk pendente */
+@font-face { font-family: 'AME Display'; src: url('file:///home/claude/fontes-ttf/InterDisplay-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: block; }
+@font-face { font-family: 'AME Display'; src: url('file:///home/claude/fontes-ttf/InterDisplay-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: block; }
+@font-face { font-family: 'AME Display'; src: url('file:///home/claude/fontes-ttf/InterDisplay-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: block; }
+@font-face { font-family: 'AME Corpo'; src: url('file:///home/claude/fontes-ttf/Inter-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: block; }
+@font-face { font-family: 'AME Corpo'; src: url('file:///home/claude/fontes-ttf/Inter-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: block; }
+@font-face { font-family: 'AME Corpo'; src: url('file:///home/claude/fontes-ttf/Inter-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: block; }
+@font-face { font-family: 'AME Corpo'; src: url('file:///home/claude/fontes-ttf/Inter-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: block; }
+@font-face { font-family: 'AME Corpo'; src: url('file:///home/claude/fontes-ttf/Inter-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: block; }
+@font-face { font-family: 'AME Corpo'; src: url('file:///home/claude/fontes-ttf/Inter-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: block; }
+@font-face { font-family: 'AME Corpo'; src: url('file:///home/claude/fontes-ttf/Inter-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: block; }
+@font-face { font-family: 'AME Cond'; src: url('file:///home/claude/fontes-ttf/texgyreheroscn-regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: block; }
+@font-face { font-family: 'AME Cond'; src: url('file:///home/claude/fontes-ttf/texgyreheroscn-italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: block; }
+@font-face { font-family: 'AME Cond'; src: url('file:///home/claude/fontes-ttf/texgyreheroscn-bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: block; }
+@font-face { font-family: 'AME Cond'; src: url('file:///home/claude/fontes-ttf/texgyreheroscn-bolditalic.ttf') format('truetype'); font-weight: 700; font-style: italic; font-display: block; }
+html[data-direcao="causa"] { --fonte-display: "AME Display", sans-serif; --fonte-titulo: "AME Display", sans-serif; --fonte-corpo: "AME Corpo", sans-serif; --peso-display: 900; }
+html[data-direcao="performance"] { --fonte-display: "AME Cond", sans-serif; --fonte-titulo: "AME Cond", sans-serif; --fonte-corpo: "AME Corpo", sans-serif; --peso-display: 700; }
+html[data-direcao="territorio"] { --fonte-display: "Poppins", sans-serif; --fonte-titulo: "Poppins", sans-serif; --fonte-corpo: "Poppins", sans-serif; --peso-display: 700; }
+/* amarelo da A.M.E não tem contraste sobre papel branco: no papel, o acento vira preto e o amarelo fica no traço */
+.pagina.papel .cor { color: #0B0B0C; }
+/* amarelo em multiply deixa a foto amarelada: na A.M.E o véu da capa é escuro na esquerda e some na direita */
+html[data-direcao="causa"] .veu.tingido { background: linear-gradient(in oklab 90deg, rgba(11,11,12,.88) 0%, rgba(11,11,12,.55) 42%, rgba(11,11,12,0) 72%); mix-blend-mode: normal; }
+/* contato sobre foto de equipe: véu mais firme para os nomes */
+.pagina:last-of-type .veu.leve { background: linear-gradient(90deg, rgba(11,11,12,.35), rgba(11,11,12,.8) 60%); }

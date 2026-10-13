@@ -1,0 +1,46 @@
+{
+ "id": "tenis-adesivo",
+ "tipo": "adesivo",
+ "familia": "meio-tom-mar",
+ "motivo": "pista",
+ "estilo": "two-tone halftone print, coarse dot screen, sea blue ink on transparent background, beach poster feel, die-cut sticker with a thin cream border",
+ "paleta": [
+  "#2067AA",
+  "#F4EADB"
+ ],
+ "paleta_nomes": [
+  "sea blue",
+  "off-white"
+ ],
+ "aspecto": "largo",
+ "luz": null,
+ "descricao": "a running shoe in side profile caught mid-stride",
+ "ref": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/ondas-serra-adesivo.png",
+ "ref_sha256": "1b399b11ad2c74cffb09ae3a9e5e3f9174e2ce31c125dd239ff5f9838b2240f7",
+ "rota": "codex-alfa",
+ "arquivo": "tenis-adesivo.png",
+ "bruto": "tenis-adesivo.bruto.png",
+ "sha256": "dc053764c623e5bae247bbfefbccbbd49d41489c0a20e82f9a3c4053c66a37f8",
+ "sha256_bruto": "dc053764c623e5bae247bbfefbccbbd49d41489c0a20e82f9a3c4053c66a37f8",
+ "dims": [
+  1536,
+  1024
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.554,
+  "opaco": 0.452
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.554,
+  "opaco": 0.452
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/tenis-adesivo.prompt.txt",
+ "gerado": true,
+ "data": "2026-10-09T14:05:42-03:00"
+}

@@ -1,0 +1,10 @@
+/* Sprint Ubatuba Run 2027: corpo em Barlow (o kit antigo era Montserrat em tudo, antiexemplo da gramática §10);
+   causa sem RocGrotesk instalada usa Archivo Expanded (wide) no display. */
+:root, [data-direcao] { --fonte-corpo: "Barlow", sans-serif; }
+[data-direcao="causa"] { --fonte-display: "Archivo Expanded", sans-serif; --fonte-titulo: "Archivo", sans-serif; --peso-display: 800; }
+/* Rótulo "Projeção ilustrativa" no canto inferior direito: no alto ele cobria a testeira do pórtico, onde mora o logo. */
+.etiqueta { top: auto; bottom: var(--margem); }
+/* Página clara (inventário em colunas): o dourado #D4A64A sobre papel dá 2,2:1; aqui a cor da marca escurece para bronze. */
+.pagina.papel { --marca: #7E5A1C; }
+/* Na capa o canto inferior direito é do rótulo do documento: lá o "Projeção ilustrativa" volta para o alto. */
+.capa .etiqueta { top: var(--margem); bottom: auto; }

@@ -1,0 +1,1459 @@
+{
+  "schema_version": "mk-2.0",
+  "cliente": {
+    "nome": "Sprint Ubatuba Run",
+    "razao_social": "Uu'hull Eventos Esportivos LTDA",
+    "contato_patrocinio": {
+      "nome": "Cristiane",
+      "whatsapp": "(12) 98122-2033",
+      "email": "contato@uuhull.com"
+    }
+  },
+  "evento": {
+    "nome": "Sprint Ubatuba Run",
+    "edicao_numero": 2,
+    "data_inicio": "2027-03-14",
+    "data_fim": null,
+    "horario": null,
+    "local": null,
+    "cidade": "Ubatuba",
+    "uf": "SP",
+    "modalidades": [
+      "5 km",
+      "10 km",
+      "14 km",
+      "PCD"
+    ],
+    "formato": "Corrida de rua na orla",
+    "periodicidade": "anual",
+    "proposito": "Trazer a corrida para dentro da cidade: o atleta vem com a família, fica o fim de semana e doa alimento na retirada do kit.",
+    "diferenciais": [
+      "Metade do público da 1ª edição era turista",
+      "Arena na orla com tendas de patrocinador",
+      "1 kg de alimento por atleta na retirada do kit"
+    ],
+    "primeira_edicao": false,
+    "modalidade_sistema": "corrida de rua"
+  },
+  "tese": {
+    "frase": "Ubatuba muda de ritmo em março. Sua marca corre junto.",
+    "o_que_a_marca_compra": "Presença na arena, no pórtico e na camisa diante de 1.200 atletas e mais de 2.000 pessoas na arena (meta 2027), com público vindo do Litoral Norte e do Vale do Paraíba.",
+    "publico_encontra_marca": "Na retirada do kit, na largada, na chegada, no photo point das asas e nas tendas da arena."
+  },
+  "publico": {
+    "titulo": "Perfil de|público",
+    "descricao": "Corredores iniciantes, amadores e experientes, com família e amigos na arena. Mais da metade é turista: vem do Litoral Norte, do Vale do Paraíba e de Paraty. A maior faixa tem de 36 a 49 anos.",
+    "genero": [
+      {
+        "rotulo": "Mulheres",
+        "pct": 53
+      },
+      {
+        "rotulo": "Homens",
+        "pct": 47
+      }
+    ],
+    "segmentos": [
+      {
+        "tipo": "inscritos",
+        "descricao": "Atletas de 5, 10 e 14 km e PCD",
+        "prova_id": "p2"
+      },
+      {
+        "tipo": "acompanhantes",
+        "descricao": "Família e amigos na arena",
+        "prova_id": "p1"
+      },
+      {
+        "tipo": "turistas",
+        "descricao": "Visitantes da região",
+        "prova_id": "p3"
+      }
+    ]
+  },
+  "provas": [
+    {
+      "id": "p1",
+      "rotulo": "pessoas na arena",
+      "valor": 1300,
+      "unidade": null,
+      "edicao": "2026",
+      "tipo": "informado",
+      "fonte": "documento:Mídia kit Sprint 2027 (2).pdf",
+      "destaque": true,
+      "icone": "pessoas",
+      "nota": "Número do organizador, sem contagem de portão."
+    },
+    {
+      "id": "p2",
+      "rotulo": "atletas inscritos",
+      "valor": 500,
+      "unidade": null,
+      "edicao": "2026",
+      "tipo": "informado",
+      "fonte": "documento:Mídia kit Sprint 2027 (2).pdf",
+      "destaque": true,
+      "icone": "seta"
+    },
+    {
+      "id": "p3",
+      "rotulo": "do público era turista",
+      "valor": 52,
+      "unidade": "%",
+      "edicao": "2026",
+      "tipo": "informado",
+      "fonte": "documento:Mídia kit Sprint 2027 (2).pdf",
+      "destaque": true,
+      "icone": "alvo"
+    },
+    {
+      "id": "p4",
+      "rotulo": "participantes",
+      "valor": 1200,
+      "unidade": null,
+      "edicao": "esta edição",
+      "tipo": "meta",
+      "fonte": "organizador",
+      "destaque": false,
+      "icone": "seta"
+    },
+    {
+      "id": "p10",
+      "rotulo": "de turistas",
+      "valor": 72,
+      "unidade": "%",
+      "edicao": "esta edição",
+      "tipo": "meta",
+      "fonte": "organizador",
+      "destaque": false,
+      "icone": "alvo"
+    },
+    {
+      "id": "p5",
+      "rotulo": "pessoas na arena",
+      "valor": 2000,
+      "unidade": null,
+      "edicao": "esta edição",
+      "tipo": "meta",
+      "fonte": "organizador",
+      "destaque": false,
+      "icone": "pessoas"
+    },
+    {
+      "id": "p6",
+      "rotulo": "visualizações digitais",
+      "valor": 500000,
+      "unidade": null,
+      "edicao": "esta edição",
+      "tipo": "meta",
+      "fonte": "organizador",
+      "destaque": false,
+      "icone": "olho"
+    },
+    {
+      "id": "p7",
+      "rotulo": "kg de alimento doados",
+      "valor": 1200,
+      "unidade": null,
+      "edicao": "esta edição",
+      "tipo": "meta",
+      "fonte": "organizador",
+      "destaque": false,
+      "icone": "coracao",
+      "nota": "1 kg por atleta na retirada do kit × meta de 1.200 inscritos."
+    },
+    {
+      "id": "p8",
+      "rotulo": "visualizações em vídeo e campanha",
+      "valor": 187000,
+      "unidade": null,
+      "edicao": "2026",
+      "tipo": "informado",
+      "fonte": "documento:Mídia kit Sprint 2027 (2).pdf",
+      "destaque": false,
+      "icone": "olho"
+    },
+    {
+      "id": "p9",
+      "rotulo": "seguidores no Instagram em 3 meses",
+      "valor": 5000,
+      "unidade": null,
+      "edicao": "2026",
+      "tipo": "informado",
+      "fonte": "documento:Mídia kit Sprint 2027 (2).pdf",
+      "destaque": false,
+      "icone": "mais"
+    },
+    {
+      "id": "p11",
+      "rotulo": "empresas patrocinaram a 1ª edição",
+      "valor": 21,
+      "unidade": null,
+      "edicao": "2026",
+      "tipo": "informado",
+      "fonte": "documento:Mídia kit Sprint 2027 (2).pdf",
+      "destaque": false,
+      "icone": "mais"
+    }
+  ],
+  "prova": {
+    "titulo": "Metas da|2ª edição",
+    "nota": "Metas do organizador para a 2ª edição, comparadas aos números informados da 1ª.",
+    "rodape": "2026: números informados pelo organizador. 2027: metas.",
+    "graficos": [
+      {
+        "titulo": "Atletas: 2026 × meta 2027",
+        "series": [
+          {
+            "rotulo": "2026",
+            "valor": 500
+          },
+          {
+            "rotulo": "Meta 2027",
+            "valor": 1200
+          }
+        ]
+      },
+      {
+        "titulo": "Visualizações: 2026 × meta 2027",
+        "series": [
+          {
+            "rotulo": "2026",
+            "valor": 187000
+          },
+          {
+            "rotulo": "Meta 2027",
+            "valor": 500000
+          }
+        ]
+      }
+    ]
+  },
+  "historico": [
+    {
+      "edicao": "2026",
+      "data": null,
+      "local": "Ubatuba/SP",
+      "prova_ids": [
+        "p1",
+        "p2",
+        "p3",
+        "p8",
+        "p9"
+      ],
+      "patrocinadores": [
+        {
+          "marca": "21 empresas (grade de logos do kit 2027)",
+          "o_que_fez": "Patrocínio e apoio da 1ª edição",
+          "pode_citar": true
+        }
+      ]
+    }
+  ],
+  "manifesto": {
+    "titulo": "Correr também||é transformar",
+    "subtitulo": "Cada atleta, uma doação.",
+    "frase": "A <b>Sprint Ubatuba Run</b> traz a corrida para dentro da cidade: quem vem correr traz a família, fica o fim de semana e deixa 1 kg de alimento na retirada do kit."
+  },
+  "divisor_inventario": {
+    "titulo": "Onde a marca||encontra o atleta.",
+    "subtitulo": "Seis pontos de contato, da retirada do kit ao pódio:"
+  },
+  "inventario": [
+    {
+      "ativo": "Pórtico de largada e chegada",
+      "onde": "Avenida da orla, ao lado da arena",
+      "capacidade": "Testeira e duas colunas",
+      "grupo": "fisico",
+      "titulo": "Sua marca||no pórtico",
+      "cena_id": "c-portico",
+      "texto": "O pórtico fica na avenida da orla, colado à arena: é por onde passam todos os atletas na largada e na chegada, embaixo do cronômetro, no momento mais fotografado da prova.",
+      "aplicacoes": [
+        "Testeira",
+        "Colunas",
+        "Grades",
+        "Bandeiras"
+      ]
+    },
+    {
+      "ativo": "Tendas de patrocinador na arena",
+      "onde": "Arena na orla, antes e depois da prova",
+      "capacidade": "6 tendas: Master, Ativação, Recovery, Experiência, Alimentação, VIP",
+      "grupo": "experiencia",
+      "titulo": "Sua marca||na arena",
+      "cena_id": "c-tendas",
+      "layout": "topo",
+      "mini_id": "c-arena",
+      "texto": "Seis tendas de patrocinador ladeiam a arena entre o palco e o pórtico. É onde o atleta e a família param depois da prova: massagem, hidratação, comida e experimentação de produto.",
+      "aplicacoes": [
+        "Recovery",
+        "Experiência",
+        "Alimentação",
+        "VIP"
+      ]
+    },
+    {
+      "ativo": "Photo point das asas",
+      "onde": "Centro da arena",
+      "capacidade": "Base da escultura",
+      "grupo": "fisico",
+      "titulo": "Sua marca||nas asas",
+      "cena_id": "c-asas",
+      "texto": "A escultura das asas é o photo point da arena. Cada atleta para ali com a medalha no peito, e a foto sai da arena para o Instagram de quem correu, levando a base da escultura junto.",
+      "aplicacoes": [
+        "Base",
+        "Totem",
+        "Moldura"
+      ]
+    },
+    {
+      "ativo": "Palco e pódio",
+      "onde": "Palco da arena, de frente para o mar",
+      "capacidade": "Backdrop de patrocinadores",
+      "grupo": "fisico",
+      "titulo": "Sua marca||no pódio",
+      "cena_id": "f7",
+      "texto": "No pódio sobem os cinco primeiros de cada distância, com o backdrop atrás. É a foto oficial da premiação, publicada pela organização e pelas assessorias de corrida da região.",
+      "aplicacoes": [
+        "Backdrop",
+        "Palco",
+        "Troféus"
+      ]
+    },
+    {
+      "ativo": "Ponto de arrecadação na retirada do kit",
+      "onde": "Retirada do kit",
+      "capacidade": "1 marca",
+      "grupo": "experiencia",
+      "titulo": "Sua marca||na doação",
+      "cena_id": "c-doacao",
+      "texto": "Na retirada do kit, cada atleta entrega 1 kg de alimento não perecível, distribuído a pessoas em situação de vulnerabilidade de Ubatuba. A marca que assina o ponto de arrecadação assina a doação.",
+      "aplicacoes": [
+        "Ponto de coleta",
+        "Caixas",
+        "Relatório"
+      ]
+    },
+    {
+      "ativo": "Camisa e kit do atleta",
+      "onde": "Retirada do kit, usada no dia e depois",
+      "capacidade": "Manga e costas; itens na sacola",
+      "grupo": "fisico",
+      "titulo": "Sua marca||no kit",
+      "cena_id": "f1",
+      "texto": "A camisa dourada vira uniforme do dia: está em todas as fotos da arena e volta para os treinos da região. Manga e costas são posições de patrocinador, e a sacola leva amostra e cupom.",
+      "aplicacoes": [
+        "Manga",
+        "Costas",
+        "Sacola"
+      ],
+      "micro": "Posições"
+    }
+  ],
+  "cotas_intro": "A <b>Sprint Ubatuba Run</b> oferece quatro cotas para marcas que querem <b>nome na prova, presença na arena e contato com o turista</b> que chega a Ubatuba em março.",
+  "cotas": [
+    {
+      "nome": "Naming",
+      "preco": 30000,
+      "quantidade": 1,
+      "principal": true,
+      "territorio": "O nome do evento e o pórtico",
+      "frase": "Seu nome na prova: Sprint Ubatuba Run apresentada pela sua marca.",
+      "entregaveis": [
+        "\"Sprint Ubatuba Run apresentada por\" em todo material",
+        "Testeira do pórtico de largada e chegada",
+        "Backdrop do palco e do pódio (posição central)",
+        "Manga da camisa oficial",
+        "Estande 3 m × 3 m na arena",
+        "2 Reels collab e stories antes, durante e depois",
+        "Menções na locução do evento",
+        "Relatório pós-evento"
+      ],
+      "exclusividade": {
+        "categoria": "categoria da marca",
+        "ate": "31/03/2027"
+      },
+      "aprovada_por": "motion",
+      "aprovada_em": null,
+      "cena_id": "f2",
+      "icones": [
+        "camisa",
+        "megafone",
+        "balao"
+      ]
+    },
+    {
+      "nome": "Master",
+      "preco": 12000,
+      "quantidade": 2,
+      "principal": false,
+      "territorio": "Uma distância com o nome da sua marca",
+      "frase": "Dê nome aos 10 km ou aos 14 km e esteja nas costas de cada camisa.",
+      "entregaveis": [
+        "Naming da distância: \"10 km [marca]\" ou \"14 km [marca]\"",
+        "Costas da camisa oficial (posição superior)",
+        "Coluna do pórtico de largada e chegada",
+        "Tenda própria na arena",
+        "1 Reels collab e stories",
+        "Menções na locução",
+        "Relatório pós-evento"
+      ],
+      "exclusividade": null,
+      "aprovada_por": "motion",
+      "aprovada_em": null,
+      "cena_id": "f10",
+      "icones": [
+        "camisa",
+        "tenis",
+        "megafone"
+      ]
+    },
+    {
+      "nome": "Oficial",
+      "preco": 5000,
+      "quantidade": 4,
+      "principal": false,
+      "territorio": "Uma tenda da arena",
+      "frase": "Uma tenda da arena é sua: o atleta experimenta a marca ao vivo.",
+      "entregaveis": [
+        "Testeira da tenda: Recovery, Hidratação, Alimentação ou Arrecadação",
+        "Ativação ou sampling na tenda",
+        "1 item na sacola do kit",
+        "Logo no backdrop do pódio",
+        "Stories durante o evento",
+        "Relatório pós-evento"
+      ],
+      "exclusividade": null,
+      "aprovada_por": "motion",
+      "aprovada_em": null,
+      "cena_id": "c-tendas",
+      "icones": [
+        "balao",
+        "megafone"
+      ]
+    },
+    {
+      "nome": "Apoio",
+      "preco": 1500,
+      "quantidade": 12,
+      "principal": false,
+      "territorio": "Backdrop e kit",
+      "frase": "Presença no backdrop, no site e na sacola de cada atleta.",
+      "entregaveis": [
+        "Logo no backdrop de medalhas",
+        "Logo no site oficial",
+        "Material na sacola do kit",
+        "Menção coletiva nas redes",
+        "1 Reels coletivo pós-evento com menção"
+      ],
+      "exclusividade": null,
+      "aprovada_por": "motion",
+      "aprovada_em": null,
+      "cena_id": "c-arena",
+      "icones": [
+        "camisa",
+        "balao"
+      ]
+    }
+  ],
+  "condicoes": {
+    "nao_incluso": [
+      "Produção das peças físicas da marca",
+      "Promessa de vendas, leads ou alcance mínimo"
+    ],
+    "depende_da_marca": [
+      "Entrega das artes dentro do calendário de produção",
+      "Equipe própria para a tenda ou estande"
+    ],
+    "observacoes": [
+      "Troca inteligente: camisas ou hidratação como permuta, com valor documentado",
+      "Projetos sob medida (naming da arena, ativação customizada) sob consulta",
+      "Exclusividade de categoria somente na cota Naming"
+    ]
+  },
+  "acervo": [
+    {
+      "id": "logo",
+      "arquivo": "acervo/logo.png",
+      "funcao": "lettering",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": false,
+      "rotulo": null,
+      "legenda": null,
+      "foco": null
+    },
+    {
+      "id": "c-asas-capa",
+      "arquivo": "acervo/tratado/c-asas-capa.jpg",
+      "funcao": "capa",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": true,
+      "rotulo": "Projeção ilustrativa",
+      "legenda": null,
+      "foco": "55% 45%",
+      "composta": true
+    },
+    {
+      "id": "f12",
+      "arquivo": "acervo/tratado/f12.jpg",
+      "funcao": "historico",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": "Atleta na orla de Ubatuba ao amanhecer",
+      "foco": "55% 22%"
+    },
+    {
+      "id": "f4",
+      "arquivo": "acervo/tratado/f4.jpg",
+      "funcao": "manifesto",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": "Atletas da 1ª edição",
+      "foco": "50% 40%"
+    },
+    {
+      "id": "c-arena",
+      "arquivo": "acervo/tratado/c-arena.jpg",
+      "funcao": "projecao",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": true,
+      "rotulo": "Projeção ilustrativa da arena 2027",
+      "legenda": "Arena na orla",
+      "foco": "50% 50%",
+      "composta": true
+    },
+    {
+      "id": "f5",
+      "arquivo": "acervo/tratado/f5.jpg",
+      "funcao": "publico",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": "Atletas da 1ª edição",
+      "foco": "50% 70%"
+    },
+    {
+      "id": "c-portico",
+      "arquivo": "acervo/tratado/c-portico.jpg",
+      "funcao": "ativo",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": true,
+      "rotulo": "Projeção ilustrativa",
+      "legenda": null,
+      "foco": "50% 45%",
+      "composta": true
+    },
+    {
+      "id": "c-tendas",
+      "arquivo": "acervo/tratado/c-tendas.jpg",
+      "funcao": "ativo",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": true,
+      "rotulo": "Projeção ilustrativa",
+      "legenda": null,
+      "foco": "40% 50%",
+      "composta": true
+    },
+    {
+      "id": "c-asas",
+      "arquivo": "acervo/tratado/c-asas.jpg",
+      "funcao": "ativo",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": true,
+      "rotulo": "Projeção ilustrativa",
+      "legenda": null,
+      "foco": "50% 70%",
+      "composta": true
+    },
+    {
+      "id": "c-doacao",
+      "arquivo": "acervo/tratado/c-doacao.jpg",
+      "funcao": "ativo",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": true,
+      "rotulo": "Projeção ilustrativa",
+      "legenda": null,
+      "foco": "50% 50%",
+      "composta": true
+    },
+    {
+      "id": "f7",
+      "arquivo": "acervo/tratado/f7.jpg",
+      "funcao": "ativo",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": "Pódio da 1ª edição",
+      "foco": "50% 30%"
+    },
+    {
+      "id": "f1",
+      "arquivo": "acervo/tratado/f1.jpg",
+      "funcao": "ativo",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": "Camisa da 1ª edição",
+      "foco": "50% 35%"
+    },
+    {
+      "id": "f8",
+      "arquivo": "acervo/tratado/f8.jpg",
+      "funcao": "historico",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": "Pódio e backdrop da 1ª edição",
+      "foco": "50% 20%"
+    },
+    {
+      "id": "f5c",
+      "arquivo": "acervo/tratado/f5.jpg",
+      "funcao": "cotas",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": null,
+      "foco": "50% 15%"
+    },
+    {
+      "id": "f2",
+      "arquivo": "acervo/tratado/f2.jpg",
+      "funcao": "cota",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": "Atletas com a medalha da 1ª edição",
+      "foco": "50% 30%"
+    },
+    {
+      "id": "f10",
+      "arquivo": "acervo/tratado/f10.jpg",
+      "funcao": "cota",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": "Atletas na orla",
+      "foco": "50% 30%"
+    },
+    {
+      "id": "f2b",
+      "arquivo": "acervo/tratado/f12.jpg",
+      "funcao": "contato",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": null,
+      "foco": "60% 25%"
+    },
+    {
+      "id": "1591018607803-0b6f5aeb3b6f",
+      "arquivo": "acervo/tratado/1591018607803-0b6f5aeb3b6f.jpg",
+      "funcao": "local",
+      "direito_uso": true,
+      "credito": "Foto: Agnaldo Andrella / Unsplash",
+      "edicao": null,
+      "gerada": false,
+      "rotulo": null,
+      "legenda": "Litoral de Ubatuba, Serra do Mar ao fundo",
+      "foco": "60% 50%",
+      "fonte": "unsplash",
+      "autor": "Agnaldo Andrella",
+      "url": "https://unsplash.com/photos/green-tree-on-white-sand-beach-during-daytime-O8O9L0cqCoI",
+      "licenca": "Unsplash License",
+      "url_licenca": "https://unsplash.com/license",
+      "id_foto": "1591018607803-0b6f5aeb3b6f",
+      "obtida_em": "2026-10-09"
+    },
+    {
+      "id": "patrocinadores-2026",
+      "arquivo": "acervo/patrocinadores-2026.png",
+      "funcao": "logo_patrocinador",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": "Patrocinadores e apoiadores da 1ª edição (grade do kit 2027 do cliente)",
+      "foco": null
+    }
+  ],
+  "marca": {
+    "logo_id": "logo",
+    "cor_primaria": "#D4A64A",
+    "cor_secundaria": "#F3E3B5",
+    "cor_fundo_escuro": "#0B0B0C",
+    "fonte_display": "Anton",
+    "fonte_corpo": "Barlow",
+    "direcao": "performance",
+    "assinatura": "lettering",
+    "estilo_cena": "early morning, low sun rising behind the coastal mountains on the left, warm golden side light, clear sky with light haze over the sea, 35mm lens f/4, eye level, palette of black, gold, sand and sea blue, cream tents with black headers, people in plain black or gold shirts"
+  },
+  "acao": {
+    "quem": "Filipe e Cristiane, Sprint Ubatuba Run",
+    "canal": "WhatsApp ou contato@uuhull.com",
+    "valido_ate": "2026-12-31",
+    "proximo_passo": "Reserve sua cota até 30/11/2026.",
+    "pessoas": [
+      {
+        "nome": "Filipe",
+        "telefone": "(11) 98012-0229"
+      },
+      {
+        "nome": "Cristiane",
+        "telefone": "(12) 98122-2033"
+      }
+    ],
+    "email": "contato@uuhull.com",
+    "convite": "Sua marca na orla de Ubatuba."
+  },
+  "pendencias": [
+    "Cotas são proposta da Motion, aguardando aprovação de Filipe e Cristiane.",
+    "Números de 2026 informados pelo organizador (kit 2027), sem documento de resultados.",
+    "Kg doados em 2026 não informados; página usa a meta de 1.200 kg."
+  ],
+  "objetos": [],
+  "historico_pagina": {
+    "titulo": "Quem já esteve||com a gente",
+    "frase": "21 empresas patrocinaram e apoiaram a 1ª edição da Sprint Ubatuba Run."
+  },
+  "territorio": {
+    "titulo": "Ubatuba atrai||a região",
+    "texto": "Mais da metade do público de 2026 veio de fora da cidade: corredores do Litoral Norte, do Vale do Paraíba e de Paraty, que viajam com família e amigos para correr na orla.",
+    "regioes": [
+      {
+        "nome": "Litoral Norte",
+        "cidades": [
+          "Caraguatatuba",
+          "São Sebastião",
+          "Ilhabela"
+        ]
+      },
+      {
+        "nome": "Vale do Paraíba",
+        "cidades": [
+          "São José dos Campos",
+          "Taubaté",
+          "Guaratinguetá"
+        ]
+      },
+      {
+        "nome": "Costa Verde",
+        "cidades": [
+          "Paraty"
+        ]
+      }
+    ]
+  },
+  "elementos": [
+    {
+      "formato": "png",
+      "kit_origem": "sprint-2027",
+      "gerado": true,
+      "rota": "codex-alfa",
+      "id": "penas-asa",
+      "papel": "pattern",
+      "tipo": "pattern",
+      "familia": "gravura-ouro",
+      "motivo": "penas",
+      "arquivo": "acervo/elementos/penas-asa-traco.png",
+      "exclusivo_cliente": "SPRINT UBATUBA RUN",
+      "paginas": [
+        "divisor"
+      ],
+      "escala_tile": 420,
+      "opacidade": 0.12,
+      "prompt": "acervo/elementos/penas-asa.prompt.txt"
+    },
+    {
+      "formato": "png",
+      "kit_origem": "sprint-2027",
+      "gerado": true,
+      "rota": "codex-alfa",
+      "id": "medalha-alada",
+      "papel": "heroi",
+      "tipo": "objeto",
+      "familia": "objeto-dourado",
+      "motivo": "medalha",
+      "aspecto": "quadrado",
+      "arquivo": "acervo/elementos/medalha-alada.png",
+      "exclusivo_cliente": "SPRINT UBATUBA RUN",
+      "prompt": "acervo/elementos/medalha-alada.prompt.txt"
+    },
+    {
+      "formato": "png",
+      "kit_origem": "sprint-2027",
+      "gerado": true,
+      "rota": "codex-alfa",
+      "id": "pena-dourada",
+      "papel": "heroi",
+      "tipo": "objeto",
+      "familia": "objeto-dourado",
+      "motivo": "penas",
+      "aspecto": "alto",
+      "arquivo": "acervo/elementos/pena-dourada.png",
+      "exclusivo_cliente": "SPRINT UBATUBA RUN",
+      "prompt": "acervo/elementos/pena-dourada.prompt.txt"
+    },
+    {
+      "formato": "png",
+      "kit_origem": "sprint-2027",
+      "gerado": true,
+      "rota": "codex-alfa",
+      "id": "tenis-usado",
+      "papel": "heroi",
+      "tipo": "objeto",
+      "familia": "objeto-dourado",
+      "motivo": "pista",
+      "aspecto": "largo",
+      "arquivo": "acervo/elementos/tenis-usado.png",
+      "exclusivo_cliente": null,
+      "prompt": "acervo/elementos/tenis-usado.prompt.txt"
+    },
+    {
+      "formato": "png",
+      "kit_origem": "sprint-2027",
+      "gerado": true,
+      "rota": "codex-alfa",
+      "id": "ondas-serra-adesivo",
+      "papel": "heroi",
+      "tipo": "adesivo",
+      "familia": "meio-tom-mar",
+      "motivo": "ondas-serra",
+      "aspecto": "largo",
+      "arquivo": "acervo/elementos/ondas-serra-adesivo.png",
+      "exclusivo_cliente": null,
+      "prompt": "acervo/elementos/ondas-serra-adesivo.prompt.txt"
+    },
+    {
+      "formato": "svg",
+      "papel": "heroi",
+      "kit_origem": "sprint-2027",
+      "gerado": true,
+      "rota": "codigo",
+      "exclusivo_cliente": null,
+      "id": "percurso-r1",
+      "tipo": "linha-percurso",
+      "familia": "gravura-ouro",
+      "motivo": "pista",
+      "aspecto": "largo",
+      "params": {
+        "curva": {
+          "tipo": "orla"
+        },
+        "distancia_km": 14,
+        "rotulos": false,
+        "largura": 900,
+        "altura": 420
+      },
+      "paginas": [
+        "territorio"
+      ]
+    },
+    {
+      "formato": "svg",
+      "papel": "heroi",
+      "kit_origem": "sprint-2027",
+      "gerado": true,
+      "rota": "codigo",
+      "exclusivo_cliente": null,
+      "id": "percurso-r2",
+      "tipo": "linha-percurso",
+      "familia": "meio-tom-mar",
+      "motivo": "pista",
+      "aspecto": "largo",
+      "params": {
+        "curva": {
+          "tipo": "orla"
+        },
+        "distancia_km": 14,
+        "rotulos": false,
+        "largura": 900,
+        "altura": 420
+      }
+    },
+    {
+      "formato": "svg",
+      "papel": "heroi",
+      "kit_origem": "sprint-2027",
+      "gerado": true,
+      "rota": "codigo",
+      "exclusivo_cliente": null,
+      "id": "percurso-r3",
+      "tipo": "linha-percurso",
+      "familia": "objeto-dourado",
+      "motivo": "pista",
+      "aspecto": "largo",
+      "params": {
+        "curva": {
+          "tipo": "orla"
+        },
+        "distancia_km": 14,
+        "rotulos": false,
+        "largura": 900,
+        "altura": 420
+      }
+    },
+    {
+      "formato": "svg",
+      "papel": "heroi",
+      "kit_origem": "sprint-2027",
+      "gerado": true,
+      "rota": "codigo",
+      "exclusivo_cliente": null,
+      "id": "numeral-02",
+      "tipo": "numeral",
+      "familia": "objeto-dourado",
+      "motivo": "pista",
+      "aspecto": "largo",
+      "params": {
+        "texto": "02",
+        "estilo": "fantasma",
+        "altura": 400
+      }
+    },
+    {
+      "id": "asa-gravura",
+      "papel": "heroi",
+      "tipo": "ilustracao",
+      "formato": "png",
+      "familia": "gravura-ouro",
+      "motivo": "asa",
+      "aspecto": "largo",
+      "arquivo": "acervo/elementos/asa-gravura.png",
+      "kit_origem": "sprint-2027",
+      "exclusivo_cliente": "SPRINT UBATUBA RUN",
+      "gerado": true,
+      "rota": "codex-alfa",
+      "prompt": "acervo/elementos/asa-gravura.prompt.txt",
+      "familia_revisada": {
+        "por": "Ugo",
+        "em": "2026-10-09",
+        "motivo": "gostou da asa preenchida na capa e mandou manter (medida: fotorreal, não traço)",
+        "sha256": "0aa5844c09ed40d0e0e1f20cef6ffc57e1886f951899a5e2ac80f6142953222c"
+      }
+    },
+    {
+      "id": "asas-par-gravura",
+      "papel": "heroi",
+      "tipo": "ilustracao",
+      "formato": "png",
+      "familia": "gravura-ouro",
+      "motivo": "asa",
+      "aspecto": "quadrado",
+      "arquivo": "acervo/elementos/asas-par-gravura.png",
+      "kit_origem": "sprint-2027",
+      "exclusivo_cliente": "SPRINT UBATUBA RUN",
+      "gerado": true,
+      "rota": "codex-alfa",
+      "prompt": "acervo/elementos/asas-par-gravura.prompt.txt"
+    },
+    {
+      "id": "pena-gravura",
+      "papel": "heroi",
+      "tipo": "ilustracao",
+      "formato": "png",
+      "familia": "gravura-ouro",
+      "motivo": "penas",
+      "aspecto": "alto",
+      "arquivo": "acervo/elementos/pena-gravura.png",
+      "kit_origem": "sprint-2027",
+      "exclusivo_cliente": "SPRINT UBATUBA RUN",
+      "gerado": true,
+      "rota": "codex-alfa",
+      "prompt": "acervo/elementos/pena-gravura.prompt.txt"
+    },
+    {
+      "id": "tenis-gravura",
+      "papel": "heroi",
+      "tipo": "ilustracao",
+      "formato": "png",
+      "familia": "gravura-ouro",
+      "motivo": "pista",
+      "aspecto": "largo",
+      "arquivo": "acervo/elementos/tenis-gravura.png",
+      "kit_origem": "sprint-2027",
+      "exclusivo_cliente": null,
+      "gerado": true,
+      "rota": "codex-alfa",
+      "prompt": "acervo/elementos/tenis-gravura.prompt.txt"
+    },
+    {
+      "id": "cronometro-gravura",
+      "papel": "heroi",
+      "tipo": "ilustracao",
+      "formato": "png",
+      "familia": "gravura-ouro",
+      "motivo": "pista",
+      "aspecto": "quadrado",
+      "arquivo": "acervo/elementos/cronometro-gravura.png",
+      "kit_origem": "sprint-2027",
+      "exclusivo_cliente": null,
+      "gerado": true,
+      "rota": "codex-alfa",
+      "prompt": "acervo/elementos/cronometro-gravura.prompt.txt"
+    },
+    {
+      "id": "folha-adesivo",
+      "papel": "heroi",
+      "tipo": "adesivo",
+      "formato": "png",
+      "familia": "meio-tom-mar",
+      "motivo": "folha-amendoeira",
+      "aspecto": "quadrado",
+      "arquivo": "acervo/elementos/folha-adesivo.png",
+      "kit_origem": "sprint-2027",
+      "exclusivo_cliente": null,
+      "gerado": true,
+      "rota": "codex-alfa",
+      "prompt": "acervo/elementos/folha-adesivo.prompt.txt"
+    },
+    {
+      "id": "onda-adesivo",
+      "papel": "heroi",
+      "tipo": "adesivo",
+      "formato": "png",
+      "familia": "meio-tom-mar",
+      "motivo": "ondas-serra",
+      "aspecto": "quadrado",
+      "arquivo": "acervo/elementos/onda-adesivo.png",
+      "kit_origem": "sprint-2027",
+      "exclusivo_cliente": null,
+      "gerado": true,
+      "rota": "codex-alfa",
+      "prompt": "acervo/elementos/onda-adesivo.prompt.txt"
+    },
+    {
+      "id": "amendoeira-adesivo",
+      "papel": "heroi",
+      "tipo": "adesivo",
+      "formato": "png",
+      "familia": "meio-tom-mar",
+      "motivo": "folha-amendoeira",
+      "aspecto": "alto",
+      "arquivo": "acervo/elementos/amendoeira-adesivo.png",
+      "kit_origem": "sprint-2027",
+      "exclusivo_cliente": null,
+      "gerado": true,
+      "rota": "codex-alfa",
+      "prompt": "acervo/elementos/amendoeira-adesivo.prompt.txt"
+    },
+    {
+      "id": "tenis-adesivo",
+      "papel": "heroi",
+      "tipo": "adesivo",
+      "formato": "png",
+      "familia": "meio-tom-mar",
+      "motivo": "pista",
+      "aspecto": "largo",
+      "arquivo": "acervo/elementos/tenis-adesivo.png",
+      "kit_origem": "sprint-2027",
+      "exclusivo_cliente": null,
+      "gerado": true,
+      "rota": "codex-alfa",
+      "prompt": "acervo/elementos/tenis-adesivo.prompt.txt"
+    },
+    {
+      "id": "cronometro-adesivo",
+      "papel": "heroi",
+      "tipo": "adesivo",
+      "formato": "png",
+      "familia": "meio-tom-mar",
+      "motivo": "pista",
+      "aspecto": "quadrado",
+      "arquivo": "acervo/elementos/cronometro-adesivo.png",
+      "kit_origem": "sprint-2027",
+      "exclusivo_cliente": null,
+      "gerado": true,
+      "rota": "codex-alfa",
+      "prompt": "acervo/elementos/cronometro-adesivo.prompt.txt",
+      "familia_revisada": {
+        "por": "Ugo",
+        "em": "2026-10-09",
+        "motivo": "aceito como está: combina com os adesivos no olho (medida: pouca retícula, lida como foto)",
+        "sha256": "3cf9c970d55227d7560a4d8cf9baa066892f7b3cab08f59aa0870e0054541e66"
+      }
+    },
+    {
+      "id": "ondas-meio-tom",
+      "papel": "pattern",
+      "tipo": "pattern",
+      "formato": "png",
+      "familia": "meio-tom-mar",
+      "motivo": "ondas-serra",
+      "aspecto": null,
+      "arquivo": "acervo/elementos/ondas-meio-tom.png",
+      "kit_origem": "sprint-2027",
+      "exclusivo_cliente": null,
+      "gerado": true,
+      "rota": "codex-branco+chroma",
+      "prompt": "acervo/elementos/ondas-meio-tom.prompt.txt",
+      "paginas": [
+        "divisor",
+        "historico_logos"
+      ],
+      "escala_tile": 480,
+      "opacidade": 0.16
+    },
+    {
+      "id": "asa-escultura",
+      "papel": "heroi",
+      "tipo": "objeto",
+      "formato": "png",
+      "familia": "objeto-dourado",
+      "motivo": "asa",
+      "aspecto": "largo",
+      "arquivo": "acervo/elementos/asa-escultura.png",
+      "kit_origem": "sprint-2027",
+      "exclusivo_cliente": "SPRINT UBATUBA RUN",
+      "gerado": true,
+      "rota": "codex-alfa",
+      "prompt": "acervo/elementos/asa-escultura.prompt.txt"
+    }
+  ],
+  "receitas": [
+    {
+      "id": "r1",
+      "nome": "Asa dourada",
+      "ideia": "a asa da Sprint como gesto: velocidade, ouro e preto, corte diagonal de quem passa voando",
+      "fontes": {
+        "display": "Kanit",
+        "peso_display": 800,
+        "titulo": null,
+        "corpo": "Outfit"
+      },
+      "paleta": {
+        "marca": "#D4A64A",
+        "escuro": "#0E0D08",
+        "papel": "#F6EEE2",
+        "texto": "#FFFFFF",
+        "apoio": "#2067AA"
+      },
+      "fundo": "escuro",
+      "mascara": "diagonal",
+      "pattern": "penas-asa",
+      "pattern_paginas": [
+        "divisor"
+      ],
+      "variantes": {
+        "capa": "c",
+        "manifesto": "a",
+        "publico": "a",
+        "ativo": [
+          "diagonal",
+          "topo",
+          "sangria",
+          "diagonal",
+          "painel",
+          "sangria"
+        ],
+        "divisor": "b",
+        "cota": "a",
+        "contato": "a"
+      }
+    },
+    {
+      "id": "r2",
+      "nome": "Orla de Ubatuba",
+      "ideia": "o lugar como protagonista: papel cor de areia, azul do mar, ondas da serra",
+      "fontes": {
+        "display": "Bricolage Grotesque",
+        "peso_display": 800,
+        "titulo": null,
+        "corpo": "Plus Jakarta Sans"
+      },
+      "paleta": {
+        "marca": "#2067AA",
+        "escuro": "#0C1B2A",
+        "papel": "#F4EADB",
+        "texto": "#FFFFFF",
+        "apoio": "#D09050"
+      },
+      "fundo": "papel",
+      "mascara": "arredondado",
+      "pattern": null,
+      "pattern_paginas": [],
+      "variantes": {
+        "capa": "a",
+        "manifesto": "b",
+        "publico": "b",
+        "ativo": [
+          "painel",
+          "topo",
+          "painel",
+          "sangria",
+          "painel",
+          "topo"
+        ],
+        "divisor": "c",
+        "cota": "c",
+        "contato": "b"
+      }
+    },
+    {
+      "id": "r3",
+      "nome": "Pódio",
+      "ideia": "a festa da chegada: serifa calorosa, fundo cor de nascer do sol, foto inteira",
+      "fontes": {
+        "display": "Fraunces",
+        "peso_display": 800,
+        "titulo": null,
+        "corpo": "Hanken Grotesk"
+      },
+      "paleta": {
+        "marca": "#D09050",
+        "escuro": "#281805",
+        "papel": "#FFF1E5",
+        "texto": "#FFFFFF",
+        "apoio": "#2067AA"
+      },
+      "fundo": "cor",
+      "mascara": "sangria",
+      "pattern": null,
+      "pattern_paginas": [],
+      "variantes": {
+        "capa": "a",
+        "manifesto": "b",
+        "publico": "a",
+        "ativo": [
+          "sangria",
+          "topo",
+          "sangria",
+          "painel",
+          "sangria",
+          "painel"
+        ],
+        "divisor": "a",
+        "cota": "b",
+        "contato": "b"
+      }
+    }
+  ],
+  "sistema_elementos": {
+    "motivos": [
+      {
+        "id": "asa",
+        "origem": "simbolo",
+        "descricao": "a asa do logo da Sprint: velocidade e a escultura photo point da arena",
+        "fonte": "acervo:logo"
+      },
+      {
+        "id": "penas",
+        "origem": "simbolo",
+        "descricao": "as penas da asa como módulo repetível"
+      },
+      {
+        "id": "pista",
+        "origem": "esporte",
+        "descricao": "tênis, cronômetro e linhas de percurso na orla"
+      },
+      {
+        "id": "medalha",
+        "origem": "esporte",
+        "descricao": "a medalha alada que o atleta leva para casa"
+      },
+      {
+        "id": "ondas-serra",
+        "origem": "territorio",
+        "descricao": "a Serra do Mar descendo até o mar de Ubatuba"
+      },
+      {
+        "id": "folha-amendoeira",
+        "origem": "territorio",
+        "descricao": "a amendoeira-da-praia da orla"
+      }
+    ],
+    "familias": [
+      {
+        "id": "gravura-ouro",
+        "meio": "traco",
+        "estilo": "fine gold line engraving, single weight 2px strokes, no fills, no shading, flat metallic gold ink on transparent background",
+        "paleta": [
+          "#D4A64A"
+        ],
+        "traco_px": 2,
+        "luz": null,
+        "ancora": "penas-asa",
+        "aprovada": {
+          "por": "Ugo (membros, 09/10/2026)",
+          "em": "2026-10-09",
+          "sha256_membros": [
+            "0aa5844c09ed40d0e0e1f20cef6ffc57e1886f951899a5e2ac80f6142953222c",
+            "0b701a42c0b1b76f13105da81c901741f5715101475efd35ddee64aaf921470a",
+            "5c64a231d214b7bbeb753d5acfb5cec1916716348e3310af646ec3c9187ff1e4",
+            "904ef5430dba4e205d0b92d84d61911764c581f915700e2c667b55a0087494a3",
+            "9819814c29865f504d36782ce0f9e232a00d079ae7921914b4adfdf3ed949c62",
+            "b52d12b21d013f60faaf8fdc6f0f7d4ba5a3c8d3e0b66d6e18c128bbb969e7e9"
+          ]
+        },
+        "traco_px_min": 0.7
+      },
+      {
+        "id": "meio-tom-mar",
+        "meio": "meio-tom",
+        "estilo": "two-tone halftone print, coarse dot screen, sea blue ink on transparent background, beach poster feel, die-cut sticker with a thin cream border",
+        "paleta": [
+          "#2067AA",
+          "#F4EADB"
+        ],
+        "traco_px": null,
+        "luz": null,
+        "ancora": "ondas-serra-adesivo",
+        "aprovada": {
+          "por": "Ugo (membros, 09/10/2026)",
+          "em": "2026-10-09",
+          "sha256_membros": [
+            "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451",
+            "1b399b11ad2c74cffb09ae3a9e5e3f9174e2ce31c125dd239ff5f9838b2240f7",
+            "3cf9c970d55227d7560a4d8cf9baa066892f7b3cab08f59aa0870e0054541e66",
+            "5be0eb19e206387b36f9787eb2a3ed45068183238c0e26662ca0b790fef77966",
+            "68b0498b2106c1bec58efe192ce7c41e74fe372739d85d4c7efafe7cb166124e",
+            "dc053764c623e5bae247bbfefbccbbd49d41489c0a20e82f9a3c4053c66a37f8",
+            "f28638983add40f91f06324cb69ad0488bf4c8103caca29228a2e9e3b3b7f65a"
+          ]
+        }
+      },
+      {
+        "id": "objeto-dourado",
+        "meio": "foto-objeto",
+        "estilo": "photoreal product photo, warm early morning side light from the left, soft contact shadow, gold and black palette, isolated on transparent background",
+        "paleta": [
+          "#D09050",
+          "#281805"
+        ],
+        "traco_px": null,
+        "luz": "esquerda",
+        "ancora": "medalha-alada",
+        "aprovada": {
+          "por": "Ugo (membros, 09/10/2026)",
+          "em": "2026-10-09",
+          "sha256_membros": [
+            "4d7fa9b7bdee04fd636be2e7abb1c19278b22391ce34907cc4f07f6fded756cf",
+            "a87dcd3c61bd06b6beea362788d27f7a8f39ae445945664e2c07f3e7d57b5741",
+            "b0a417688dad344133e1a39252477868d862adb938e907d543d556b93928f790",
+            "beba8f82453c06fc61295f8e01f777818c65e4f88a6c4451ccdbab738970e85f"
+          ]
+        }
+      }
+    ],
+    "constantes": [
+      {
+        "tipo": "grao"
+      },
+      {
+        "tipo": "microtexto",
+        "texto_de": "personalizado",
+        "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO",
+        "encaixe": "borda-base",
+        "exceto": [
+          "projecao"
+        ]
+      },
+      {
+        "tipo": "selo",
+        "texto_de": "personalizado",
+        "texto": "SPRINT UBATUBA RUN · 2ª EDIÇÃO · 2027",
+        "encaixe": null,
+        "exceto": [
+          "prova",
+          "cota",
+          "projecao"
+        ],
+        "params": {
+          "recorte": [
+            0,
+            0,
+            0.477,
+            1
+          ]
+        }
+      }
+    ],
+    "receitas": {
+      "r1": {
+        "familia": "gravura-ouro",
+        "motivos": [
+          "asa",
+          "penas",
+          "pista"
+        ],
+        "pattern": "penas-asa"
+      },
+      "r2": {
+        "familia": "meio-tom-mar",
+        "motivos": [
+          "ondas-serra",
+          "folha-amendoeira",
+          "pista"
+        ],
+        "pattern": "ondas-meio-tom"
+      },
+      "r3": {
+        "familia": "objeto-dourado",
+        "motivos": [
+          "medalha",
+          "asa",
+          "penas",
+          "pista"
+        ],
+        "pattern": null
+      }
+    },
+    "excecoes": {
+      "r1": {
+        "ativo": {
+          "heroi": null,
+          "porque": "página de ativo: a foto é o produto à venda (testeira, coluna, tenda, placa 'SEU LOGO AQUI'); herói por cima tapava o pórtico nas 3 receitas. O render ainda não protege painel composto dentro da foto"
+        }
+      },
+      "r2": {
+        "ativo": {
+          "heroi": null,
+          "porque": "página de ativo: a foto é o produto à venda (testeira, coluna, tenda, placa 'SEU LOGO AQUI'); herói por cima tapava o pórtico nas 3 receitas. O render ainda não protege painel composto dentro da foto"
+        }
+      },
+      "r3": {
+        "ativo": {
+          "heroi": null,
+          "porque": "página de ativo: a foto é o produto à venda (testeira, coluna, tenda, placa 'SEU LOGO AQUI'); herói por cima tapava o pórtico nas 3 receitas. O render ainda não protege painel composto dentro da foto"
+        }
+      }
+    }
+  }
+}

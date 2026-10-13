@@ -1,0 +1,52 @@
+{
+ "id": "asas-par-gravura",
+ "tipo": "ilustracao",
+ "familia": "gravura-ouro",
+ "motivo": "asa",
+ "estilo": "fine gold line engraving, single weight 2px strokes, no fills, no shading, flat metallic gold ink on transparent background",
+ "paleta": [
+  "#D4A64A"
+ ],
+ "paleta_nomes": [
+  "antique gold"
+ ],
+ "aspecto": "quadrado",
+ "luz": null,
+ "descricao": "a symmetrical pair of open wings joined at the center, a heraldic winged emblem without any shield or badge, drawn with fine parallel engraving lines",
+ "ref": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/penas-asa-traco.png",
+ "ref_sha256": "9819814c29865f504d36782ce0f9e232a00d079ae7921914b4adfdf3ed949c62",
+ "rota": "codex-alfa",
+ "arquivo": "asas-par-gravura.png",
+ "bruto": "asas-par-gravura.bruto.png",
+ "sha256": "5c64a231d214b7bbeb753d5acfb5cec1916716348e3310af646ec3c9187ff1e4",
+ "sha256_bruto": "5c64a231d214b7bbeb753d5acfb5cec1916716348e3310af646ec3c9187ff1e4",
+ "dims": [
+  1254,
+  1254
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.997,
+  "opaco": 0.207
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.997,
+  "opaco": 0.207
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/asas-par-gravura.prompt.txt",
+ "gerado": true,
+ "data": "2026-10-09T13:58:43-03:00",
+ "ocr_revisado": {
+  "lido": "SEE NEN",
+  "sha256": "5c64a231d214b7bbeb753d5acfb5cec1916716348e3310af646ec3c9187ff1e4",
+  "veredito": "sem texto",
+  "por": "Claude",
+  "em": "2026-10-09",
+  "evidencia": "imagem inteira ampliada (1162x818, recortada no alfa) sobre branco: só penas em hachura dourada; 'SEE NEN' veio das linhas paralelas das penas, nenhuma letra"
+ }
+}

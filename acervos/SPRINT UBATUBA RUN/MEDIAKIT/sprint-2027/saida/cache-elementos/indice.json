@@ -1,0 +1,600 @@
+{
+ "medalha-alada@981.png": {
+  "sha256": "b0a417688dad344133e1a39252477868d862adb938e907d543d556b93928f790",
+  "bbox": [
+   137,
+   124,
+   1118,
+   1057
+  ],
+  "largura": 981,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "c007e7edb0891f4054a8d142b62ab882080020f2f2fd81c33965338dbe8109a8"
+ },
+ "ondas-serra-adesivo@1120.png": {
+  "sha256": "1b399b11ad2c74cffb09ae3a9e5e3f9174e2ce31c125dd239ff5f9838b2240f7",
+  "bbox": [
+   10,
+   126,
+   1519,
+   898
+  ],
+  "largura": 1120,
+  "cor": null,
+  "sha256_uso": "10c84c16a91ecc69090b0d31c88060c131a13f1d205a8282df27e180c216dcd6"
+ },
+ "pena-dourada@1095.png": {
+  "sha256": "beba8f82453c06fc61295f8e01f777818c65e4f88a6c4451ccdbab738970e85f",
+  "bbox": [
+   94,
+   151,
+   1189,
+   1180
+  ],
+  "largura": 1095,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "14bad303c4cd4fa27e079750fd56d0a5019208094c16accfb7a9827502de1c4d"
+ },
+ "tenis-usado@848.png": {
+  "sha256": "a87dcd3c61bd06b6beea362788d27f7a8f39ae445945664e2c07f3e7d57b5741",
+  "bbox": [
+   33,
+   334,
+   1221,
+   910
+  ],
+  "largura": 848,
+  "cor": null,
+  "sha256_uso": "c4dab0605c722ddaf9d68a278c05c5ab0cb5ae715ff4ab9bc8b62057c104841b"
+ },
+ "pena-dourada@1040.png": {
+  "sha256": "beba8f82453c06fc61295f8e01f777818c65e4f88a6c4451ccdbab738970e85f",
+  "bbox": [
+   94,
+   151,
+   1189,
+   1180
+  ],
+  "largura": 1040,
+  "cor": null,
+  "sha256_uso": "aa064e747ad50a59ef74bcfe26ff073a262e65d59ccb232116c95cd98187ea1f"
+ },
+ "penas-asa@848.png": {
+  "sha256": "9819814c29865f504d36782ce0f9e232a00d079ae7921914b4adfdf3ed949c62",
+  "bbox": null,
+  "largura": 848,
+  "cor": "#D4A64A",
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "b110dbab564a12bdda5be125e2e1e2b50f22609cb05c057c41a1821eef33321c"
+ },
+ "ondas-serra-adesivo@992.png": {
+  "sha256": "1b399b11ad2c74cffb09ae3a9e5e3f9174e2ce31c125dd239ff5f9838b2240f7",
+  "bbox": [
+   10,
+   126,
+   1519,
+   898
+  ],
+  "largura": 992,
+  "cor": null,
+  "sha256_uso": "1c73f2dd7fc0a4fcd7164f630d3b1fe1953e76a4b6c3c2a3ff51b95fc7c8bf5d"
+ },
+ "tenis-usado@1120.png": {
+  "sha256": "a87dcd3c61bd06b6beea362788d27f7a8f39ae445945664e2c07f3e7d57b5741",
+  "bbox": [
+   33,
+   334,
+   1221,
+   910
+  ],
+  "largura": 1120,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "54805a8e49a05e01b8adfb2465e182424ac8539fe9ae25d239100307dfada36e"
+ },
+ "tenis-usado@992.png": {
+  "sha256": "a87dcd3c61bd06b6beea362788d27f7a8f39ae445945664e2c07f3e7d57b5741",
+  "bbox": [
+   33,
+   334,
+   1221,
+   910
+  ],
+  "largura": 992,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "5941a3bee21d9f123e5b80fea1ef3043635a544f704fd66170098a57b6443979"
+ },
+ "asa-gravura@1200.png": {
+  "sha256": "0aa5844c09ed40d0e0e1f20cef6ffc57e1886f951899a5e2ac80f6142953222c",
+  "bbox": [
+   46,
+   92,
+   1506,
+   944
+  ],
+  "largura": 1200,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "319a63e35361daad6e5343fd224d413f9cee3e149685df9280f30196a34ef955"
+ },
+ "asas-par-gravura@848.png": {
+  "sha256": "5c64a231d214b7bbeb753d5acfb5cec1916716348e3310af646ec3c9187ff1e4",
+  "bbox": [
+   47,
+   217,
+   1209,
+   1035
+  ],
+  "largura": 848,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "dc54241a0767402189cabcf75007ea7a7ccad34b615c14c2e0095e801674d335"
+ },
+ "cronometro-gravura@832.png": {
+  "sha256": "0b701a42c0b1b76f13105da81c901741f5715101475efd35ddee64aaf921470a",
+  "bbox": [
+   201,
+   36,
+   1052,
+   1201
+  ],
+  "largura": 832,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "4d1c43440fa18a73c7cde3192b2271f97ab2fdbc7349386e4b34582560250cca"
+ },
+ "pena-gravura@448.png": {
+  "sha256": "b52d12b21d013f60faaf8fdc6f0f7d4ba5a3c8d3e0b66d6e18c128bbb969e7e9",
+  "bbox": [
+   226,
+   45,
+   826,
+   1497
+  ],
+  "largura": 448,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "29206ee66121a82f69fd6aa3d394e70c3959a3971ef3230d64b29d690ca39893"
+ },
+ "tenis-gravura@1120.png": {
+  "sha256": "904ef5430dba4e205d0b92d84d61911764c581f915700e2c667b55a0087494a3",
+  "bbox": [
+   60,
+   170,
+   1477,
+   851
+  ],
+  "largura": 1120,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "7c1cd47b59db31454e31f7cbfacda89c4fe445a970712bf04bf34ed2f77f8a9d"
+ },
+ "asa-gravura@992.png": {
+  "sha256": "0aa5844c09ed40d0e0e1f20cef6ffc57e1886f951899a5e2ac80f6142953222c",
+  "bbox": [
+   46,
+   92,
+   1506,
+   944
+  ],
+  "largura": 992,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "cad9f45aa2ea70ba4bb07658336c4f76666683791963a05e2a444ee5af54f9a7"
+ },
+ "tenis-gravura@992.png": {
+  "sha256": "904ef5430dba4e205d0b92d84d61911764c581f915700e2c667b55a0087494a3",
+  "bbox": [
+   60,
+   170,
+   1477,
+   851
+  ],
+  "largura": 992,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "b5cdd3262c8266f47b3ebd93e36a58d6a528268bc324f562ae29a2ac46e8676a"
+ },
+ "amendoeira-adesivo@1019.png": {
+  "sha256": "f28638983add40f91f06324cb69ad0488bf4c8103caca29228a2e9e3b3b7f65a",
+  "bbox": [
+   0,
+   225,
+   1019,
+   1313
+  ],
+  "largura": 1019,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "486b82fa891ceaabbd9b63d46e8c926e797bfe9ef11681210f6d4c00df1368ed"
+ },
+ "cronometro-adesivo@640.png": {
+  "sha256": "3cf9c970d55227d7560a4d8cf9baa066892f7b3cab08f59aa0870e0054541e66",
+  "bbox": [
+   172,
+   24,
+   1081,
+   1221
+  ],
+  "largura": 640,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "dc9bd5566eebd3db121ca1af579b5eac11f1d6a94e7fbcf461a3bf137e977a19"
+ },
+ "folha-adesivo@1101.png": {
+  "sha256": "5be0eb19e206387b36f9787eb2a3ed45068183238c0e26662ca0b790fef77966",
+  "bbox": [
+   79,
+   62,
+   1180,
+   1201
+  ],
+  "largura": 1101,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "91d0d8929015ef70cbfc0014e8c03c70477aeabd5c8c73e0d542e91002d1b94c"
+ },
+ "onda-adesivo@1120.png": {
+  "sha256": "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451",
+  "bbox": [
+   52,
+   188,
+   1207,
+   1083
+  ],
+  "largura": 1120,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "a83e054232d7a5f3ea34c76e679f8fd21cc577ac03b507972103a45e1a5ce239"
+ },
+ "ondas-meio-tom@960.png": {
+  "sha256": "68b0498b2106c1bec58efe192ce7c41e74fe372739d85d4c7efafe7cb166124e",
+  "bbox": null,
+  "largura": 960,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "ee3b7fc49a71146f0a37c3687b7496d608c870fabd631bdc3b85a5798b71f88e"
+ },
+ "ondas-serra-adesivo@848.png": {
+  "sha256": "1b399b11ad2c74cffb09ae3a9e5e3f9174e2ce31c125dd239ff5f9838b2240f7",
+  "bbox": [
+   10,
+   126,
+   1519,
+   898
+  ],
+  "largura": 848,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "81dc66497b43378e82ba76863ad47a31e1201bf50358ac7893ab6b232222f29e"
+ },
+ "tenis-adesivo@1120.png": {
+  "sha256": "dc053764c623e5bae247bbfefbccbbd49d41489c0a20e82f9a3c4053c66a37f8",
+  "bbox": [
+   15,
+   123,
+   1522,
+   883
+  ],
+  "largura": 1120,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "b734e2301d7958b65b990fad2703b2933734b41e039dc0904a444f0f1faabee4"
+ },
+ "amendoeira-adesivo@976.png": {
+  "sha256": "f28638983add40f91f06324cb69ad0488bf4c8103caca29228a2e9e3b3b7f65a",
+  "bbox": [
+   0,
+   225,
+   1019,
+   1313
+  ],
+  "largura": 976,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "4530bb84a59edb2c6e37cabbaf4642e22a88ddf8b8bf8892539b3222a66c7814"
+ },
+ "tenis-adesivo@992.png": {
+  "sha256": "dc053764c623e5bae247bbfefbccbbd49d41489c0a20e82f9a3c4053c66a37f8",
+  "bbox": [
+   15,
+   123,
+   1522,
+   883
+  ],
+  "largura": 992,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "ba167bce88960fbf271963144c0ed0669845996a2719087083d4ebef18156444"
+ },
+ "asa-escultura@1120.png": {
+  "sha256": "4d7fa9b7bdee04fd636be2e7abb1c19278b22391ce34907cc4f07f6fded756cf",
+  "bbox": [
+   181,
+   26,
+   1510,
+   964
+  ],
+  "largura": 1120,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "a39679dd6c742f745ddaf939f6b6ca8db62c447dee09732c17b225f2b14a97c4"
+ },
+ "medalha-alada@848.png": {
+  "sha256": "b0a417688dad344133e1a39252477868d862adb938e907d543d556b93928f790",
+  "bbox": [
+   137,
+   124,
+   1118,
+   1057
+  ],
+  "largura": 848,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "0eb2c5df7e2675e16b688e7f0a0b9651f20a519771a9366c361750a8ec41a30e"
+ },
+ "asa-escultura@992.png": {
+  "sha256": "4d7fa9b7bdee04fd636be2e7abb1c19278b22391ce34907cc4f07f6fded756cf",
+  "bbox": [
+   181,
+   26,
+   1510,
+   964
+  ],
+  "largura": 992,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "18115218d2a66b6322c278a26d236dcb017447c3d0a33a99c89f820f256c941c"
+ },
+ "asas-par-gravura@1120.png": {
+  "sha256": "5c64a231d214b7bbeb753d5acfb5cec1916716348e3310af646ec3c9187ff1e4",
+  "bbox": [
+   47,
+   217,
+   1209,
+   1035
+  ],
+  "largura": 1120,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "b65d7e266cd2e10126a5026d77156fa677c23e6226a374b2b67d52aea0caeb22"
+ },
+ "cronometro-gravura@784.png": {
+  "sha256": "0b701a42c0b1b76f13105da81c901741f5715101475efd35ddee64aaf921470a",
+  "bbox": [
+   201,
+   36,
+   1052,
+   1201
+  ],
+  "largura": 784,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "bc759b663e8179ea95ce7e7f2de6589b8de956eadeffe1cc30990f41d5af4aa8"
+ },
+ "pena-gravura@352.png": {
+  "sha256": "b52d12b21d013f60faaf8fdc6f0f7d4ba5a3c8d3e0b66d6e18c128bbb969e7e9",
+  "bbox": [
+   226,
+   45,
+   826,
+   1497
+  ],
+  "largura": 352,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "aef39078fe5b7c30c921810c8f2342f1a24a63f08093624f3c2229d52f9c9018"
+ },
+ "pena-dourada@848.png": {
+  "sha256": "beba8f82453c06fc61295f8e01f777818c65e4f88a6c4451ccdbab738970e85f",
+  "bbox": [
+   94,
+   151,
+   1189,
+   1180
+  ],
+  "largura": 848,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "856ea9fa0a97ebdfabe3c4de62e0f5d73f0c8d32952ac2131402a04d4b52f082"
+ },
+ "tenis-gravura@848.png": {
+  "sha256": "904ef5430dba4e205d0b92d84d61911764c581f915700e2c667b55a0087494a3",
+  "bbox": [
+   60,
+   170,
+   1477,
+   851
+  ],
+  "largura": 848,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "3d486460698b6a9aa3702ae828dd3c684a4b5888e70686e82dd4a343514c81c9"
+ },
+ "tenis-gravura@800.png": {
+  "sha256": "904ef5430dba4e205d0b92d84d61911764c581f915700e2c667b55a0087494a3",
+  "bbox": [
+   60,
+   170,
+   1477,
+   851
+  ],
+  "largura": 800,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "0c8df2ae6e14c11255020cc06fdbf4af6c6be674811f0a1574c1720a961dda7e"
+ },
+ "pena-gravura@416.png": {
+  "sha256": "b52d12b21d013f60faaf8fdc6f0f7d4ba5a3c8d3e0b66d6e18c128bbb969e7e9",
+  "bbox": [
+   226,
+   45,
+   826,
+   1497
+  ],
+  "largura": 416,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "0511a39e069973ba42fbe65f79118bd63f76df4aaff5e734e2ade37f9144caec"
+ },
+ "asa-gravura@1120.png": {
+  "sha256": "0aa5844c09ed40d0e0e1f20cef6ffc57e1886f951899a5e2ac80f6142953222c",
+  "bbox": [
+   46,
+   92,
+   1506,
+   944
+  ],
+  "largura": 1120,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "9812ec1548bc49c909799938d046b2f8191fa26ebcebd94632400ff29937a55e"
+ },
+ "cronometro-gravura@288.png": {
+  "sha256": "0b701a42c0b1b76f13105da81c901741f5715101475efd35ddee64aaf921470a",
+  "bbox": [
+   201,
+   36,
+   1052,
+   1201
+  ],
+  "largura": 288,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "d4f114ab00a9f994f8f8dc05471eabdacec9f13efafe6030d91f6ea7f942e0f8"
+ },
+ "amendoeira-adesivo@912.png": {
+  "sha256": "f28638983add40f91f06324cb69ad0488bf4c8103caca29228a2e9e3b3b7f65a",
+  "bbox": [
+   0,
+   225,
+   1019,
+   1313
+  ],
+  "largura": 912,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "370a77fdbd60ee6e46bd8a79a1f66936aa901df2047c0400118615a9db3a4f11"
+ },
+ "cronometro-adesivo@909.png": {
+  "sha256": "3cf9c970d55227d7560a4d8cf9baa066892f7b3cab08f59aa0870e0054541e66",
+  "bbox": [
+   172,
+   24,
+   1081,
+   1221
+  ],
+  "largura": 909,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "88cc4e4767bca8104c879ddd1fb5310fb58fca6b87542ff459704ba81a26efd8"
+ },
+ "folha-adesivo@1024.png": {
+  "sha256": "5be0eb19e206387b36f9787eb2a3ed45068183238c0e26662ca0b790fef77966",
+  "bbox": [
+   79,
+   62,
+   1180,
+   1201
+  ],
+  "largura": 1024,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "9669e7992409b3a00101aa2bae2bd4aad1967024b6c5041e96c640fbbb81a55d"
+ },
+ "onda-adesivo@848.png": {
+  "sha256": "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451",
+  "bbox": [
+   52,
+   188,
+   1207,
+   1083
+  ],
+  "largura": 848,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "d0d6fc9f23c89f6e22aa65e5dfa97ad5c482d0b709973c4467e1a88f5dabd00b"
+ },
+ "tenis-adesivo@848.png": {
+  "sha256": "dc053764c623e5bae247bbfefbccbbd49d41489c0a20e82f9a3c4053c66a37f8",
+  "bbox": [
+   15,
+   123,
+   1522,
+   883
+  ],
+  "largura": 848,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "6fed8d3f8121081763bee2fcad08297dbdc1a440643b76c499c64b27a100da53"
+ },
+ "onda-adesivo@992.png": {
+  "sha256": "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451",
+  "bbox": [
+   52,
+   188,
+   1207,
+   1083
+  ],
+  "largura": 992,
+  "cor": null,
+  "cores": 32,
+  "versao": 2,
+  "sha256_uso": "5e2e4c0292a78bda0b498c7e588d0cbb92aab478d50c5b26b3aa958dd0ae96ef"
+ },
+ "pena-dourada@704.png": {
+  "sha256": "beba8f82453c06fc61295f8e01f777818c65e4f88a6c4451ccdbab738970e85f",
+  "bbox": [
+   94,
+   151,
+   1189,
+   1180
+  ],
+  "largura": 704,
+  "cor": null,
+  "cores": null,
+  "versao": 2,
+  "sha256_uso": "b113cb06a9241d2f1f058adae1792e66d6af39d2da409e73e549898a9c01d880"
+ }
+}

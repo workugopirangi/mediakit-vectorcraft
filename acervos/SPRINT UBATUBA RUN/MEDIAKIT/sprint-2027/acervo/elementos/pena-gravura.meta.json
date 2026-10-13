@@ -1,0 +1,52 @@
+{
+ "id": "pena-gravura",
+ "tipo": "ilustracao",
+ "familia": "gravura-ouro",
+ "motivo": "penas",
+ "estilo": "fine gold line engraving, single weight 2px strokes, no fills, no shading, flat metallic gold ink on transparent background",
+ "paleta": [
+  "#D4A64A"
+ ],
+ "paleta_nomes": [
+  "antique gold"
+ ],
+ "aspecto": "alto",
+ "luz": null,
+ "descricao": "one long flight feather, slightly curved, with fine hatching along the vanes, drawn with fine engraving lines",
+ "ref": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/penas-asa-traco.png",
+ "ref_sha256": "9819814c29865f504d36782ce0f9e232a00d079ae7921914b4adfdf3ed949c62",
+ "rota": "codex-alfa",
+ "arquivo": "pena-gravura.png",
+ "bruto": "pena-gravura.bruto.png",
+ "sha256": "b52d12b21d013f60faaf8fdc6f0f7d4ba5a3c8d3e0b66d6e18c128bbb969e7e9",
+ "sha256_bruto": "b52d12b21d013f60faaf8fdc6f0f7d4ba5a3c8d3e0b66d6e18c128bbb969e7e9",
+ "dims": [
+  1024,
+  1536
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 1.0,
+  "opaco": 0.23
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 1.0,
+  "opaco": 0.23
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/pena-gravura.prompt.txt",
+ "gerado": true,
+ "data": "2026-10-09T14:00:15-03:00",
+ "ocr_revisado": {
+  "lido": "NES SSN",
+  "sha256": "b52d12b21d013f60faaf8fdc6f0f7d4ba5a3c8d3e0b66d6e18c128bbb969e7e9",
+  "veredito": "sem texto",
+  "por": "Claude",
+  "em": "2026-10-09",
+  "evidencia": "recortes ampliados nas 2 caixas onde o leitor achou 'SSN' e 'NES': barbas da pena em traço fino, nenhuma letra"
+ }
+}

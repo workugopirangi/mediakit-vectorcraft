@@ -1,0 +1,46 @@
+{
+ "id": "asa-escultura",
+ "tipo": "objeto",
+ "familia": "objeto-dourado",
+ "motivo": "asa",
+ "estilo": "photoreal product photo, warm early morning side light from the left, soft contact shadow, gold and black palette, isolated on transparent background",
+ "paleta": [
+  "#D09050",
+  "#281805"
+ ],
+ "paleta_nomes": [
+  "light caramel",
+  "near-black brown"
+ ],
+ "aspecto": "largo",
+ "luz": "esquerda",
+ "descricao": "a polished gold sculpture of a wide outstretched stylized wing mounted on a low black stone base, the photo point of a running race",
+ "ref": null,
+ "ref_sha256": null,
+ "rota": "codex-alfa",
+ "arquivo": "asa-escultura.png",
+ "bruto": "asa-escultura.bruto.png",
+ "sha256": "4d7fa9b7bdee04fd636be2e7abb1c19278b22391ce34907cc4f07f6fded756cf",
+ "sha256_bruto": "4d7fa9b7bdee04fd636be2e7abb1c19278b22391ce34907cc4f07f6fded756cf",
+ "dims": [
+  1536,
+  1024
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.64,
+  "opaco": 0.378
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.64,
+  "opaco": 0.378
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/asa-escultura.prompt.txt",
+ "gerado": true,
+ "data": "2026-10-09T14:07:29-03:00"
+}

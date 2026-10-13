@@ -1,0 +1,20 @@
+Generate one image with one call of the image generator and save it exactly as /Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/AME CRIANCA/MEDIAKIT/copa-ame-v2/acervo/elementos/apito-cartoes.bruto.png (PNG).
+Use case: product-mockup
+Asset type: isolated object cut-out for a sports sponsorship media kit page (transparent PNG placed over layouts)
+Primary request: one single object: a referee metal whistle on a black lanyard with one yellow card and one red card slightly fanned out next to it, used, real materials, plain cards with no printing
+Subject: a referee metal whistle on a black lanyard with one yellow card and one red card slightly fanned out next to it, used, real materials, plain cards with no printing
+Theme: objetos do jogo (a visual theme, never written)
+Style/medium: photorealistic studio cutout of a single sports object, warm low side light from the left, soft contact shadow to the right, natural materials, no logos, no text, transparent background
+Composition/framing: Landscape 3:2 image, 1536x1024 pixels or larger. One single isolated object, whole object, centered, nothing cropped.
+Page placement: On the final 1920 x 1080 px page this object appears about 360 x 270 px (ratio 1.33:1, landscape), in the horizontal center of the page, around the middle. It must point and face toward the right, at the photo, so the eye travels from the object into the page. It overlaps the photo, so give it a clean, crisp silhouette that reads against a busy photo. Its role on the page: the focal point of the page.
+Lighting/mood: key light from the LEFT, gentle fill from the opposite side.
+Perspective: like the page photo (35 to 50mm lens, eye level), no extreme foreshortening; turned slightly toward the right.
+Color palette: lemon yellow as the dominant color, with black, white, mustard yellow; no other hues except the natural highlights and shadows of the materials.
+Background: fully transparent (PNG with a real alpha channel). If the generator cannot produce transparency, use this instead: a perfectly flat, uniform mid grey background (50% grey), no gradient, no vignette.
+Constraints: one object only; no people, no hands, no body parts, no floor, no table, no props, no scenery.
+Avoid: text of any kind, letters, numbers, digits, logos, brand marks, signatures, watermarks.
+The image must contain NO text of any kind: no letters, no numbers, no digits, no logos, no brand marks, no signatures, no watermarks, no engraved or printed characters.
+Do NOT post-process the image with code or any other tool: no background removal, no resizing, no recoloring, no cropping. Save exactly the file the image generator returned (we measure its transparency afterwards).
+Do NOT regenerate under any circumstance, not even if a check below fails (each generation spends the ChatGPT quota). Make exactly one image generation call and keep that single image.
+After saving, open the image and check: (1) no text, letter, number, digit or logo anywhere, including on the subject itself, (2) one object only, nothing cropped by the frame, (3) background is transparent or perfectly flat mid grey, (4) light comes from the left, (5) the object faces toward the right.
+In your final message, write one line exactly as TRANSPARENT: yes or TRANSPARENT: no (as returned by the generator), then list any defect found.

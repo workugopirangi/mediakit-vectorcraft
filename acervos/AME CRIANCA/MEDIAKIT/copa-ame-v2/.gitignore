@@ -1,0 +1,16 @@
+# Kit Copa AME v2 (acervo leve, 12/10/2026). O git guarda o que fecha o render: todo arquivo que o mediakit.json
+# cita, os prompts, as fichas dos elementos (*.meta.json), a referência e os manifestos. Fica fora o que se refaz ou
+# já tem cópia em outro lugar:
+#   saida/          a saída do render (render.py refaz a partir do mediakit.json)
+#   *.bruto.png     o arquivo cru do Codex; o PNG de uso, ao lado, entra
+#   fontes/*.ttf    iguais às de fontes-livres/ da skill, conferidas uma a uma por sha256 em fontes.lock.json
+#   acervo/c-*.png  as cenas cruas do Codex; as tratadas, em acervo/tratado/, entram
+# Tudo o que fica fora continua listado, com bytes e sha256, em acervo/MANIFESTO.json.
+saida/
+*.bruto.png
+fontes/*.ttf
+acervo/c-*.png
+# Registros de execução do Codex (não fecham o render):
+acervo/**/.claude/
+acervo/**/.codex*
+acervo/**/elementos.log

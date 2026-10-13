@@ -1,0 +1,338 @@
+{
+ "receita": "performance",
+ "formato": "vertical",
+ "largura": 1080,
+ "altura": 1920,
+ "planejador": "derivado do horizontal",
+ "grafismos": "grafismos.gerar",
+ "paginas": [
+  {
+   "n": 1,
+   "rotulo": "vertical:capa",
+   "tipo": "capa",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "medalha-alada",
+     "papel": "heroi",
+     "encaixe": "canto-sup-dir",
+     "camada": "frente",
+     "x": 488.0,
+     "y": 96.0,
+     "w": 490.5,
+     "h": 466.5,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/medalha-alada@981.png",
+     "sha256": "b0a417688dad344133e1a39252477868d862adb938e907d543d556b93928f790",
+     "arquivo": "acervo/elementos/medalha-alada.png",
+     "alfa_bbox": [
+      137,
+      124,
+      1118,
+      1057
+     ],
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 1598.6,
+     "w": 913.1,
+     "h": 43,
+     "texto": "Ubatuba muda de ritmo em março. Sua marc"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 1675,
+     "w": 294.9,
+     "h": 54,
+     "texto": "14 de março de 2027"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 1728.4,
+     "w": 125.6,
+     "h": 29,
+     "texto": "Ubatuba/SP"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 1804,
+     "w": 439.5,
+     "h": 43,
+     "texto": "Mídia Kit de Patrocínio 2027"
+    },
+    {
+     "classe": "logo",
+     "x": 96,
+     "y": 1295.6,
+     "w": 410.4,
+     "h": 260,
+     "texto": "lettering"
+    }
+   ],
+   "avisos": [
+    "vertical:capa: `constante-microtexto` (constante) não coube em nenhum encaixe (borda-base, borda-topo, selo-sup-esq, selo-sup-dir)",
+    "vertical:capa: `constante-selo` (constante) não coube em nenhum encaixe (borda-base, borda-topo, selo-sup-esq, selo-sup-dir)"
+   ]
+  },
+  {
+   "n": 2,
+   "rotulo": "vertical:numeros",
+   "tipo": "cota",
+   "elegivel_heroi": true,
+   "elementos": [],
+   "protegidos": [
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 100,
+     "w": 427.6,
+     "h": 96,
+     "texto": "Perfil de público"
+    },
+    {
+     "classe": "numero",
+     "x": 257.7,
+     "y": 356.6,
+     "w": 130.7,
+     "h": 96,
+     "texto": "1.300"
+    },
+    {
+     "classe": "micro",
+     "x": 201.8,
+     "y": 461.2,
+     "w": 242.4,
+     "h": 29,
+     "texto": "pessoas na arena"
+    },
+    {
+     "classe": "micro",
+     "x": 158.8,
+     "y": 499.4,
+     "w": 328.3,
+     "h": 19,
+     "texto": "Informado pelo organizador · 2026"
+    },
+    {
+     "classe": "numero",
+     "x": 757.6,
+     "y": 356.6,
+     "w": 94.9,
+     "h": 96,
+     "texto": "500"
+    },
+    {
+     "classe": "micro",
+     "x": 684.2,
+     "y": 461.2,
+     "w": 241.7,
+     "h": 29,
+     "texto": "atletas inscritos"
+    },
+    {
+     "classe": "micro",
+     "x": 640.8,
+     "y": 499.4,
+     "w": 328.3,
+     "h": 19,
+     "texto": "Informado pelo organizador · 2026"
+    },
+    {
+     "classe": "numero",
+     "x": 257.6,
+     "y": 714.4,
+     "w": 130.9,
+     "h": 96,
+     "texto": "52%"
+    },
+    {
+     "classe": "micro",
+     "x": 169.1,
+     "y": 819,
+     "w": 307.7,
+     "h": 29,
+     "texto": "do público era turista"
+    },
+    {
+     "classe": "micro",
+     "x": 158.8,
+     "y": 857.2,
+     "w": 328.3,
+     "h": 19,
+     "texto": "Informado pelo organizador · 2026"
+    },
+    {
+     "classe": "titulo",
+     "x": 123,
+     "y": 1235,
+     "w": 65.8,
+     "h": 54,
+     "texto": "Cota"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 1287,
+     "w": 188.1,
+     "h": 96,
+     "texto": "Naming"
+    },
+    {
+     "classe": "micro",
+     "x": 383.1,
+     "y": 1260,
+     "w": 163.9,
+     "h": 19,
+     "texto": "Investimento"
+    },
+    {
+     "classe": "preco",
+     "x": 383.1,
+     "y": 1271,
+     "w": 247.8,
+     "h": 96,
+     "texto": "R$ 30.000"
+    },
+    {
+     "classe": "micro",
+     "x": 383.1,
+     "y": 1359,
+     "w": 334.7,
+     "h": 19,
+     "texto": "1 cota · mais 3 a partir de R$ 1.500"
+    },
+    {
+     "classe": "corpo",
+     "x": 141,
+     "y": 1476,
+     "w": 411.2,
+     "h": 43,
+     "texto": "Direitos e contrapartidas:"
+    },
+    {
+     "classe": "corpo",
+     "x": 171,
+     "y": 1542,
+     "w": 570.4,
+     "h": 29,
+     "texto": "\"Sprint Ubatuba Run apresentada por\" em "
+    },
+    {
+     "classe": "corpo",
+     "x": 171,
+     "y": 1590.4,
+     "w": 418.6,
+     "h": 29,
+     "texto": "Testeira do pórtico de largada e chegada"
+    },
+    {
+     "classe": "corpo",
+     "x": 171,
+     "y": 1638.8,
+     "w": 480.1,
+     "h": 29,
+     "texto": "Backdrop do palco e do pódio (posição ce"
+    },
+    {
+     "classe": "corpo",
+     "x": 171,
+     "y": 1687.2,
+     "w": 245.9,
+     "h": 29,
+     "texto": "Manga da camisa oficial"
+    },
+    {
+     "classe": "corpo",
+     "x": 171,
+     "y": 1735.6,
+     "w": 277.9,
+     "h": 29,
+     "texto": "Estande 3 m × 3 m na arena"
+    }
+   ],
+   "avisos": [
+    "vertical:numeros: `constante-microtexto` (constante) não coube em nenhum encaixe (borda-base, borda-topo, selo-sup-dir, selo-inf-esq)"
+   ]
+  },
+  {
+   "n": 3,
+   "rotulo": "vertical:contato",
+   "tipo": "contato",
+   "elegivel_heroi": true,
+   "elementos": [],
+   "protegidos": [
+    {
+     "classe": "titulo",
+     "x": 526.3,
+     "y": 895.7,
+     "w": 75.4,
+     "h": 54,
+     "texto": "Filipe"
+    },
+    {
+     "classe": "titulo",
+     "x": 456,
+     "y": 936.1,
+     "w": 215.9,
+     "h": 54,
+     "texto": "(11) 98012-0229"
+    },
+    {
+     "classe": "titulo",
+     "x": 500.8,
+     "y": 1008.5,
+     "w": 126.4,
+     "h": 54,
+     "texto": "Cristiane"
+    },
+    {
+     "classe": "titulo",
+     "x": 453.1,
+     "y": 1048.9,
+     "w": 221.8,
+     "h": 54,
+     "texto": "(12) 98122-2033"
+    },
+    {
+     "classe": "corpo",
+     "x": 399.5,
+     "y": 1135.3,
+     "w": 328.9,
+     "h": 43,
+     "texto": "contato@uuhull.com"
+    },
+    {
+     "classe": "corpo",
+     "x": 390,
+     "y": 1289.7,
+     "w": 348.1,
+     "h": 29,
+     "texto": "Reserve sua cota até 30/11/2026."
+    },
+    {
+     "classe": "logo",
+     "x": 374.8,
+     "y": 565.7,
+     "w": 378.5,
+     "h": 220,
+     "texto": "logo"
+    }
+   ],
+   "avisos": [
+    "vertical:contato: `constante-microtexto` (constante) não coube em nenhum encaixe (borda-base, borda-topo, selo-inf-dir, selo-sup-esq)",
+    "vertical:contato: `constante-selo` (constante) não coube em nenhum encaixe (borda-base, borda-topo, selo-inf-dir, selo-sup-esq)"
+   ]
+  }
+ ],
+ "avisos": []
+}

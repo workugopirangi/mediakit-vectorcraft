@@ -1,0 +1,643 @@
+{
+  "schema_version": "mk-2.0",
+  "cliente": {
+    "nome": "A.M.E",
+    "razao_social": "Associação de Menores no Esporte",
+    "contato_patrocinio": {
+      "nome": "Nicollas",
+      "whatsapp": "(17) 99711-1195",
+      "email": null
+    }
+  },
+  "evento": {
+    "nome": "Copa AME",
+    "edicao_numero": 43,
+    "data_inicio": "2027",
+    "data_fim": null,
+    "horario": "Noites de semana e sábados de manhã",
+    "local": "",
+    "cidade": "São José do Rio Preto e região",
+    "uf": "SP",
+    "modalidades": [
+      "Futebol de campo",
+      "Mini campo",
+      "Futsal"
+    ],
+    "formato": "Campeonato semestral de futebol infantil e juvenil, sub-06 a sub-20",
+    "periodicidade": "semestral",
+    "proposito": "Dar a toda criança da região um campeonato de verdade para jogar.",
+    "diferenciais": [
+      "21 anos e 42 edições desde 2005",
+      "Quatro cidades-sede: Rio Preto, Araçatuba, Taquaritinga e Bauru",
+      "Transmissão ao vivo pela TV AME e app próprio de resultados"
+    ],
+    "primeira_edicao": false
+  },
+  "tese": {
+    "frase": "Todo semestre, 10 mil atletas em campo. E as famílias deles também.",
+    "o_que_a_marca_compra": "Presença semanal no campeonato que reúne cerca de 10 mil atletas e as famílias deles, no campo, na transmissão e no celular dos pais.",
+    "publico_encontra_marca": "Nos jogos de semana à noite e de sábado de manhã, na transmissão da TV AME, no app de resultados e na Noite das Estrelas."
+  },
+  "publico": {
+    "titulo": "Quem está|em campo",
+    "descricao": "Atletas de 6 a 20 anos, de escolinhas e clubes da região, e as famílias que levam, assistem e acompanham pelo app e pela transmissão.",
+    "genero": null,
+    "segmentos": [
+      {
+        "tipo": "inscritos",
+        "descricao": "Atletas por semestre, sub-06 a sub-20",
+        "prova_id": "p1"
+      },
+      {
+        "tipo": "acompanhantes",
+        "descricao": "Famílias que acompanham os jogos",
+        "prova_id": "p3"
+      },
+      {
+        "tipo": "digital",
+        "descricao": "Seguidores do @amecrianca",
+        "prova_id": "p5"
+      }
+    ]
+  },
+  "provas": [
+    {
+      "id": "p1",
+      "rotulo": "atletas por semestre",
+      "valor": 10000,
+      "unidade": null,
+      "edicao": "2026",
+      "tipo": "informado",
+      "fonte": "organizador",
+      "destaque": true,
+      "icone": "pessoas",
+      "nota": "Cerca de 10 mil, informado pela organização."
+    },
+    {
+      "id": "p2",
+      "rotulo": "equipes por semestre",
+      "valor": 750,
+      "unidade": null,
+      "edicao": "2026",
+      "tipo": "informado",
+      "fonte": "organizador",
+      "destaque": true,
+      "icone": "alvo",
+      "nota": "750 a 800 equipes, informado pela organização."
+    },
+    {
+      "id": "p3",
+      "rotulo": "famílias acompanhando",
+      "valor": 10000,
+      "unidade": null,
+      "edicao": "2026",
+      "tipo": "informado",
+      "fonte": "organizador",
+      "destaque": true,
+      "icone": "coracao",
+      "nota": "Cerca de 10 mil famílias por semestre, informado pela organização."
+    },
+    {
+      "id": "p4",
+      "rotulo": "visualizações no Instagram em 30 dias",
+      "valor": 204800,
+      "unidade": null,
+      "edicao": "23/ago a 21/set/2026",
+      "tipo": "realizado",
+      "fonte": "documento:referencia/print-redes-02.jpg",
+      "destaque": false,
+      "icone": "olho"
+    },
+    {
+      "id": "p5",
+      "rotulo": "seguidores no Instagram",
+      "valor": 20200,
+      "unidade": null,
+      "edicao": "out/2026",
+      "tipo": "realizado",
+      "fonte": "documento:referencia/print-redes-05.jpg",
+      "destaque": false,
+      "icone": "mais"
+    },
+    {
+      "id": "p6",
+      "rotulo": "inscritos na TV AME",
+      "valor": 5180,
+      "unidade": null,
+      "edicao": "out/2026",
+      "tipo": "realizado",
+      "fonte": "documento:referencia/print-redes-08.jpg",
+      "destaque": false,
+      "icone": "cursor"
+    },
+    {
+      "id": "p7",
+      "rotulo": "anos de campeonato",
+      "valor": 21,
+      "unidade": null,
+      "edicao": "2026",
+      "tipo": "informado",
+      "fonte": "organizador",
+      "destaque": false,
+      "icone": "seta"
+    },
+    {
+      "id": "p8",
+      "rotulo": "novos seguidores em 30 dias",
+      "valor": 559,
+      "unidade": null,
+      "edicao": "23/ago a 21/set/2026",
+      "tipo": "realizado",
+      "fonte": "documento:referencia/print-redes-02.jpg",
+      "destaque": false,
+      "icone": "pessoa"
+    }
+  ],
+  "historico": [
+    {
+      "edicao": "2026",
+      "data": "2026",
+      "local": "São José do Rio Preto, Araçatuba, Taquaritinga e Bauru",
+      "prova_ids": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "patrocinadores": [
+        {
+          "marca": "Laboratório Tajara",
+          "o_que_fez": "Naming da Copa AME Lab. Tajara, camisa da arbitragem, wind banners",
+          "pode_citar": true
+        },
+        {
+          "marca": "DSport Uniformes",
+          "o_que_fez": "Camisa da arbitragem, banner no app, backdrop",
+          "pode_citar": true
+        },
+        {
+          "marca": "Óticas Diniz",
+          "o_que_fez": "Camisas e backdrop",
+          "pode_citar": true
+        },
+        {
+          "marca": "Maple Bear",
+          "o_que_fez": "Naming da 4ª Copa AME Colégio Maple Bear",
+          "pode_citar": true
+        },
+        {
+          "marca": "Profi",
+          "o_que_fez": "Bola oficial e placas",
+          "pode_citar": true
+        },
+        {
+          "marca": "VAR Esporte",
+          "o_que_fez": "Transmissões",
+          "pode_citar": true
+        },
+        {
+          "marca": "Farmácia Princesa",
+          "o_que_fez": "Camisa da arbitragem, parceria Copa AME 2026",
+          "pode_citar": true
+        }
+      ]
+    }
+  ],
+  "inventario": [
+    {
+      "ativo": "Nome da competição",
+      "onde": "Tabela, app, transmissões, posts de resultado e Noite das Estrelas, o semestre inteiro",
+      "capacidade": "1 marca por competição",
+      "prova_possivel": "Tabela e posts com o nome",
+      "foto_id": null,
+      "grupo": "fisico",
+      "titulo": "Sua marca no||nome da copa",
+      "cena_id": "c-projecao",
+      "texto": "O patrocinador master dá nome à competição, como já fizeram a Copa AME Lab. Tajara e a Copa AME Colégio Maple Bear. O nome aparece na tabela, no app, nas transmissões e em cada post de resultado durante o semestre inteiro.",
+      "aplicacoes": [
+        "Tabela",
+        "App",
+        "Transmissão",
+        "Posts"
+      ],
+      "foco": "75% 50%"
+    },
+    {
+      "ativo": "Camisa da arbitragem e da organização",
+      "onde": "Todos os jogos, em toda foto oficial antes do apito",
+      "capacidade": "Peito e manga",
+      "prova_possivel": "Fotos oficiais de equipe",
+      "foto_id": null,
+      "grupo": "fisico",
+      "titulo": "Sua marca na||arbitragem",
+      "cena_id": "c-arbitragem",
+      "texto": "Árbitros e organização estão em todos os jogos do semestre e em toda foto oficial de equipe antes do apito. A camisa leva a marca para cada partida, no campo, no mini campo e no futsal.",
+      "aplicacoes": [
+        "Peito",
+        "Manga",
+        "Organização",
+        "Mascote"
+      ]
+    },
+    {
+      "ativo": "Transmissão ao vivo TV AME",
+      "onde": "YouTube @TVAME2025, jogos ao vivo e replay",
+      "capacidade": "Vinheta, tela e locução",
+      "prova_possivel": "Visualizações de cada transmissão",
+      "foto_id": null,
+      "grupo": "digital",
+      "titulo": "Sua marca na||transmissão ao vivo",
+      "cena_id": "c-transmissao",
+      "layout": "topo",
+      "mini_id": "c-projecao-limpa",
+      "texto": "A TV AME transmite os jogos ao vivo no YouTube, para mais de 5 mil inscritos. A marca entra com vídeo, som e telefone na tela e no intervalo, e continua no vídeo gravado depois do jogo.",
+      "aplicacoes": [
+        "Vinheta",
+        "Tela",
+        "Locução",
+        "Replay"
+      ]
+    },
+    {
+      "ativo": "Beira do campo",
+      "onde": "Sábados de jogo, na linha do campo e na entrada",
+      "capacidade": "Placas, faixas, wind banners e backdrop",
+      "prova_possivel": "Fotos dos jogos",
+      "foto_id": null,
+      "grupo": "fisico",
+      "titulo": "Sua marca na||beira do campo",
+      "cena_id": "c-beira",
+      "texto": "Aos sábados, placas, faixas e wind banners ficam na linha do campo, onde pais e mães assistem de pé ao lado dos filhos. É o ponto com mais tempo de exposição do dia de jogo e aparece nas fotos de cada partida.",
+      "aplicacoes": [
+        "Placas",
+        "Faixas",
+        "Wind banner",
+        "Backdrop"
+      ]
+    },
+    {
+      "ativo": "App da A.M.E",
+      "onde": "Janela fixa com link para o WhatsApp da marca",
+      "capacidade": "1 janela fixa",
+      "prova_possivel": "Print do app",
+      "foto_id": null,
+      "grupo": "digital"
+    },
+    {
+      "ativo": "Panfleto pelos fotógrafos",
+      "onde": "Verso do panfleto com QR do site de fotos",
+      "capacidade": "1 marca por panfleto",
+      "prova_possivel": "Panfleto impresso",
+      "foto_id": null,
+      "grupo": "fisico"
+    },
+    {
+      "ativo": "Redes do @amecrianca",
+      "onde": "Collabs, ações e posts no perfil oficial",
+      "capacidade": "Por cota",
+      "prova_possivel": "Insights de cada post",
+      "foto_id": null,
+      "grupo": "digital"
+    },
+    {
+      "ativo": "Noite das Estrelas",
+      "onde": "Festa de premiação do fim de cada campeonato",
+      "capacidade": "Backdrop e anúncio no palco",
+      "prova_possivel": "Fotos da festa",
+      "foto_id": null,
+      "grupo": "experiencia"
+    },
+    {
+      "ativo": "Mascote oficial",
+      "onde": "Entrada dos times, finais e redes, com a camisa do patrocinador",
+      "capacidade": "Frente da camisa",
+      "prova_possivel": "Fotos e vídeos do mascote",
+      "foto_id": null,
+      "grupo": "experiencia"
+    },
+    {
+      "ativo": "Finais e brindes",
+      "onde": "Anúncio nas finais e brindes em dia de jogo",
+      "capacidade": "Por cota",
+      "prova_possivel": "Fotos e posts",
+      "foto_id": null,
+      "grupo": "experiencia"
+    }
+  ],
+  "cotas": [
+    {
+      "nome": "Master",
+      "preco": 18000,
+      "quantidade": 1,
+      "principal": true,
+      "territorio": "Nome da copa · por semestre",
+      "frase": "Seu nome na copa que a região acompanha, do primeiro jogo à Noite das Estrelas.",
+      "entregaveis": [
+        "Nome na competição: Copa AME + sua marca, em tabela, app e posts",
+        "Peito da camisa da arbitragem e da organização",
+        "Frente da camisa do mascote oficial",
+        "Vídeo de 15 s em todas as transmissões da TV AME",
+        "Janela fixa no app com link direto para o seu WhatsApp",
+        "4 placas na beira do campo e 2 wind banners aos sábados",
+        "Verso do panfleto do site de fotos",
+        "4 collabs no @amecrianca e anúncio nas finais e na Noite das Estrelas"
+      ],
+      "exclusividade": {
+        "categoria": "categoria",
+        "ate": "o fim do semestre"
+      },
+      "aprovada_por": "cliente",
+      "aprovada_em": "2026-10-08",
+      "cena_id": "c-projecao-limpa",
+      "icones": [
+        "camisa",
+        "megafone",
+        "balao"
+      ]
+    },
+    {
+      "nome": "Oficial",
+      "preco": 6000,
+      "quantidade": 4,
+      "principal": false,
+      "territorio": "Camisa da arbitragem · por semestre",
+      "frase": "Sua marca em campo e na transmissão, toda semana, perto de quem decide a compra da casa.",
+      "entregaveis": [
+        "Manga da camisa da arbitragem",
+        "2 placas na beira do campo aos sábados",
+        "Logo no canto da tela em todas as transmissões",
+        "Logo rotativo no rodapé do app da A.M.E",
+        "2 collabs no feed do @amecrianca",
+        "Logo no backdrop da Noite das Estrelas"
+      ],
+      "exclusividade": null,
+      "aprovada_por": "cliente",
+      "aprovada_em": "2026-10-08",
+      "cena_id": "c-arbitragem",
+      "icones": [
+        "camisa",
+        "megafone"
+      ]
+    },
+    {
+      "nome": "Apoio",
+      "preco": 2400,
+      "quantidade": 8,
+      "principal": false,
+      "territorio": "Beira do campo · por semestre ou permuta",
+      "frase": "Presença em campo e no backdrop, com troca em produto ou serviço quando fizer sentido.",
+      "entregaveis": [
+        "1 placa na beira do campo em rodízio aos sábados",
+        "Logo no backdrop Copa AME",
+        "1 post coletivo de apoiadores no @amecrianca",
+        "Brinde da marca em dia de jogo"
+      ],
+      "exclusividade": null,
+      "aprovada_por": "cliente",
+      "aprovada_em": "2026-10-08",
+      "cena_id": "c-beira",
+      "icones": [
+        "megafone",
+        "tenis"
+      ]
+    }
+  ],
+  "condicoes": {
+    "nao_incluso": [
+      "Produção das placas, faixas e wind banners da marca",
+      "Promessa de vendas, leads ou alcance mínimo",
+      "Uso de imagem dos atletas pela marca"
+    ],
+    "depende_da_marca": [
+      "Artes e vídeo entregues 15 dias antes do início do semestre",
+      "Instalação das placas no dia combinado com a organização"
+    ],
+    "observacoes": [
+      "Valores por semestre, proposta para a temporada 2027",
+      "Exclusividade de categoria somente na cota Master",
+      "Cota Apoio aceita permuta em produto ou serviço"
+    ]
+  },
+  "acervo": [
+    {
+      "id": "logo",
+      "arquivo": "acervo/logo-ame-320-x3.png",
+      "funcao": "lettering",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": false,
+      "rotulo": null,
+      "legenda": null,
+      "foco": null
+    },
+    {
+      "id": "c-capa",
+      "arquivo": "acervo/tratado/c-capa-composta.jpg",
+      "funcao": "capa",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": "2026",
+      "gerada": false,
+      "composta": true,
+      "rotulo": null,
+      "legenda": "Atleta da A.M.E (foto real) sobre fundo de campo",
+      "foco": "50% 50%"
+    },
+    {
+      "id": "c-paifilho",
+      "arquivo": "acervo/tratado/c-paifilho.jpg",
+      "funcao": "manifesto",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": true,
+      "rotulo": "Imagem ilustrativa",
+      "legenda": "Pai e filho a caminho do campo",
+      "foco": "60% 50%"
+    },
+    {
+      "id": "c-projecao",
+      "arquivo": "acervo/tratado/c-projecao-composta.jpg",
+      "funcao": "projecao",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": true,
+      "composta": true,
+      "rotulo": "Projeção ilustrativa",
+      "legenda": null,
+      "foco": "50% 50%"
+    },
+    {
+      "id": "c-projecao-limpa",
+      "arquivo": "acervo/tratado/c-projecao.jpg",
+      "funcao": "cota",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": true,
+      "rotulo": null,
+      "legenda": "O campeonato inteiro",
+      "foco": "70% 50%"
+    },
+    {
+      "id": "f-equipe",
+      "arquivo": "acervo/tratado/real-equipe-sub.jpg",
+      "funcao": "publico",
+      "direito_uso": true,
+      "credito": "Foto: acervo A.M.E",
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": "Equipe da Copa AME",
+      "foco": "50% 40%"
+    },
+    {
+      "id": "c-arbitragem",
+      "arquivo": "acervo/tratado/c-arbitragem-composta.jpg",
+      "funcao": "ativo",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": true,
+      "composta": true,
+      "rotulo": "Projeção ilustrativa",
+      "legenda": null,
+      "foco": "70% 50%"
+    },
+    {
+      "id": "c-transmissao",
+      "arquivo": "acervo/tratado/c-transmissao-composta.jpg",
+      "funcao": "ativo",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": true,
+      "composta": true,
+      "rotulo": "Projeção ilustrativa",
+      "legenda": null,
+      "foco": "50% 60%"
+    },
+    {
+      "id": "c-beira",
+      "arquivo": "acervo/tratado/c-beira-composta.jpg",
+      "funcao": "ativo",
+      "direito_uso": true,
+      "credito": null,
+      "edicao": null,
+      "gerada": true,
+      "composta": true,
+      "rotulo": "Projeção ilustrativa",
+      "legenda": null,
+      "foco": "70% 50%"
+    },
+    {
+      "id": "f-arbitragem",
+      "arquivo": "acervo/tratado/real-arbitragem-entrada.jpg",
+      "funcao": "cotas",
+      "direito_uso": true,
+      "credito": "Foto: acervo A.M.E",
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": "Arbitragem e atletas antes do jogo",
+      "foco": "50% 45%"
+    },
+    {
+      "id": "f-contato",
+      "arquivo": "acervo/tratado/real-equipe-sub.jpg",
+      "funcao": "contato",
+      "direito_uso": true,
+      "credito": "Foto: acervo A.M.E",
+      "edicao": "2026",
+      "gerada": false,
+      "rotulo": null,
+      "legenda": null,
+      "foco": "50% 35%"
+    }
+  ],
+  "marca": {
+    "logo_id": "logo",
+    "cor_primaria": "#F5D80A",
+    "cor_secundaria": "#FFF6B8",
+    "cor_fundo_escuro": "#0B0B0C",
+    "fonte_display": null,
+    "fonte_corpo": null,
+    "direcao": "causa",
+    "assinatura": "fio",
+    "estilo_cena": "Saturday morning in the interior of São Paulo state, warm low sun from the left at 20 degrees, 35 to 50mm lens, eye level, light haze, red earth and tall trees, black and yellow kits, real photograph, no text"
+  },
+  "acao": {
+    "quem": "Júnior e Nicollas, A.M.E",
+    "canal": "WhatsApp (17) 99147-2050 ou (17) 99711-1195",
+    "valido_ate": "2026-12-31",
+    "proximo_passo": "Fale com a A.M.E e reserve a sua cota de 2027.",
+    "pessoas": [
+      {
+        "nome": "Júnior",
+        "telefone": "(17) 99147-2050"
+      },
+      {
+        "nome": "Nicollas",
+        "telefone": "(17) 99711-1195"
+      }
+    ],
+    "email": "@amecrianca"
+  },
+  "pendencias": [
+    "Preços e quantidades das cotas são proposta da Motion; a A.M.E aprova ou ajusta antes do envio às marcas.",
+    "Números de público são informados pela organização, sem documento.",
+    "Logo da A.M.E só existe em raster pequeno (do kit antigo); falta o vetor.",
+    "Fontes: RocGrotesk não está disponível neste ambiente; o kit usa Inter Display (OFL). Trocar quando os arquivos estiverem no vault.",
+    "E-mail de contato não informado; o rodapé do contato usa o Instagram.",
+    "Cenas de projeção, arbitragem, transmissão, beira do campo e pai e filho são geradas por IA (Higgsfield, plano B sem Codex) e rotuladas como projeção ilustrativa.",
+    "Data de início da temporada não informada; a capa mostra só o ano."
+  ],
+  "manifesto": {
+    "titulo": "Um pai criou|um campeonato",
+    "subtitulo": "para o filho ter onde jogar.",
+    "frase": "Em 2005, Walter Neves viu o filho Nicollas começar no futebol e criou a <b>A.M.E</b>. Vinte e um anos depois, é onde a região inteira aprende a jogar."
+  },
+  "prova": {
+    "titulo": "Alcance|digital",
+    "nota": "Dados do Instagram @amecrianca e do canal TV AME, prints de outubro de 2026.",
+    "rodape": "Instagram: painel profissional, 23/ago a 21/set/2026. YouTube: página do canal, out/2026.",
+    "graficos": [
+      {
+        "titulo": "Visualizações no Instagram em 30 dias",
+        "series": [
+          {
+            "rotulo": "Jan/2026",
+            "valor": 113400
+          },
+          {
+            "rotulo": "Set/2026",
+            "valor": 204800
+          }
+        ]
+      },
+      {
+        "titulo": "Inscritos na TV AME",
+        "series": [
+          {
+            "rotulo": "Jan/2026",
+            "valor": 2430
+          },
+          {
+            "rotulo": "Out/2026",
+            "valor": 5180
+          }
+        ]
+      }
+    ]
+  },
+  "divisor_inventario": {
+    "titulo": "Onde a família inteira||vê a sua marca.",
+    "subtitulo": "Os pontos da A.M.E onde a marca entra em campo:"
+  },
+  "cotas_intro": "A <b>A.M.E</b> abre três cotas para 2027, cada uma presa a um lugar real do campeonato: o <b>nome da copa</b>, a <b>camisa da arbitragem</b> e a <b>beira do campo</b>.",
+  "objetos": []
+}

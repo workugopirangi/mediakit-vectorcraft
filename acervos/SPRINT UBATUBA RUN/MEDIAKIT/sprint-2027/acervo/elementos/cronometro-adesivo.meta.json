@@ -1,0 +1,46 @@
+{
+ "id": "cronometro-adesivo",
+ "tipo": "adesivo",
+ "familia": "meio-tom-mar",
+ "motivo": "pista",
+ "estilo": "two-tone halftone print, coarse dot screen, sea blue ink on transparent background, beach poster feel, die-cut sticker with a thin cream border",
+ "paleta": [
+  "#2067AA",
+  "#F4EADB"
+ ],
+ "paleta_nomes": [
+  "sea blue",
+  "off-white"
+ ],
+ "aspecto": "quadrado",
+ "luz": null,
+ "descricao": "a classic stopwatch, the dial with tick marks only and no numerals",
+ "ref": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/ondas-serra-adesivo.png",
+ "ref_sha256": "1b399b11ad2c74cffb09ae3a9e5e3f9174e2ce31c125dd239ff5f9838b2240f7",
+ "rota": "codex-alfa",
+ "arquivo": "cronometro-adesivo.png",
+ "bruto": "cronometro-adesivo.bruto.png",
+ "sha256": "3cf9c970d55227d7560a4d8cf9baa066892f7b3cab08f59aa0870e0054541e66",
+ "sha256_bruto": "3cf9c970d55227d7560a4d8cf9baa066892f7b3cab08f59aa0870e0054541e66",
+ "dims": [
+  1254,
+  1254
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.535,
+  "opaco": 0.479
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.535,
+  "opaco": 0.479
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/cronometro-adesivo.prompt.txt",
+ "gerado": true,
+ "data": "2026-10-09T14:06:09-03:00"
+}

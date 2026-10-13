@@ -1,0 +1,51 @@
+{
+ "id": "jogo-pattern",
+ "tipo": "pattern",
+ "familia": "objeto-sabado",
+ "motivo": "objetos-do-jogo",
+ "estilo": "photorealistic flat lay seen from directly above, warm low side light from the left, soft contact shadows to the right, natural materials, no logos, no text, transparent background",
+ "paleta": [
+  "#F5D80A",
+  "#0B0B0C",
+  "#FFFFFF",
+  "#C9A227"
+ ],
+ "paleta_nomes": [
+  "lemon yellow",
+  "black",
+  "white",
+  "mustard yellow"
+ ],
+ "aspecto": "quadrado",
+ "luz": "esquerda",
+ "descricao": "a seamless repeating flat lay of small football objects seen from directly above, evenly scattered with generous space between them: referee whistles on short black lanyards, plain yellow referee cards, small black and white footballs and small gold five-point stars; every object complete inside the tile, none touching the tile edges",
+ "ref": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/AME CRIANCA/MEDIAKIT/copa-ame-v2/acervo/elementos/bola-jogo.png",
+ "ref_sha256": "a9c91c132d5553186934e4ff654d28cc7b78014851c29ac6458800cc900e52c8",
+ "rota": "codex-alfa",
+ "arquivo": "jogo-pattern.png",
+ "bruto": "jogo-pattern.bruto.png",
+ "sha256": "a7017b20eda5c0bf3ef912992974fe430ec172028d3f5584f4b17b0cfca04b25",
+ "sha256_bruto": "a7017b20eda5c0bf3ef912992974fe430ec172028d3f5584f4b17b0cfca04b25",
+ "dims": [
+  1254,
+  1254
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.687,
+  "opaco": 0.449
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.687,
+  "opaco": 0.449
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/AME CRIANCA/MEDIAKIT/copa-ame-v2/acervo/elementos/jogo-pattern.prompt.txt",
+ "gerado": true,
+ "composicao": null,
+ "data": "2026-10-09T19:11:53-03:00"
+}

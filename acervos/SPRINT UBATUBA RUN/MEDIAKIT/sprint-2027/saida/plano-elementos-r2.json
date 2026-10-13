@@ -1,0 +1,3126 @@
+{
+ "receita": "r2",
+ "formato": "horizontal",
+ "largura": 1920,
+ "altura": 1080,
+ "planejador": "plano_elementos.planejar",
+ "grafismos": "grafismos.gerar",
+ "paginas": [
+  {
+   "n": 1,
+   "rotulo": "capa:a",
+   "tipo": "capa",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 1016.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-inf-dir",
+     "camada": "frente",
+     "x": 1672.0,
+     "y": 752.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    },
+    {
+     "id": "amendoeira-adesivo",
+     "papel": "heroi",
+     "encaixe": "canto-sup-dir",
+     "camada": "frente",
+     "x": 1368.0,
+     "y": 152.0,
+     "w": 450.2,
+     "h": 480.7,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/amendoeira-adesivo@912.png",
+     "sha256": "f28638983add40f91f06324cb69ad0488bf4c8103caca29228a2e9e3b3b7f65a",
+     "arquivo": "acervo/elementos/amendoeira-adesivo.png",
+     "alfa_bbox": [
+      0,
+      225,
+      1019,
+      1313
+     ],
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "corpo",
+     "x": 400,
+     "y": 727.6,
+     "w": 794.5,
+     "h": 45,
+     "texto": "Ubatuba muda de ritmo em março. Sua marc"
+    },
+    {
+     "classe": "corpo",
+     "x": 400,
+     "y": 774.4,
+     "w": 204.3,
+     "h": 45,
+     "texto": "Ubatuba muda de ritmo em março. Sua marc"
+    },
+    {
+     "classe": "titulo",
+     "x": 400,
+     "y": 855.2,
+     "w": 341.3,
+     "h": 43,
+     "texto": "14 de março de 2027"
+    },
+    {
+     "classe": "corpo",
+     "x": 400,
+     "y": 903.6,
+     "w": 210.5,
+     "h": 45,
+     "texto": "Ubatuba/SP"
+    },
+    {
+     "classe": "corpo",
+     "x": 1550.5,
+     "y": 918,
+     "w": 201.9,
+     "h": 45,
+     "texto": "Mídia Kit de"
+    },
+    {
+     "classe": "corpo",
+     "x": 1550.5,
+     "y": 963,
+     "w": 273.5,
+     "h": 45,
+     "texto": "Patrocínio 2027"
+    },
+    {
+     "classe": "etiqueta",
+     "x": 1561.1,
+     "y": 96,
+     "w": 262.9,
+     "h": 39,
+     "texto": "PROJEÇÃO ILUSTRATIVA"
+    },
+    {
+     "classe": "logo",
+     "x": 400,
+     "y": 299.6,
+     "w": 729.6,
+     "h": 380,
+     "texto": "lettering"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 2,
+   "rotulo": "manifesto:b",
+   "tipo": "manifesto",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-inf-dir",
+     "camada": "frente",
+     "x": 1672.0,
+     "y": 824.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    },
+    {
+     "id": "cronometro-adesivo",
+     "papel": "heroi",
+     "encaixe": "canto-sup-dir",
+     "camada": "frente",
+     "x": 1616.0,
+     "y": 96.0,
+     "w": 202.4,
+     "h": 266.5,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/cronometro-adesivo@909.png",
+     "sha256": "3cf9c970d55227d7560a4d8cf9baa066892f7b3cab08f59aa0870e0054541e66",
+     "arquivo": "acervo/elementos/cronometro-adesivo.png",
+     "alfa_bbox": [
+      172,
+      24,
+      1081,
+      1221
+     ],
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "micro",
+     "x": 248,
+     "y": 322,
+     "w": 107.9,
+     "h": 21,
+     "texto": "Manifesto"
+    },
+    {
+     "classe": "titulo",
+     "x": 221.1,
+     "y": 388,
+     "w": 1374.4,
+     "h": 77,
+     "texto": "“A Sprint Ubatuba Run traz a corrida par"
+    },
+    {
+     "classe": "titulo",
+     "x": 248,
+     "y": 459.6,
+     "w": 1361.3,
+     "h": 77,
+     "texto": "traz a corrida para dentro da cidade: qu"
+    },
+    {
+     "classe": "titulo",
+     "x": 248,
+     "y": 531.3,
+     "w": 1194.8,
+     "h": 77,
+     "texto": "traz a corrida para dentro da cidade: qu"
+    },
+    {
+     "classe": "titulo",
+     "x": 248,
+     "y": 603,
+     "w": 425.4,
+     "h": 77,
+     "texto": "traz a corrida para dentro da cidade: qu"
+    },
+    {
+     "classe": "titulo",
+     "x": 248,
+     "y": 719.6,
+     "w": 600.8,
+     "h": 43,
+     "texto": "Correr também é transformar"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 3,
+   "rotulo": "projecao",
+   "tipo": "projecao",
+   "elegivel_heroi": false,
+   "elementos": [],
+   "protegidos": [
+    {
+     "classe": "micro",
+     "x": 168,
+     "y": 92,
+     "w": 212.8,
+     "h": 21,
+     "texto": "Projeção do evento"
+    },
+    {
+     "classe": "etiqueta",
+     "x": 1408.8,
+     "y": 945,
+     "w": 415.2,
+     "h": 39,
+     "texto": "PROJEÇÃO ILUSTRATIVA DA ARENA 2027"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 4,
+   "rotulo": "publico:b",
+   "tipo": "publico",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-inf-dir",
+     "camada": "frente",
+     "x": 1672.0,
+     "y": 824.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    },
+    {
+     "id": "cronometro-adesivo",
+     "papel": "heroi",
+     "encaixe": "sobre-cena",
+     "camada": "frente",
+     "x": 1368.0,
+     "y": 96.0,
+     "w": 454.5,
+     "h": 598.5,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/cronometro-adesivo@909.png",
+     "sha256": "3cf9c970d55227d7560a4d8cf9baa066892f7b3cab08f59aa0870e0054541e66",
+     "arquivo": "acervo/elementos/cronometro-adesivo.png",
+     "alfa_bbox": [
+      172,
+      24,
+      1081,
+      1221
+     ],
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 186,
+     "w": 855.6,
+     "h": 115,
+     "texto": "Perfil de público"
+    },
+    {
+     "classe": "numero",
+     "x": 96,
+     "y": 284.4,
+     "w": 617.6,
+     "h": 276,
+     "texto": "1.300"
+    },
+    {
+     "classe": "micro",
+     "x": 96,
+     "y": 542.4,
+     "w": 578.1,
+     "h": 21,
+     "texto": "pessoas na arena · Informado pelo organi"
+    },
+    {
+     "classe": "numero",
+     "x": 96,
+     "y": 637.4,
+     "w": 116.9,
+     "h": 77,
+     "texto": "500"
+    },
+    {
+     "classe": "corpo",
+     "x": 228.9,
+     "y": 672.4,
+     "w": 178.4,
+     "h": 30,
+     "texto": "atletas inscritos"
+    },
+    {
+     "classe": "micro",
+     "x": 228.9,
+     "y": 711.6,
+     "w": 166.5,
+     "h": 21,
+     "texto": "Informado pelo organizador · 2026"
+    },
+    {
+     "classe": "micro",
+     "x": 228.9,
+     "y": 742.8,
+     "w": 199,
+     "h": 21,
+     "texto": "Informado pelo organizador · 2026"
+    },
+    {
+     "classe": "numero",
+     "x": 570,
+     "y": 637.4,
+     "w": 140.3,
+     "h": 77,
+     "texto": "52%"
+    },
+    {
+     "classe": "corpo",
+     "x": 726.3,
+     "y": 672.4,
+     "w": 239.1,
+     "h": 30,
+     "texto": "do público era turista"
+    },
+    {
+     "classe": "micro",
+     "x": 726.3,
+     "y": 711.6,
+     "w": 166.5,
+     "h": 21,
+     "texto": "Informado pelo organizador · 2026"
+    },
+    {
+     "classe": "micro",
+     "x": 726.3,
+     "y": 742.8,
+     "w": 199,
+     "h": 21,
+     "texto": "Informado pelo organizador · 2026"
+    },
+    {
+     "classe": "numero",
+     "x": 96,
+     "y": 808,
+     "w": 140.3,
+     "h": 77,
+     "texto": "53%"
+    },
+    {
+     "classe": "corpo",
+     "x": 252.3,
+     "y": 843,
+     "w": 102.9,
+     "h": 30,
+     "texto": "Mulheres"
+    },
+    {
+     "classe": "numero",
+     "x": 570,
+     "y": 808,
+     "w": 140.3,
+     "h": 77,
+     "texto": "47%"
+    },
+    {
+     "classe": "corpo",
+     "x": 726.3,
+     "y": 843,
+     "w": 95.9,
+     "h": 30,
+     "texto": "Homens"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 5,
+   "rotulo": "historico_logos",
+   "tipo": "historico_logos",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-sup-esq",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 96.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    },
+    {
+     "id": "ondas-meio-tom",
+     "papel": "pattern",
+     "encaixe": "pattern-topo",
+     "camada": "atras",
+     "x": 0,
+     "y": 0,
+     "w": 1920.0,
+     "h": 72.0,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/ondas-meio-tom@960.png",
+     "sha256": "68b0498b2106c1bec58efe192ce7c41e74fe372739d85d4c7efafe7cb166124e",
+     "arquivo": "acervo/elementos/ondas-meio-tom.png",
+     "alfa_bbox": null,
+     "opacidade": 0.16,
+     "blend": "normal",
+     "cor_chapada": null,
+     "escala_tile": 480
+    },
+    {
+     "id": "folha-adesivo",
+     "papel": "heroi",
+     "encaixe": "canto-inf-esq",
+     "camada": "frente",
+     "x": 344.0,
+     "y": 688.0,
+     "w": 274.1,
+     "h": 283.5,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/folha-adesivo@1024.png",
+     "sha256": "5be0eb19e206387b36f9787eb2a3ed45068183238c0e26662ca0b790fef77966",
+     "arquivo": "acervo/elementos/folha-adesivo.png",
+     "alfa_bbox": [
+      79,
+      62,
+      1180,
+      1201
+     ],
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "micro",
+     "x": 96,
+     "y": 385.5,
+     "w": 171.1,
+     "h": 21,
+     "texto": "Edição anterior"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 407.5,
+     "w": 756.2,
+     "h": 115,
+     "texto": "Quem já esteve"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 493.9,
+     "w": 625.1,
+     "h": 115,
+     "texto": "com a gente"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 628.3,
+     "w": 589.4,
+     "h": 30,
+     "texto": "21 empresas patrocinaram e apoiaram a 1ª"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 661.9,
+     "w": 225.2,
+     "h": 30,
+     "texto": "21 empresas patrocinaram e apoiaram a 1ª"
+    },
+    {
+     "classe": "logo",
+     "x": 1008,
+     "y": 96,
+     "w": 816,
+     "h": 888,
+     "texto": "mural-logos"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 6,
+   "rotulo": "territorio",
+   "tipo": "territorio",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1413.8,
+     "h": 29.5,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-inf-dir",
+     "camada": "frente",
+     "x": 1672.0,
+     "y": 832.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    },
+    {
+     "id": "cronometro-adesivo",
+     "papel": "heroi",
+     "encaixe": "sobre-cena",
+     "camada": "frente",
+     "x": 1368.0,
+     "y": 96.0,
+     "w": 454.5,
+     "h": 598.5,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/cronometro-adesivo@909.png",
+     "sha256": "3cf9c970d55227d7560a4d8cf9baa066892f7b3cab08f59aa0870e0054541e66",
+     "arquivo": "acervo/elementos/cronometro-adesivo.png",
+     "alfa_bbox": [
+      172,
+      24,
+      1081,
+      1221
+     ],
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "micro",
+     "x": 96,
+     "y": 249.4,
+     "w": 111.1,
+     "h": 21,
+     "texto": "Território"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 271.4,
+     "w": 717.3,
+     "h": 115,
+     "texto": "Ubatuba atrai"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 357.8,
+     "w": 425.2,
+     "h": 115,
+     "texto": "a região"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 492.2,
+     "w": 668.5,
+     "h": 30,
+     "texto": "Mais da metade do público de 2026 veio d"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 525.8,
+     "w": 710.5,
+     "h": 30,
+     "texto": "Mais da metade do público de 2026 veio d"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 559.4,
+     "w": 528.7,
+     "h": 30,
+     "texto": "Mais da metade do público de 2026 veio d"
+    },
+    {
+     "classe": "micro",
+     "x": 96,
+     "y": 656,
+     "w": 144.1,
+     "h": 21,
+     "texto": "Litoral Norte"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 685,
+     "w": 298.8,
+     "h": 43,
+     "texto": "Caraguatatuba"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 736.2,
+     "w": 271.4,
+     "h": 43,
+     "texto": "São Sebastião"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 787.4,
+     "w": 165.4,
+     "h": 43,
+     "texto": "Ilhabela"
+    },
+    {
+     "classe": "micro",
+     "x": 442.8,
+     "y": 656,
+     "w": 165.3,
+     "h": 21,
+     "texto": "Vale do Paraíba"
+    },
+    {
+     "classe": "corpo",
+     "x": 442.8,
+     "y": 685,
+     "w": 398.9,
+     "h": 43,
+     "texto": "São José dos Campos"
+    },
+    {
+     "classe": "corpo",
+     "x": 442.8,
+     "y": 736.2,
+     "w": 152.4,
+     "h": 43,
+     "texto": "Taubaté"
+    },
+    {
+     "classe": "corpo",
+     "x": 442.8,
+     "y": 787.4,
+     "w": 290,
+     "h": 43,
+     "texto": "Guaratinguetá"
+    },
+    {
+     "classe": "micro",
+     "x": 889.7,
+     "y": 656,
+     "w": 129.1,
+     "h": 21,
+     "texto": "Costa Verde"
+    },
+    {
+     "classe": "corpo",
+     "x": 889.7,
+     "y": 685,
+     "w": 134.7,
+     "h": 43,
+     "texto": "Paraty"
+    },
+    {
+     "classe": "credito",
+     "x": 1533.7,
+     "y": 1019,
+     "w": 290.3,
+     "h": 25,
+     "texto": "Foto: Agnaldo Andrella / Unsplash"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 7,
+   "rotulo": "prova",
+   "tipo": "prova",
+   "elegivel_heroi": false,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "titulo",
+     "x": 88,
+     "y": 95,
+     "w": 930.1,
+     "h": 115,
+     "texto": "Metas da 2ª edição"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 219.4,
+     "w": 874.9,
+     "h": 30,
+     "texto": "Metas do organizador para a 2ª edição, c"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 253,
+     "w": 60.5,
+     "h": 30,
+     "texto": "Metas do organizador para a 2ª edição, c"
+    },
+    {
+     "classe": "numero",
+     "x": 205,
+     "y": 345.6,
+     "w": 171.8,
+     "h": 77,
+     "texto": "1.200"
+    },
+    {
+     "classe": "micro",
+     "x": 205,
+     "y": 422.6,
+     "w": 138.9,
+     "h": 21,
+     "texto": "participantes"
+    },
+    {
+     "classe": "micro",
+     "x": 205,
+     "y": 447.6,
+     "w": 188.5,
+     "h": 21,
+     "texto": "Meta · esta edição"
+    },
+    {
+     "classe": "numero",
+     "x": 655,
+     "y": 345.6,
+     "w": 140.3,
+     "h": 77,
+     "texto": "72%"
+    },
+    {
+     "classe": "micro",
+     "x": 655,
+     "y": 422.6,
+     "w": 113.3,
+     "h": 21,
+     "texto": "de turistas"
+    },
+    {
+     "classe": "micro",
+     "x": 655,
+     "y": 447.6,
+     "w": 188.5,
+     "h": 21,
+     "texto": "Meta · esta edição"
+    },
+    {
+     "classe": "numero",
+     "x": 1105,
+     "y": 345.6,
+     "w": 171.8,
+     "h": 77,
+     "texto": "2.000"
+    },
+    {
+     "classe": "micro",
+     "x": 1105,
+     "y": 422.6,
+     "w": 179.9,
+     "h": 21,
+     "texto": "pessoas na arena"
+    },
+    {
+     "classe": "micro",
+     "x": 1105,
+     "y": 447.6,
+     "w": 188.5,
+     "h": 21,
+     "texto": "Meta · esta edição"
+    },
+    {
+     "classe": "numero",
+     "x": 1555,
+     "y": 345.6,
+     "w": 249.8,
+     "h": 77,
+     "texto": "500.000"
+    },
+    {
+     "classe": "micro",
+     "x": 1555,
+     "y": 422.6,
+     "w": 226.8,
+     "h": 21,
+     "texto": "visualizações digitais"
+    },
+    {
+     "classe": "micro",
+     "x": 1555,
+     "y": 447.6,
+     "w": 188.5,
+     "h": 21,
+     "texto": "Meta · esta edição"
+    },
+    {
+     "classe": "corpo",
+     "x": 129,
+     "y": 552.6,
+     "w": 305,
+     "h": 30,
+     "texto": "Atletas: 2026 × meta 2027"
+    },
+    {
+     "classe": "micro",
+     "x": 215.4,
+     "y": 888.8,
+     "w": 9.6,
+     "h": 21,
+     "texto": "0"
+    },
+    {
+     "classe": "micro",
+     "x": 196.2,
+     "y": 799.1,
+     "w": 28.8,
+     "h": 21,
+     "texto": "500"
+    },
+    {
+     "classe": "micro",
+     "x": 182,
+     "y": 709.3,
+     "w": 43,
+     "h": 21,
+     "texto": "1.000"
+    },
+    {
+     "classe": "micro",
+     "x": 182,
+     "y": 619.6,
+     "w": 43,
+     "h": 21,
+     "texto": "1.500"
+    },
+    {
+     "classe": "numero",
+     "x": 395.9,
+     "y": 775.1,
+     "w": 43.2,
+     "h": 30,
+     "texto": "500"
+    },
+    {
+     "classe": "numero",
+     "x": 729.2,
+     "y": 649.4,
+     "w": 33.3,
+     "h": 30,
+     "texto": "1.200"
+    },
+    {
+     "classe": "numero",
+     "x": 762.5,
+     "y": 649.4,
+     "w": 33.3,
+     "h": 30,
+     "texto": "1.200"
+    },
+    {
+     "classe": "micro",
+     "x": 397.3,
+     "y": 914.8,
+     "w": 40.5,
+     "h": 21,
+     "texto": "2026"
+    },
+    {
+     "classe": "micro",
+     "x": 722.1,
+     "y": 914.8,
+     "w": 80.8,
+     "h": 21,
+     "texto": "Meta 2027"
+    },
+    {
+     "classe": "corpo",
+     "x": 1029,
+     "y": 552.6,
+     "w": 379.9,
+     "h": 30,
+     "texto": "Visualizações: 2026 × meta 2027"
+    },
+    {
+     "classe": "micro",
+     "x": 1115.4,
+     "y": 888.8,
+     "w": 9.6,
+     "h": 21,
+     "texto": "0"
+    },
+    {
+     "classe": "micro",
+     "x": 1062.8,
+     "y": 799.1,
+     "w": 31.1,
+     "h": 21,
+     "texto": "200.000"
+    },
+    {
+     "classe": "micro",
+     "x": 1093.9,
+     "y": 799.1,
+     "w": 31.1,
+     "h": 21,
+     "texto": "200.000"
+    },
+    {
+     "classe": "micro",
+     "x": 1062.8,
+     "y": 709.3,
+     "w": 31.1,
+     "h": 21,
+     "texto": "400.000"
+    },
+    {
+     "classe": "micro",
+     "x": 1093.9,
+     "y": 709.3,
+     "w": 31.1,
+     "h": 21,
+     "texto": "400.000"
+    },
+    {
+     "classe": "micro",
+     "x": 1062.8,
+     "y": 619.6,
+     "w": 31.1,
+     "h": 21,
+     "texto": "600.000"
+    },
+    {
+     "classe": "micro",
+     "x": 1093.9,
+     "y": 619.6,
+     "w": 31.1,
+     "h": 21,
+     "texto": "600.000"
+    },
+    {
+     "classe": "numero",
+     "x": 1269.8,
+     "y": 780.9,
+     "w": 47.7,
+     "h": 30,
+     "texto": "187.000"
+    },
+    {
+     "classe": "numero",
+     "x": 1317.5,
+     "y": 780.9,
+     "w": 47.7,
+     "h": 30,
+     "texto": "187.000"
+    },
+    {
+     "classe": "numero",
+     "x": 1614.8,
+     "y": 640.5,
+     "w": 47.7,
+     "h": 30,
+     "texto": "500.000"
+    },
+    {
+     "classe": "numero",
+     "x": 1662.5,
+     "y": 640.5,
+     "w": 47.7,
+     "h": 30,
+     "texto": "500.000"
+    },
+    {
+     "classe": "micro",
+     "x": 1297.3,
+     "y": 914.8,
+     "w": 40.5,
+     "h": 21,
+     "texto": "2026"
+    },
+    {
+     "classe": "micro",
+     "x": 1622.1,
+     "y": 914.8,
+     "w": 80.8,
+     "h": 21,
+     "texto": "Meta 2027"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 961.6,
+     "w": 442,
+     "h": 21,
+     "texto": "2026: números informados pelo organizado"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 8,
+   "rotulo": "divisor:c",
+   "tipo": "divisor",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-inf-dir",
+     "camada": "frente",
+     "x": 1672.0,
+     "y": 824.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    },
+    {
+     "id": "ondas-meio-tom",
+     "papel": "pattern",
+     "encaixe": "pattern-topo",
+     "camada": "atras",
+     "x": 0,
+     "y": 0,
+     "w": 1920.0,
+     "h": 200.0,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/ondas-meio-tom@960.png",
+     "sha256": "68b0498b2106c1bec58efe192ce7c41e74fe372739d85d4c7efafe7cb166124e",
+     "arquivo": "acervo/elementos/ondas-meio-tom.png",
+     "alfa_bbox": null,
+     "opacidade": 0.16,
+     "blend": "normal",
+     "cor_chapada": null,
+     "escala_tile": 480
+    },
+    {
+     "id": "folha-adesivo",
+     "papel": "heroi",
+     "encaixe": "canto-sup-dir",
+     "camada": "frente",
+     "x": 1424.0,
+     "y": 96.0,
+     "w": 397.3,
+     "h": 411.0,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/folha-adesivo@1024.png",
+     "sha256": "5be0eb19e206387b36f9787eb2a3ed45068183238c0e26662ca0b790fef77966",
+     "arquivo": "acervo/elementos/folha-adesivo.png",
+     "alfa_bbox": [
+      79,
+      62,
+      1180,
+      1201
+     ],
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "numero",
+     "x": 96,
+     "y": 401.3,
+     "w": 271,
+     "h": 276,
+     "texto": "06"
+    },
+    {
+     "classe": "micro",
+     "x": 431,
+     "y": 402.3,
+     "w": 223,
+     "h": 21,
+     "texto": "pontos de exposição"
+    },
+    {
+     "classe": "titulo",
+     "x": 431,
+     "y": 424.3,
+     "w": 705.4,
+     "h": 115,
+     "texto": "Onde a marca"
+    },
+    {
+     "classe": "titulo",
+     "x": 431,
+     "y": 510.7,
+     "w": 967.8,
+     "h": 115,
+     "texto": "encontra o atleta."
+    },
+    {
+     "classe": "corpo",
+     "x": 431,
+     "y": 645.1,
+     "w": 579.1,
+     "h": 30,
+     "texto": "Seis pontos de contato, da retirada do k"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 9,
+   "rotulo": "ativo:painel",
+   "tipo": "ativo_painel",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-inf-dir",
+     "camada": "frente",
+     "x": 1672.0,
+     "y": 784.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "numero",
+     "x": 144,
+     "y": 31,
+     "w": 215.1,
+     "h": 276,
+     "texto": "01"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 260.5,
+     "w": 549.5,
+     "h": 115,
+     "texto": "Sua marca"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 346.9,
+     "w": 555.2,
+     "h": 115,
+     "texto": "no pórtico"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 497.3,
+     "w": 546.3,
+     "h": 30,
+     "texto": "O pórtico fica na avenida da orla, colad"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 530.9,
+     "w": 544.7,
+     "h": 30,
+     "texto": "O pórtico fica na avenida da orla, colad"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 564.5,
+     "w": 460.4,
+     "h": 30,
+     "texto": "O pórtico fica na avenida da orla, colad"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 598.1,
+     "w": 424.4,
+     "h": 30,
+     "texto": "O pórtico fica na avenida da orla, colad"
+    },
+    {
+     "classe": "corpo",
+     "x": 133,
+     "y": 830,
+     "w": 480.8,
+     "h": 45,
+     "texto": "Testeira · Colunas · Grades · Bandeiras"
+    },
+    {
+     "classe": "corpo",
+     "x": 133,
+     "y": 875,
+     "w": 175.3,
+     "h": 45,
+     "texto": "Testeira · Colunas · Grades · Bandeiras"
+    },
+    {
+     "classe": "micro",
+     "x": 133,
+     "y": 930,
+     "w": 120.5,
+     "h": 21,
+     "texto": "Aplicações"
+    },
+    {
+     "classe": "etiqueta",
+     "x": 1561.1,
+     "y": 945,
+     "w": 262.9,
+     "h": 39,
+     "texto": "PROJEÇÃO ILUSTRATIVA"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 10,
+   "rotulo": "ativo:topo",
+   "tipo": "ativo_topo",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1328.9,
+     "h": 27.7,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-sup-esq",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 96.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "micro",
+     "x": 96,
+     "y": 747.2,
+     "w": 24.1,
+     "h": 21,
+     "texto": "02"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 772.2,
+     "w": 366.3,
+     "h": 77,
+     "texto": "Sua marca"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 829.8,
+     "w": 319.8,
+     "h": 77,
+     "texto": "na arena"
+    },
+    {
+     "classe": "corpo",
+     "x": 856,
+     "y": 760.2,
+     "w": 501.2,
+     "h": 30,
+     "texto": "Seis tendas de patrocinador ladeiam a ar"
+    },
+    {
+     "classe": "corpo",
+     "x": 856,
+     "y": 793.8,
+     "w": 493.8,
+     "h": 30,
+     "texto": "Seis tendas de patrocinador ladeiam a ar"
+    },
+    {
+     "classe": "corpo",
+     "x": 856,
+     "y": 827.4,
+     "w": 482.2,
+     "h": 30,
+     "texto": "Seis tendas de patrocinador ladeiam a ar"
+    },
+    {
+     "classe": "corpo",
+     "x": 856,
+     "y": 861,
+     "w": 431.2,
+     "h": 30,
+     "texto": "Seis tendas de patrocinador ladeiam a ar"
+    },
+    {
+     "classe": "corpo",
+     "x": 856,
+     "y": 894.6,
+     "w": 135.9,
+     "h": 30,
+     "texto": "Seis tendas de patrocinador ladeiam a ar"
+    },
+    {
+     "classe": "micro",
+     "x": 1511,
+     "y": 972.2,
+     "w": 124.4,
+     "h": 21,
+     "texto": "Visão geral"
+    },
+    {
+     "classe": "corpo",
+     "x": 1511,
+     "y": 999.2,
+     "w": 150.2,
+     "h": 30,
+     "texto": "Arena na orla"
+    },
+    {
+     "classe": "etiqueta",
+     "x": 1561.1,
+     "y": 945,
+     "w": 262.9,
+     "h": 39,
+     "texto": "PROJEÇÃO ILUSTRATIVA"
+    },
+    {
+     "classe": "logo",
+     "x": 1492,
+     "y": 747.2,
+     "w": 380,
+     "h": 301,
+     "texto": "miniatura"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 11,
+   "rotulo": "ativo:painel",
+   "tipo": "ativo_painel",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-inf-dir",
+     "camada": "frente",
+     "x": 1672.0,
+     "y": 784.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "numero",
+     "x": 144,
+     "y": 31,
+     "w": 273.5,
+     "h": 276,
+     "texto": "03"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 260.5,
+     "w": 549.5,
+     "h": 115,
+     "texto": "Sua marca"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 346.9,
+     "w": 462.3,
+     "h": 115,
+     "texto": "nas asas"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 497.3,
+     "w": 513,
+     "h": 30,
+     "texto": "A escultura das asas é o photo point da "
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 530.9,
+     "w": 535.1,
+     "h": 30,
+     "texto": "A escultura das asas é o photo point da "
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 564.5,
+     "w": 485.5,
+     "h": 30,
+     "texto": "A escultura das asas é o photo point da "
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 598.1,
+     "w": 467.1,
+     "h": 30,
+     "texto": "A escultura das asas é o photo point da "
+    },
+    {
+     "classe": "corpo",
+     "x": 133,
+     "y": 875,
+     "w": 393.8,
+     "h": 45,
+     "texto": "Base · Totem · Moldura"
+    },
+    {
+     "classe": "micro",
+     "x": 133,
+     "y": 930,
+     "w": 120.5,
+     "h": 21,
+     "texto": "Aplicações"
+    },
+    {
+     "classe": "etiqueta",
+     "x": 1561.1,
+     "y": 945,
+     "w": 262.9,
+     "h": 39,
+     "texto": "PROJEÇÃO ILUSTRATIVA"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 12,
+   "rotulo": "ativo:sangria",
+   "tipo": "ativo_painel",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 1008.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-sup-esq",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 96.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "micro",
+     "x": 96,
+     "y": 774.2,
+     "w": 25,
+     "h": 21,
+     "texto": "04"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 796.2,
+     "w": 549.5,
+     "h": 115,
+     "texto": "Sua marca"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 882.6,
+     "w": 441.1,
+     "h": 115,
+     "texto": "no pódio"
+    },
+    {
+     "classe": "corpo",
+     "x": 1008,
+     "y": 710.2,
+     "w": 806.4,
+     "h": 30,
+     "texto": "No pódio sobem os cinco primeiros de cad"
+    },
+    {
+     "classe": "corpo",
+     "x": 1008,
+     "y": 743.8,
+     "w": 796,
+     "h": 30,
+     "texto": "No pódio sobem os cinco primeiros de cad"
+    },
+    {
+     "classe": "corpo",
+     "x": 1008,
+     "y": 777.4,
+     "w": 371.6,
+     "h": 30,
+     "texto": "No pódio sobem os cinco primeiros de cad"
+    },
+    {
+     "classe": "corpo",
+     "x": 1045,
+     "y": 875,
+     "w": 453.5,
+     "h": 45,
+     "texto": "Backdrop · Palco · Troféus"
+    },
+    {
+     "classe": "micro",
+     "x": 1045,
+     "y": 930,
+     "w": 120.5,
+     "h": 21,
+     "texto": "Aplicações"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 13,
+   "rotulo": "ativo:painel",
+   "tipo": "ativo_painel",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-inf-dir",
+     "camada": "frente",
+     "x": 1672.0,
+     "y": 784.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "numero",
+     "x": 144,
+     "y": 31,
+     "w": 274.4,
+     "h": 276,
+     "texto": "05"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 260.5,
+     "w": 549.5,
+     "h": 115,
+     "texto": "Sua marca"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 346.9,
+     "w": 538.6,
+     "h": 115,
+     "texto": "na doação"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 497.3,
+     "w": 505.8,
+     "h": 30,
+     "texto": "Na retirada do kit, cada atleta entrega "
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 530.9,
+     "w": 508.4,
+     "h": 30,
+     "texto": "Na retirada do kit, cada atleta entrega "
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 564.5,
+     "w": 517.3,
+     "h": 30,
+     "texto": "Na retirada do kit, cada atleta entrega "
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 598.1,
+     "w": 549.3,
+     "h": 30,
+     "texto": "Na retirada do kit, cada atleta entrega "
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 631.7,
+     "w": 113.8,
+     "h": 30,
+     "texto": "Na retirada do kit, cada atleta entrega "
+    },
+    {
+     "classe": "corpo",
+     "x": 133,
+     "y": 830,
+     "w": 439.8,
+     "h": 45,
+     "texto": "Ponto de coleta · Caixas · Relatório"
+    },
+    {
+     "classe": "corpo",
+     "x": 133,
+     "y": 875,
+     "w": 158.5,
+     "h": 45,
+     "texto": "Ponto de coleta · Caixas · Relatório"
+    },
+    {
+     "classe": "micro",
+     "x": 133,
+     "y": 930,
+     "w": 120.5,
+     "h": 21,
+     "texto": "Aplicações"
+    },
+    {
+     "classe": "etiqueta",
+     "x": 1561.1,
+     "y": 945,
+     "w": 262.9,
+     "h": 39,
+     "texto": "PROJEÇÃO ILUSTRATIVA"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 14,
+   "rotulo": "ativo:topo",
+   "tipo": "ativo_topo",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-inf-dir",
+     "camada": "frente",
+     "x": 1672.0,
+     "y": 824.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "micro",
+     "x": 96,
+     "y": 747.2,
+     "w": 24.2,
+     "h": 21,
+     "texto": "06"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 772.2,
+     "w": 366.3,
+     "h": 77,
+     "texto": "Sua marca"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 829.8,
+     "w": 200.3,
+     "h": 77,
+     "texto": "no kit"
+    },
+    {
+     "classe": "corpo",
+     "x": 856,
+     "y": 760.2,
+     "w": 487.8,
+     "h": 30,
+     "texto": "A camisa dourada vira uniforme do dia: e"
+    },
+    {
+     "classe": "corpo",
+     "x": 856,
+     "y": 793.8,
+     "w": 471,
+     "h": 30,
+     "texto": "A camisa dourada vira uniforme do dia: e"
+    },
+    {
+     "classe": "corpo",
+     "x": 856,
+     "y": 827.4,
+     "w": 425.1,
+     "h": 30,
+     "texto": "A camisa dourada vira uniforme do dia: e"
+    },
+    {
+     "classe": "corpo",
+     "x": 856,
+     "y": 861,
+     "w": 466.6,
+     "h": 30,
+     "texto": "A camisa dourada vira uniforme do dia: e"
+    },
+    {
+     "classe": "corpo",
+     "x": 856,
+     "y": 894.6,
+     "w": 206.1,
+     "h": 30,
+     "texto": "A camisa dourada vira uniforme do dia: e"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 15,
+   "rotulo": "divisor_cotas",
+   "tipo": "divisor_cotas",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 1016.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-inf-dir",
+     "camada": "frente",
+     "x": 1704.0,
+     "y": 744.0,
+     "w": 117.1,
+     "h": 117.1,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    },
+    {
+     "id": "folha-adesivo",
+     "papel": "heroi",
+     "encaixe": "canto-sup-dir",
+     "camada": "frente",
+     "x": 1312.0,
+     "y": 96.0,
+     "w": 508.8,
+     "h": 526.4,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/folha-adesivo@1024.png",
+     "sha256": "5be0eb19e206387b36f9787eb2a3ed45068183238c0e26662ca0b790fef77966",
+     "arquivo": "acervo/elementos/folha-adesivo.png",
+     "alfa_bbox": [
+      79,
+      62,
+      1180,
+      1201
+     ],
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "titulo",
+     "x": 246,
+     "y": 135,
+     "w": 437.8,
+     "h": 115,
+     "texto": "Cotas de"
+    },
+    {
+     "classe": "titulo",
+     "x": 246,
+     "y": 221.4,
+     "w": 547.8,
+     "h": 115,
+     "texto": "patrocínio"
+    },
+    {
+     "classe": "corpo",
+     "x": 297,
+     "y": 439.8,
+     "w": 807,
+     "h": 45,
+     "texto": "A Sprint Ubatuba Run oferece quatro cota"
+    },
+    {
+     "classe": "corpo",
+     "x": 297,
+     "y": 486.6,
+     "w": 819.3,
+     "h": 45,
+     "texto": "oferece quatro cotas para marcas que que"
+    },
+    {
+     "classe": "corpo",
+     "x": 297,
+     "y": 533.4,
+     "w": 708.8,
+     "h": 45,
+     "texto": "nome na prova, presença na arena e conta"
+    },
+    {
+     "classe": "corpo",
+     "x": 297,
+     "y": 580.2,
+     "w": 336.6,
+     "h": 45,
+     "texto": "que chega a Ubatuba em março."
+    },
+    {
+     "classe": "logo",
+     "x": 1600.4,
+     "y": 878,
+     "w": 223.6,
+     "h": 130,
+     "texto": "logo-canto"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 16,
+   "rotulo": "cota:c",
+   "tipo": "cota",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 1016.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "onda-adesivo",
+     "papel": "heroi",
+     "encaixe": "sobre-cena",
+     "camada": "frente",
+     "x": 1400.0,
+     "y": 96.0,
+     "w": 420.0,
+     "h": 325.5,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/onda-adesivo@848.png",
+     "sha256": "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451",
+     "arquivo": "acervo/elementos/onda-adesivo.png",
+     "alfa_bbox": [
+      52,
+      188,
+      1207,
+      1083
+     ],
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "titulo",
+     "x": 123,
+     "y": 84,
+     "w": 160.8,
+     "h": 77,
+     "texto": "Cota"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 171,
+     "w": 260.1,
+     "h": 77,
+     "texto": "Naming"
+    },
+    {
+     "classe": "micro",
+     "x": 455.1,
+     "y": 107,
+     "w": 173,
+     "h": 21,
+     "texto": "Investimento"
+    },
+    {
+     "classe": "preco",
+     "x": 455.1,
+     "y": 132,
+     "w": 172.2,
+     "h": 43,
+     "texto": "R$ 30.000"
+    },
+    {
+     "classe": "micro",
+     "x": 455.1,
+     "y": 180,
+     "w": 188.6,
+     "h": 21,
+     "texto": "1 cota disponível"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 265.8,
+     "w": 648.3,
+     "h": 30,
+     "texto": "Seu nome na prova: Sprint Ubatuba Run ap"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 299.4,
+     "w": 122.2,
+     "h": 30,
+     "texto": "Seu nome na prova: Sprint Ubatuba Run ap"
+    },
+    {
+     "classe": "corpo",
+     "x": 295,
+     "y": 413,
+     "w": 447.9,
+     "h": 45,
+     "texto": "Direitos e contrapartidas:"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 481,
+     "w": 471.8,
+     "h": 30,
+     "texto": "\"Sprint Ubatuba Run apresentada por\" em "
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 513.4,
+     "w": 152.1,
+     "h": 30,
+     "texto": "\"Sprint Ubatuba Run apresentada por\" em "
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 561.8,
+     "w": 464,
+     "h": 30,
+     "texto": "Testeira do pórtico de largada e chegada"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 610.2,
+     "w": 541.4,
+     "h": 30,
+     "texto": "Backdrop do palco e do pódio (posição ce"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 658.5,
+     "w": 268.6,
+     "h": 30,
+     "texto": "Manga da camisa oficial"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 706.9,
+     "w": 301.7,
+     "h": 30,
+     "texto": "Estande 3 m × 3 m na arena"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 755.3,
+     "w": 525.6,
+     "h": 30,
+     "texto": "2 Reels collab e stories antes, durante "
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 803.7,
+     "w": 353.9,
+     "h": 30,
+     "texto": "Menções na locução do evento"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 852.1,
+     "w": 242,
+     "h": 30,
+     "texto": "Relatório pós-evento"
+    },
+    {
+     "classe": "corpo",
+     "x": 295,
+     "y": 899.5,
+     "w": 467.8,
+     "h": 30,
+     "texto": "Exclusividade de categoria da marca até "
+    },
+    {
+     "classe": "corpo",
+     "x": 295,
+     "y": 929.5,
+     "w": 139.4,
+     "h": 30,
+     "texto": "Exclusividade de categoria da marca até "
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 17,
+   "rotulo": "cota:c",
+   "tipo": "cota",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "percurso-r2",
+     "papel": "heroi",
+     "encaixe": "sobre-cena",
+     "camada": "frente",
+     "x": 1400.0,
+     "y": 96.0,
+     "w": 420.0,
+     "h": 196.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "fafb587ce6e1fd6ec5db031f811fe6fe0c2b1b653dbf9b5462bc973622b748fe",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": ""
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "titulo",
+     "x": 123,
+     "y": 84,
+     "w": 160.8,
+     "h": 77,
+     "texto": "Cota"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 171,
+     "w": 255.9,
+     "h": 77,
+     "texto": "Master"
+    },
+    {
+     "classe": "micro",
+     "x": 450.9,
+     "y": 107,
+     "w": 173,
+     "h": 21,
+     "texto": "Investimento"
+    },
+    {
+     "classe": "preco",
+     "x": 450.9,
+     "y": 132,
+     "w": 172.2,
+     "h": 43,
+     "texto": "R$ 12.000"
+    },
+    {
+     "classe": "micro",
+     "x": 450.9,
+     "y": 180,
+     "w": 212.8,
+     "h": 21,
+     "texto": "2 cotas disponíveis"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 265.8,
+     "w": 617.2,
+     "h": 30,
+     "texto": "Dê nome aos 10 km ou aos 14 km e esteja "
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 299.4,
+     "w": 149.7,
+     "h": 30,
+     "texto": "Dê nome aos 10 km ou aos 14 km e esteja "
+    },
+    {
+     "classe": "corpo",
+     "x": 295,
+     "y": 413,
+     "w": 447.9,
+     "h": 45,
+     "texto": "Direitos e contrapartidas:"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 481,
+     "w": 487.4,
+     "h": 30,
+     "texto": "Naming da distância: \"10 km [marca]\" ou "
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 513.4,
+     "w": 135.2,
+     "h": 30,
+     "texto": "Naming da distância: \"10 km [marca]\" ou "
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 561.8,
+     "w": 482.4,
+     "h": 30,
+     "texto": "Costas da camisa oficial (posição superi"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 610.2,
+     "w": 456.4,
+     "h": 30,
+     "texto": "Coluna do pórtico de largada e chegada"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 658.5,
+     "w": 255.8,
+     "h": 30,
+     "texto": "Tenda própria na arena"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 706.9,
+     "w": 250.1,
+     "h": 30,
+     "texto": "1 Reels collab e stories"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 755.3,
+     "w": 234.3,
+     "h": 30,
+     "texto": "Menções na locução"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 803.7,
+     "w": 242,
+     "h": 30,
+     "texto": "Relatório pós-evento"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 18,
+   "rotulo": "cota:c",
+   "tipo": "cota",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "onda-adesivo",
+     "papel": "heroi",
+     "encaixe": "sobre-cena",
+     "camada": "frente",
+     "x": 1400.0,
+     "y": 96.0,
+     "w": 420.0,
+     "h": 325.5,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/onda-adesivo@848.png",
+     "sha256": "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451",
+     "arquivo": "acervo/elementos/onda-adesivo.png",
+     "alfa_bbox": [
+      52,
+      188,
+      1207,
+      1083
+     ],
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "titulo",
+     "x": 123,
+     "y": 84,
+     "w": 160.8,
+     "h": 77,
+     "texto": "Cota"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 171,
+     "w": 234.2,
+     "h": 77,
+     "texto": "Oficial"
+    },
+    {
+     "classe": "micro",
+     "x": 429.2,
+     "y": 107,
+     "w": 173,
+     "h": 21,
+     "texto": "Investimento"
+    },
+    {
+     "classe": "preco",
+     "x": 429.2,
+     "y": 132,
+     "w": 150.3,
+     "h": 43,
+     "texto": "R$ 5.000"
+    },
+    {
+     "classe": "micro",
+     "x": 429.2,
+     "y": 180,
+     "w": 213.3,
+     "h": 21,
+     "texto": "4 cotas disponíveis"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 265.8,
+     "w": 716.1,
+     "h": 30,
+     "texto": "Uma tenda da arena é sua: o atleta exper"
+    },
+    {
+     "classe": "corpo",
+     "x": 295,
+     "y": 379.4,
+     "w": 447.9,
+     "h": 45,
+     "texto": "Direitos e contrapartidas:"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 447.4,
+     "w": 454.9,
+     "h": 30,
+     "texto": "Testeira da tenda: Recovery, Hidratação,"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 479.8,
+     "w": 328.9,
+     "h": 30,
+     "texto": "Testeira da tenda: Recovery, Hidratação,"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 528.2,
+     "w": 343.7,
+     "h": 30,
+     "texto": "Ativação ou sampling na tenda"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 576.6,
+     "w": 242.6,
+     "h": 30,
+     "texto": "1 item na sacola do kit"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 625,
+     "w": 319.5,
+     "h": 30,
+     "texto": "Logo no backdrop do pódio"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 673.3,
+     "w": 277.3,
+     "h": 30,
+     "texto": "Stories durante o evento"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 721.7,
+     "w": 242,
+     "h": 30,
+     "texto": "Relatório pós-evento"
+    },
+    {
+     "classe": "etiqueta",
+     "x": 1561.1,
+     "y": 945,
+     "w": 262.9,
+     "h": 39,
+     "texto": "PROJEÇÃO ILUSTRATIVA"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 19,
+   "rotulo": "cota:c",
+   "tipo": "cota",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 992.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "tenis-adesivo",
+     "papel": "heroi",
+     "encaixe": "sobre-cena",
+     "camada": "frente",
+     "x": 1400.0,
+     "y": 96.0,
+     "w": 420.0,
+     "h": 211.8,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/tenis-adesivo@848.png",
+     "sha256": "dc053764c623e5bae247bbfefbccbbd49d41489c0a20e82f9a3c4053c66a37f8",
+     "arquivo": "acervo/elementos/tenis-adesivo.png",
+     "alfa_bbox": [
+      15,
+      123,
+      1522,
+      883
+     ],
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "titulo",
+     "x": 123,
+     "y": 84,
+     "w": 160.8,
+     "h": 77,
+     "texto": "Cota"
+    },
+    {
+     "classe": "titulo",
+     "x": 96,
+     "y": 171,
+     "w": 191.6,
+     "h": 77,
+     "texto": "Apoio"
+    },
+    {
+     "classe": "micro",
+     "x": 409.8,
+     "y": 107,
+     "w": 173,
+     "h": 21,
+     "texto": "Investimento"
+    },
+    {
+     "classe": "preco",
+     "x": 409.8,
+     "y": 132,
+     "w": 150.3,
+     "h": 43,
+     "texto": "R$ 1.500"
+    },
+    {
+     "classe": "micro",
+     "x": 409.8,
+     "y": 180,
+     "w": 221,
+     "h": 21,
+     "texto": "12 cotas disponíveis"
+    },
+    {
+     "classe": "corpo",
+     "x": 96,
+     "y": 265.8,
+     "w": 646,
+     "h": 30,
+     "texto": "Presença no backdrop, no site e na sacol"
+    },
+    {
+     "classe": "corpo",
+     "x": 295,
+     "y": 379.4,
+     "w": 447.9,
+     "h": 45,
+     "texto": "Direitos e contrapartidas:"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 447.4,
+     "w": 361,
+     "h": 30,
+     "texto": "Logo no backdrop de medalhas"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 495.8,
+     "w": 211.4,
+     "h": 30,
+     "texto": "Logo no site oficial"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 544.2,
+     "w": 268.8,
+     "h": 30,
+     "texto": "Material na sacola do kit"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 592.6,
+     "w": 300.8,
+     "h": 30,
+     "texto": "Menção coletiva nas redes"
+    },
+    {
+     "classe": "corpo",
+     "x": 325,
+     "y": 641,
+     "w": 465.8,
+     "h": 30,
+     "texto": "1 Reels coletivo pós-evento com menção"
+    },
+    {
+     "classe": "etiqueta",
+     "x": 1408.8,
+     "y": 945,
+     "w": 415.2,
+     "h": 39,
+     "texto": "PROJEÇÃO ILUSTRATIVA DA ARENA 2027"
+    }
+   ],
+   "avisos": []
+  },
+  {
+   "n": 20,
+   "rotulo": "contato:b",
+   "tipo": "contato",
+   "elegivel_heroi": true,
+   "elementos": [
+    {
+     "id": "constante-microtexto",
+     "papel": "constante",
+     "encaixe": "borda-base",
+     "camada": "frente",
+     "x": 96.0,
+     "y": 1016.0,
+     "w": 1600.0,
+     "h": 33.3,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "44c0b469e9b3adf98c724775f2726b149da40da59e8fde929bff0afa8ec7d3da",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO"
+    },
+    {
+     "id": "constante-selo",
+     "papel": "constante",
+     "encaixe": "selo-inf-dir",
+     "camada": "frente",
+     "x": 1672.0,
+     "y": 752.0,
+     "w": 150.0,
+     "h": 150.0,
+     "rot": 0,
+     "formato": "svg",
+     "uso": null,
+     "sha256": "7b7544e79b5c2d584717ebda2aeb234c840f671afb98248ef2ca7c8f84750043",
+     "arquivo": null,
+     "alfa_bbox": null,
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null,
+     "texto": "SPRINT UBATUBA RUN\n2ª EDIÇÃO · 2027"
+    },
+    {
+     "id": "onda-adesivo",
+     "papel": "heroi",
+     "encaixe": "canto-sup-dir",
+     "camada": "frente",
+     "x": 1408.0,
+     "y": 96.0,
+     "w": 411.0,
+     "h": 318.5,
+     "rot": 0,
+     "formato": "png",
+     "uso": "saida/cache-elementos/onda-adesivo@848.png",
+     "sha256": "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451",
+     "arquivo": "acervo/elementos/onda-adesivo.png",
+     "alfa_bbox": [
+      52,
+      188,
+      1207,
+      1083
+     ],
+     "opacidade": 1,
+     "blend": "normal",
+     "cor_chapada": null
+    }
+   ],
+   "protegidos": [
+    {
+     "classe": "micro",
+     "x": 905.5,
+     "y": 409.7,
+     "w": 156.9,
+     "h": 21,
+     "texto": "Próximo passo"
+    },
+    {
+     "classe": "titulo",
+     "x": 253.2,
+     "y": 440.7,
+     "w": 1461.6,
+     "h": 106,
+     "texto": "Sua marca na orla de Ubatuba."
+    },
+    {
+     "classe": "micro",
+     "x": 478.9,
+     "y": 598.3,
+     "w": 56.5,
+     "h": 21,
+     "texto": "Filipe"
+    },
+    {
+     "classe": "corpo",
+     "x": 478.9,
+     "y": 627.3,
+     "w": 241.3,
+     "h": 43,
+     "texto": "(11) 98012-0229"
+    },
+    {
+     "classe": "micro",
+     "x": 816.1,
+     "y": 598.3,
+     "w": 98.1,
+     "h": 21,
+     "texto": "Cristiane"
+    },
+    {
+     "classe": "corpo",
+     "x": 816.1,
+     "y": 627.3,
+     "w": 245.3,
+     "h": 43,
+     "texto": "(12) 98122-2033"
+    },
+    {
+     "classe": "micro",
+     "x": 1157.4,
+     "y": 598.3,
+     "w": 67.6,
+     "h": 21,
+     "texto": "E-mail"
+    },
+    {
+     "classe": "corpo",
+     "x": 1157.4,
+     "y": 627.3,
+     "w": 331.7,
+     "h": 43,
+     "texto": "contato@uuhull.com"
+    },
+    {
+     "classe": "logo",
+     "x": 1658.8,
+     "y": 912,
+     "w": 165.2,
+     "h": 96,
+     "texto": "logo-canto"
+    }
+   ],
+   "avisos": []
+  }
+ ],
+ "avisos": []
+}

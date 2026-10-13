@@ -1,0 +1,172 @@
+{
+ "_leia": "Fontes do kit Copa AME v2 (12/10/2026). Os .ttf ficam fora do git (.gitignore): são os mesmos arquivos de fontes-livres/ da skill (SISTEMAS/GERAR MEDIAKIT/fontes-livres, licença OFL). Para refazer a pasta: pipeline/fontes_livres.py para <kit>/fontes \"Barlow Condensed\" Barlow; depois confira cada sha256 abaixo. origem_sha256_bate = o arquivo de fontes-livres/ tem o mesmo sha256 (conferido na árvore principal e na cópia isolada da skill em 12/10/2026).",
+ "receita": {
+  "display": "Barlow Condensed",
+  "peso_display": 800,
+  "corpo": "Barlow"
+ },
+ "fontes": [
+  {
+   "familia": "Barlow Condensed",
+   "peso": 400,
+   "arquivo": "fontes/Barlow Condensed.ttf",
+   "bytes": 102192,
+   "sha256": "2a48ce3895069661319ed24d087beb12b15c2e1d7f95b5e679cca09806a5b1fb",
+   "origem": "fontes-livres/Barlow Condensed/Barlow Condensed.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow Condensed",
+   "peso": 250,
+   "arquivo": "fontes/Barlow Condensed__250.ttf",
+   "bytes": 100016,
+   "sha256": "aef9b48a2a0028f7aab044ba80db10736133f4d9591e09838009f5dda6826ed5",
+   "origem": "fontes-livres/Barlow Condensed/Barlow Condensed__250.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow Condensed",
+   "peso": 275,
+   "arquivo": "fontes/Barlow Condensed__275.ttf",
+   "bytes": 100740,
+   "sha256": "ae0f92fce0efaefb36dffbb9e64ee855a0a5da21965e04e19833d968c6b227d4",
+   "origem": "fontes-livres/Barlow Condensed/Barlow Condensed__275.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow Condensed",
+   "peso": 300,
+   "arquivo": "fontes/Barlow Condensed__300.ttf",
+   "bytes": 101632,
+   "sha256": "a290860d79ae7c31c926107fa1db2f17d93f5a40bcf94a8e5306d74831a1dbf6",
+   "origem": "fontes-livres/Barlow Condensed/Barlow Condensed__300.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow Condensed",
+   "peso": 500,
+   "arquivo": "fontes/Barlow Condensed__500.ttf",
+   "bytes": 102996,
+   "sha256": "e55fd416763bafd51ab9dc858984f4ba0c17cd950040293cd400e5da0098f652",
+   "origem": "fontes-livres/Barlow Condensed/Barlow Condensed__500.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow Condensed",
+   "peso": 600,
+   "arquivo": "fontes/Barlow Condensed__600.ttf",
+   "bytes": 109044,
+   "sha256": "3b5bf720298c5efdcc621361cea418f2bcb75672314d1e18d82594d7ee2bb986",
+   "origem": "fontes-livres/Barlow Condensed/Barlow Condensed__600.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow Condensed",
+   "peso": 700,
+   "arquivo": "fontes/Barlow Condensed__700.ttf",
+   "bytes": 109648,
+   "sha256": "fd4e2169cea7873aae04e16b28738e0aebe8ec676a8b02a79291c5084d28a638",
+   "origem": "fontes-livres/Barlow Condensed/Barlow Condensed__700.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow Condensed",
+   "peso": 800,
+   "arquivo": "fontes/Barlow Condensed__800.ttf",
+   "bytes": 109900,
+   "sha256": "e1ef6e61bb2b2870b0bde54b85a8516fe469659ee6d5c7b35152901a8430f7a6",
+   "origem": "fontes-livres/Barlow Condensed/Barlow Condensed__800.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow Condensed",
+   "peso": 900,
+   "arquivo": "fontes/Barlow Condensed__900.ttf",
+   "bytes": 110472,
+   "sha256": "e5b64ceec692306facf81119a26fddca0d7bf8007725b888af1c5ce265dad2bc",
+   "origem": "fontes-livres/Barlow Condensed/Barlow Condensed__900.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow",
+   "peso": 400,
+   "arquivo": "fontes/Barlow.ttf",
+   "bytes": 103836,
+   "sha256": "44180d88f8404e3dc8ce62275e45e2f31e59b7712085268ac0174d704052a5c1",
+   "origem": "fontes-livres/Barlow/Barlow.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow",
+   "peso": 250,
+   "arquivo": "fontes/Barlow__250.ttf",
+   "bytes": 101432,
+   "sha256": "d187bd2f6fccdaa6b8e83e60bd4ec4f195ef892c70db827196fc97f16a829cd2",
+   "origem": "fontes-livres/Barlow/Barlow__250.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow",
+   "peso": 275,
+   "arquivo": "fontes/Barlow__275.ttf",
+   "bytes": 102148,
+   "sha256": "4cc39f5c97019952ee86531db107ce764223d035844be033d266479a880f8e85",
+   "origem": "fontes-livres/Barlow/Barlow__275.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow",
+   "peso": 300,
+   "arquivo": "fontes/Barlow__300.ttf",
+   "bytes": 102852,
+   "sha256": "f8f1db7b65f53ec1e10a2f237aea67c8206d1b90c5474b09101fdd39e34da1d1",
+   "origem": "fontes-livres/Barlow/Barlow__300.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow",
+   "peso": 500,
+   "arquivo": "fontes/Barlow__500.ttf",
+   "bytes": 103248,
+   "sha256": "4079ca3548a6eaca1e924bb9ef8bc3bcbb4924edcec617178dc65a2cb5bdee19",
+   "origem": "fontes-livres/Barlow/Barlow__500.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow",
+   "peso": 600,
+   "arquivo": "fontes/Barlow__600.ttf",
+   "bytes": 108040,
+   "sha256": "5ca96a030148e546cb99e0c34542797aa820b4b698e2e5b47136e4a7103bb5b7",
+   "origem": "fontes-livres/Barlow/Barlow__600.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow",
+   "peso": 700,
+   "arquivo": "fontes/Barlow__700.ttf",
+   "bytes": 108012,
+   "sha256": "737ea75a2c9217f96b67ea36b598907ba6adaf6029288e62a05ca24bc4f841ff",
+   "origem": "fontes-livres/Barlow/Barlow__700.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow",
+   "peso": 800,
+   "arquivo": "fontes/Barlow__800.ttf",
+   "bytes": 109912,
+   "sha256": "d528c856a0d844291d9c229ea967da30bae9c2a1f9758e5b3746efd70ef5d139",
+   "origem": "fontes-livres/Barlow/Barlow__800.ttf",
+   "origem_sha256_bate": true
+  },
+  {
+   "familia": "Barlow",
+   "peso": 900,
+   "arquivo": "fontes/Barlow__900.ttf",
+   "bytes": 110840,
+   "sha256": "cdae0cfd2b66fe8fc11c732b975e343b56f06e3d7ae1a6fa651fa446357d9c2c",
+   "origem": "fontes-livres/Barlow/Barlow__900.ttf",
+   "origem_sha256_bate": true
+  }
+ ]
+}

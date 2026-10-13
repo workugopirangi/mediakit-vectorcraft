@@ -1,0 +1,10 @@
+Generate one SQUARE seamless repeating pattern tile, 1024x1024 pixels or larger, and save it exactly as /Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/ondas-serra.bruto.png (PNG).
+Motif: minimal line drawing of ocean waves in front of a coastal mountain range (the Serra do Mar at Ubatuba, Brazil): alternating rows of wave crests and mountain ridge contour lines, thin topographic-style lines
+Style: flat graphic illustration, like a screen-printed textile pattern. Solid black ink only (one tone, optionally a second lighter grey tone), clean lines of even weight, no gradients, no shading, no paper or grain texture. Motif density even across the whole tile, no focal point, no border, no frame.
+SEAMLESS: the tile must wrap around. Any shape that crosses the left edge continues exactly on the right edge, any shape that crosses the top edge continues exactly on the bottom edge, so that placing copies side by side shows no visible seam.
+Background: fully transparent (PNG with a real alpha channel). If the generator cannot produce transparency, use a perfectly flat, uniform pure white background instead, with nothing else on it.
+The image must contain NO text of any kind: no letters, no numbers, no logos, no brand marks, no signatures, no watermarks.
+Do NOT post-process the image with code or any other tool: no background removal, no resizing, no recoloring. Save exactly the file the image generator returned (we measure its transparency afterwards).
+Do NOT regenerate under any circumstance (each generation spends the ChatGPT quota). Keep the single image.
+After saving, open the image and check: (1) no text, letter, number or logo anywhere, (2) background is transparent or perfectly flat white, (3) the motif is black ink of even weight, (4) left and right edges match and top and bottom edges match.
+In your final message, write one line exactly as TRANSPARENT: yes or TRANSPARENT: no (as returned by the generator), then list any defect found.

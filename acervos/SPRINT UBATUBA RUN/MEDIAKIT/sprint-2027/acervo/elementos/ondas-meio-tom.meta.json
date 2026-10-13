@@ -1,0 +1,51 @@
+{
+ "id": "ondas-meio-tom",
+ "tipo": "pattern",
+ "familia": "meio-tom-mar",
+ "motivo": "ondas-serra",
+ "estilo": "two-tone halftone print, coarse dot screen, sea blue ink on transparent background, beach poster feel",
+ "paleta": [
+  "#2067AA",
+  "#F4EADB"
+ ],
+ "paleta_nomes": [
+  "sea blue",
+  "off-white"
+ ],
+ "aspecto": "quadrado",
+ "luz": null,
+ "descricao": "rolling sea waves in staggered rows, a seamless repeating tile where waves cross the tile edges and continue on the opposite side",
+ "ref": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/ondas-serra-adesivo.png",
+ "ref_sha256": "1b399b11ad2c74cffb09ae3a9e5e3f9174e2ce31c125dd239ff5f9838b2240f7",
+ "rota": "codex-branco+chroma",
+ "arquivo": "ondas-meio-tom.png",
+ "bruto": "ondas-meio-tom.bruto.png",
+ "sha256": "68b0498b2106c1bec58efe192ce7c41e74fe372739d85d4c7efafe7cb166124e",
+ "sha256_bruto": "a7315bc261476f9c08089d36840a06117f2ff3cb4f04dc8991138905520c7f6f",
+ "dims": [
+  1254,
+  1254
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.807,
+  "opaco": 0.539
+ },
+ "alfa_bruto": {
+  "real": false,
+  "modo": "RGBA",
+  "transparente": 0.047,
+  "opaco": 0.959
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/ondas-meio-tom.prompt.txt",
+ "gerado": true,
+ "data": "2026-10-09T14:07:38-03:00",
+ "pos_processo": [
+  "padrao.py separar --fundo #FFFFFF (o modo antigo tomava a tinta azul por fundo)",
+  "tinta única #2067AA (máscara sobre a cor da página)",
+  "padrao.py tornar-seamless: costura 0,37 para 0,32"
+ ]
+}

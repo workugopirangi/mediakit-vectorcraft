@@ -1,0 +1,52 @@
+{
+ "id": "tenis-gravura",
+ "tipo": "ilustracao",
+ "familia": "gravura-ouro",
+ "motivo": "pista",
+ "estilo": "fine gold line engraving, single weight 2px strokes, no fills, no shading, flat metallic gold ink on transparent background",
+ "paleta": [
+  "#D4A64A"
+ ],
+ "paleta_nomes": [
+  "antique gold"
+ ],
+ "aspecto": "largo",
+ "luz": null,
+ "descricao": "a running shoe in side profile caught mid-stride, laces and sole tread drawn with fine engraving lines",
+ "ref": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/penas-asa-traco.png",
+ "ref_sha256": "9819814c29865f504d36782ce0f9e232a00d079ae7921914b4adfdf3ed949c62",
+ "rota": "codex-alfa",
+ "arquivo": "tenis-gravura.png",
+ "bruto": "tenis-gravura.bruto.png",
+ "sha256": "904ef5430dba4e205d0b92d84d61911764c581f915700e2c667b55a0087494a3",
+ "sha256_bruto": "904ef5430dba4e205d0b92d84d61911764c581f915700e2c667b55a0087494a3",
+ "dims": [
+  1536,
+  1024
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 1.0,
+  "opaco": 0.311
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 1.0,
+  "opaco": 0.311
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/tenis-gravura.prompt.txt",
+ "gerado": true,
+ "data": "2026-10-09T14:00:37-03:00",
+ "ocr_revisado": {
+  "lido": "SS ES ANS SSX WSS ESS",
+  "sha256": "904ef5430dba4e205d0b92d84d61911764c581f915700e2c667b55a0087494a3",
+  "veredito": "sem texto",
+  "por": "Claude",
+  "em": "2026-10-09",
+  "evidencia": "6 recortes ampliados nas caixas de 'SS', 'ES', 'ANS', 'SSX', 'WSS', 'ESS': só hachura de gravura do cabedal e da sola, nenhuma letra"
+ }
+}

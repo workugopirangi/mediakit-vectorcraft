@@ -1,0 +1,54 @@
+{
+ "id": "amendoeira-adesivo",
+ "tipo": "adesivo",
+ "familia": "meio-tom-mar",
+ "motivo": "folha-amendoeira",
+ "estilo": "two-tone halftone print, coarse dot screen, sea blue ink on transparent background, beach poster feel, die-cut sticker with a thin cream border",
+ "paleta": [
+  "#2067AA",
+  "#F4EADB"
+ ],
+ "paleta_nomes": [
+  "sea blue",
+  "off-white"
+ ],
+ "aspecto": "alto",
+ "luz": null,
+ "descricao": "a tropical almond tree standing on beach sand, wide layered canopy",
+ "ref": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/ondas-serra-adesivo.png",
+ "ref_sha256": "1b399b11ad2c74cffb09ae3a9e5e3f9174e2ce31c125dd239ff5f9838b2240f7",
+ "rota": "codex-alfa",
+ "arquivo": "amendoeira-adesivo.png",
+ "bruto": "amendoeira-adesivo.bruto.png",
+ "sha256": "f28638983add40f91f06324cb69ad0488bf4c8103caca29228a2e9e3b3b7f65a",
+ "sha256_bruto": "f28638983add40f91f06324cb69ad0488bf4c8103caca29228a2e9e3b3b7f65a",
+ "dims": [
+  1024,
+  1536
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.57,
+  "opaco": 0.443
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.57,
+  "opaco": 0.443
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/amendoeira-adesivo.prompt.txt",
+ "gerado": true,
+ "data": "2026-10-09T14:04:14-03:00",
+ "ocr_revisado": {
+  "lido": "ASN",
+  "sha256": "f28638983add40f91f06324cb69ad0488bf4c8103caca29228a2e9e3b3b7f65a",
+  "veredito": "sem texto",
+  "por": "Claude",
+  "em": "2026-10-09",
+  "evidencia": "recorte ampliado na caixa de 'ASN': tronco e raízes em retícula sobre areia, nenhuma letra"
+ }
+}

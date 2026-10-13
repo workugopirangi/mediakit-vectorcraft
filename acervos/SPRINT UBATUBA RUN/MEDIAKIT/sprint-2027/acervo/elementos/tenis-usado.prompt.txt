@@ -1,0 +1,10 @@
+Generate one square image, 1024x1024 pixels or larger, of a SINGLE isolated object, and save it exactly as /Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/tenis-usado.bruto.png (PNG).
+Object: a single used running shoe seen from the side, black upper with a gold accent, worn sole with grains of beach sand, slightly dusty, completely unbranded with no logo, no stripes, no swoosh and no text
+Photorealistic product photograph of the object alone, centered, the whole object inside the frame with a generous empty margin on every side, nothing cropped. Soft key light from the LEFT, gentle fill from the right, crisp focus, true colors.
+No people, no hands, no body parts, no floor, no props, no cast shadow on the background.
+Background: fully transparent (PNG with a real alpha channel). If the generator cannot produce transparency, use a perfectly flat, uniform mid grey background (50% grey) instead, no gradient, no vignette.
+The image must contain NO text of any kind: no letters, no numbers, no logos, no brand marks, no signatures, no watermarks.
+Do NOT post-process the image with code or any other tool: no background removal, no resizing, no recoloring. Save exactly the file the image generator returned (we measure its transparency afterwards).
+Do NOT regenerate under any circumstance (each generation spends the ChatGPT quota). Keep the single image.
+After saving, open the image and check: (1) no text, letter, number or logo anywhere, including on the object itself, (2) one object only, nothing cropped by the frame, (3) background is transparent or perfectly flat mid grey, (4) light comes from the left.
+In your final message, write one line exactly as TRANSPARENT: yes or TRANSPARENT: no (as returned by the generator), then list any defect found.

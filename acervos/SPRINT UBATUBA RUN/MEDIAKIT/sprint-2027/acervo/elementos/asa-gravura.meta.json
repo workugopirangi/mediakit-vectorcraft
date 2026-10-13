@@ -1,0 +1,44 @@
+{
+ "id": "asa-gravura",
+ "tipo": "ilustracao",
+ "familia": "gravura-ouro",
+ "motivo": "asa",
+ "estilo": "fine gold line engraving, single weight 2px strokes, no fills, no shading, flat metallic gold ink on transparent background",
+ "paleta": [
+  "#D4A64A"
+ ],
+ "paleta_nomes": [
+  "antique gold"
+ ],
+ "aspecto": "largo",
+ "luz": null,
+ "descricao": "a single large outstretched bird wing seen from the side, long primary feathers fanned out, drawn entirely with fine parallel engraving lines like a banknote engraving",
+ "ref": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/penas-asa-traco.png",
+ "ref_sha256": "9819814c29865f504d36782ce0f9e232a00d079ae7921914b4adfdf3ed949c62",
+ "rota": "codex-alfa",
+ "arquivo": "asa-gravura.png",
+ "bruto": "asa-gravura.bruto.png",
+ "sha256": "0aa5844c09ed40d0e0e1f20cef6ffc57e1886f951899a5e2ac80f6142953222c",
+ "sha256_bruto": "0aa5844c09ed40d0e0e1f20cef6ffc57e1886f951899a5e2ac80f6142953222c",
+ "dims": [
+  1536,
+  1024
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.602,
+  "opaco": 0.42
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.602,
+  "opaco": 0.42
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/asa-gravura.prompt.txt",
+ "gerado": true,
+ "data": "2026-10-09T13:58:22-03:00"
+}

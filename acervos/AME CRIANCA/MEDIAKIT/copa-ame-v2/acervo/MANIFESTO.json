@@ -1,0 +1,805 @@
+{
+ "_leia": "Manifesto de acervo/ do kit Copa AME v2 (12/10/2026): todo arquivo, inclusive os que ficam fora do git. origem: codex (gerado ou registrado pelo Codex), cliente (do cliente), derivado (tratado a partir de `de`), 08-10-higgsfield (cena gerada em 08/10 no Higgsfield, que saiu da skill), pipeline (escrito pela skill: prompt e ficha). rastreado: entra no git no próximo commit (não está no .gitignore do kit). citado_no_mediakit: o mediakit.json aponta para o arquivo (fechamento do render). Este arquivo não se lista.",
+ "resumo": {
+  "arquivos": 79,
+  "bytes": 46794920,
+  "rastreados": 69,
+  "bytes_rastreados": 21430831,
+  "fora_do_git": 10,
+  "bytes_fora_do_git": 25364089,
+  "citados_no_mediakit": 26,
+  "citados_fora_do_git": [],
+  "por_origem": {
+   "cliente": 7,
+   "codex": 34,
+   "derivado": 24,
+   "pipeline": 14
+  }
+ },
+ "arquivos": [
+  {
+   "caminho": "acervo/.claude/state/runs/01a1227c-508f-7292-a29e-776037eeb653/events.jsonl",
+   "bytes": 2850,
+   "sha256": "6bdb0138c44e903e018b322f08ae8669c38448982895d55f68f5d35916c1db58",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/.claude/state/runs/01a1227e-5cbd-7083-a973-8d8d3119ef66/events.jsonl",
+   "bytes": 1904,
+   "sha256": "1c34b83bccf17a5e957c2a318a22bf81e52d28f9026edc36e86b8a5d1fde98ef",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/.claude/state/runs/01a122ad-8706-7231-bc69-44f034c8e30f/events.jsonl",
+   "bytes": 2271,
+   "sha256": "c083f425a77ef2ab387e87cbc2212c22cdfc0e5741fc260c4d3905366ab29cef",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/.claude/state/runs/01a122af-008d-78c0-9b53-e509a820bd8e/events.jsonl",
+   "bytes": 1854,
+   "sha256": "7eea72b61e1a82ab0a3fc8f874a2303608dcc112d6a39043f67e8ad6767c8b6b",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/.claude/state/runs/01a122b0-aa6a-7820-bbea-e1914d97e164/events.jsonl",
+   "bytes": 3069,
+   "sha256": "c2f727b192544edcdefa62805fc05b8a64d45058afe1dd06b3b5316e9def687a",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/.claude/state/runs/01a122b2-ab61-7043-bcbc-76bd91ef7f86/events.jsonl",
+   "bytes": 2287,
+   "sha256": "2a9f86b15034752c1fe01bdb6968d39528de574244e70fa1580fb2d50b1f40f0",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/.codex-c-apoio.log",
+   "bytes": 639,
+   "sha256": "55f8f07b7f96994776333cad6c2c83ac50bd69f2a76569670016e7b1fc0e8e2a",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/.codex-c-capa-sabado.log",
+   "bytes": 891,
+   "sha256": "da93d5e5c92b1e3bfcd0bafef027de9d93c2ab9443ec7bee658557d9687ba938",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/.codex-c-contato.log",
+   "bytes": 651,
+   "sha256": "c52708cb696de10d0a60e5941c92fc5b8c86b9b9e8fe9c3aff1126cdff891977",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/.codex-c-master.log",
+   "bytes": 802,
+   "sha256": "14409435aa8e86b058f2507f65c6032b7648762f5ab9e0b3b3b0c692e1370a55",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/.codex-c-noite-limpa.log",
+   "bytes": 519,
+   "sha256": "11cd2045822f67d7263b08d55a03d680839910310d68621236d46a4c86c517ea",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/.codex-c-noite.log",
+   "bytes": 900,
+   "sha256": "9f85c49bf1e70b099289a4bd414083491881d2bf6ecc12fce197d5111ff5b0ad",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/.codex.lock",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/c-apoio.png",
+   "bytes": 3073004,
+   "sha256": "e9e33ad1d8a99422214f6d3a7a4c76c5afa9e2ed938693aafba5b02fdd4a1829",
+   "origem": "codex",
+   "nota": "cena crua do Codex (09/10)",
+   "citado_no_mediakit": false,
+   "rastreado": false
+  },
+  {
+   "caminho": "acervo/c-apoio.prompt.txt",
+   "bytes": 1631,
+   "sha256": "aa8485f3fa0edc74760371abf270331641c4012fba2857abd6a65f1a40f56c91",
+   "origem": "pipeline",
+   "nota": "prompt escrito pela skill para o Codex",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/c-capa-sabado.png",
+   "bytes": 3607801,
+   "sha256": "320172f57f3e47046cd3f03bed47ef0d24f5963d726c9d1fb9bd61c41a0a4d24",
+   "origem": "codex",
+   "nota": "cena crua do Codex (09/10)",
+   "citado_no_mediakit": false,
+   "rastreado": false
+  },
+  {
+   "caminho": "acervo/c-capa-sabado.prompt.txt",
+   "bytes": 1675,
+   "sha256": "d7207debe05a08856516dfea82f8a87dfba2e27859cceebec5201752ee6f8cda",
+   "origem": "pipeline",
+   "nota": "prompt escrito pela skill para o Codex",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/c-contato.png",
+   "bytes": 3491989,
+   "sha256": "464f3a229d16fb7318f0bc0705130d4234a8e0abda88dfd732dcfbbbfe29a0dd",
+   "origem": "codex",
+   "nota": "cena crua do Codex (09/10)",
+   "citado_no_mediakit": false,
+   "rastreado": false
+  },
+  {
+   "caminho": "acervo/c-contato.prompt.txt",
+   "bytes": 1716,
+   "sha256": "b74e77a32c5aa2da88042c0e2d3a819da0a45c35b07ba192be30ae44f992d023",
+   "origem": "pipeline",
+   "nota": "prompt escrito pela skill para o Codex",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/c-master.png",
+   "bytes": 3038868,
+   "sha256": "29d64d4c74b153988f9d3cdf8b33899b8001b5b9feb07993889be848e3c13983",
+   "origem": "codex",
+   "nota": "cena crua do Codex (09/10)",
+   "citado_no_mediakit": false,
+   "rastreado": false
+  },
+  {
+   "caminho": "acervo/c-master.prompt.txt",
+   "bytes": 1616,
+   "sha256": "3c769fe2187b1e60faaa68a102d3a70a20308e92014e8519333f7c2eb02b3a73",
+   "origem": "pipeline",
+   "nota": "prompt escrito pela skill para o Codex",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/c-noite-limpa.png",
+   "bytes": 1712687,
+   "sha256": "103cf0e9be340fab665650c7ac01795bbdbd602856c49ec98aaffd489d48657c",
+   "origem": "codex",
+   "nota": "cena crua do Codex (09/10)",
+   "citado_no_mediakit": false,
+   "rastreado": false
+  },
+  {
+   "caminho": "acervo/c-noite-limpa.prompt.txt",
+   "bytes": 1397,
+   "sha256": "5c72bb58dc4d8c2307b1abf6a581122541800bb1caf10ffcebb71a861a2391db",
+   "origem": "pipeline",
+   "nota": "prompt escrito pela skill para o Codex",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/c-noite.png",
+   "bytes": 2477436,
+   "sha256": "cedf4e5532d5a70a1fc985bf2da1b2756c3872e8f82879a02349e3c7dd2d3be1",
+   "origem": "codex",
+   "nota": "cena crua do Codex (09/10)",
+   "citado_no_mediakit": false,
+   "rastreado": false
+  },
+  {
+   "caminho": "acervo/c-noite.prompt.txt",
+   "bytes": 1553,
+   "sha256": "ce225645a81268827e296084aad43d7c4393e98f8ccc826cfd87533a08f03532",
+   "origem": "pipeline",
+   "nota": "prompt escrito pela skill para o Codex",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/.claude/state/runs/01a12280-24e2-76a0-a854-7d1424ab9e3a/events.jsonl",
+   "bytes": 1743,
+   "sha256": "39859d67a3de664d6c6fb246add937e0ae2f28054e242300e983dd8550b6bd49",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/.claude/state/runs/01a12281-5742-7b51-943f-d2b228623a88/events.jsonl",
+   "bytes": 2422,
+   "sha256": "77771ebf0d11cd979cf0e5f54ea84c2e259ee84af540dfa23c90c05bfe983dc0",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/.claude/state/runs/01a12282-d648-7093-9f21-ca0839814965/events.jsonl",
+   "bytes": 2056,
+   "sha256": "b355115494bf180662b57545504e2e03b1e9246897ea5469b3b251cf0d5a7ebe",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/.claude/state/runs/01a122b7-3f5a-7e82-9f86-adbe0bee879d/events.jsonl",
+   "bytes": 1986,
+   "sha256": "19f7b6030c76ad2975831171d6420830eff36a88754dd9954bfa6200473ade44",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/.codex-apito-cartoes.log",
+   "bytes": 402,
+   "sha256": "f4184e26a1305e59bab94fa53d9b11f340ae1ba466577c86c18832291363b000",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/.codex-bola-jogo.log",
+   "bytes": 440,
+   "sha256": "51bc8822d137d117e7b048acf892edb070d492a9f1eff961e4a82b5ef2d9b53f",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/.codex-jogo-pattern.log",
+   "bytes": 592,
+   "sha256": "90e59da3393e01ebee3f3af4fb7250a630e69733630a7e66f10d7bae7f72a9f2",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/.codex-trofeu-dourado.log",
+   "bytes": 518,
+   "sha256": "58625085a085c08fbd81c14066126cf10a091baa9a68c922a5aaa98ae78b79cc",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/apito-cartoes.bruto.png",
+   "bytes": 1950468,
+   "sha256": "639fe76f5323221b7591dccb8f3409fc3fea1a22bb84e38cb9cf0a74a38a82d4",
+   "origem": "codex",
+   "nota": "arquivo cru do Codex",
+   "citado_no_mediakit": false,
+   "rastreado": false
+  },
+  {
+   "caminho": "acervo/elementos/apito-cartoes.meta.json",
+   "bytes": 1886,
+   "sha256": "2d104321fa22f0ef7bb00d50b302166d5892a92e91c0414721a457e0f3c12928",
+   "origem": "pipeline",
+   "nota": "ficha do elemento (elementos.sh)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/apito-cartoes.png",
+   "bytes": 1950468,
+   "sha256": "639fe76f5323221b7591dccb8f3409fc3fea1a22bb84e38cb9cf0a74a38a82d4",
+   "origem": "codex",
+   "nota": "igual ao bruto",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/apito-cartoes.prompt.txt",
+   "bytes": 3365,
+   "sha256": "166b31311a55e78ba145e9d2425b130be2b45c0cee90220b8536e3a776ea522b",
+   "origem": "pipeline",
+   "nota": "prompt escrito pela skill para o Codex",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/bola-jogo.bruto.png",
+   "bytes": 2212312,
+   "sha256": "a9c91c132d5553186934e4ff654d28cc7b78014851c29ac6458800cc900e52c8",
+   "origem": "codex",
+   "nota": "arquivo cru do Codex",
+   "citado_no_mediakit": false,
+   "rastreado": false
+  },
+  {
+   "caminho": "acervo/elementos/bola-jogo.meta.json",
+   "bytes": 2076,
+   "sha256": "e24aa4cd5ec2b0ad9b12db1494340087d8371eed4bcc34681c5290a5304b5bdb",
+   "origem": "pipeline",
+   "nota": "ficha do elemento (elementos.sh)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/bola-jogo.png",
+   "bytes": 2201696,
+   "sha256": "b09c5ea47d4a0136d403296c62fc757876f931535acacdb5e912ed19cabb77f3",
+   "origem": "derivado",
+   "de": [
+    "codex"
+   ],
+   "nota": "o bruto do Codex espelhado na horizontal (luz da esquerda)",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/bola-jogo.prompt.txt",
+   "bytes": 3240,
+   "sha256": "05f74e03b4007d05dea2846e076aea8e8e44c2697c3d6c3c80cced62b854330d",
+   "origem": "pipeline",
+   "nota": "prompt escrito pela skill para o Codex",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/elementos.log",
+   "bytes": 665,
+   "sha256": "73c18fcf9d952508291caeb3f99bea4edbf0eec10e30adaeb4b96dda6a272aa7",
+   "origem": "codex",
+   "nota": "registro da execução (log)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/jogo-pattern.bruto.png",
+   "bytes": 2017342,
+   "sha256": "a7017b20eda5c0bf3ef912992974fe430ec172028d3f5584f4b17b0cfca04b25",
+   "origem": "codex",
+   "nota": "arquivo cru do Codex",
+   "citado_no_mediakit": false,
+   "rastreado": false
+  },
+  {
+   "caminho": "acervo/elementos/jogo-pattern.meta.json",
+   "bytes": 1868,
+   "sha256": "5ac08946017f02c9df62219996964fe6d36f029afe35fb5243b8f28913694eef",
+   "origem": "pipeline",
+   "nota": "ficha do elemento (elementos.sh)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/jogo-pattern.png",
+   "bytes": 2017342,
+   "sha256": "a7017b20eda5c0bf3ef912992974fe430ec172028d3f5584f4b17b0cfca04b25",
+   "origem": "codex",
+   "nota": "igual ao bruto",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/jogo-pattern.prompt.txt",
+   "bytes": 3745,
+   "sha256": "1fe200906d3630b066dfc643d1c588ae28b3ffe29d91ac7f345b436c162fb548",
+   "origem": "pipeline",
+   "nota": "prompt escrito pela skill para o Codex",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/trofeu-dourado.bruto.png",
+   "bytes": 1782182,
+   "sha256": "538dc4ca864713f22b857d45ecb4553f536578cca322760e771c2749f517e0cb",
+   "origem": "codex",
+   "nota": "arquivo cru do Codex",
+   "citado_no_mediakit": false,
+   "rastreado": false
+  },
+  {
+   "caminho": "acervo/elementos/trofeu-dourado.meta.json",
+   "bytes": 2076,
+   "sha256": "cc62a6777a312c6a6fa2ae140143dea12b00d47ca09feedd059c927d9aa2d3a3",
+   "origem": "pipeline",
+   "nota": "ficha do elemento (elementos.sh)",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/trofeu-dourado.png",
+   "bytes": 1779642,
+   "sha256": "78bd6ee1afcbcd25cd9a88a7e8b1ecb0c972b5daae8e375a5a2f9911d70c6a91",
+   "origem": "derivado",
+   "de": [
+    "codex"
+   ],
+   "nota": "o bruto do Codex espelhado na horizontal (luz da esquerda)",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/elementos/trofeu-dourado.prompt.txt",
+   "bytes": 3218,
+   "sha256": "4a39ada784d82a9fd4c3cd97be3932739de819e221dbabd66a451708aced7b5d",
+   "origem": "pipeline",
+   "nota": "prompt escrito pela skill para o Codex",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/logo-ame-320-x3.png",
+   "bytes": 472288,
+   "sha256": "f1b7b12997f7c168d03ab321b81fefaa4afdfa7e72558df3ae691e7d3b11cb57",
+   "origem": "derivado",
+   "de": [
+    "cliente"
+   ],
+   "nota": "logo raster do kit antigo, ampliado 3 vezes",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/pdf/app-ame.jpg",
+   "bytes": 137159,
+   "sha256": "2d10b033f9f9fdf04e4940a5173735f20ce30d5340ca4f34c1f66ba97898d7a0",
+   "origem": "cliente",
+   "nota": "recuperada do PDF Patrocinadores 2026",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/pdf/app-tabela-rodada.jpg",
+   "bytes": 217291,
+   "sha256": "f785f79cf7012a1c1668b4c2fc6b29e71a61539298a572a5cc3eb980488ce1d3",
+   "origem": "cliente",
+   "nota": "recuperada do PDF Patrocinadores 2026",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/pdf/backdrop.jpg",
+   "bytes": 150291,
+   "sha256": "5b74871fb1b452af8f6c34d78f7eef95e1b7ef2f28f681c5283c2d2e5f45671b",
+   "origem": "cliente",
+   "nota": "recuperada do PDF Patrocinadores 2026",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/pdf/noite-das-estrelas-post.jpg",
+   "bytes": 324029,
+   "sha256": "29774b40664c1f9f9c15a0b010c71f6ec815298511f39f135e4fc626f60526c7",
+   "origem": "cliente",
+   "nota": "recuperada do PDF Patrocinadores 2026",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/pdf/panfleto-qr.jpg",
+   "bytes": 93501,
+   "sha256": "bbc4e80410883b2d7d1acd57fe570ddc65e87dfef14bd6b84072a81b7296dfc4",
+   "origem": "cliente",
+   "nota": "recuperada do PDF Patrocinadores 2026",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/pdf/placas-campo.jpg",
+   "bytes": 121958,
+   "sha256": "f844270e773f893911406e49f2f53cdcbf13978f3ff4f0b32ec9a50950784b5c",
+   "origem": "cliente",
+   "nota": "recuperada do PDF Patrocinadores 2026",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/pdf/wind-banners.jpg",
+   "bytes": 54903,
+   "sha256": "bc4a7b792e50884358b81ff86aa843cce0962882e0feb9b0eb3297e7fbc2785f",
+   "origem": "cliente",
+   "nota": "recuperada do PDF Patrocinadores 2026",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/real-atleta-recorte.png",
+   "bytes": 1079064,
+   "sha256": "87ccb7c5dbd4fc4686f94b1d2de5ef4e292d9488274487a8bfe513fbf9167468",
+   "origem": "derivado",
+   "de": [
+    "cliente"
+   ],
+   "nota": "recorte de foto real do cliente",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/real-goleiro-recorte.png",
+   "bytes": 1117011,
+   "sha256": "8ffad4d0511146bd1083f64b022d1b0b25a9e29035fc53d64766efb5524ef2fe",
+   "origem": "derivado",
+   "de": [
+    "cliente"
+   ],
+   "nota": "recorte de foto real do cliente",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/real-mascote-arbitragem-recorte.png",
+   "bytes": 1683489,
+   "sha256": "c6149b5475f58cbb04cc235647ee3146a894e2b3c6d8e5a726a590e2d7c78dec",
+   "origem": "derivado",
+   "de": [
+    "cliente"
+   ],
+   "nota": "recorte de foto real do cliente",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/backdrop-1400.jpg",
+   "bytes": 276220,
+   "sha256": "b0b56f53753fa6f8c8aa2458b3c9ca5f29a526e6d070f3546e7139074c1eafec",
+   "origem": "derivado",
+   "de": [
+    "cliente"
+   ],
+   "nota": "foto real do cliente tratada",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-apoio-composta.jpg",
+   "bytes": 495908,
+   "sha256": "d59b2519183d77af4d1d7dad8a8b0c7fd8936d6853e4188cdaa1a92cea142d45",
+   "origem": "derivado",
+   "de": [
+    "codex"
+   ],
+   "nota": "cena do Codex tratada e composta (compor.py)",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-apoio.jpg",
+   "bytes": 315462,
+   "sha256": "f5d12c6f05f1469314c9a9cec513c45c7183e475ff0841d149db624711791c59",
+   "origem": "derivado",
+   "de": [
+    "codex"
+   ],
+   "nota": "cena do Codex tratada",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-arbitragem-composta.jpg",
+   "bytes": 464603,
+   "sha256": "05ba6cec0e0b89027db2bd0a9de09496f77c66a46b0107866f312c1ddc658e2a",
+   "origem": "derivado",
+   "de": [
+    "08-10-higgsfield"
+   ],
+   "nota": "cena de 08/10 reduzida a 1936 px e composta (compor.py)",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-beira-composta.jpg",
+   "bytes": 517208,
+   "sha256": "65b41460901c976a1b74318b12e1dd9af760b54fe7698380113c9344b62362e4",
+   "origem": "derivado",
+   "de": [
+    "08-10-higgsfield"
+   ],
+   "nota": "cena de 08/10 reduzida a 1936 px e composta (compor.py)",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-capa-composta.jpg",
+   "bytes": 194446,
+   "sha256": "7ff0137e8881e64989899d58fd6fe8649acd5ac90bfd1ce5bea88676c9d4556c",
+   "origem": "derivado",
+   "de": [
+    "cliente",
+    "08-10-higgsfield"
+   ],
+   "nota": "atleta real recortado sobre cena de 08/10 (provável: arco e bandeiras lisos de cena gerada; o mediakit.json marca gerada false e sem rótulo; confirmar)",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-capa-sabado.jpg",
+   "bytes": 438636,
+   "sha256": "1944bad6f19bc7769206fa7c900bcea28e1457827e9301f8df38a7919d35735e",
+   "origem": "derivado",
+   "de": [
+    "codex"
+   ],
+   "nota": "cena do Codex tratada",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-contato.jpg",
+   "bytes": 422358,
+   "sha256": "6ca41bb3c50dba9c5bfa0dc5f8e7229041c1d51b916da846184a95f25fc63354",
+   "origem": "derivado",
+   "de": [
+    "codex"
+   ],
+   "nota": "cena do Codex tratada",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-master.jpg",
+   "bytes": 311578,
+   "sha256": "9ae31e46a656283d5fe72f1c196bf6379df2a44c446ff144422a5739eceea652",
+   "origem": "derivado",
+   "de": [
+    "codex"
+   ],
+   "nota": "cena do Codex tratada",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-noite-composta.jpg",
+   "bytes": 466077,
+   "sha256": "0aae13a7bea6d04f72dbaf38046c82c3eb04aa989e1e281b78ad78b431adea72",
+   "origem": "derivado",
+   "de": [
+    "codex"
+   ],
+   "nota": "cena do Codex tratada e composta (compor.py)",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-noite.jpg",
+   "bytes": 289225,
+   "sha256": "c847a11475bd8d2bb58ce725ef6436193ef5419be8c681ac5cf9c249b3948174",
+   "origem": "derivado",
+   "de": [
+    "codex"
+   ],
+   "nota": "cena do Codex tratada",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-paifilho.jpg",
+   "bytes": 425524,
+   "sha256": "2e2e6a2d710c657c0842183052ac9f28a807efb89ca5ab10f14158635cf24768",
+   "origem": "derivado",
+   "de": [
+    "08-10-higgsfield"
+   ],
+   "nota": "cena de 08/10 reduzida a 1936 px",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-projecao-composta.jpg",
+   "bytes": 619424,
+   "sha256": "5133a76431d9ce979c10636766adeceb0959daf3662fb20b85a53424c8b61469",
+   "origem": "derivado",
+   "de": [
+    "08-10-higgsfield"
+   ],
+   "nota": "cena de 08/10 reduzida a 1936 px e composta (compor.py)",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-projecao.jpg",
+   "bytes": 1081348,
+   "sha256": "20a4b690661a7a7c3b3269bd5f27636045679d5b32122a27a423f493b6458791",
+   "origem": "derivado",
+   "de": [
+    "08-10-higgsfield"
+   ],
+   "nota": "cena de 08/10 reduzida a 1936 px",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/c-transmissao-composta.jpg",
+   "bytes": 416967,
+   "sha256": "719e71f80d4633c2ad8bf468ab99978005c0c8c09819223dd59ab74a94b61dc9",
+   "origem": "derivado",
+   "de": [
+    "08-10-higgsfield"
+   ],
+   "nota": "cena de 08/10 reduzida a 1936 px e composta (compor.py)",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/real-arbitragem-entrada.jpg",
+   "bytes": 525340,
+   "sha256": "8b8744627638f23b78297305c35f6bd8e5da24c3ab1e379792bb1dc632c6eb78",
+   "origem": "derivado",
+   "de": [
+    "cliente"
+   ],
+   "nota": "foto real do cliente tratada",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/real-equipe-sub.jpg",
+   "bytes": 543434,
+   "sha256": "291010602d477d8a9b03af4552263e8b085c0533a9e65d03af2725da9dbd01a2",
+   "origem": "derivado",
+   "de": [
+    "cliente"
+   ],
+   "nota": "foto real do cliente tratada",
+   "citado_no_mediakit": true,
+   "rastreado": true
+  },
+  {
+   "caminho": "acervo/tratado/real-noite-das-estrelas.jpg",
+   "bytes": 166418,
+   "sha256": "cc780796096182a4c30da8f39c80fe75d211cebc7b9f41b4836727f8e3fcd196",
+   "origem": "derivado",
+   "de": [
+    "cliente"
+   ],
+   "nota": "foto real do cliente tratada",
+   "citado_no_mediakit": false,
+   "rastreado": true
+  }
+ ]
+}

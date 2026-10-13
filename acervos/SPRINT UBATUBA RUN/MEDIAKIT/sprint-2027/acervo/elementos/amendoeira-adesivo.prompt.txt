@@ -1,0 +1,19 @@
+Generate one image with one call of the image generator and save it exactly as /Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/amendoeira-adesivo.bruto.png (PNG).
+Use case: logo-brand
+Asset type: die-cut sticker artwork for a sports sponsorship media kit (transparent PNG; any wording is added later by layout software)
+Primary request: one die-cut sticker: a tropical almond tree standing on beach sand, wide layered canopy
+Input images: Image 1 (attached) is a STYLE REFERENCE only. Generate a new image and match the rendering style of the attached reference, not its subject: same medium, material finish, light direction and softness, level of detail, color treatment, camera angle and edge quality. Do not copy, trace, edit or include the reference object; draw only the subject described here, as a new and different object.
+Subject: a tropical almond tree standing on beach sand, wide layered canopy
+Theme: folha amendoeira (a visual theme, never written)
+Style/medium: two-tone halftone print, coarse dot screen, sea blue ink on transparent background, beach poster feel, die-cut sticker with a thin cream border
+Composition/framing: Portrait 2:3 image, 1024x1536 pixels or larger. One sticker, centered, generous empty margin on every side, a clean continuous outer cut line; slightly rotated is fine. Any area meant for a label stays blank and flat.
+Color palette: sea blue as the dominant color, with off-white; no other hues.
+Background: fully transparent (PNG with a real alpha channel). If the generator cannot produce transparency, use this instead: a perfectly flat, uniform mid grey background (50% grey), no gradient, no vignette.
+Constraints: one sticker only; no mockup, no hand, no surface or shadow under it.
+Avoid: text of any kind, letters, numbers, digits, logos, brand marks, signatures, watermarks.
+The image must contain NO text of any kind: no letters, no numbers, no digits, no logos, no brand marks, no signatures, no watermarks, no engraved or printed characters.
+Do NOT post-process the image with code or any other tool: no background removal, no resizing, no recoloring, no cropping. Save exactly the file the image generator returned (we measure its transparency afterwards).
+Do NOT regenerate under any circumstance, not even if a check below fails (each generation spends the ChatGPT quota). Make exactly one image generation call and keep that single image.
+Do not edit, copy or overwrite the attached reference image file.
+After saving, open the image and check: (1) no text, letter, number, digit or logo anywhere, including on the subject itself, (2) one sticker only with a clean cut line and blank label areas, (3) background is transparent or perfectly flat mid grey, (4) the rendering style matches the attached reference while the subject is the new one.
+In your final message, write one line exactly as TRANSPARENT: yes or TRANSPARENT: no (as returned by the generator), then list any defect found.

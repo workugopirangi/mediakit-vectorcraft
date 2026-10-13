@@ -1,0 +1,19 @@
+Generate one image with one call of the image generator and save it exactly as /Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/AME CRIANCA/MEDIAKIT/copa-ame-v2/acervo/elementos/jogo-pattern.bruto.png (PNG).
+Use case: stylized-concept
+Asset type: seamless repeating pattern tile for a sports sponsorship media kit (transparent PNG)
+Primary request: one seamless repeating pattern tile: a seamless repeating flat lay of small football objects seen from directly above, evenly scattered with generous space between them: referee whistles on short black lanyards, plain yellow referee cards, small black and white footballs and small gold five-point stars; every object complete inside the tile, none touching the tile edges
+Input images: Image 1 (attached) is a STYLE REFERENCE only. Generate a new image and match the rendering style of the attached reference, not its subject: same medium, material finish, light direction and softness, level of detail, color treatment, camera angle and edge quality. Do not copy, trace, edit or include the reference object; draw only the subject described here, as a new and different object.
+Subject: a seamless repeating flat lay of small football objects seen from directly above, evenly scattered with generous space between them: referee whistles on short black lanyards, plain yellow referee cards, small black and white footballs and small gold five-point stars; every object complete inside the tile, none touching the tile edges
+Theme: objetos do jogo (a visual theme, never written)
+Style/medium: photorealistic flat lay seen from directly above, warm low side light from the left, soft contact shadows to the right, natural materials, no logos, no text, transparent background
+Composition/framing: Square 1:1 image, 1024x1024 pixels or larger, a seamless repeating pattern tile. Motif density even across the whole tile, no focal point, no border, no frame.
+Color palette: lemon yellow as the dominant color, with black, white, mustard yellow; no other hues.
+Background: fully transparent (PNG with a real alpha channel). If the generator cannot produce transparency, use this instead: a perfectly flat, uniform pure white background with nothing else on it.
+Constraints: SEAMLESS: the tile must wrap around. Any shape that crosses the left edge continues exactly on the right edge, any shape that crosses the top edge continues exactly on the bottom edge, so that placing copies side by side shows no visible seam.
+Avoid: text of any kind, letters, numbers, digits, logos, brand marks, signatures, watermarks.
+The image must contain NO text of any kind: no letters, no numbers, no digits, no logos, no brand marks, no signatures, no watermarks, no engraved or printed characters.
+Do NOT post-process the image with code or any other tool: no background removal, no resizing, no recoloring, no cropping. Save exactly the file the image generator returned (we measure its transparency afterwards).
+Do NOT regenerate under any circumstance, not even if a check below fails (each generation spends the ChatGPT quota). Make exactly one image generation call and keep that single image.
+Do not edit, copy or overwrite the attached reference image file.
+After saving, open the image and check: (1) no text, letter, number, digit or logo anywhere, including on the subject itself, (2) background is transparent or perfectly flat white, (3) even density with no focal point, (4) left and right edges match and top and bottom edges match, (5) the rendering style matches the attached reference while the subject is the new one.
+In your final message, write one line exactly as TRANSPARENT: yes or TRANSPARENT: no (as returned by the generator), then list any defect found.

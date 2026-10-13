@@ -1,0 +1,78 @@
+{
+ "id": "bola-jogo",
+ "tipo": "objeto",
+ "familia": "objeto-sabado",
+ "motivo": "objetos-do-jogo",
+ "estilo": "photorealistic studio cutout of a single sports object, warm low side light from the left, soft contact shadow to the right, natural materials, no logos, no text, transparent background",
+ "paleta": [
+  "#F5D80A",
+  "#0B0B0C",
+  "#FFFFFF",
+  "#C9A227"
+ ],
+ "paleta_nomes": [
+  "lemon yellow",
+  "black",
+  "white",
+  "mustard yellow"
+ ],
+ "aspecto": "quadrado",
+ "luz": "esquerda",
+ "descricao": "a classic black and white football with pentagon and hexagon panels, used in a Saturday match, a little red earth dust on it, no brand, no printing",
+ "ref": null,
+ "ref_sha256": null,
+ "rota": "codex-alfa",
+ "arquivo": "bola-jogo.png",
+ "bruto": "bola-jogo.bruto.png",
+ "sha256": "a9c91c132d5553186934e4ff654d28cc7b78014851c29ac6458800cc900e52c8",
+ "sha256_bruto": "a9c91c132d5553186934e4ff654d28cc7b78014851c29ac6458800cc900e52c8",
+ "dims": [
+  1254,
+  1254
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.435,
+  "opaco": 0.574
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.435,
+  "opaco": 0.574
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/AME CRIANCA/MEDIAKIT/copa-ame-v2/acervo/elementos/bola-jogo.prompt.txt",
+ "gerado": true,
+ "composicao": {
+  "pagina": "ativo:3",
+  "chave": "ativo:3",
+  "plano": "plano-maquete-r1.json",
+  "area_px": [
+   134,
+   134
+  ],
+  "aspecto": "quadrado",
+  "origem_da_medida": "plano",
+  "lado": [
+   "left",
+   "lower"
+  ],
+  "rumo": "upper right",
+  "sangra": null,
+  "sobrepoe": null,
+  "rot": 0.0,
+  "espelhar": false,
+  "elemento": "bola-jogo"
+ },
+ "data": "2026-10-09T18:12:41-03:00",
+ "tratamentos": [
+  {
+   "em": "2026-10-09",
+   "o_que": "espelhado na horizontal",
+   "porque": "a luz medida vinha da direita (razão 0.871); a família e as cenas pedem luz da esquerda. Peça simétrica: espelhar não muda o objeto. O bruto do Codex fica intacto"
+  }
+ ]
+}

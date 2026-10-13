@@ -1,0 +1,46 @@
+{
+ "id": "folha-adesivo",
+ "tipo": "adesivo",
+ "familia": "meio-tom-mar",
+ "motivo": "folha-amendoeira",
+ "estilo": "two-tone halftone print, coarse dot screen, sea blue ink on transparent background, beach poster feel, die-cut sticker with a thin cream border",
+ "paleta": [
+  "#2067AA",
+  "#F4EADB"
+ ],
+ "paleta_nomes": [
+  "sea blue",
+  "off-white"
+ ],
+ "aspecto": "quadrado",
+ "luz": null,
+ "descricao": "a single broad rounded leaf of the tropical almond tree with visible veins",
+ "ref": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/ondas-serra-adesivo.png",
+ "ref_sha256": "1b399b11ad2c74cffb09ae3a9e5e3f9174e2ce31c125dd239ff5f9838b2240f7",
+ "rota": "codex-alfa",
+ "arquivo": "folha-adesivo.png",
+ "bruto": "folha-adesivo.bruto.png",
+ "sha256": "5be0eb19e206387b36f9787eb2a3ed45068183238c0e26662ca0b790fef77966",
+ "sha256_bruto": "5be0eb19e206387b36f9787eb2a3ed45068183238c0e26662ca0b790fef77966",
+ "dims": [
+  1254,
+  1254
+ ],
+ "alfa": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.443,
+  "opaco": 0.57
+ },
+ "alfa_bruto": {
+  "real": true,
+  "modo": "RGBA",
+  "transparente": 0.443,
+  "opaco": 0.57
+ },
+ "codex_disse": "TRANSPARENT: yes",
+ "geracoes_medidas": 1,
+ "prompt": "/Users/ugopirangi/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027/acervo/elementos/folha-adesivo.prompt.txt",
+ "gerado": true,
+ "data": "2026-10-09T14:02:05-03:00"
+}

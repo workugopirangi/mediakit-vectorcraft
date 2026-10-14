@@ -1,1 +1,14 @@
-{"c-portico-wt-gerada.png": "usar", "c-estande-wt-gerada.png": "usar", "camisa-wt-gerada.png": "usar"}
+{
+ "c-portico-wt-gerada.png": {
+  "decisao": "usar",
+  "sha256": "c710f3ecfc81003374f3ccefb159a8282c6f5972371403e206a7fd12cd30b734"
+ },
+ "c-estande-wt-gerada.png": {
+  "decisao": "usar",
+  "sha256": "d20f7aff474c84de8265bbed84253f26a76302fb7dfb561365f38b84bf6136af"
+ },
+ "camisa-wt-gerada.png": {
+  "decisao": "usar",
+  "sha256": "742f5244dc30e3d9a73242b6e46ff9d21aced1ac7d76e7c8a18d22500e005bfb"
+ }
+}

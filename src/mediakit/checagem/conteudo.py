@@ -3,11 +3,18 @@ import re
 
 import fitz
 
-_NUM = re.compile(r"\d+(?:[./-]\d+)*%?")
+_NUM = re.compile(r"\d+(?:[.,/-]\d+)*%?")
+# Rótulo com espaçamento largo entre letras sai da extração como "2 0 2 6": junta caracteres soltos de número.
+_ESPACADO = re.compile(r"(?<![\w.,/%-])[\d.,/%-](?: [\d.,/%-]){2,}(?![\w.,/%-])")
 _TRAVESSAO = re.compile("(?s).{0,20}[\u2014\u2013].{0,20}")
 
 
+_ESPACOS = re.compile("[\N{NO-BREAK SPACE}\N{THIN SPACE}\N{NARROW NO-BREAK SPACE}]")
+
+
 def numeros(texto):
+    texto = _ESPACOS.sub(" ", texto)
+    texto = _ESPACADO.sub(lambda m: m.group(0).replace(" ", ""), texto)
     return set(_NUM.findall(texto))
 
 

@@ -30,3 +30,19 @@ def test_travessao_aparece(tmp_path):
     pdf = _pdf(tmp_path, ["Sem problema aqui.", "Largada \u2014 chegada"])
     r = conteudo.travessoes(pdf)
     assert len(r) == 1 and r[0]["pagina"] == 2
+
+
+def test_virgula_decimal_e_um_numero_so():
+    assert "4,8" in conteudo.numeros("4,8 mil visualizações")
+
+
+def test_rotulo_espacado_vira_um_numero():
+    assert conteudo.numeros("2 0 2 5 : I N F O R M A D O") == {"2025"}
+    assert conteudo.numeros("5 · 10 · 14 KM") == {"5", "10", "14"}
+
+
+def test_rotulo_espacado_errado_aparece(tmp_path):
+    ficha = tmp_path / "ficha.md"
+    ficha.write_text("2026 (informado): 500 atletas. Página 2 de 5.")
+    pdf = _pdf(tmp_path, ["2 0 2 5 · I N F O R M A D O"])
+    assert conteudo.numeros_fora_da_ficha(pdf, ficha) == [{"pagina": 1, "numero": "2025"}]

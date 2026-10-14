@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# O Python da v10 (Python 3.12 com as bibliotecas de requirements.txt), com o pacote mediakit no caminho.
+RAIZ="$(cd "$(dirname "$0")/.." && pwd)"
+PYTHONPATH="$RAIZ/src${PYTHONPATH:+:$PYTHONPATH}" exec "$HOME/.venvs/mediakit-vc/bin/python" "$@"

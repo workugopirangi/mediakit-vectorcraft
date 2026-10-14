@@ -1,0 +1,12 @@
+# Ambiente da v10: ~/.venvs/mediakit-vc (Python 3.12). Versões iguais às do ambiente da v9 que já rodam.
+pymupdf==1.26.5
+pillow==12.3.0
+numpy==2.5.3
+rembg==2.0.85
+onnxruntime==1.30.0
+opencv-python-headless==5.0.0.93
+scikit-image==0.26.0
+fonttools==4.66.1
+requests==2.34.2
+jsonschema==4.26.0
+pytest==8.3.3

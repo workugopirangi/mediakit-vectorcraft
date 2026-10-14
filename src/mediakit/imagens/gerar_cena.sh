@@ -4,6 +4,7 @@
 # Nunca regera uma imagem que já abre inteira.
 # Uso: gerar_cena.sh <id> <arquivo-de-prompt> <pasta-acervo> [imagem-anexa ...]
 AQUI="$(cd "$(dirname "$0")" && pwd)"
+PY="${PY:-$HOME/.venvs/mediakit-vc/bin/python}"
 source "$AQUI/codex_gerar.sh"
 MEDIAKIT_CODEX_TENTATIVAS=1
 export PYTHONPATH="$(cd "$AQUI/../.." && pwd)${PYTHONPATH:+:$PYTHONPATH}"

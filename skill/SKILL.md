@@ -7,7 +7,7 @@ description: Gera mídia kit de patrocínio da Motion Perform em PDF 16:9 montad
 
 Projeto: `~/Developer/vectorcraft-mediakit` (código, receitas, bibliotecas). Especificação: `docs/SPEC.md`.
 Saída de cada kit: `CLIENTES/<CLIENTE>/MEDIAKIT/<kit>/` no cofre, com `ficha.md`, `acervo/`, `saida/kit-<nome>.pdf` e `.vectorcraft`.
-Comandos rodam de dentro do projeto com `PYTHONPATH=src`.
+Comandos rodam de dentro do projeto com `scripts/py` (o Python da v10, já com o pacote).
 
 ## A régua
 - Um estilo por kit, dirigido por UMA referência. Qualidade se julga pelo resultado (referência, revisor), nunca por lista de técnicas.
@@ -31,5 +31,5 @@ Comandos rodam de dentro do projeto com `PYTHONPATH=src`.
 6. Aprender: `passos/6 APRENDER.md`
 
 ## Antes de começar
-- `cd ~/Developer/vectorcraft-mediakit && python3 -m pytest -m "not vectorcraft" -q` tem de passar.
+- `cd ~/Developer/vectorcraft-mediakit && scripts/py -m pytest -m "not vectorcraft" -q` tem de passar.
 - O VectorCraft precisa estar na versão travada (a montagem para sozinha se não estiver; o remédio é `scripts/montar_vectorcraft.sh`).

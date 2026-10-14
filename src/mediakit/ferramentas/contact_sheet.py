@@ -1,11 +1,11 @@
-# Copiado da v9 (commit <pendente>) em 14/10/2026.
+# Copiado da v9 (commit 1d62c10) em 14/10/2026 e reescrito sobre PDFs.
 """
 contact_sheet.py: folhas de comparação entre dois PDFs de mídia kit (prova para o dono cético).
 
 Na v9 este arquivo trabalhava sobre a pasta do kit (mediakit.json, render-report, PNGs do render). Na v10 o que existe é o
 PDF entregue, então só ficaram os dois modos que funcionam com PDFs. Saíram os que só existem para o HTML da v9: a folha de
 contato com a régua (lia render-report.json), --composicao, --acabamento e --estudo (liam o plano de elementos, o
-mediakit.json e o repertório). A régua em si continua em regua.py.
+mediakit.json e o repertório). A régua da v9 (regua.py) não entrou na v10.
 
 Uso:
   scripts/py -m mediakit.ferramentas.contact_sheet --antes <depois.pdf> <antes.pdf> [--saida folha.png]
@@ -31,9 +31,18 @@ import sys
 from pathlib import Path
 
 import fitz
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 
-from mediakit.ferramentas.regua import fonte_ui
+
+
+def fonte_ui(tam):
+    """Fonte da folha (veio do regua.py da v9, que não entrou na v10)."""
+    for c in ("/System/Library/Fonts/Supplemental/Arial Bold.ttf", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"):
+        try:
+            return ImageFont.truetype(c, tam)
+        except Exception:
+            pass
+    return ImageFont.load_default()
 
 FUNDO_FOLHA, FUNDO_CELULA = (18, 18, 20), (32, 32, 36)
 CEL_AD, CEL_CEGA = 640, 860

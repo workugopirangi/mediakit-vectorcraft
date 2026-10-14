@@ -16,6 +16,7 @@ CL = os.path.expanduser("~/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFO
 KIT = os.path.join(CL, "sprint-world-tennis")
 AC = os.path.join(KIT, "acervo")
 SP = os.path.join(CL, "sprint-2027", "acervo")
+OF = os.path.join(AC, "oficial-2027")  # arquivos oficiais enviados pela Sprint em 13 e 14/10/2026: não alterar o desenho
 ASSETS = os.path.join(KIT, "assets")
 os.makedirs(ASSETS, exist_ok=True)
 
@@ -72,7 +73,7 @@ def faixa(P, y, ang=-4, cor=R, tcor=K):
     """A fita inclinada da Nike: informação da prova repetida, cortada pela página."""
     ids = [P.rect(-200, y, PW + 400, 64, fill=cor)]
     x = -120
-    itens = [("SPRINT 27", DIN, 46), ("▶", BOLD, 26), ("5 · 10 · 14 KM", DIN, 46), ("▶", BOLD, 26),
+    itens = [("SPRINT 27", DIN, 46), ("▶", BOLD, 26), ("5 · 10 · 15 KM", DIN, 46), ("▶", BOLD, 26),
              ("14.03.27", DIN, 46), ("▶", BOLD, 26), ("WORLD TENNIS", COND, 40), ("▶", BOLD, 26), ("UBATUBA / SP", DIN, 46), ("////", COND, 40)]
     while x < PW + 200:
         for s, f, sz in itens:
@@ -109,10 +110,14 @@ def vertical(P, x, y, w, h, s, cor, font=COND):
     return t
 
 
+LOGO_SPRINT = os.path.join(OF, "logo-branco.png")  # o logo de 13/10 (escolha do Ugo em 14/10), só sem o fundo branco
+LOGO_R = 731 / 413
+
+
 def logos(P, x, y, h=64, cor_sprint="#FFFFFF"):
-    sp = os.path.join(SP, "logo.png")
+    sp = LOGO_SPRINT
     wt = os.path.join(AC, "logo-world-tennis.png")
-    ws = h * 843 / 490
+    ws = h * LOGO_R
     P.image(sp, x, y, ws, h)
     P.rect(x + ws + 22, y + h * 0.15, 2, h * 0.7, fill=W, opacity=60)
     hw = h * 0.9
@@ -173,9 +178,14 @@ def p_objetivo(P):
     head(P, 96, 300, "Dar nome à\n2ª edição.", 140, W, "2ª edição.", R, COND, 130, -10)
     P.text(96, 600, "Convidar a World Tennis a dar nome à prova: ela passa a se chamar\nSprint Ubatuba Run apresentada por World Tennis,\ndo primeiro post à última medalha.",
            MED, 30, W, leading=42)
-    P.ellipse(1440, 520, 330, 330, fill=R)
-    P.ellipse(1440, 520, 360, 360, fill=None, stroke=R, sw=3)
-    P.image(os.path.join(SP, "elementos", "medalha-alada.png"), 1170, 250, 540, 540)
+    # A medalha oficial, inteira (foto da Sprint, sem recorte): 2026 deu uma asa, 2027 dá a outra (áudio do Filipe, 14/10).
+    # Painel, não círculo: o círculo cortava a base das duas metades.
+    mw, mh = 640, 640 * 807 / 739
+    P.image(os.path.join(OF, "medalha-par.jpeg"), 1160, 110, mw, mh)
+    P.rect(1160, 110, mw, mh, fill=None, stroke=R, sw=6)
+    P.text(1160 + mw, 110 + mh + 34, "MEDALHA OFICIAL: 2026 + 2027", BOLD, 12, GR, tracking=160, justify="right")
+    P.text(96, 790, "A medalha de 2027 é a outra asa da medalha de 2026:\nquem correu as duas edições fecha o par.",
+           BOLD, 28, G, leading=40)
     raia(P, 1000, 760, PH)
     faixa(P, 960, -3)
 
@@ -238,37 +248,48 @@ def p_estande(P):
     return rota
 
 
+def camiseta_oficial():
+    """A arte oficial 2027 (frente e costas), só aparada nas bordas transparentes: o desenho não muda."""
+    out = os.path.join(ASSETS, "camiseta-oficial-aparada.png")
+    im = Image.open(os.path.join(OF, "camiseta-frente-costas.png")).convert("RGBA")
+    im.crop(im.getchannel("A").point(lambda a: 255 if a > 10 else 0).getbbox()).save(out)
+    return out
+
+
 def p_camisa(P):
     fundo(P)
-    for x in (120, 380, 640):
-        raia(P, x)
-    if cenas.escolher_cena(AC, "", "camisa-wt-gerada.png")[1] == "gerada":
-        P.image(foto("camisa-wt-gerada.png", "camisa-final", 820, 820, "none", (0.6, 0.5), raiz=AC), 40, 130, 820, 820)
-        tag(P, 60, 1040, "Projeção ilustrativa", K, W)
-        rota = "gerada"
-    else:
-        P.image(foto("tratado/f2.jpg", "f2-cor", 640, 860, "warm", (0.5, 0.4)), 120, 110, 640, 860)
-        rota = "foto real"
-    P.text(960, 150, "03 · CAMISA E PÓDIO", BOLD, 13, R, tracking=180)
-    head(P, 960, 290, "Na manga de cada camisa.\nNo centro do pódio.", 76, W, "No centro do pódio.", R, COND, 74)
-    P.text(960, 450, "A camisa dourada vira uniforme do dia. O backdrop do\npódio é a foto oficial da premiação.", MED, 26, W, leading=36)
-    P.image(foto("tratado/f7.jpg", "f7-cor", 860, 500, "warm", (0.5, 0.42)), 960, 520, 860, 500)
-    P.rect(960, 520, 860, 500, fill=None, stroke=R, sw=4)
+    raia(P, 505)
+    cw = 900
+    img = camiseta_oficial()
+    iw, ih = Image.open(img).size
+    k, y0 = cw / iw, 250
+    P.image(img, 40, y0, cw, ih * k)
+    # Marca, sem tocar na arte, onde a World Tennis entra: a faixa de patrocinadores das costas.
+    P.rect(40 + 1200 * k, y0 + 250 * k, 165 * k, 510 * k, fill=None, stroke=R, sw=4)
+    tag(P, 40 + 1196 * k, y0 + 810 * k, "World Tennis aqui", W, R)
+    P.text(40, y0 + ih * k + 70, "CAMISETA OFICIAL 2027 · ARTE DA ORGANIZAÇÃO", BOLD, 12, GR, tracking=160)
+    rota = "arte oficial"
+    P.text(960, 150, "03 · CAMISETA E PÓDIO", BOLD, 13, R, tracking=180)
+    head(P, 960, 290, "Nas costas de cada camiseta.\nNo centro do pódio.", 70, W, "No centro do pódio.", R, COND, 70)
+    P.text(960, 450, "A camiseta oficial 2027 vira uniforme do dia, com a World\nTennis na faixa de patrocinadores das costas. O backdrop\ndo pódio é a foto oficial da premiação.", MED, 26, W, leading=36)
+    P.image(foto("tratado/f7.jpg", "f7-cor", 845, 452, "warm", (0.5, 0.42)), 960, 560, 845, 452)
+    P.rect(960, 560, 845, 452, fill=None, stroke=R, sw=4)
     P.text(1820, 1050, "FOTO: PÓDIO 2026", BOLD, 12, GR, tracking=160, justify="right")
     return rota
 
 
 CID = {"UBATUBA": (-45.0717, -23.4336), "CARAGUATATUBA": (-45.4131, -23.6203), "SÃO SEBASTIÃO": (-45.4097, -23.7600),
        "ILHABELA": (-45.3581, -23.7786), "SÃO JOSÉ DOS CAMPOS": (-45.8869, -23.1794), "TAUBATÉ": (-45.5550, -23.0264),
-       "GUARATINGUETÁ": (-45.1925, -22.8164), "PARATY": (-44.7131, -23.2178)}
+       "GUARATINGUETÁ": (-45.1925, -22.8164), "PARATY": (-44.7131, -23.2178),
+       "SÃO PAULO": (-46.6333, -23.5505)}  # capital: pedido do Filipe (Sprint) em 14/10/2026
 
 
 def p_alcance(P):
     fundo(P)
     lat0 = math.radians(-23.2)
-    s = 640
+    s = 500
     def f(lon, lat):
-        return (640 + (lon + 45.25) * math.cos(lat0) * s, 600 - (lat + 23.25) * s)
+        return (580 + (lon + 45.62) * math.cos(lat0) * s, 610 - (lat + 23.3) * s)
     ring = lib.sp_shape()
     sp = P.path(P.poly_d([f(*p) for p in ring]), fill="#17171A", stroke="#3A3A40", sw=2)
     r = P.rect(0, 0, 1100, PH, K)
@@ -282,13 +303,13 @@ def p_alcance(P):
         x, y = f(*ll)
         P.path(P.poly_d([(x, y), (ux, uy)], closed=False), fill=None, stroke=R, sw=3, opacity=80)
         P.ellipse(x, y, 7, 7, fill=W)
-        right = x > ux or c == "ILHABELA"
+        right = x > ux or c in ("ILHABELA", "SÃO PAULO")
         P.text(x + (14 if right else -14), y + 5, c, BOLD, 14, W, tracking=60, justify="left" if right else "right")
     P.ellipse(ux, uy, 26, 26, fill=R)
     P.ellipse(ux, uy, 10, 10, fill=K)
     P.text(ux + 40, uy + 10, "UBATUBA", COND, 34, R)
     P.text(96, 140, "Impacto e alcance.", COND, 80, W, tracking=-10)
-    P.text(96, 190, "PRAÇA: UBATUBA/SP, ORLA · FORMATO: 5, 10 E 14 KM E PCD", BOLD, 14, GR, tracking=120)
+    P.text(96, 190, "PRAÇA: UBATUBA/SP, ORLA · FORMATO: 5, 10 E 15 KM E PCD", BOLD, 14, GR, tracking=120)
     raia(P, 1110, 120, PH)
     x0 = 1190
     P.text(x0, 200, "2026 · INFORMADO", BOLD, 15, GR, tracking=160)
@@ -321,7 +342,7 @@ def p_leva(P):
     itens = ["“Sprint Ubatuba Run apresentada por World Tennis” em todo material",
              "Testeira do pórtico de largada e chegada",
              "Backdrop do palco e do pódio (posição central)",
-             "Manga da camisa oficial",
+             "Costas da camiseta oficial, na faixa de patrocinadores",
              "Estande 3 m × 3 m na arena",
              "2 Reels collab e stories antes, durante e depois",
              "Menções na locução do evento",
@@ -352,7 +373,7 @@ def p_convite(P):
         x = 470 + k * 350
         P.text(x + 140, 720, n, BOLD, 17, R, tracking=200, justify="center")
         P.text(x + 140, 764, v, BOLD, 28, W, justify="center")
-    logos(P, 960 - (110 * 1508 / 624 * 0.9 + 110 * 843 / 490 + 46) / 2, 820, 110)
+    logos(P, 960 - (110 * 1508 / 624 * 0.9 + 110 * LOGO_R + 46) / 2, 820, 110)
     faixa(P, 990, -3)
 
 

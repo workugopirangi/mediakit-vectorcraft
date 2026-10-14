@@ -1,0 +1,11 @@
+# saídas regeráveis pelo pipeline (regressao.sh refaz)
+exemplos/*/saida/
+bancada/*/saida/
+__pycache__/
+# log de eventos que os automatismos do Codex gravam onde ele roda (cena.sh)
+.claude/
+# linha de base dos kits (golden.py capturar): os PNG pesam; hashes, texto e planos ficam no git
+bancada/golden/*/*/png/
+
+# capturas das galerias do estudo de composição (repertorio.py capturar regera; os manifestos em repertorio/fontes/ ficam no git)
+repertorio/capturas/

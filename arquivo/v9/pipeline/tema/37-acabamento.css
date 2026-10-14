@@ -1,0 +1,29 @@
+/* 37-acabamento.css (camada de acabamento, mk-2.1, references/10-acabamento.md). O render.py só põe este arquivo no HTML
+   de kit que declara direcao_criativa, `acabamento` de página ou `efeito` de elemento: o legado sai byte a byte igual.
+   Só o que o PDF preserva (pipeline/prova_pdf.py prova cada um): opacidade, gradiente em oklab, blend nativo. Nada de
+   filter, mask-image com gradiente, text-shadow nem perspective.
+
+   data-grao (composicao.<página>.acabamento.grao): a opacidade do grão do tema (.pagina::after, 30-componentes.css,
+   soft-light a .5). `nenhum` tira o ::after: nenhuma imagem de grão entra naquela página do PDF.
+   data-luz (acabamento.luz): véu de luz na direção da luz da cena, gradiente em oklab de 4 paradas em screen, na camada
+   z 1 (acima da foto e do véu escuro, abaixo do texto, que é z 2, e do grão, que é o último z 1 da página). */
+
+html { --fonte-lettering: var(--fonte-display); }   /* lettering não declarado: o display (a receita declara e vence) */
+
+.pagina[data-grao="nenhum"]::after { content: none; }
+.pagina[data-grao="leve"]::after { opacity: .3; }
+.pagina[data-grao="padrao"]::after { opacity: .5; }
+.pagina[data-grao="forte"]::after { opacity: .75; }
+
+.pagina[data-luz="esq"]::before, .pagina[data-luz="dir"]::before, .pagina[data-luz="topo"]::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1; mix-blend-mode: screen;
+}
+.pagina[data-luz="esq"]::before {
+  background: linear-gradient(in oklab 90deg, rgb(255 255 255 / .14) 0%, rgb(255 255 255 / .07) 24%, rgb(255 255 255 / .02) 48%, rgb(255 255 255 / 0) 72%);
+}
+.pagina[data-luz="dir"]::before {
+  background: linear-gradient(in oklab 270deg, rgb(255 255 255 / .14) 0%, rgb(255 255 255 / .07) 24%, rgb(255 255 255 / .02) 48%, rgb(255 255 255 / 0) 72%);
+}
+.pagina[data-luz="topo"]::before {
+  background: linear-gradient(in oklab 180deg, rgb(255 255 255 / .14) 0%, rgb(255 255 255 / .07) 24%, rgb(255 255 255 / .02) 48%, rgb(255 255 255 / 0) 72%);
+}

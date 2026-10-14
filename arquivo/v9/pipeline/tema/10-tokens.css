@@ -1,0 +1,45 @@
+/* tema.css v3 — gramática v1 + guia de qualidade em código.
+   Página 1920×1080. O Claude nunca escreve CSS. Tokens de marca sobrescritos pelo render.py a partir do mediakit.json.
+   Escala tipográfica fechada (6 tamanhos), espaço em 8 pt, grid de 12 colunas, grão, véus em oklab. */
+
+:root {
+  --marca: #E8307A;
+  --escuro: #0B0B0C;            /* nunca #000 (Refactoring UI) */
+  --papel: #FFFFFF;
+  --branco: #FFFFFF;
+  --texto: #FFFFFF;
+  --texto-suave: rgba(255,255,255,0.72);
+  --texto-apagado: rgba(255,255,255,0.46);
+  --fantasma: rgba(255,255,255,0.11);
+  --linha: var(--marca);
+
+  --fonte-display: "RocGrotesk Wide", "Roc Grotesk", "Archivo Black", "DejaVu Sans", sans-serif;
+  --fonte-titulo:  "RocGrotesk", "Roc Grotesk", "Montserrat", "DejaVu Sans", sans-serif;
+  --fonte-corpo:   "Montserrat", "DM Sans", "Liberation Sans", sans-serif;
+  --peso-display: 800;
+
+  /* escala tipográfica fechada: 6 tamanhos (guia B) */
+  --t-1: 230px;  /* numeral fantasma, número-herói da vertical */
+  --t-2: 96px;   /* título de página (Corre por Elas p.11 ≈ 96 px) */
+  --t-3: 64px;   /* sub, preço, nome de cota */
+  --t-4: 36px;   /* corpo grande, frase de capa */
+  --t-5: 24px;   /* corpo */
+  --t-6: 16px;   /* micro, crédito */
+  --lh-corpo: 1.4;
+
+  /* escala de espaço 8 pt (guia B) */
+  --e-1: 8px; --e-2: 16px; --e-3: 24px; --e-4: 32px; --e-5: 48px; --e-6: 64px; --e-7: 96px; --e-8: 128px;
+
+  /* grid 12 colunas, margem 96, calha 24 → coluna 128 px */
+  --margem: 96px; --calha: 24px; --col: 128px;
+  --divisa: 41.667%;            /* 5/12 */
+  --divisa-cota: 50%;           /* 6/12 */
+  --raio: 24px; --raio-cota: 32px; --raio-pill: 10px;
+
+  /* compatibilidade com nomes antigos */
+  --t-heroi: var(--t-1); --t-titulo: var(--t-2); --t-titulo-m: var(--t-2); --t-sub: var(--t-3); --t-numero: var(--t-2);
+  --t-preco: var(--t-3); --t-corpo: var(--t-4); --t-corpo-m: var(--t-5); --t-pequeno: var(--t-5); --t-micro: var(--t-6);
+}
+
+@page { size: 1920px 1080px; margin: 0; }
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; font-synthesis: none; } /* peso sintético vira Type 3 no PDF (validar_pdf) */

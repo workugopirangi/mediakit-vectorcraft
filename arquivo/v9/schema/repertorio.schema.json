@@ -1,0 +1,262 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "mk-repertorio-1.0",
+  "title": "Repertório de composição e acabamento do mídia kit (repertorio/indice.json), versões 1 e 2",
+  "description": "Índice do repertório: padrões de composição extraídos de referências de estúdio (por que o elemento está onde está, com que escala, ancorado em quê, com que função). Estrito: chave com erro de digitação reprova. Os vocabulários de funcao e relacao são os de pipeline/composicao.py (FUNCOES, RELACOES); relacao aceita também `fundo` (textura ou pattern numa região, que a rubrica da análise usa e que não é âncora de elemento) e tipo_pagina aceita `outro`. Os tipos de página são os de regua.TIPOS mais territorio, historico_logos, redes e premiacao. `composicao_exemplo` valida como `composicao_pagina` de elementos.schema.json (o $ref abaixo precisa do outro schema registrado, o que o pipeline/repertorio.py faz). Arquivos relativos à pasta repertorio/: padroes/<id>.md, referencias/<ref>.md, recortes/<arquivo>.jpg. O .md do padrão é a fonte do trecho de composição; o índice repete o mesmo objeto. VERSÃO 2 (12/10/2026, estudo visual v2, só acréscimo): `versao` aceita 1 e 2; lista opcional `recursos[]` (a camada de acabamento: repertorio/recursos/<id>.md, com o front matter do briefing-redator-v2.md, os recortes e o `acabamento_exemplo`), só com versao 2; `padrao` ganha `dimensoes` e `recursos`; `recorte` ganha `anotado` e `anotacoes`; `referencia` ganha `serie`, `captura`, `camada_v2` e `uau_paginas`. Tudo opcional: o índice v1 continua válido sem mudar nada. Os vocabulários fechados novos ficam em definitions/voc_* e são os mesmos do bloco `vocabulario` de repertorio/estudo/RUBRICA-v2.md (pipeline/test_repertorio_v2.py confere que andam juntos). `acabamento_exemplo.pagina` valida como composicao_pagina; `acabamento_exemplo.direcao_criativa` valida contra mediakit.schema.json#/properties/direcao_criativa, que é draft 2020-12 e não tem $id: quem confere é o `repertorio.py checar` e o test_repertorio_v2.py, não este arquivo.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["versao", "padroes", "referencias"],
+  "properties": {
+    "versao": {"enum": [1, 2], "description": "1 = só padrões e referências (09/10/2026); 2 = com a camada de acabamento do estudo v2 (recursos e campos novos)"},
+    "padroes": {"type": "array", "items": {"$ref": "#/definitions/padrao"}},
+    "referencias": {"type": "array", "items": {"$ref": "#/definitions/referencia"}},
+    "recursos": {"type": "array", "items": {"$ref": "#/definitions/recurso"}, "description": "v2: recursos de acabamento (repertorio/recursos/<id>.md). Só com versao 2."}
+  },
+  "if": {"required": ["recursos"]},
+  "then": {"properties": {"versao": {"const": 2}}},
+  "definitions": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "maxLength": 100},
+    "padrao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "nome", "arquivo", "problema", "tipo_pagina", "funcao", "relacao", "rota", "tom", "densidade"],
+      "properties": {
+        "id": {"$ref": "#/definitions/id"},
+        "nome": {"type": "string", "minLength": 3, "maxLength": 120},
+        "arquivo": {"type": "string", "pattern": "^padroes/[A-Za-z0-9._-]+\\.md$"},
+        "problema": {"type": "string", "minLength": 8, "description": "que problema de composição o padrão resolve, numa frase"},
+        "tipo_pagina": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"enum": ["capa", "manifesto", "projecao", "publico", "prova", "divisor", "ativo_painel", "ativo_topo",
+                             "inventario_colunas", "divisor_cotas", "cota", "contato", "territorio", "historico_logos",
+                             "redes", "premiacao", "outro"]}
+        },
+        "funcao": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"enum": ["foco", "contexto", "identidade", "conexao", "organizacao", "profundidade", "equilibrio", "acabamento"]}
+        },
+        "relacao": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"enum": ["alinha", "sangra", "sobrepoe", "liga", "fundo"]}
+        },
+        "rota": {"enum": ["codigo", "imagem", "hibrido"]},
+        "tom": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"enum": ["causa", "performance", "territorio", "festa", "corporativo"]}
+        },
+        "densidade": {"enum": ["respiro", "media", "alta"]},
+        "recortes": {"type": "array", "items": {"$ref": "#/definitions/recorte"}},
+        "composicao_exemplo": {"$ref": "mk-elementos-1.0#/definitions/composicao_pagina"},
+        "dimensoes": {
+          "type": "array", "uniqueItems": true, "items": {"$ref": "#/definitions/voc_dimensao"},
+          "description": "v2: dimensões do estudo v2 que o padrão também cobre (quando o estudo v2 acrescenta referência a ele)"
+        },
+        "recursos": {
+          "type": "array", "uniqueItems": true, "items": {"$ref": "#/definitions/id"},
+          "description": "v2: ids de recursos[] que realizam ou acabam este padrão"
+        }
+      }
+    },
+    "recorte": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["arquivo", "referencia", "pagina", "legenda"],
+      "properties": {
+        "arquivo": {"type": "string", "pattern": "^recortes/[A-Za-z0-9._-]+\\.(jpg|jpeg|png)$"},
+        "referencia": {"$ref": "#/definitions/id"},
+        "pagina": {"type": "integer", "minimum": 1},
+        "legenda": {"type": "string", "minLength": 3},
+        "anti": {"type": "boolean", "description": "antiexemplo: o erro que o padrão evita (vai sob 'Não fazer' no html e com o rótulo NÃO FAZER na folha)"},
+        "anotado": {
+          "type": "string", "pattern": "^recortes/[A-Za-z0-9._-]+--anotado\\.(jpg|jpeg|png)$",
+          "description": "v2: a versão anotada do mesmo recorte (caixa #FFD400, seta, disco numerado; o texto na faixa de legenda abaixo), gravada pelo `repertorio.py anotar`"
+        },
+        "anotacoes": {
+          "type": "array", "minItems": 1, "maxItems": 9, "items": {"$ref": "#/definitions/anotacao"},
+          "description": "v2: o que a versão anotada marca, em fração do RECORTE (o arquivo em `arquivo`, já com a folga), de 0 a 1"
+        }
+      }
+    },
+    "anotacao": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["n", "caixa", "rotulo"],
+      "properties": {
+        "n": {"type": "integer", "minimum": 1, "maximum": 9, "description": "número do disco na figura anotada e na legenda"},
+        "caixa": {"$ref": "#/definitions/caixa_fracao"},
+        "seta": {
+          "type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number", "minimum": 0, "maximum": 1},
+          "description": "[x0, y0, x1, y1]: a seta sai de (x0, y0) e aponta para (x1, y1), o detalhe"
+        },
+        "rotulo": {"type": "string", "minLength": 3, "maxLength": 90, "description": "o que a caixa mostra, com a medida (vai na faixa de legenda, nunca sobre a peça)"}
+      }
+    },
+    "caixa_fracao": {
+      "type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number", "minimum": 0, "maximum": 1},
+      "description": "[x0, y0, x1, y1] em fração (0 a 1), com x0 < x1 e y0 < y1 (a ordem o checar confere)"
+    },
+    "referencia": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "nome", "arquivo"],
+      "properties": {
+        "id": {"$ref": "#/definitions/id"},
+        "nome": {"type": "string", "minLength": 2},
+        "url": {"type": ["string", "null"]},
+        "arquivo": {"type": "string", "pattern": "^referencias/[A-Za-z0-9._-]+\\.md$"},
+        "camada_v2": {
+          "enum": ["prioritaria", "profunda", "releitura", "lente", "regua", "fora"],
+          "description": "v2: a camada da referência no estudo v2, igual a repertorio/fontes.json"
+        },
+        "captura": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["manifesto", "status"],
+          "description": "v2: a captura permanente (as imagens ficam em repertorio/capturas/<id>/, fora do git e do pacote; o manifesto é rastreado)",
+          "properties": {
+            "manifesto": {"type": "string", "pattern": "^fontes/[a-z0-9][a-z0-9-]*\\.json$"},
+            "status": {"enum": ["ok", "suspeita", "bloqueada", "vazia"]},
+            "paginas": {"type": "integer", "minimum": 0}
+          }
+        },
+        "serie": {"$ref": "#/definitions/serie"},
+        "uau_paginas": {
+          "type": "array", "items": {"$ref": "#/definitions/uau_pagina"},
+          "description": "v2: as páginas que param o olho no teste dos 2 segundos (no máximo um quarto das páginas), com nota e gatilhos"
+        }
+      }
+    },
+    "serie": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["constantes", "variaveis", "por_tipo", "ritmo"],
+      "description": "v2: como a referência funciona como série (continuidade entre as páginas)",
+      "properties": {
+        "constantes": {"type": "array", "items": {"type": "string", "minLength": 3}, "description": "o que se repete igual em toda página, com a medida"},
+        "variaveis": {"type": "array", "items": {"type": "string", "minLength": 3}, "description": "o que muda de página para página, e por quê"},
+        "por_tipo": {
+          "type": "object",
+          "propertyNames": {"$ref": "#/definitions/padrao/properties/tipo_pagina/items"},
+          "additionalProperties": {"type": "string", "minLength": 3},
+          "description": "a gramática de cada tipo de página da série, numa frase"
+        },
+        "ritmo": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["padrao", "paginas"],
+          "properties": {
+            "padrao": {"$ref": "#/definitions/voc_ritmo_padrao"},
+            "paginas": {
+              "type": "object",
+              "propertyNames": {"pattern": "^[1-9][0-9]*$"},
+              "additionalProperties": {"$ref": "#/definitions/voc_ritmo_papel"},
+              "description": "papel de cada página no ritmo, pela numeração da captura v2 (\"7\": \"respiro\")"
+            }
+          }
+        }
+      }
+    },
+    "uau_pagina": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pagina", "nota", "gatilhos"],
+      "properties": {
+        "pagina": {"type": "integer", "minimum": 1},
+        "nota": {"type": "integer", "minimum": 0, "maximum": 3},
+        "gatilhos": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/definitions/voc_gatilho_uau"}},
+        "primeiro_olhar": {"type": "string", "minLength": 3, "description": "o que se lê em 2 segundos, na ordem"},
+        "depende_de": {"enum": ["foto"], "description": "a impressão vem da foto de produção: não conta para a nota do recurso"}
+      }
+    },
+    "recurso": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "nome", "arquivo", "efeito", "familia", "recurso", "dimensoes", "material", "luz", "luz_direcao",
+                   "profundidade", "intensidade", "continuidade", "borda", "tipo_pagina", "funcao", "tom", "rota",
+                   "producao", "risco_pdf", "reproduzivel", "uau", "padroes"],
+      "description": "v2: um recurso de acabamento (repertorio/recursos/<id>.md). Os campos repetem o front matter do .md, que é a fonte.",
+      "properties": {
+        "id": {"$ref": "#/definitions/id"},
+        "nome": {"type": "string", "minLength": 3, "maxLength": 120},
+        "arquivo": {"type": "string", "pattern": "^recursos/[A-Za-z0-9._-]+\\.md$"},
+        "efeito": {"type": "string", "minLength": 8, "description": "o efeito que o recurso produz, numa frase"},
+        "familia": {"$ref": "#/definitions/voc_familia"},
+        "recurso": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/definitions/voc_recurso"}},
+        "dimensoes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/definitions/voc_dimensao"}},
+        "material": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/definitions/voc_material"}},
+        "luz": {"$ref": "#/definitions/voc_luz"},
+        "luz_direcao": {"$ref": "#/definitions/voc_luz_direcao"},
+        "profundidade": {"$ref": "#/definitions/voc_profundidade"},
+        "intensidade": {
+          "type": "array", "minItems": 2, "maxItems": 2, "items": {"$ref": "#/definitions/voc_intensidade"},
+          "description": "[mínimo, máximo] em que o recurso funciona, na escala da RUBRICA-v2 (1 sutil, 2 presente, 3 marcante)"
+        },
+        "continuidade": {"$ref": "#/definitions/voc_continuidade"},
+        "borda": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/definitions/voc_borda"}},
+        "tipo_pagina": {"$ref": "#/definitions/padrao/properties/tipo_pagina"},
+        "funcao": {"$ref": "#/definitions/padrao/properties/funcao"},
+        "tom": {"$ref": "#/definitions/padrao/properties/tom"},
+        "rota": {"$ref": "#/definitions/padrao/properties/rota"},
+        "producao": {"$ref": "#/definitions/voc_via"},
+        "risco_pdf": {"$ref": "#/definitions/voc_risco_pdf"},
+        "reproduzivel": {"$ref": "#/definitions/voc_reproduzivel"},
+        "uau": {"type": "integer", "minimum": 0, "maximum": 3},
+        "padroes": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/definitions/id"}, "description": "ids dos padrões que o recurso acaba ou de que difere (pode ser vazia)"},
+        "tratamento_imagem": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/definitions/voc_tratamento_imagem"}},
+        "tipografia": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/definitions/voc_tipografia"}},
+        "mistura": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/definitions/voc_mistura"}},
+        "uau_gatilhos": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/definitions/voc_gatilho_uau"}},
+        "eixos": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/definitions/voc_eixo"}, "description": "eixos que a tabela da seção 5 cobre"},
+        "depende": {"type": "array", "items": {"type": "string", "minLength": 3}, "description": "o que falta para reproduzir quando `reproduzivel` é parcial ou so-com-insumo-do-cliente"},
+        "recortes": {"type": "array", "items": {"$ref": "#/definitions/recorte"}},
+        "acabamento_exemplo": {"$ref": "#/definitions/acabamento_exemplo"}
+      }
+    },
+    "acabamento_exemplo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["direcao_criativa", "pagina"],
+      "description": "v2: o `## Trecho de acabamento` do .md do recurso (o .md é a fonte; o índice repete o mesmo objeto). O render consome sem tradução.",
+      "properties": {
+        "direcao_criativa": {"type": "object", "description": "parcial de mediakit.schema.json#/properties/direcao_criativa (conferido pelo checar e pelo test_repertorio_v2.py)"},
+        "pagina": {"$ref": "mk-elementos-1.0#/definitions/composicao_pagina"}
+      }
+    },
+    "voc_familia": {"enum": ["ornamento-identidade", "pattern-textura", "sobreposicao-recorte", "profundidade-3d",
+                             "tratamento-imagem", "tipografia-expressiva", "acabamento-borda", "composicao-hibrida"]},
+    "voc_dimensao": {"enum": ["ornamento-identidade", "pattern-textura", "sobreposicao-recorte", "profundidade-3d",
+                              "tratamento-imagem", "tipografia-expressiva", "acabamento-borda", "composicao-hibrida",
+                              "continuidade", "ritmo", "uau"]},
+    "voc_recurso": {"enum": ["ornamento", "motivo-de-marca", "pattern", "textura", "moldura", "selo", "faixa", "fio",
+                             "lettering", "numeral", "mascara", "figura-recortada", "sobreposicao", "transparencia",
+                             "objeto-3d", "cena-3d", "luz", "sombra", "reflexo", "tratamento", "colagem", "transicao",
+                             "mockup-aplicado", "icone"]},
+    "voc_material": {"enum": ["chapado", "papel", "impressao", "relevo", "metal", "vidro", "plastico", "borracha", "tecido",
+                              "piso-esportivo", "asfalto-pedra", "madeira", "adesivo-fita", "luz-emitida", "liquido",
+                              "iridescente", "outro"]},
+    "voc_luz": {"enum": ["nenhuma", "difusa", "direcional", "contraluz", "dura", "especular", "emitida", "da-cena", "vinheta"]},
+    "voc_luz_direcao": {"enum": ["nenhuma", "esq", "dir", "topo", "base", "frente", "tras"]},
+    "voc_profundidade": {"enum": ["plana", "camadas", "sombra", "perspectiva", "isometrica", "volume", "cena"]},
+    "voc_intensidade": {"type": "integer", "minimum": 1, "maximum": 3},
+    "voc_continuidade": {"enum": ["unica", "constante", "variada", "por-tipo", "atravessa", "progressiva"]},
+    "voc_tratamento_imagem": {"enum": ["natural", "pb", "duotone", "tingida", "cor-seletiva", "grao", "meio-tom", "posterizada",
+                                       "desfoque", "silhueta", "dupla-exposicao", "blend-cor", "vinheta", "contraste-alto",
+                                       "fora-de-registro"]},
+    "voc_tipografia": {"enum": ["neutra", "gigante", "encaixada", "empilhada", "contorno", "vazada", "atras-da-figura",
+                                "frente-da-figura", "vertical", "em-caminho", "repetida", "distorcida", "mista", "espacada",
+                                "extrudada", "manuscrita"]},
+    "voc_borda": {"enum": ["reta", "sangra", "arredondada", "chanfrada", "diagonal", "rasgada", "organica", "picotada", "forma",
+                           "contornada", "esmaecida", "sombreada"]},
+    "voc_ritmo_papel": {"enum": ["abertura", "impacto", "respiro", "dados", "transicao", "climax", "fecho"]},
+    "voc_ritmo_padrao": {"enum": ["constante", "alternado", "blocos", "crescente", "onda", "pontuado", "irregular"]},
+    "voc_mistura": {"enum": ["foto", "vetor", "ilustracao", "render-3d", "tipografia", "textura", "interface", "mapa"]},
+    "voc_via": {"enum": ["codigo-svg-css", "grafismo-existente", "raster-tratar", "codex-objeto", "codex-textura", "codex-cena",
+                         "compor-homografia", "misto", "fora-do-pipeline"]},
+    "voc_risco_pdf": {"enum": ["nenhum", "rasteriza-regiao", "perde-texto", "type3", "nao-testado"]},
+    "voc_reproduzivel": {"enum": ["sim", "parcial", "so-com-insumo-do-cliente", "nao"]},
+    "voc_eixo": {"enum": ["escala", "orientacao", "cor", "material", "densidade", "enquadramento", "localizacao", "relacao-texto",
+                          "intensidade"]},
+    "voc_gatilho_uau": {"enum": ["escala", "profundidade", "material", "luz", "inesperado", "corte", "cor", "detalhe", "movimento",
+                                 "precisao"]}
+  }
+}

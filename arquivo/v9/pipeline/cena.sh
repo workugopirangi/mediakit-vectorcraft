@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+# cena.sh — gera UMA cena fotorrealista SEM texto, com painéis lisos; lettering e "SEU LOGO AQUI" entram depois, pelo compor.py.
+# Adaptado do asset.sh do carrossel: mesma rota (codex exec → GPT Image, incluso no ChatGPT Plus do Ugo), sem cutout
+# porque cena não é recorte. O Codex confere o próprio resultado (sem texto, painéis lisos, multidão crível).
+#
+# Uso:  bash cena.sh <pasta-do-cliente> <id-da-cena> [-]
+#       O prompt NÃO vai na linha de comando: ele traz campos do evento, e um $(...) ou uma crase dentro de aspas duplas
+#       rodaria no shell de quem chama. Ele vem de <pasta>/acervo/<id>.prompt.txt (o cena_prompt.py --salvar <id> grava) ou,
+#       com "-" no lugar do 3º argumento, da entrada padrão (o script o grava nesse mesmo arquivo):
+#         python3 cena_prompt.py <pasta> ativo --ativo "Pórtico" --salvar c-portico
+#         bash cena.sh <pasta> c-portico
+#         bash cena.sh <pasta> c-portico - <<'EOT'      (aspas simples no EOT: nada dentro do texto é expandido)
+#         ...prompt...
+#         EOT
+#       <id>: só a-z, 0-9 e hífen (é nome de arquivo).
+# Saída: <pasta>/acervo/<id>.png  e  <pasta>/acervo/<id>.prompt.txt (cada geração gasta cota do ChatGPT: rode UMA cena por vez)
+#
+# Roda na máquina do Ugo (Codex instalado e logado no ChatGPT). Sem Codex instalado: código 2. Codex que falha, repete no
+# Codex (codex_gerar.sh): até 3 tentativas com espera crescente quando ele sai com erro sem imagem ou entrega PNG truncado;
+# cota ou login esgotados param na hora com código 3 ("cota do Codex: espere e rode de novo; não troque de fornecedor").
+# Nunca outro fornecedor. Uma chamada por vez por kit (trava em <pasta>/acervo/.codex.lock). Rodar de novo com o mesmo <id>
+# regera por cima (é como uma cena reprovada volta com o defeito nomeado no prompt); se nenhuma tentativa entregar, a imagem
+# anterior fica no lugar. A saída das tentativas que falharam fica em .codex-<id>.saida. O Codex roda no sandbox
+# workspace-write SEM rede (CODEX_SANDBOX em codex_gerar.sh).
+# Códigos de saída: 0 ok, 1 o Codex não entregou, 2 Codex não instalado, 3 cota ou login, 4 trava ocupada, 5 Python do kit
+# sem PIL, 64 uso ou id inválido, 66 prompt ausente ou vazio.
+set -euo pipefail
+AQUI="$(cd "$(dirname "$0")" && pwd)"
+PY="${MEDIAKIT_PY:-$HOME/.venvs/mediakit/bin/python}"
+. "$AQUI/codex_gerar.sh"
+
+uso() {
+  cat >&2 <<'EOT'
+uso: bash cena.sh <pasta-do-cliente> <id-da-cena> [-]
+     o prompt vem de <pasta>/acervo/<id>.prompt.txt (cena_prompt.py <pasta> <arquétipo> --salvar <id>)
+     ou da entrada padrão, com "-" no lugar do 3º argumento; nunca na linha de comando
+EOT
+  exit 64
+}
+[ $# -ge 2 ] && [ $# -le 3 ] || uso
+PASTA="$1"; ID="$2"; FONTE="${3:-}"
+id_valido "$ID" || { echo "id inválido: $ID (só a-z, 0-9 e hífen, sem começar por hífen)" >&2; exit 64; }
+case "$FONTE" in
+  ""|-) ;;
+  *) echo "o prompt não vai mais na linha de comando (um \$(...) ou crase nele rodaria no seu shell). Grave-o com cena_prompt.py --salvar $ID e rode: bash cena.sh <pasta> $ID   ou mande por entrada padrão: bash cena.sh <pasta> $ID -" >&2; exit 64;;
+esac
+mkdir -p "$PASTA/acervo"
+OUT="$(cd "$PASTA/acervo" && pwd)"   # caminho absoluto: o Codex roda em outra pasta de trabalho
+if [ "$FONTE" = "-" ]; then
+  PROMPT="$(cat)"
+  [ -n "$(printf '%s' "$PROMPT" | tr -d '[:space:]')" ] || { echo "o prompt veio vazio pela entrada padrão" >&2; exit 66; }
+  printf '%s\n' "$PROMPT" > "$OUT/$ID.prompt.txt"
+else
+  [ -s "$OUT/$ID.prompt.txt" ] || { echo "falta o prompt: $OUT/$ID.prompt.txt não existe ou está vazio. Grave com cena_prompt.py <pasta> <arquétipo> --salvar $ID, ou mande o texto por entrada padrão: bash cena.sh <pasta> $ID -" >&2; exit 66; }
+  PROMPT="$(cat "$OUT/$ID.prompt.txt")"
+  [ -n "$(printf '%s' "$PROMPT" | tr -d '[:space:]')" ] || { echo "o prompt de $OUT/$ID.prompt.txt está em branco" >&2; exit 66; }
+fi
+command -v codex >/dev/null 2>&1 || { echo "codex não encontrado: instale, entre com \`codex login\` e rode de novo; não troque de fornecedor" >&2; exit 2; }
+
+# CODEX_SANDBOX = --sandbox workspace-write sem rede, e -C: o Codex precisa gravar o PNG na pasta do kit; -o guarda a última
+# mensagem dele (log). (a flag --output não existe no codex exec; o nome certo é -o/--output-last-message)
+TEXTO="$(cat <<EOT
+Generate one photorealistic image, 16:9 landscape, and save it exactly as $OUT/$ID.png.
+$PROMPT
+The image must contain NO text of any kind: no letters, no numbers, no logos. Signage surfaces stay blank and smooth.
+After generating, open the image and check: (1) there is no text or logo anywhere,
+(2) every signage surface in the scene (boards, banners, flags, arches, screens, shirts) is blank, flat, evenly lit and faces the camera,
+(3) people in the foreground are sharp, the crowd behind is believable (varied heights, poses and shirt tones, no cloned figures),
+(4) the light matches the prompt. If any check fails, do NOT regenerate (each generation spends the ChatGPT quota; the first run regenerated by itself and cost 2 images). Keep the single image and list the defects in your final message.
+EOT
+)"
+codex_produzir 0 "$OUT" "$OUT/$ID.png" "$OUT/.codex-$ID.saida" \
+  codex exec "${CODEX_SANDBOX[@]}" -C "$OUT" --skip-git-repo-check -o "$OUT/.codex-$ID.log" "$TEXTO" || exit $?
+test -s "$OUT/$ID.png" && echo "OK $OUT/$ID.png"

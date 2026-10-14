@@ -1,0 +1,121 @@
+/* 35-receitas.css (frente 4): fundos, máscaras de foto, camadas de elemento e as variantes de layout.
+   Nada aqui muda o legado: tudo depende de data-fundo / data-mascara (só com receita), de classes das variantes novas
+   ou de tokens que só elas usam. Sem filter CSS (rasteriza o PDF, aprendizado 12); gradientes em oklab com 3+ paradas. */
+
+:root {
+  /* fundo de cor e fundo claro: o render.py recalcula por receita escolhendo a tinta de maior contraste */
+  --cor-fundo: var(--marca); --cor-texto: #0B0B0C; --cor-acento: #0B0B0C; --cor-suave: rgba(11,11,12,.78); --cor-apagado: rgba(11,11,12,.58); --cor-fantasma: rgba(11,11,12,.10); --cor-linha: rgba(11,11,12,.22);
+  --claro-fundo: #F4F1EA; --claro-texto: #0B0B0C; --claro-acento: #0B0B0C; --claro-suave: rgba(11,11,12,.78); --claro-apagado: rgba(11,11,12,.58); --claro-fantasma: rgba(11,11,12,.10); --claro-linha: rgba(11,11,12,.22);
+  /* máscara diagonal com ângulo fixo de 12°: deslocamento horizontal = altura × tan(12°) */
+  --diag-dx: 230px;              /* 1080 × 0,2126 = 229,6 */
+  --raio-mascara: var(--raio-cota);
+}
+
+/* ---------- fundos: páginas planas (texto sobre o fundo chapado) trocam fundo, tinta e acento ---------- */
+[data-fundo="papel"] .pagina.plano, [data-fundo="cor"] .pagina.plano {
+  --escuro: var(--plano-fundo); --texto: var(--plano-texto); --texto-suave: var(--plano-suave); --texto-apagado: var(--plano-apagado);
+  --fantasma: var(--plano-fantasma); --marca: var(--plano-acento); --linha: var(--plano-acento); color: var(--texto);
+}
+.pagina.plano .painel::after { background: var(--plano-linha); }
+.pagina.plano .caixa.branca { border-color: var(--texto); }
+.pagina.plano .traco.branco, .pagina.plano .fio .trilho { background: var(--plano-linha); }
+.pagina.plano .invest { border-color: var(--plano-linha); }
+.pagina.plano .pill.solido { background: var(--texto); color: var(--escuro); border-color: var(--texto); }
+.pagina.plano .barras .trilho, .pagina.plano .graf-grade, .pagina.plano .graf-grade.base { background: var(--plano-linha); }
+.pagina.plano .barras .knob { background: var(--escuro); }
+.pagina.plano .etiqueta { color: var(--texto); }
+.pagina.plano .card { background: transparent; }
+
+/* ---------- máscaras: aplicadas às cenas de painel (.cena) ---------- */
+.cena.bloco { top: var(--margem); bottom: var(--margem); right: var(--margem); left: calc(var(--divisa) + var(--e-3)); --diag-dx: 189px; } /* 888 × tan(12°) */
+[data-mascara="diagonal"] .cena, .pagina.m-diagonal .cena { clip-path: polygon(var(--diag-dx) 0, 100% 0, 100% 100%, 0 100%); left: calc(var(--divisa) - var(--diag-dx) / 2); }
+[data-mascara="diagonal"] .cena.bloco { left: calc(var(--divisa) + var(--e-3)); }
+[data-mascara="arredondado"] .cena { top: var(--margem); bottom: var(--margem); right: var(--margem); left: calc(var(--divisa) + var(--e-3)); border-radius: var(--raio-mascara); }
+[data-mascara="sangria"] .pagina:not(.m-diagonal) .cena:not(.bloco) { left: 0; right: 0; }
+[data-mascara="sangria"] .pagina:not(.m-diagonal) .cena:not(.bloco)::after { content: ""; position: absolute; inset: 0; background: linear-gradient(in oklab 90deg, var(--escuro) 0%, var(--escuro) 36%, color-mix(in oklab, var(--escuro) 82%, transparent) 46%, color-mix(in oklab, var(--escuro) 30%, transparent) 62%, rgba(0,0,0,0) 76%); }
+/* fio na cor ao longo do corte diagonal (Praia Delas): paralelogramo de 16 px colado à aresta */
+.borda-diag { position: absolute; top: 0; bottom: 0; left: calc(var(--divisa) - var(--diag-dx) / 2 - 24px); width: calc(var(--diag-dx) + 16px); background: var(--marca); clip-path: polygon(var(--diag-dx) 0, calc(var(--diag-dx) + 16px) 0, 16px 100%, 0 100%); z-index: 1; }
+
+/* ---------- camadas de elemento: pattern (fundo repetido) e ornamento (posicionado) ---------- */
+.camada-pattern { position: absolute; inset: 0; z-index: 1; pointer-events: none; background-repeat: repeat; }
+.ornamento { position: absolute; display: block; height: auto; pointer-events: none; transform-origin: 50% 50%; }
+.ornamento.atras { z-index: 1; }   /* sobre a cena e o véu, sob o painel de texto (z 2) */
+.ornamento.frente { z-index: 6; }  /* acima de tudo; o qa.py reprova se cruzar mais de 15% de um título */
+
+/* ---------- tokens locais: fundo de cor (capa b, manifesto b) e bloco claro (cota c) ---------- */
+.capa-b, .manifesto-b, .cota-b .preco-heroi {
+  --texto: var(--cor-texto); --texto-suave: var(--cor-suave); --texto-apagado: var(--cor-apagado); --fantasma: var(--cor-fantasma);
+}
+.capa-b, .manifesto-b { background: var(--cor-fundo); color: var(--cor-texto); --marca: var(--cor-acento); --linha: var(--cor-acento); }
+[data-fundo="papel"] .manifesto-b { background: var(--claro-fundo); color: var(--claro-texto); --texto: var(--claro-texto); --texto-suave: var(--claro-suave); --texto-apagado: var(--claro-apagado); --marca: var(--claro-acento); --linha: var(--claro-acento); }
+.bloco-claro { background: var(--claro-fundo); color: var(--claro-texto); --texto: var(--claro-texto); --texto-suave: var(--claro-suave); --texto-apagado: var(--claro-apagado); --fantasma: var(--claro-fantasma); --marca: var(--claro-acento); --linha: var(--claro-acento); }
+.bloco-claro::after { display: none; }
+.bloco-claro .pill.solido { background: var(--claro-texto); color: var(--claro-fundo); border-color: var(--claro-texto); }
+.bloco-claro .invest { border-color: var(--claro-linha); }
+
+/* ---------- capa b / c ---------- */
+.heroi { font-size: var(--t-1); line-height: .88; }
+.capa-b .painel::after { display: none; }
+.capa-c .lettering-central { height: 360px; width: auto; max-width: 1200px; object-fit: contain; }
+.faixa-diag { position: absolute; left: -160px; right: -160px; top: 812px; height: 88px; background: var(--marca); transform: rotate(-12deg); transform-origin: 50% 50%; display: flex; align-items: center; justify-content: center; z-index: 1; }
+.faixa-txt { background: var(--marca); color: var(--cor-texto); font-size: var(--t-5); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; line-height: 1; padding: var(--e-1) 0; }
+
+/* ---------- manifesto b ---------- */
+.citacao { font-family: var(--fonte-titulo); font-size: var(--t-3); line-height: 1.12; max-width: 1400px; text-wrap: pretty; color: var(--texto); }
+.citacao b, .citacao strong { color: var(--marca); font-weight: inherit; }
+.manifesto-b .assina { font-size: var(--t-4); margin-top: var(--e-5); color: var(--marca); }
+.manifesto-b::after { display: none; }
+
+/* ---------- público b ---------- */
+.publico-b .painel::after { display: none; }
+.heroi-num { font-family: var(--fonte-display); font-weight: var(--peso-display); font-size: var(--t-1); line-height: .9; color: var(--marca); margin-top: var(--e-4); white-space: nowrap; }
+.publico-b > .painel > .micro { margin-top: var(--e-2); }
+.lista-num { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: var(--e-4) var(--e-5); margin-top: var(--e-6); max-width: 900px; }
+.lista-num li { display: flex; align-items: baseline; gap: var(--e-2); border-top: 1.5px solid var(--linha); padding-top: var(--e-2); }
+.lista-num .n { font-family: var(--fonte-display); font-weight: var(--peso-display); font-size: var(--t-3); line-height: 1; white-space: nowrap; font-variant-numeric: tabular-nums lining-nums; }
+.lista-num .r { font-size: var(--t-5); line-height: 1.3; color: var(--texto); }
+.lista-num .e { font-size: var(--t-6); letter-spacing: .1em; text-transform: uppercase; color: var(--texto-apagado); }
+
+/* ---------- ativo sangria ---------- */
+.veu.sangria-base { background: linear-gradient(in oklab 0deg, rgba(0,0,0,.86) 0%, rgba(0,0,0,.72) 26%, rgba(0,0,0,.32) 52%, rgba(0,0,0,0) 74%); }
+.ativo-sangria .painel { justify-content: flex-end; }
+
+/* ---------- divisor b / c ---------- */
+.divisor-b .placa { top: 192px; bottom: 192px; background: var(--escuro); border-top: 1.5px solid var(--marca); border-bottom: 1.5px solid var(--marca); }
+.divisor-c-linha { display: flex; align-items: center; gap: var(--e-6); }
+.num-forma { font-family: var(--fonte-display); font-weight: var(--peso-display); font-size: var(--t-1); line-height: .85; color: var(--marca); letter-spacing: -.02em; }
+
+/* ---------- cota b ---------- */
+.cota-b .nome { font-size: var(--t-2); color: var(--marca); line-height: .95; margin-top: var(--e-1); }
+.preco-linha { display: flex; align-items: center; gap: var(--e-3); margin: var(--e-4) 0 var(--e-3); }
+.fio-faixa { width: 96px; height: 2px; background: var(--marca); }
+.preco-heroi { font-family: var(--fonte-display); font-weight: var(--peso-display); font-size: var(--t-1); line-height: 1; background: var(--cor-fundo); color: var(--cor-texto); padding: var(--e-1) var(--e-4) 0; white-space: nowrap; }
+.direitos-2col { margin-top: var(--e-4); width: 100%; max-width: 1500px; text-align: left; }
+.direitos-2col ul { columns: 2; column-gap: var(--e-7); margin-top: var(--e-2); }
+.direitos-2col li { list-style: none; position: relative; padding-left: 30px; font-size: var(--t-5); line-height: 1.35; margin-bottom: var(--e-2); break-inside: avoid; }
+.direitos-2col li::before { content: ""; position: absolute; left: 6px; top: 13px; width: 9px; height: 9px; border-radius: 50%; background: var(--marca); }
+.direitos-2col .excl { margin-top: var(--e-1); font-size: var(--t-5); color: var(--marca); font-weight: 700; }
+
+/* ---------- cota c ---------- */
+.cota-c .painel::after { display: none; }
+
+/* ---------- contato b ---------- */
+.contato-linha { display: flex; gap: var(--e-7); margin-top: var(--e-6); text-align: left; }
+.contato-linha .quem { font-size: var(--t-6); letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--marca); white-space: nowrap; }
+.contato-linha .como { font-family: var(--fonte-titulo); font-size: var(--t-4); margin-top: var(--e-1); white-space: nowrap; }
+[data-fundo="cor"] .pagina.plano .preco-heroi { background: var(--cor-texto); color: var(--cor-fundo); }
+
+/* inventário em colunas (página papel do legado) dentro de uma receita: usa os tokens do fundo claro da receita */
+html[data-receita] .pagina.papel { background: var(--claro-fundo); color: var(--claro-texto); --texto: var(--claro-texto); --texto-suave: var(--claro-suave); --texto-apagado: var(--claro-apagado); --fantasma: var(--claro-fantasma); --marca: var(--claro-acento); --linha: var(--claro-acento); }
+/* crédito fica sobre a foto mesmo em página plana: continua claro */
+.pagina.plano .credito { color: rgba(255,255,255,.72); }
+/* máscara arredondada deixa o canto inferior sem foto: o crédito cai no fundo plano e volta a usar a tinta */
+[data-mascara="arredondado"] .pagina.plano .credito { color: var(--texto-suave); }
+/* sangria: microlabel sobre foto com véu não garante 4,5:1 na cor da marca; vai na cor do texto */
+.ativo-sangria .micro { color: var(--texto); }
+
+/* Contato b sobre foto: o rótulo do nome na cor da marca sumia na foto (azul sobre foto escura deu 1,7:1 na Sprint r2, 09/10/2026).
+   Sobre foto o rótulo é branco; a cor da marca fica só na palavra colorida do convite. */
+.contato-b .quem { color: rgba(255,255,255,.86); }
+/* Crédito de foto pequeno sobre areia/céu sumia (1,2:1): ganha uma base escura mínima, sem sombra. */
+.credito { background: rgba(0,0,0,.55); color: rgba(255,255,255,.86) !important; padding: 2px 8px; border-radius: 4px; }

@@ -1,0 +1,1417 @@
+{
+ "_leia": "Cartela de fontes livres do mídia kit. Gerado por pipeline/fontes_livres.py catalogo (pesos e acentos_ptbr são medidos nos arquivos, não declarados). Cada peso é o arquivo 'Familia__peso.ttf' em 'pasta' (400 = 'Familia.ttf'). papel: display, corpo ou serifa. largura: condensada, normal ou larga. Só use família com acentos_ptbr true. Fontshare fica de fora por licença (ver fontes-livres/LICENCAS.md).",
+ "familias": [
+  {
+   "familia": "Abril Fatface",
+   "pasta": "fontes-livres/Abril Fatface",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "serifa",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "retro",
+    "festa",
+    "luxo"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Alfa Slab One",
+   "pasta": "fontes-livres/Alfa Slab One",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "serifa",
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "retro",
+    "esporte",
+    "urbano"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Anton",
+   "pasta": "fontes-livres/Anton",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "esporte",
+    "urbano"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Antonio",
+   "pasta": "fontes-livres/Antonio",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "esporte",
+    "urbano",
+    "causa"
+   ],
+   "pesos": [
+    400,
+    500,
+    700
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Anybody Expanded",
+   "pasta": "fontes-livres/Anybody Expanded",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "esporte",
+    "festa",
+    "urbano"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Archivo",
+   "pasta": "fontes-livres/Archivo",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "esporte",
+    "urbano",
+    "causa"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Archivo Black",
+   "pasta": "fontes-livres/Archivo Black",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "esporte",
+    "urbano"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Archivo Expanded",
+   "pasta": "fontes-livres/Archivo Expanded",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "esporte",
+    "urbano",
+    "causa"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Barlow",
+   "pasta": "fontes-livres/Barlow",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "esporte",
+    "urbano",
+    "natureza"
+   ],
+   "pesos": [
+    250,
+    275,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Barlow Condensed",
+   "pasta": "fontes-livres/Barlow Condensed",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display",
+    "corpo"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "esporte",
+    "urbano",
+    "tecnologia"
+   ],
+   "pesos": [
+    250,
+    275,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Bebas Neue",
+   "pasta": "fontes-livres/Bebas Neue",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "esporte",
+    "urbano",
+    "festa"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Big Shoulders Display",
+   "pasta": "fontes-livres/Big Shoulders Display",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "esporte",
+    "urbano",
+    "causa"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Bodoni Moda",
+   "pasta": "fontes-livres/Bodoni Moda",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "serifa",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "luxo",
+    "festa"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Bowlby One",
+   "pasta": "fontes-livres/Bowlby One",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "esporte",
+    "festa",
+    "retro"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Bricolage Grotesque",
+   "pasta": "fontes-livres/Bricolage Grotesque",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display",
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "festa",
+    "urbano",
+    "causa"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Bungee",
+   "pasta": "fontes-livres/Bungee",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "urbano",
+    "festa",
+    "retro"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Cormorant Garamond",
+   "pasta": "fontes-livres/Cormorant Garamond",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "serifa",
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "luxo",
+    "natureza"
+   ],
+   "pesos": [
+    400,
+    500,
+    700
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "DM Sans",
+   "pasta": "fontes-livres/DM Sans",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "causa",
+    "praia",
+    "tecnologia"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "DM Serif Display",
+   "pasta": "fontes-livres/DM Serif Display",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "serifa",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "luxo",
+    "festa"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Epilogue",
+   "pasta": "fontes-livres/Epilogue",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "urbano",
+    "festa",
+    "causa"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Familjen Grotesk",
+   "pasta": "fontes-livres/Familjen Grotesk",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "natureza",
+    "causa",
+    "urbano"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Fjalla One",
+   "pasta": "fontes-livres/Fjalla One",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "esporte",
+    "urbano",
+    "natureza"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Fraunces",
+   "pasta": "fontes-livres/Fraunces",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "serifa",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "luxo",
+    "natureza",
+    "festa",
+    "retro"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Fredoka",
+   "pasta": "fontes-livres/Fredoka",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display",
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "causa",
+    "praia",
+    "festa"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Gloock",
+   "pasta": "fontes-livres/Gloock",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "serifa",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "luxo",
+    "retro",
+    "natureza"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Hanken Grotesk",
+   "pasta": "fontes-livres/Hanken Grotesk",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "causa",
+    "natureza",
+    "luxo"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Instrument Sans",
+   "pasta": "fontes-livres/Instrument Sans",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "luxo",
+    "urbano",
+    "tecnologia"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Instrument Serif",
+   "pasta": "fontes-livres/Instrument Serif",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "serifa",
+    "display"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "luxo",
+    "causa"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Inter",
+   "pasta": "fontes-livres/Inter",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "tecnologia",
+    "urbano",
+    "causa"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Kanit",
+   "pasta": "fontes-livres/Kanit",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display",
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "esporte",
+    "urbano",
+    "praia"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Krona One",
+   "pasta": "fontes-livres/Krona One",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "tecnologia",
+    "luxo",
+    "urbano"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "League Gothic",
+   "pasta": "fontes-livres/League Gothic",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "esporte",
+    "urbano",
+    "causa"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Lexend",
+   "pasta": "fontes-livres/Lexend",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "causa",
+    "esporte",
+    "natureza"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Lexend Zetta",
+   "pasta": "fontes-livres/Lexend Zetta",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "tecnologia",
+    "causa",
+    "esporte"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Libre Caslon Display",
+   "pasta": "fontes-livres/Libre Caslon Display",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "serifa",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "luxo",
+    "retro"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Lora",
+   "pasta": "fontes-livres/Lora",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "serifa",
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "natureza",
+    "causa",
+    "luxo"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Manrope",
+   "pasta": "fontes-livres/Manrope",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "tecnologia",
+    "luxo",
+    "causa"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Mattone",
+   "pasta": "fontes-livres/Mattone",
+   "origem": "collletttivo",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "urbano",
+    "tecnologia",
+    "esporte"
+   ],
+   "pesos": [
+    400,
+    700,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Michroma",
+   "pasta": "fontes-livres/Michroma",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "tecnologia",
+    "esporte"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Montserrat",
+   "pasta": "fontes-livres/Montserrat",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "urbano",
+    "praia",
+    "causa"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Onest",
+   "pasta": "fontes-livres/Onest",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "causa",
+    "tecnologia",
+    "praia"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Oswald",
+   "pasta": "fontes-livres/Oswald",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display",
+    "corpo"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "esporte",
+    "natureza",
+    "causa"
+   ],
+   "pesos": [
+    400,
+    500,
+    700
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Outfit",
+   "pasta": "fontes-livres/Outfit",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "praia",
+    "causa",
+    "tecnologia"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Pacifico",
+   "pasta": "fontes-livres/Pacifico",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "praia",
+    "retro",
+    "festa"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Playfair Display",
+   "pasta": "fontes-livres/Playfair Display",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "serifa",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "luxo",
+    "retro"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Plus Jakarta Sans",
+   "pasta": "fontes-livres/Plus Jakarta Sans",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "festa",
+    "praia",
+    "causa",
+    "luxo"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Red Hat Display",
+   "pasta": "fontes-livres/Red Hat Display",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "causa",
+    "luxo",
+    "praia"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Rubik",
+   "pasta": "fontes-livres/Rubik",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "festa",
+    "praia",
+    "urbano"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Rubik Mono One",
+   "pasta": "fontes-livres/Rubik Mono One",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "festa",
+    "urbano"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Russo One",
+   "pasta": "fontes-livres/Russo One",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "esporte",
+    "tecnologia"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Saira Condensed",
+   "pasta": "fontes-livres/Saira Condensed",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display",
+    "corpo"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "esporte",
+    "tecnologia",
+    "urbano"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Saira Extra Condensed",
+   "pasta": "fontes-livres/Saira Extra Condensed",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "esporte",
+    "tecnologia"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Schibsted Grotesk",
+   "pasta": "fontes-livres/Schibsted Grotesk",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "urbano",
+    "esporte",
+    "causa"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Shrikhand",
+   "pasta": "fontes-livres/Shrikhand",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "festa",
+    "praia",
+    "retro"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Sofia Sans Extra Condensed",
+   "pasta": "fontes-livres/Sofia Sans Extra Condensed",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "esporte",
+    "urbano",
+    "praia"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Sora",
+   "pasta": "fontes-livres/Sora",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "tecnologia",
+    "causa",
+    "praia"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Space Grotesk",
+   "pasta": "fontes-livres/Space Grotesk",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "tecnologia",
+    "urbano",
+    "festa"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Staatliches",
+   "pasta": "fontes-livres/Staatliches",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "retro",
+    "urbano",
+    "festa"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Syne",
+   "pasta": "fontes-livres/Syne",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "urbano",
+    "festa",
+    "luxo"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Teko",
+   "pasta": "fontes-livres/Teko",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "condensada",
+   "humor": [
+    "esporte",
+    "tecnologia",
+    "urbano"
+   ],
+   "pesos": [
+    400,
+    500,
+    700
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Tomorrow",
+   "pasta": "fontes-livres/Tomorrow",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display",
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "tecnologia",
+    "esporte"
+   ],
+   "pesos": [
+    400,
+    500,
+    600,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Unbounded",
+   "pasta": "fontes-livres/Unbounded",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "display"
+   ],
+   "largura": "larga",
+   "humor": [
+    "tecnologia",
+    "festa",
+    "urbano"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Work Sans",
+   "pasta": "fontes-livres/Work Sans",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "corpo"
+   ],
+   "largura": "normal",
+   "humor": [
+    "esporte",
+    "natureza",
+    "urbano"
+   ],
+   "pesos": [
+    400,
+    500,
+    700,
+    800,
+    900
+   ],
+   "acentos_ptbr": true
+  },
+  {
+   "familia": "Young Serif",
+   "pasta": "fontes-livres/Young Serif",
+   "origem": "google",
+   "licenca": "OFL",
+   "papel": [
+    "serifa",
+    "display"
+   ],
+   "largura": "normal",
+   "humor": [
+    "natureza",
+    "causa",
+    "retro"
+   ],
+   "pesos": [
+    400
+   ],
+   "acentos_ptbr": true
+  }
+ ]
+}

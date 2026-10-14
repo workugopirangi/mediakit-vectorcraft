@@ -1,0 +1,30 @@
+/* 36-elementos.css (Frente A): camadas do sistema de elementos. O render.py só põe este arquivo no HTML de kit com
+   `elementos` ou `sistema_elementos`: o legado sai byte a byte igual. Quem injeta os nós na posição certa do DOM é o
+   camadas.py; aqui fica só a ordem de pintura. Escala de z da página:
+     cena 0 → sob-veu 0 (logo depois da cena, antes do véu) → véu 1 → atras 1 (depois do último véu) → forma 1-2
+     (faixa diagonal, borda diagonal) → texto 2 (painel) → frente 3 (antes do .logo-canto) → logo 3 → fio 4 →
+     etiqueta, crédito e documento 5.
+   Blend nativo do PDF fica no próprio nó (multiply, screen, soft-light); nenhum contêiner com z-index em volta dele,
+   senão o blend isola e vira normal. Sem filter CSS (rasteriza o PDF, aprendizado 12). */
+
+.elemento { position: absolute; display: block; pointer-events: none; transform-origin: 50% 50%; max-width: none; }
+.elemento.el-sob-veu { z-index: 0; }
+.elemento.el-atras { z-index: 1; }
+.elemento.el-frente { z-index: 3; }
+.elemento.el-pattern { background-repeat: repeat; }
+/* grafismo (svg inline, texto vivo): a cor vem do acento da página, que já troca em fundo papel e cor */
+.elemento.el-svg { color: var(--marca); }
+/* o microtexto de borda é textura, não acento: no tom do texto suave. Em dourado ele entrava em toda página como mais
+   um uso da cor da marca (as cotas da Sprint passavam de 8 papéis, guia: 1 a 3 usos); o selo continua na cor da marca */
+.elemento.el-svg[data-elemento^="constante-microtexto"] { color: var(--texto-suave); }
+.elemento.el-svg > svg.grafismo { display: block; width: 100%; height: 100%; overflow: visible; }
+/* dentro da cena (máscara sangria tem o véu no ::after da própria cena): o nó fica sob esse véu */
+.cena > .elemento, .full > .elemento { z-index: auto; }
+.cena > img.elemento, .full > img.elemento { object-fit: fill; }
+
+/* texto fora do painel fica acima de qualquer camada de elemento (antes ficava em z auto, sob véu e grão) */
+.credito, .pagina .doc { z-index: 5; }
+
+/* maquete (render.py --maquete): a caixa hachurada e o rótulo vêm com estilo inline do camadas.html_maquete; aqui só
+   o rótulo e a geometria da liga podem sair da caixa */
+.elemento.el-maquete { overflow: visible; }

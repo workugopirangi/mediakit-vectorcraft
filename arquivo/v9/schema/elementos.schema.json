@@ -1,0 +1,1622 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "$id": "mk-elementos-1.0",
+ "title": "Sistema de elementos do mídia kit (contratos congelados em 09/10/2026)",
+ "description": "Contratos entre render (camadas, encaixes), produção (elementos.sh, grafismos.py), biblioteca (biblioteca.py), planejador (plano_elementos.py) e QA (qa_geometria.py, qa_conjunto.py). Mudar nome de chave aqui quebra as outras frentes: só com acordo. Regras do dono: elementos são altamente importantes e entram sempre; cada página pode ter elementos diferentes no mesmo sentido; 1 herói por página + 2 a 3 constantes; pelo menos 60% dos elementos de cada kit gerados para ele, sempre 1 pattern novo e herói de capa novo; elemento derivado da identidade de um cliente é exclusivo dele.",
+ "definitions": {
+  "sistema_elementos": {
+   "description": "Chave `sistema_elementos` do mediakit.json. Declara o SENTIDO (motivos), o ESTILO (famílias), as CONSTANTES e o que cada receita usa. O planejador transforma isso em plano por página.",
+   "type": "object",
+   "required": [
+    "motivos",
+    "familias",
+    "constantes",
+    "receitas"
+   ],
+   "properties": {
+    "motivos": {
+     "type": "array",
+     "minItems": 3,
+     "maxItems": 6,
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "origem",
+       "descricao"
+      ],
+      "properties": {
+       "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+       },
+       "origem": {
+        "enum": [
+         "simbolo",
+         "esporte",
+         "territorio"
+        ],
+        "description": "simbolo = vem do logo/identidade do cliente (gera elementos exclusivos); esporte; territorio = lugar do evento"
+       },
+       "descricao": {
+        "type": "string",
+        "description": "uma linha: de onde vem e por que serve a este evento"
+       },
+       "fonte": {
+        "type": "string",
+        "description": "opcional: 'acervo:<id>' quando o motivo nasce de um arquivo do cliente (ex.: logo)"
+       }
+      }
+     }
+    },
+    "familias": {
+     "type": "array",
+     "minItems": 1,
+     "maxItems": 3,
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "meio",
+       "estilo",
+       "paleta"
+      ],
+      "properties": {
+       "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+       },
+       "meio": {
+        "enum": [
+         "traco",
+         "chapado",
+         "meio-tom",
+         "foto-objeto",
+         "ilustracao",
+         "adesivo",
+         "textura"
+        ],
+        "description": "como o elemento é desenhado; o familia.py mede isso"
+       },
+       "estilo": {
+        "type": "string",
+        "description": "bloco de estilo em inglês repetido em todo prompt de IA desta família (como marca.estilo_cena)"
+       },
+       "paleta": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "minItems": 1,
+        "maxItems": 4
+       },
+       "traco_px": {
+        "type": [
+         "number",
+         "null"
+        ],
+        "description": "espessura do traço na escala de uso (só meio traco)"
+       },
+       "luz": {
+        "enum": [
+         "esquerda",
+         "direita",
+         "cima",
+         null
+        ],
+        "description": "direção da luz (só foto-objeto)"
+       },
+       "ancora": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "description": "id do elemento-âncora aprovado pelo Ugo; os demais membros são gerados com --ref nele"
+       },
+       "aprovada": {
+        "type": [
+         "object",
+         "null"
+        ],
+        "description": "{por, em, sha256_membros: [..]} gravado quando o Ugo aprova a folha da família; muda um membro, cai a aprovação"
+       },
+       "traco_px_min": {
+        "type": [
+         "number",
+         "null"
+        ],
+        "description": "piso do traço na escala de uso (sem ele: traco_px / 1,6)"
+       },
+       "traco_px_max": {
+        "type": [
+         "number",
+         "null"
+        ],
+        "description": "teto do traço na escala de uso (sem ele: traco_px × 1,6)"
+       }
+      }
+     }
+    },
+    "constantes": {
+     "type": "array",
+     "minItems": 2,
+     "maxItems": 3,
+     "items": {
+      "type": "object",
+      "required": [
+       "tipo"
+      ],
+      "properties": {
+       "tipo": {
+        "enum": [
+         "grao",
+         "microtexto",
+         "faixa-diagonal",
+         "selo",
+         "fio-borda",
+         "pattern-borda",
+         "listras",
+         "regua-borda"
+        ]
+       },
+       "texto_de": {
+        "enum": [
+         "evento",
+         "tese",
+         "local",
+         "data",
+         "personalizado",
+         null
+        ],
+        "description": "microtexto/selo: de onde vem o texto (sempre texto vivo, por código)"
+       },
+       "texto": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "encaixe": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "description": "id de encaixe (ex.: borda-topo, borda-base)"
+       },
+       "exceto": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        },
+        "description": "rótulos de página onde a constante não entra (ex.: projecao)"
+       },
+       "params": {
+        "type": "object",
+        "description": "parâmetros extras do grafismos.gerar para esta constante (ex.: selo com só o símbolo do cliente: {\"recorte\": [0, 0, 0.477, 1]}, a caixa do símbolo em fração do logo). O texto vem de texto_de/texto; o tamanho do selo vem do encaixe."
+       },
+       "ancora": {
+        "$ref": "#/definitions/composicao_ancora",
+        "description": "opcional: a caixa única da constante, na sintaxe da composição (alinha ou sangra) e só com alvos estruturais (margem, pagina, coluna:N), porque a caixa é a mesma em toda página da receita e do formato. Sem ela, vale a caixa do catálogo que serve a mais páginas. Onde a caixa bate em conteúdo, a constante sai da página (aviso); nunca muda de lugar"
+       }
+      }
+     }
+    },
+    "receitas": {
+     "type": "object",
+     "description": "chave = id da receita (r1, r2, r3) ou 'padrao' quando o kit não tem receitas",
+     "additionalProperties": {
+      "type": "object",
+      "required": [
+       "familia",
+       "motivos"
+      ],
+      "properties": {
+       "familia": {
+        "type": "string"
+       },
+       "motivos": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        },
+        "minItems": 2
+       },
+       "pattern": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "description": "id do elemento papel pattern desta receita"
+       },
+       "densidade": {
+        "enum": [
+         "heroi-constantes"
+        ],
+        "default": "heroi-constantes"
+       }
+      }
+     }
+    },
+    "excecoes": {
+     "type": "object",
+     "description": "por receita, por rótulo de página: o Claude fixa herói/apoio/encaixe por cima do planejador",
+     "additionalProperties": {
+      "type": "object",
+      "additionalProperties": {
+       "type": "object",
+       "properties": {
+        "heroi": {
+         "type": [
+          "string",
+          "null"
+         ],
+         "description": "id do elemento; null = página sem herói (justificar em 'porque')"
+        },
+        "apoio": {
+         "type": [
+          "string",
+          "null"
+         ]
+        },
+        "encaixe": {
+         "type": "string"
+        },
+        "camada": {
+         "enum": [
+          "sob-veu",
+          "atras",
+          "frente"
+         ]
+        },
+        "porque": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "elemento": {
+   "description": "Item de `elementos[]` no mediakit.json. Campos antigos (x, y, w, rot, camada, paginas, opacidade, blend, escala_tile) continuam valendo como ajuste manual; sem eles, o planejador e os encaixes decidem.",
+   "type": "object",
+   "required": [
+    "id",
+    "papel",
+    "tipo",
+    "formato"
+   ],
+   "properties": {
+    "id": {
+     "type": "string",
+     "pattern": "^[a-z0-9-]+$"
+    },
+    "papel": {
+     "enum": [
+      "pattern",
+      "constante",
+      "heroi",
+      "apoio",
+      "estrutura",
+      "ornamento",
+      "acabamento"
+     ],
+     "description": "'ornamento' é o valor antigo e equivale a heroi; 'estrutura' é linha, fio ou moldura presa a alvos (não conta no limite de 1 herói e 1 apoio por página); 'acabamento' (mk-2.1, references/10-acabamento.md) é a camada de acabamento: exige `motivo` de sistema_elementos.motivos e entra no máximo 2 por página"
+    },
+    "material": {
+     "enum": [
+      "metal-escovado",
+      "ouro",
+      "couro",
+      "borracha",
+      "tecido",
+      "vidro-fosco",
+      "plastico-fosco",
+      "madeira",
+      "papel",
+      "grama"
+     ],
+     "description": "opcional (mk-2.1): material do objeto ou da textura, para luz, sombra e reflexo coerentes"
+    },
+    "tipo": {
+     "enum": [
+      "objeto",
+      "ilustracao",
+      "pictograma",
+      "textura",
+      "pattern",
+      "adesivo",
+      "microtexto",
+      "selo",
+      "meio-tom-simbolo",
+      "pattern-simbolo",
+      "linha-percurso",
+      "fios-tecnicos",
+      "moldura",
+      "numeral",
+      "tipo-textura",
+      "mosaico",
+      "faixa-diagonal",
+      "etiqueta",
+      "linhas",
+      "listras",
+      "colchetes",
+      "fio",
+      "regua",
+      "divisoria",
+      "grade-pontos",
+      "circulos",
+      "setas",
+      "estrelas",
+      "campo",
+      "placar",
+      "celular",
+      "mapa",
+      "fio-borda",
+      "pattern-borda",
+      "hachura",
+      "malha",
+      "aneis",
+      "pontos-radiais",
+      "cantoneira",
+      "moldura-dupla",
+      "regua-borda",
+      "eco",
+      "texto-curva",
+      "ondas",
+      "curvas-nivel",
+      "fita",
+      "carimbo",
+      "numeral-eco",
+      "meio-tom-foto"
+     ],
+     "description": "objeto, ilustracao, pictograma, textura, pattern e adesivo vêm da IA (Codex, elementos.sh); todos os outros são grafismo por código (grafismos.py, formato svg, texto vivo) e precisam ter gerador: o test_grafismos.py cobra que o enum e o TIPOS andem juntos"
+    },
+    "formato": {
+     "enum": [
+      "png",
+      "svg"
+     ],
+     "description": "png = raster (IA ou derivado); svg = grafismo por código, inline, texto vivo"
+    },
+    "familia": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "motivo": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "arquivo": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "description": "png: caminho relativo à pasta do kit; svg: null (gerado no render por grafismos.py)"
+    },
+    "params": {
+     "type": "object",
+     "description": "svg: parâmetros do grafismos.gerar(tipo, params); png: nada"
+    },
+    "biblioteca_id": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "description": "id no indice.json da biblioteca quando veio de lá ou foi registrado nela"
+    },
+    "kit_origem": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "description": "kit em que foi gerado; 'novo' para o QA de novidade = kit_origem igual ao kit atual"
+    },
+    "exclusivo_cliente": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "description": "cliente dono quando o motivo tem origem simbolo"
+    },
+    "encaixes_preferidos": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "aspecto": {
+     "enum": [
+      "quadrado",
+      "largo",
+      "alto",
+      "faixa",
+      null
+     ]
+    },
+    "gerado": {
+     "type": "boolean"
+    },
+    "rota": {
+     "type": [
+      "string",
+      "null"
+     ],
+     "description": "codex-alfa | codex-cinza+rembg | codigo | biblioteca"
+    },
+    "prompt": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "sha256": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "paginas": {
+     "description": "ajuste manual: lista de rótulos ou 'todas'"
+    },
+    "x": {
+     "type": "number"
+    },
+    "y": {
+     "type": "number"
+    },
+    "w": {
+     "type": "number"
+    },
+    "rot": {
+     "type": "number"
+    },
+    "camada": {
+     "enum": [
+      "sob-veu",
+      "atras",
+      "frente"
+     ]
+    },
+    "opacidade": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "blend": {
+     "enum": [
+      "normal",
+      "multiply",
+      "screen",
+      "soft-light"
+     ]
+    },
+    "escala_tile": {
+     "type": "number"
+    },
+    "familia_revisada": {
+     "type": "object",
+     "required": [
+      "por",
+      "motivo",
+      "sha256"
+     ],
+     "description": "membro aceito pelo dono apesar da medida da família, só para este arquivo (sha256); o qa_conjunto troca a falha por aviso permanente",
+     "properties": {
+      "por": {
+       "type": "string"
+      },
+      "em": {
+       "type": "string"
+      },
+      "motivo": {
+       "type": "string"
+      },
+      "sha256": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  "encaixes": {
+   "description": "Arquivo pipeline/encaixes.json. Chave = rótulo de variante ('capa:c', 'cota:b', 'ativo:diagonal', 'prova', 'territorio'...). Cada encaixe é uma REGRA resolvida sobre o layout medido (depois do data-fit), não uma coordenada fixa.",
+   "type": "object",
+   "additionalProperties": {
+    "type": "array",
+    "items": {
+     "type": "object",
+     "required": [
+      "id",
+      "gerador",
+      "papeis",
+      "camadas"
+     ],
+     "properties": {
+      "id": {
+       "type": "string"
+      },
+      "gerador": {
+       "enum": [
+        "canto",
+        "faixa",
+        "maior-vazio",
+        "sobre-cena",
+        "atras-de",
+        "fixo"
+       ]
+      },
+      "canto": {
+       "enum": [
+        "sup-esq",
+        "sup-dir",
+        "inf-esq",
+        "inf-dir"
+       ]
+      },
+      "lado": {
+       "enum": [
+        "topo",
+        "base",
+        "esq",
+        "dir"
+       ]
+      },
+      "seletor": {
+       "type": "string",
+       "description": "atras-de: seletor CSS do bloco (ex.: '.preco')"
+      },
+      "esp": {
+       "type": "number",
+       "description": "faixa: espessura em px"
+      },
+      "max": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[w, h] máximos em px"
+      },
+      "min": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       },
+       "minItems": 2,
+       "maxItems": 2
+      },
+      "sangra": {
+       "type": "boolean",
+       "description": "pode passar da área segura até a borda da página"
+      },
+      "papeis": {
+       "type": "array",
+       "items": {
+        "enum": [
+         "pattern",
+         "constante",
+         "heroi",
+         "apoio"
+        ]
+       }
+      },
+      "camadas": {
+       "type": "array",
+       "items": {
+        "enum": [
+         "sob-veu",
+         "atras",
+         "frente"
+        ]
+       }
+      },
+      "box": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       },
+       "minItems": 4,
+       "maxItems": 4,
+       "description": "fixo: [x, y, w, h]"
+      }
+     }
+    }
+   }
+  },
+  "plano_elementos": {
+   "description": "Arquivo saida/plano-elementos-<receita>.json. O render grava depois de posicionar; o QA lê. 'protegidos' são as caixas de texto e marcas medidas por linha (Range.getClientRects), não o bloco inteiro.",
+   "type": "object",
+   "required": [
+    "receita",
+    "paginas"
+   ],
+   "properties": {
+    "receita": {
+     "type": "string"
+    },
+    "paginas": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "n",
+       "rotulo",
+       "elementos",
+       "protegidos"
+      ],
+      "properties": {
+       "n": {
+        "type": "integer"
+       },
+       "rotulo": {
+        "type": "string",
+        "description": "tipo:variante, ex.: 'capa:c', 'cota:b', 'ativo:diagonal'"
+       },
+       "elegivel_heroi": {
+        "type": "boolean"
+       },
+       "elementos": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "required": [
+          "id",
+          "papel",
+          "camada",
+          "x",
+          "y",
+          "w",
+          "h"
+         ],
+         "properties": {
+          "id": {
+           "type": "string"
+          },
+          "papel": {
+           "type": "string"
+          },
+          "encaixe": {
+           "type": [
+            "string",
+            "null"
+           ]
+          },
+          "camada": {
+           "type": "string"
+          },
+          "x": {
+           "type": "number"
+          },
+          "y": {
+           "type": "number"
+          },
+          "w": {
+           "type": "number"
+          },
+          "h": {
+           "type": "number"
+          },
+          "rot": {
+           "type": "number"
+          },
+          "uso": {
+           "type": [
+            "string",
+            "null"
+           ],
+           "description": "png preparado (cortado e reduzido a 2x o uso) em saida/cache-elementos/"
+          },
+          "sha256": {
+           "type": [
+            "string",
+            "null"
+           ]
+          },
+          "origem": {
+           "enum": [
+            "composicao",
+            "plano",
+            "manual"
+           ],
+           "description": "composicao = posição vinda da composição da página (âncora); plano = encaixe automático do catálogo"
+          },
+          "funcao": {
+           "type": [
+            "string",
+            "null"
+           ]
+          },
+          "porque": {
+           "type": [
+            "string",
+            "null"
+           ]
+          },
+          "espelhar": {
+           "type": "boolean"
+          },
+          "ancora": {
+           "type": "object",
+           "description": "âncora resolvida: relação, restrições com o valor do alvo, caixa da TINTA (alfa >= 128) na página, escala e se ela é degrau"
+          },
+          "caixa_unica": {
+           "type": "string",
+           "description": "constante na caixa única: 'ancora' (âncora da constante) ou 'p.N' (a página cuja caixa do catálogo serve a mais páginas)"
+          },
+          "acabamento": {
+           "type": [
+            "string",
+            "null"
+           ],
+           "description": "camada frente: chave do acabamento aplicado ao PNG de uso (grão do tema, tingir e temperatura da receita)"
+          },
+          "grafismo": {
+           "type": "object",
+           "description": "grafismo gerado na resolução (liga, ancorado com escala): tipo e os parâmetros com que foi gerado"
+          }
+         }
+        }
+       },
+       "protegidos": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "required": [
+          "classe",
+          "x",
+          "y",
+          "w",
+          "h"
+         ],
+         "properties": {
+          "classe": {
+           "enum": [
+            "titulo",
+            "corpo",
+            "numero",
+            "preco",
+            "logo",
+            "credito",
+            "etiqueta",
+            "fio",
+            "micro"
+           ]
+          },
+          "x": {
+           "type": "number"
+          },
+          "y": {
+           "type": "number"
+          },
+          "w": {
+           "type": "number"
+          },
+          "h": {
+           "type": "number"
+          }
+         }
+        }
+       },
+       "alvos": {
+        "type": "object",
+        "description": "alvos medidos no render final (página, margem, colunas, título com linhas, linha de base e cap, números, foto, painel, blocos, logo): o QA da composição confere as âncoras contra eles"
+       },
+       "composicao": {
+        "type": [
+         "object",
+         "null"
+        ],
+        "description": "chave da composição que valeu para a página, mensagem, foco e a chave da gramática do tipo"
+       },
+       "erros_composicao": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        },
+        "description": "âncora que não resolveu (alvo ausente, restrição inválida): FALHA no qa_geometria"
+       },
+       "vendaveis": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "required": [
+          "classe",
+          "x",
+          "y",
+          "w",
+          "h"
+         ],
+         "properties": {
+          "classe": {
+           "const": "vendavel"
+          },
+          "x": {
+           "type": "number"
+          },
+          "y": {
+           "type": "number"
+          },
+          "w": {
+           "type": "number"
+          },
+          "h": {
+           "type": "number"
+          },
+          "quad": {
+           "type": "array",
+           "description": "os 4 cantos do painel na página"
+          },
+          "texto": {
+           "type": "string"
+          },
+          "fonte": {
+           "type": "string"
+          },
+          "foto": {
+           "type": "string"
+          }
+         }
+        },
+        "description": "zonas protegidas DENTRO da foto, na página: painel do compor.py (acervo[].paineis) e o foco do acervo (um terço da foto visível em volta do ponto). Elemento que cobre mais de 2% de uma delas é FALHA"
+       },
+       "dom": {
+        "type": "array",
+        "description": "caixa de cada elemento no DOM do render final (id, x, y, w, h; girado = caixa alinhada aos eixos)"
+       }
+      }
+     }
+    },
+    "composicao_erros": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     },
+     "description": "erros de validação da composição do kit inteiro (schema e regras): FALHA no qa_geometria"
+    },
+    "composicao_kit": {
+     "type": "boolean",
+     "description": "o kit declara `composicao`: herói, apoio ou estrutura do catálogo sem âncora é FALHA (sem composição: aviso)"
+    },
+    "maquete": {
+     "type": "boolean",
+     "description": "plano da maquete (saida/plano-maquete-<receita>.json): caixas no lugar dos elementos, sem asset"
+    }
+   }
+  },
+  "biblioteca_indice": {
+   "description": "MARKETING/BIBLIOTECA DE OBJETOS/indice.json: fonte de verdade da biblioteca compartilhada (mídia kit e carrossel). INDICE.md é gerado entre marcadores; linhas escritas à mão pelo carrossel fora dos marcadores são preservadas e importadas pelo `biblioteca.py sincronizar`.",
+   "type": "object",
+   "required": [
+    "versao",
+    "itens"
+   ],
+   "properties": {
+    "versao": {
+     "const": 1
+    },
+    "itens": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "tipo",
+       "formato",
+       "arquivo",
+       "motivo",
+       "origem_motivo",
+       "sha256",
+       "data"
+      ],
+      "properties": {
+       "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+       },
+       "tipo": {
+        "type": "string",
+        "description": "mesmo vocabulário de elemento.tipo"
+       },
+       "papel_sugerido": {
+        "enum": [
+         "pattern",
+         "heroi",
+         "apoio",
+         "constante"
+        ]
+       },
+       "formato": {
+        "enum": [
+         "png",
+         "svg"
+        ]
+       },
+       "arquivo": {
+        "type": "string",
+        "description": "relativo à pasta da biblioteca; exclusivos em _EXCLUSIVOS/<cliente>/"
+       },
+       "bruto": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "description": "só quando difere do arquivo final"
+       },
+       "motivo": {
+        "type": "string"
+       },
+       "origem_motivo": {
+        "enum": [
+         "simbolo",
+         "esporte",
+         "territorio",
+         "generico"
+        ]
+       },
+       "estilo": {
+        "type": "string",
+        "description": "família/estilo de render em uma linha"
+       },
+       "meio": {
+        "type": "string"
+       },
+       "tags": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "cores": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "exclusivo_cliente": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "dims": {
+        "type": "array",
+        "items": {
+         "type": "integer"
+        }
+       },
+       "alfa_bbox": {
+        "type": [
+         "array",
+         "null"
+        ],
+        "items": {
+         "type": "integer"
+        }
+       },
+       "costura": {
+        "type": [
+         "number",
+         "null"
+        ]
+       },
+       "ocr": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "description": "texto encontrado pelo OCR; precisa ser vazio para uso"
+       },
+       "descritores": {
+        "type": "object",
+        "description": "medidas do familia.py: paleta Lab, n_cores, croma, traco_px, luz"
+       },
+       "rota": {
+        "type": "string"
+       },
+       "prompt": {
+        "type": [
+         "string",
+         "null"
+        ]
+       },
+       "ref": {
+        "type": [
+         "string",
+         "null"
+        ],
+        "description": "id da âncora usada no --ref"
+       },
+       "kit_origem": {
+        "type": "string"
+       },
+       "sha256": {
+        "type": "string"
+       },
+       "data": {
+        "type": "string"
+       },
+       "veredito": {
+        "type": "object",
+        "properties": {
+         "status": {
+          "enum": [
+           "aprovado",
+           "ressalva",
+           "reprovado"
+          ]
+         },
+         "nota": {
+          "type": "string"
+         },
+         "por": {
+          "type": "string"
+         }
+        }
+       },
+       "usos": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "properties": {
+          "kit": {
+           "type": "string"
+          },
+          "cliente": {
+           "type": "string"
+          },
+          "receita": {
+           "type": [
+            "string",
+            "null"
+           ]
+          },
+          "paginas": {
+           "type": "array",
+           "items": {
+            "type": "string"
+           }
+          },
+          "data": {
+           "type": "string"
+          },
+          "sistema": {
+           "enum": [
+            "mediakit",
+            "carrossel"
+           ]
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "composicao": {
+   "description": "Composição por página (references/09-composicao.md), escrita ANTES de buscar ou gerar elementos. Chave = rótulo da página: tipo ('ativo', 'cota': vale como gramática do tipo), variante ('cota:b'), página ('ativo:2', 'cota:Master') ou 'vertical:capa|numeros|contato'. O mais específico vence.",
+   "type": "object",
+   "propertyNames": {
+    "pattern": "^(_.*|[a-z_]+(:[^\\s]+)?)$"
+   },
+   "additionalProperties": {
+    "$ref": "#/definitions/composicao_pagina"
+   }
+  },
+  "composicao_pagina": {
+   "type": "object",
+   "additionalProperties": false,
+   "properties": {
+    "mensagem": {
+     "type": "string",
+     "minLength": 3,
+     "maxLength": 200,
+     "description": "o que a página diz, numa frase"
+    },
+    "foco": {
+     "enum": [
+      "titulo",
+      "numero",
+      "preco",
+      "foto",
+      "objeto",
+      "lettering",
+      "grafico",
+      "lista"
+     ],
+     "description": "o que se lê primeiro"
+    },
+    "leitura": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     },
+     "maxItems": 6,
+     "description": "ordem dos olhos"
+    },
+    "estrutura": {
+     "type": "string",
+     "description": "como o grid divide a página"
+    },
+    "padroes": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     },
+     "description": "ids do repertório consultados (repertorio/indice.json)"
+    },
+    "porque_fora_da_gramatica": {
+     "type": "string",
+     "minLength": 8
+    },
+    "sem": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     },
+     "description": "ids de constante ou 'pattern' que saem desta página"
+    },
+    "acabamento": {
+     "type": "object",
+     "additionalProperties": false,
+     "description": "opcional (mk-2.1): a camada de acabamento desta página (references/10-acabamento.md). Vence direcao_criativa.intensidade.padrao",
+     "properties": {
+      "recursos": {
+       "type": "array",
+       "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9-]*$"
+       },
+       "description": "ids de direcao_criativa.recursos usados na página"
+      },
+      "intensidade": {
+       "type": "integer",
+       "minimum": 0,
+       "maximum": 3,
+       "description": "0 nenhuma, 1 sutil, 2 presente, 3 marcante"
+      },
+      "profundidade": {
+       "enum": [
+        "plana",
+        "camadas",
+        "volume"
+       ]
+      },
+      "grao": {
+       "enum": [
+        "nenhum",
+        "leve",
+        "padrao",
+        "forte"
+       ]
+      },
+      "luz": {
+       "enum": [
+        "nenhuma",
+        "esq",
+        "dir",
+        "topo"
+       ]
+      },
+      "porque": {
+       "type": "string",
+       "minLength": 8
+      }
+     }
+    },
+    "elementos": {
+     "type": "array",
+     "items": {
+      "$ref": "#/definitions/composicao_elemento"
+     }
+    }
+   }
+  },
+  "composicao_elemento": {
+   "type": "object",
+   "additionalProperties": false,
+   "required": [
+    "id",
+    "papel",
+    "funcao",
+    "ancora"
+   ],
+   "properties": {
+    "id": {
+     "type": "string",
+     "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "grafismo": {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "tipo"
+     ],
+     "properties": {
+      "tipo": {
+       "type": "string"
+      },
+      "params": {
+       "type": "object"
+      }
+     },
+     "description": "grafismo por código declarado só nesta página (id sem entrada em elementos[])"
+    },
+    "papel": {
+     "enum": [
+      "heroi",
+      "apoio",
+      "estrutura",
+      "acabamento"
+     ],
+     "description": "'acabamento' (mk-2.1): exige `motivo` (dele ou do elemento em elementos[]) e função acabamento, identidade, profundidade ou equilibrio; no máximo 2 por página"
+    },
+    "recurso": {
+     "type": "string",
+     "pattern": "^[a-z0-9][a-z0-9-]*$",
+     "description": "opcional (mk-2.1): id de direcao_criativa.recursos que este elemento realiza"
+    },
+    "motivo": {
+     "type": "string",
+     "pattern": "^[a-z0-9-]+$",
+     "description": "opcional (mk-2.1): id de sistema_elementos.motivos; vence o `motivo` do elemento em elementos[]"
+    },
+    "efeito": {
+     "type": "object",
+     "additionalProperties": false,
+     "description": "opcional (mk-2.1): efeitos de acabamento deste elemento nesta página. Vence elementos[].opacidade e .blend, que vencem o tema. Regras além do schema em pipeline/acabamento.py (sombra contato e reflexo piso só em PNG de imagem, sombra deslocada só em grafismo SVG, cruza só na camada frente)",
+     "properties": {
+      "opacidade": {
+       "enum": [
+        1,
+        0.72,
+        0.46,
+        0.24,
+        0.12,
+        0.06
+       ]
+      },
+      "blend": {
+       "enum": [
+        "normal",
+        "multiply",
+        "screen",
+        "soft-light"
+       ]
+      },
+      "mascara": {
+       "enum": [
+        "nenhuma",
+        "diagonal",
+        "chanfro",
+        "circulo",
+        "arco-base",
+        "janela"
+       ]
+      },
+      "sombra": {
+       "enum": [
+        "nenhuma",
+        "contato",
+        "deslocada"
+       ]
+      },
+      "reflexo": {
+       "enum": [
+        "nenhum",
+        "piso"
+       ]
+      },
+      "cruza": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "alvo",
+        "corte"
+       ],
+       "description": "o elemento cruza o texto do alvo: o render o parte na linha `corte` do alvo, um pedaço atrás do texto e outro na frente (dois nós do mesmo PNG)",
+       "properties": {
+        "alvo": {
+         "enum": [
+          "titulo",
+          "numero"
+         ]
+        },
+        "corte": {
+         "enum": [
+          "linha_base",
+          "cap",
+          "cy"
+         ]
+        }
+       }
+      },
+      "esmaecer": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "direcao",
+        "passos",
+        "minimo"
+       ],
+       "description": "a tinta perde força em degraus na direção dada, até a opacidade `minimo`",
+       "properties": {
+        "direcao": {
+         "enum": [
+          "dir",
+          "esq",
+          "cima",
+          "baixo"
+         ]
+        },
+        "passos": {
+         "type": "integer",
+         "minimum": 3,
+         "maximum": 8
+        },
+        "minimo": {
+         "type": "number",
+         "minimum": 0,
+         "maximum": 0.46
+        }
+       }
+      }
+     }
+    },
+    "funcao": {
+     "enum": [
+      "foco",
+      "contexto",
+      "identidade",
+      "conexao",
+      "organizacao",
+      "profundidade",
+      "equilibrio",
+      "acabamento"
+     ]
+    },
+    "camada": {
+     "enum": [
+      "atras",
+      "frente",
+      "sob-veu"
+     ]
+    },
+    "ancora": {
+     "$ref": "#/definitions/composicao_ancora"
+    },
+    "escala": {
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+      "altura": {
+       "type": [
+        "string",
+        "number"
+       ],
+       "pattern": "^((1/6|1/4|1/3|1/2|2/3|3/4|1)p|[1-9][0-9]?col|[1-9]cap)$"
+      },
+      "largura": {
+       "type": [
+        "string",
+        "number"
+       ],
+       "pattern": "^((1/6|1/4|1/3|1/2|2/3|3/4|1)p|[1-9][0-9]?col|[1-9]cap)$"
+      },
+      "de": {
+       "type": "string"
+      }
+     }
+    },
+    "proporcao": {
+     "type": "array",
+     "items": {
+      "type": "number",
+      "exclusiveMinimum": 0
+     },
+     "minItems": 2,
+     "maxItems": 2,
+     "description": "[w, h] do asset ainda não gerado: a maquete (render.py --maquete) desenha a caixa nesta proporção no lugar resolvido; o render final reprova enquanto o asset não existir"
+    },
+    "rot": {
+     "type": "number",
+     "minimum": -180,
+     "maximum": 180
+    },
+    "espelhar": {
+     "type": "boolean"
+    },
+    "porque": {
+     "type": "string",
+     "minLength": 8
+    }
+   }
+  },
+  "composicao_ancora": {
+   "oneOf": [
+    {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "relacao",
+      "x",
+      "y"
+     ],
+     "properties": {
+      "relacao": {
+       "const": "alinha"
+      },
+      "x": {
+       "type": "string",
+       "pattern": "^(esq|dir|cx|topo|base|cy|linha_base|cap)=[a-z][a-z0-9-]*(:[A-Za-z0-9_À-ÿ-]+)?(\\.l[0-9]+)?\\.(esq|dir|cx|topo|base|cy|linha_base|cap)([+-](e[1-8]|[0-9]+(\\.[0-9]+)?))?$"
+      },
+      "y": {
+       "type": "string",
+       "pattern": "^(esq|dir|cx|topo|base|cy|linha_base|cap)=[a-z][a-z0-9-]*(:[A-Za-z0-9_À-ÿ-]+)?(\\.l[0-9]+)?\\.(esq|dir|cx|topo|base|cy|linha_base|cap)([+-](e[1-8]|[0-9]+(\\.[0-9]+)?))?$"
+      }
+     }
+    },
+    {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "relacao",
+      "borda",
+      "corte"
+     ],
+     "properties": {
+      "relacao": {
+       "const": "sangra"
+      },
+      "borda": {
+       "enum": [
+        "esq",
+        "dir",
+        "topo",
+        "base"
+       ]
+      },
+      "corte": {
+       "enum": [
+        "1/4",
+        "1/3",
+        "1/2"
+       ]
+      },
+      "x": {
+       "type": "string",
+       "pattern": "^(esq|dir|cx|topo|base|cy|linha_base|cap)=[a-z][a-z0-9-]*(:[A-Za-z0-9_À-ÿ-]+)?(\\.l[0-9]+)?\\.(esq|dir|cx|topo|base|cy|linha_base|cap)([+-](e[1-8]|[0-9]+(\\.[0-9]+)?))?$"
+      },
+      "y": {
+       "type": "string",
+       "pattern": "^(esq|dir|cx|topo|base|cy|linha_base|cap)=[a-z][a-z0-9-]*(:[A-Za-z0-9_À-ÿ-]+)?(\\.l[0-9]+)?\\.(esq|dir|cx|topo|base|cy|linha_base|cap)([+-](e[1-8]|[0-9]+(\\.[0-9]+)?))?$"
+      }
+     }
+    },
+    {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "relacao",
+      "alvo",
+      "lado",
+      "fracao"
+     ],
+     "properties": {
+      "relacao": {
+       "const": "sobrepoe"
+      },
+      "alvo": {
+       "type": "string"
+      },
+      "lado": {
+       "enum": [
+        "esq",
+        "dir",
+        "topo",
+        "base"
+       ]
+      },
+      "fracao": {
+       "enum": [
+        "1/4",
+        "1/3",
+        "1/2"
+       ]
+      },
+      "x": {
+       "type": "string",
+       "pattern": "^(esq|dir|cx|topo|base|cy|linha_base|cap)=[a-z][a-z0-9-]*(:[A-Za-z0-9_À-ÿ-]+)?(\\.l[0-9]+)?\\.(esq|dir|cx|topo|base|cy|linha_base|cap)([+-](e[1-8]|[0-9]+(\\.[0-9]+)?))?$"
+      },
+      "y": {
+       "type": "string",
+       "pattern": "^(esq|dir|cx|topo|base|cy|linha_base|cap)=[a-z][a-z0-9-]*(:[A-Za-z0-9_À-ÿ-]+)?(\\.l[0-9]+)?\\.(esq|dir|cx|topo|base|cy|linha_base|cap)([+-](e[1-8]|[0-9]+(\\.[0-9]+)?))?$"
+      }
+     }
+    },
+    {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "relacao",
+      "modo"
+     ],
+     "properties": {
+      "relacao": {
+       "const": "liga"
+      },
+      "modo": {
+       "enum": [
+        "conecta",
+        "emoldura",
+        "separa",
+        "continua"
+       ]
+      },
+      "de": {
+       "type": "string"
+      },
+      "para": {
+       "type": "string"
+      },
+      "alvo": {
+       "type": "string"
+      },
+      "folga": {
+       "type": [
+        "string",
+        "number"
+       ]
+      },
+      "entre": {
+       "type": "string"
+      },
+      "de_foto": {
+       "type": "array",
+       "items": {
+        "type": "number"
+       },
+       "minItems": 2,
+       "maxItems": 2
+      },
+      "angulo": {
+       "type": "number"
+      },
+      "ate": {
+       "type": "string"
+      },
+      "espessura": {
+       "type": "number"
+      }
+     }
+    },
+    {
+     "type": "object",
+     "additionalProperties": false,
+     "required": [
+      "relacao",
+      "alvo"
+     ],
+     "description": "registro (mk-2.1): recorte da própria foto (a pessoa da cena) na caixa da foto, com o mesmo enquadramento dela, na frente do título. Posição e escala vêm da foto: sem eixo nem escala",
+     "properties": {
+      "relacao": {
+       "const": "registro"
+      },
+      "alvo": {
+       "enum": [
+        "foto"
+       ]
+      }
+     }
+    }
+   ]
+  }
+ }
+}

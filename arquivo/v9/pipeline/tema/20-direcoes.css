@@ -1,0 +1,17 @@
+/* ---------- direções ---------- */
+[data-direcao="performance"] {
+  --lh-display: .9; --track-display: -.005em;
+  --fonte-display: "Anton", "Antonio", "Bebas Neue", "Oswald", "DejaVu Sans Condensed", sans-serif;
+  --fonte-titulo:  "Anton", "Antonio", "Bebas Neue", "DejaVu Sans Condensed", sans-serif;
+  --peso-display: 400;
+  
+  --escuro: #0A0A0A;
+}
+[data-direcao="territorio"] {
+  --fonte-display: "Antonio", "Anton", "Oswald", "DejaVu Sans Condensed", sans-serif;
+  --fonte-titulo:  "Antonio", "Anton", "DejaVu Sans Condensed", sans-serif;
+  --fonte-corpo:   "Open Sauce One", "DM Sans", "Liberation Sans", sans-serif;
+  --peso-display: 700;
+  
+}
+

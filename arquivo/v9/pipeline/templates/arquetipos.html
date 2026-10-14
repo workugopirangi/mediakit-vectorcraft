@@ -1,0 +1,498 @@
+{# Arquétipos da gramática v1. Cada macro = uma página. Nomes seguem o catálogo (§8). #}
+
+{% macro icone(nome) -%}
+{%- if nome == 'seta' -%}<svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
+{%- elif nome == 'coracao' -%}<svg viewBox="0 0 24 24"><path d="M12 20s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.4-7 10-7 10z"/><path d="M4 12h3l2-3 2 5 2-4 1 2h6"/></svg>
+{%- elif nome == 'alvo' -%}<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/><path d="M12 3v3M21 12h-3"/></svg>
+{%- elif nome == 'olho' -%}<svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+{%- elif nome == 'pessoa' -%}<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+{%- elif nome == 'pessoas' -%}<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-4 3-6 7-6s7 2 7 6M15 15c3 0 6 1 6 5"/></svg>
+{%- elif nome == 'camisa' -%}<svg viewBox="0 0 24 24"><path d="M8 4 4 7l2 3 2-1v10h8V9l2 1 2-3-4-3a4 4 0 0 1-8 0z"/></svg>
+{%- elif nome == 'megafone' -%}<svg viewBox="0 0 24 24"><path d="M3 10v4h3l8 5V5L6 10H3zM17 9a4 4 0 0 1 0 6M19 7a7 7 0 0 1 0 10"/></svg>
+{%- elif nome == 'balao' -%}<svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/><circle cx="9" cy="10.5" r=".8"/><circle cx="12" cy="10.5" r=".8"/><circle cx="15" cy="10.5" r=".8"/></svg>
+{%- elif nome == 'tenis' -%}<svg viewBox="0 0 24 24"><path d="M3 15c3 0 5-3 7-3l5 3h6v2a2 2 0 0 1-2 2H3v-4zM10 12l1-3M13 13l1-3"/></svg>
+{%- elif nome == 'cursor' -%}<svg viewBox="0 0 24 24"><path d="m5 4 14 7-6 2-2 6L5 4z"/></svg>
+{%- elif nome == 'mais' -%}<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-4 3-6 7-6M18 13v6M15 16h6"/></svg>
+{%- elif nome == 'grafico' -%}<svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg>
+{%- else -%}<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/></svg>
+{%- endif -%}
+{%- endmacro %}
+
+{% macro estado(p) -%}
+{%- if p.tipo != 'realizado' -%}{{ {'informado':'Informado pelo organizador','meta':'Meta','projecao':'Projeção','proxy':'Referência'}[p.tipo] }} · {{ p.edicao }}{%- else -%}{{ p.edicao }}{%- endif -%}
+{%- endmacro %}
+
+{% macro duas(titulo) -%}
+{# "Perfil de|público" → mesma linha, segunda parte na cor. "Sua marca||na largada" → quebra de linha e cor. Sem marcador, a última palavra fica na cor. #}
+{%- if '||' in titulo -%}{{ titulo.split('||')[0] }}<br><span class="cor">{{ titulo.split('||')[1] }}</span>
+{%- elif '|' in titulo -%}{{ titulo.split('|')[0] }} <span class="cor">{{ titulo.split('|')[1] }}</span>
+{%- else -%}{% set w = titulo.split(' ') %}{{ w[:-1]|join(' ') }} <span class="cor">{{ w[-1] }}</span>{%- endif -%}
+{%- endmacro %}
+
+{# ========= A1 CAPA ========= #}
+{% macro capa(k, cena, logo, data_fmt, variante='a') %}{% if variante == 'b' %}{{ capa_b(k, cena, logo, data_fmt) }}{% elif variante == 'c' %}{{ capa_c(k, cena, logo, data_fmt) }}{% else %}
+<section class="pagina capa" data-dominante="{{ 'lettering' if logo else 'titulo' }}">
+  {% if cena %}<div class="full" data-layer="cena"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '50% 40%' }}" alt=""></div>{% endif %}
+  <div class="veu tingido" data-layer="veu"></div>
+  {% if cena and cena.rotulo %}<div class="etiqueta">{{ cena.rotulo }}</div>{% endif %}
+  <div class="painel inteiro" data-layer="tipo" style="justify-content:flex-end;padding-left:400px;padding-bottom:var(--e-8)">
+    {% if logo %}<img class="lettering" src="{{ logo.src }}" alt="">{% else %}<h1 class="display nome-display" data-fit>{{ k.evento.nome }}</h1>{% endif %}
+    <p class="corpo-g" style="font-weight:700;margin-top:var(--e-5);max-width:900px">{{ k.tese.frase }}</p>
+    <p class="display" style="font-size: var(--t-4);margin-top:40px;text-transform:none;font-family:var(--fonte-titulo);font-weight:800">{{ data_fmt }}</p>
+    <p class="corpo" style="color:var(--texto);margin-top:8px;font-size: var(--t-4)">{% if k.evento.local %}{{ k.evento.local }}, {% endif %}{{ k.evento.cidade }}{% if k.evento.uf %}/{{ k.evento.uf }}{% endif %}</p>
+  </div>
+  <div class="linha-rodape" style="right:30%;bottom:72px"></div>
+  <div class="doc">Mídia Kit de<br>Patrocínio {{ k.evento.data_inicio[:4] }}</div>
+  {% if cena and cena.credito %}<div class="credito">{{ cena.credito|e }}</div>{% endif %}
+</section>
+{% endif %}{% endmacro %}
+
+{# ========= A2 MANIFESTO ========= #}
+{% macro manifesto(k, cena, simbolo, variante='a') %}{% if variante == 'b' %}{{ manifesto_b(k, simbolo) }}{% else %}
+<section class="pagina" data-dominante="titulo">
+  {% if cena %}<div class="full"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '50% 40%' }}" alt=""></div>{% endif %}
+  <div class="veu escuro"></div>
+  {% if cena and cena.rotulo %}<div class="etiqueta">{{ cena.rotulo }}</div>{% endif %}
+  <div class="painel inteiro" style="padding-top:200px;padding-left:248px">
+    <div style="display:flex;align-items:flex-start;gap:0"><span class="traco branco" style="margin-top:60px;margin-left:-120px;width:100px"></span>
+      <div>
+        <h2 class="display titulo-m" style="max-width:1000px" data-fit>{{ k.manifesto.titulo.replace("|", "<br>")|safe }}</h2>
+        {% if k.manifesto.subtitulo %}<p class="sub-caixa" style="margin-top:36px;max-width:800px">{{ k.manifesto.subtitulo }}</p>{% endif %}
+      </div>
+    </div>
+    <div class="caixa branca" style="margin-top:72px;max-width:1030px;padding:40px 60px;border-radius:12px"><p class="corpo-g" style="font-weight:600">{{ k.manifesto.frase|safe }}</p></div>
+  </div>
+  {% if simbolo %}<img class="logo-canto" src="{{ simbolo.src }}" alt="">{% endif %}
+  {% if cena and cena.credito %}<div class="credito">{{ cena.credito|e }}</div>{% endif %}
+</section>
+{% endif %}{% endmacro %}
+
+{# ========= A3 PROJEÇÃO DO EVENTO ========= #}
+{% macro projecao(k, cena) %}
+<section class="pagina" data-dominante="cena">
+  <div class="full"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '50% 50%' }}" alt=""></div>
+  <div class="selo" data-layer="tipo" style="position:absolute;top:84px;left:var(--margem)"><span class="traco branco" style="width:40px"></span><span class="micro branco">Projeção do evento</span></div>
+  {% if cena.rotulo %}<div class="etiqueta">{{ cena.rotulo }}</div>{% endif %}
+  {% if cena.credito %}<div class="credito">{{ cena.credito|e }}</div>{% endif %}
+</section>
+{% endmacro %}
+
+{# ========= A6 PÚBLICO ========= #}
+{% macro publico(k, cena, cards, genero, variante='a') %}{% if variante == 'b' %}{{ publico_b(k, cena, cards, genero) }}{% else %}
+<section class="pagina" data-dominante="numero">
+  {% if cena %}<div class="full"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '70% 40%' }}" alt=""></div><div class="veu leve"></div><div class="veu painel-fade"></div>{% endif %}
+  <div class="painel inteiro" style="padding-top:140px">
+    <div style="display:flex;align-items:center;margin-bottom:60px"><span class="traco branco" style="margin-left:-96px;width:70px"></span><h2 class="display titulo-m duas" data-fit>{{ duas(k.publico.titulo or 'Perfil de|público') }}</h2></div>
+    <div style="display:flex;gap:120px;align-items:flex-start">
+      <div class="cards">
+        {% for c in cards %}
+        <div class="card{% if c.tipo == 'meta' %} meta{% endif %}">
+          <div class="icone">{{ icone(c.icone) }}</div>
+          <div class="numero{% if c.valor is string and c.valor|length > 6 %} texto{% endif %}" data-fit>{{ c.valor_fmt }}</div>
+          <div class="label">{{ c.rotulo }}</div>
+          <div class="estado">{{ estado(c) }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% if genero %}
+      <div class="barras" style="width:440px;padding-top:var(--e-2)">
+        <div class="display" style="font-size: var(--t-4)">Gênero</div>
+        {% for g in genero %}<div class="linha-b"><div class="rot"><span>{{ g.rotulo }}</span><span>{{ g.pct }}%</span></div><div class="trilho"><div class="cheio" style="width:{{ g.pct }}%"></div><div class="knob" style="left:{{ g.pct }}%"></div></div></div>{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}{% endmacro %}
+
+{# ========= A7 / A8 PROVA (realizado ou metas) ========= #}
+{% macro prova(k, caixas, nota, graficos) %}
+<section class="pagina" data-dominante="titulo">
+  <div class="painel inteiro" style="padding-top:110px">
+    <div style="display:flex;align-items:center;margin-bottom:22px"><span class="traco branco" style="margin-left:-96px;width:70px"></span><h2 class="display titulo-m duas" data-fit>{{ duas(k.prova.titulo or ('Plano desta|edição' if k.evento.primeira_edicao else 'Alcance|digital')) }}</h2></div>
+    {% if nota %}<p class="pequeno" style="color:var(--texto-suave);max-width:900px;margin-bottom:40px">{{ nota }}</p>{% endif %}
+    <div class="caixas4">
+      {% for c in caixas %}
+      <div class="caixa-num{% if c.tipo == 'meta' %} meta{% endif %}">
+        <div class="icone">{{ icone(c.icone) }}</div>
+        <div><div class="numero">{{ c.valor_fmt }}</div><div class="label">{{ c.rotulo }}</div><div class="estado">{{ estado(c) }}</div></div>
+      </div>
+      {% endfor %}
+    </div>
+    {% if graficos %}
+    <div class="graficos">
+      {% for g in graficos %}
+      {# gráfico vetorial (HTML, sem raster nem filtro): eixo com valores, grade leve, valor em cima da barra, legenda #}
+      <div class="caixa grafico" data-grafico="{{ g.escala }}">
+        <div class="graf-cab"><span class="graf-tit">{{ g.titulo }}</span>
+          {% if g.legenda %}<div class="graf-leg">{% for l in g.legenda %}<span class="s{{ loop.index0 }}"><i></i>{{ l }}</span>{% endfor %}</div>{% endif %}
+        </div>
+        <div class="graf-corpo">
+          <div class="graf-eixo">{% for t in g.marcas %}<span style="bottom:{{ (t.pos * 100)|round(2) }}%">{{ t.valor_fmt }}</span>{% endfor %}</div>
+          <div class="graf-plot">
+            {% for t in g.marcas %}<i class="graf-grade{% if loop.first %} base{% endif %}" style="bottom:{{ (t.pos * 100)|round(2) }}%"></i>{% endfor %}
+            {% for s in g.series %}
+            <div class="graf-cat">{% for b in s.barras %}<div class="graf-barra s{{ loop.index0 }}" style="height:{{ (b.pos * 100)|round(2) }}%"><span class="graf-val">{{ b.valor_fmt }}</span></div>{% endfor %}</div>
+            {% endfor %}
+          </div>
+          <div></div>
+          <div class="graf-rots">{% for s in g.series %}<span>{{ s.rotulo }}</span>{% endfor %}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if k.prova.rodape %}<p class="pequeno" style="font-style:italic;color:var(--texto-apagado);margin-top:auto;font-size: var(--t-6)">{{ k.prova.rodape }}</p>{% endif %}
+  </div>
+</section>
+{% endmacro %}
+
+{# ========= A12 DIVISOR TIPOGRÁFICO ========= #}
+{% macro divisor(titulo, subtitulo, variante='a', k=None) %}{% if variante == 'b' %}{{ divisor_b(titulo, subtitulo) }}{% elif variante == 'c' %}{{ divisor_c(titulo, subtitulo, k) }}{% else %}
+<section class="pagina" data-dominante="titulo">
+  <div class="painel inteiro" style="justify-content:center;align-items:center;text-align:center">
+    <h2 class="display titulo-m duas" style="max-width:1500px" data-fit>{{ duas(titulo) }}</h2>
+    {% if subtitulo %}<p class="sub-caixa" style="margin-top:var(--e-6);max-width:1100px;font-size: var(--t-4);line-height:1.3;text-wrap:balance">{{ subtitulo }}</p>{% endif %}
+  </div>
+</section>
+{% endif %}{% endmacro %}
+
+{# ========= A13 ATIVO EM USO (painel) ========= #}
+{% macro ativo_painel(n, a, cena, numerar=True, variante='a') %}{% if variante == 'diagonal' %}{{ ativo_diagonal(n, a, cena, numerar) }}{% elif variante == 'sangria' %}{{ ativo_sangria(n, a, cena, numerar) }}{% else %}
+<section class="pagina" data-dominante="cena">
+  <div class="cena"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '50% 50%' }}" alt=""></div>
+  {% if cena.rotulo %}<div class="etiqueta">{{ cena.rotulo }}</div>{% endif %}
+  <div class="painel" style="padding-top:72px">
+    {% if numerar %}<div class="fantasma-linha"><span class="traco"></span><span class="fantasma">{{ '%02d' % n }}</span></div>{% endif %}
+    <h2 class="display titulo duas" style="margin-top:8px" data-fit>{{ duas(a.titulo) }}</h2>
+    <p class="corpo" style="margin-top:var(--e-5);max-width:560px">{{ a.texto|safe }}</p>
+    <div class="caixa" style="margin-top:auto;max-width:640px"><div class="lista-ponto">{{ a.aplicacoes|join(' · ') }}</div><span class="micro">{{ a.micro or 'Aplicações' }}</span></div>
+  </div>
+  {% if cena.credito %}<div class="credito">{{ cena.credito|e }}</div>{% endif %}
+</section>
+{% endif %}{% endmacro %}
+
+{# ========= A14 ATIVO EM USO (cena no topo) ========= #}
+{% macro ativo_topo(n, a, cena, mini, numerar=True) %}
+<section class="pagina" data-dominante="cena">
+  <div class="full" style="bottom:36%"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '50% 50%' }}" alt=""></div>
+  {% if cena.rotulo %}<div class="etiqueta">{{ cena.rotulo }}</div>{% endif %}
+  <div class="painel inteiro" style="top:64%;padding-top:56px;padding-bottom:56px;flex-direction:row;gap:var(--calha);align-items:flex-start">
+    {# coluna do título = 5 colunas do grid (5×128 + 4×24 = 736 px): "SUA MARCA EM" cabe numa linha e o título fecha em 3 (Corre por Elas p.12) #}
+    <div style="flex:0 0 736px;height:100%" data-fit>{% if numerar %}<span class="micro">{{ '%02d' % n }}</span>{% endif %}<h2 class="display duas" style="margin-top:14px;font-size: var(--t-3)">{{ duas(a.titulo) }}</h2></div>
+    <p class="corpo-m" style="flex:1;max-width:520px;padding-top:12px">{{ a.texto|safe }}</p>
+    {% if mini %}<div class="miniatura" style="margin-left:auto"><img src="{{ mini.src }}" alt=""><div class="leg"><span class="micro">Visão geral</span>{% if mini.legenda %}<div class="t">{{ mini.legenda|e }}</div>{% endif %}</div></div>{% endif %}
+  </div>
+</section>
+{% endmacro %}
+
+{# ========= A16 INVENTÁRIO EM COLUNAS (Levinrun) ========= #}
+{% macro inventario_colunas(k, itens) %}
+<section class="pagina papel" data-dominante="titulo">
+  <div class="painel inteiro" style="padding-top:120px">
+    <div style="display:flex;align-items:center"><span class="traco" style="margin-left:-96px;width:70px"></span><h2 class="display titulo-m duas" data-fit style="max-width:1700px">{{ duas(k.inventario_titulo or 'Onde sua marca||pode aparecer') }}</h2></div>
+    <div class="inv-colunas" data-fit style="flex:1">
+      {% for i in itens %}<div class="inv-item"><div class="nome duas">{{ duas(i.ativo) }}</div><div class="desc">{{ i.onde }}{% if i.capacidade %} · {{ i.capacidade }}{% endif %}</div></div>{% endfor %}
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{# ========= A19 DIVISOR DE COTAS ========= #}
+{% macro divisor_cotas(k, cena, simbolo) %}
+<section class="pagina" data-dominante="titulo">
+  {% if cena %}<div class="full"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '50% 40%' }}" alt=""></div><div class="veu escuro"></div>{% endif %}
+  <div class="painel inteiro" style="padding-top:150px;padding-left:248px">
+    <div style="display:flex;align-items:flex-start"><span class="traco branco" style="margin-top:50px;margin-left:-120px;width:100px"></span><h2 class="display titulo duas">Cotas de<br><span class="cor">patrocínio</span></h2></div>
+    <div class="caixa branca" style="margin-top:72px;max-width:960px;padding:44px 48px;border-radius:12px"><p class="corpo-g" style="font-weight:600">{{ k.cotas_intro|safe }}</p></div>
+  </div>
+  {% if simbolo %}<img class="logo-canto" src="{{ simbolo.src }}" alt="">{% endif %}
+</section>
+{% endmacro %}
+
+{# ========= A20 COTA ========= #}
+{% macro cota(c, cena, icones, objeto=None, variante='a') %}{% if variante == 'b' %}{{ cota_b(c) }}{% elif variante == 'c' %}{{ cota_c(c, cena, icones) }}{% else %}
+<section class="pagina cota" style="--divisa:var(--divisa-cota)" data-dominante="preco">
+  <div class="full" data-layer="cena"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '70% 30%' }}" alt=""></div>
+  <div class="veu painel-fade" data-layer="veu"></div>
+  {% if cena.rotulo %}<div class="etiqueta">{{ cena.rotulo }}</div>{% endif %}
+  {% if objeto %}{{ objeto_html(objeto) }}{% endif %}
+  <div class="acento-curva" data-layer="forma"></div>
+  <div class="painel" data-layer="tipo" style="padding-top:80px;background:transparent">
+    <div class="cota-cab">
+      <div class="cota-nome"><span class="traco" style="position:absolute;left:-64px;top:112px;width:52px;margin:0"></span><span class="pill solido">Cota</span><div class="nome">{{ c.nome }}</div></div>
+      <div class="invest"><span class="micro">Investimento</span><div class="preco">R$ {{ '{:,.0f}'.format(c.preco).replace(',', '.') }}</div><div class="qtd">{{ c.quantidade }} {% if c.quantidade == 1 %}cota disponível{% else %}cotas disponíveis{% endif %}</div></div>
+    </div>
+    {% if c.territorio %}<div class="micro" style="margin-top:var(--e-3)">{{ c.territorio }}</div>{% endif %}
+    {% if c.frase %}<p class="corpo" style="margin-top:var(--e-2);max-width:760px;color:var(--texto)">{{ c.frase }}</p>{% endif %}
+    <div class="cota-corpo">
+      <div class="trilho-icones">{% for ic in icones %}{% if not loop.first %}<div class="lig"></div>{% endif %}<div class="ic">{{ icone(ic) }}</div>{% endfor %}</div>
+      <div class="direitos" data-fit>
+        <h3>Direitos e contrapartidas:</h3>
+        <ul>{% for e in c.entregaveis %}<li>{{ e }}</li>{% endfor %}</ul>
+        {% if c.exclusividade %}<div class="excl">Exclusividade de {{ c.exclusividade.categoria }} até {{ c.exclusividade.ate }}</div>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% if cena.credito %}<div class="credito">{{ cena.credito|e }}</div>{% endif %}
+</section>
+{% endif %}{% endmacro %}
+
+{# ========= A5 TERRITÓRIO (Levinrun "Por que a cidade" + Saudade "local") ========= #}
+{% macro territorio(t, cena) %}
+<section class="pagina" style="--divisa:50%" data-dominante="titulo">
+  {% if cena %}<div class="full" data-layer="cena"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '60% 50%' }}" alt=""></div><div class="veu painel-fade" data-layer="veu"></div>{% endif %}
+  <div class="painel" data-layer="tipo" style="justify-content:center">
+    <span class="micro">{{ t.micro or 'Território' }}</span>
+    <h2 class="display titulo-m duas" style="margin-top:var(--e-2)" data-fit>{{ duas(t.titulo) }}</h2>
+    {% if t.texto %}<p class="corpo" style="margin-top:var(--e-4);max-width:720px">{{ t.texto }}</p>{% endif %}
+    <div class="regioes">
+      {% for r in t.regioes %}<div class="regiao"><span class="micro">{{ r.nome }}</span>{% for c in r.cidades %}<div class="cidade">{{ c }}</div>{% endfor %}</div>{% endfor %}
+    </div>
+  </div>
+  {% if cena and cena.credito %}<div class="credito">{{ cena.credito|e }}</div>{% endif %}
+</section>
+{% endmacro %}
+
+{# ========= A25 QUEM JÁ ESTEVE (Sprint p.18, só a arquitetura) ========= #}
+{% macro historico_logos(h, logos) %}
+<section class="pagina" style="--divisa:50%" data-dominante="midia">
+  <div class="painel" data-layer="tipo" style="justify-content:center">
+    <span class="micro">{{ h.micro or 'Edição anterior' }}</span>
+    <h2 class="display titulo-m duas" style="margin-top:var(--e-2)" data-fit>{{ duas(h.titulo or 'Quem já esteve||com a gente') }}</h2>
+    {% if h.frase %}<p class="corpo" style="margin-top:var(--e-4);max-width:640px">{{ h.frase }}</p>{% endif %}
+  </div>
+  <div class="mural-logos" data-layer="cena"><img src="{{ logos.src }}" alt=""></div>
+</section>
+{% endmacro %}
+
+{# ========= A26 CONTATO ========= #}
+{% macro contato(k, cena, logo, variante='a') %}{% if variante == 'b' %}{{ contato_b(k, cena, logo) }}{% else %}
+<section class="pagina" data-dominante="lettering">
+  {% if cena %}<div class="full"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '50% 40%' }}" alt=""></div><div class="veu leve"></div>{% endif %}
+  <div class="painel inteiro" style="justify-content:center;align-items:center">
+    <div style="display:flex;align-items:center;gap:90px">
+      {% if logo %}<img src="{{ logo.src }}" alt="" style="height:260px;width:auto;max-width:560px;object-fit:contain">{% else %}<div class="display titulo-m" style="max-width:600px">{{ k.evento.nome }}</div>{% endif %}
+      <div style="width:1px;height:300px;background:rgba(255,255,255,.85)"></div>
+      <div>
+        {% for p in k.acao.pessoas %}<div style="margin-bottom:34px"><div class="display" style="font-size: var(--t-4);font-family:var(--fonte-titulo);text-transform:none">{{ p.nome }}</div><div class="display" style="font-size: var(--t-4);font-family:var(--fonte-titulo);text-transform:none;margin-top:6px">{{ p.telefone }}</div></div>{% endfor %}
+      </div>
+    </div>
+    {% if k.acao.email %}<div class="display" style="font-size: var(--t-4);font-family:var(--fonte-titulo);text-transform:none;position:absolute;bottom:88px">{{ k.acao.email }}</div>{% endif %}
+  </div>
+</section>
+{% endif %}{% endmacro %}
+
+{# ========= assinatura "fio" (linha de progresso) ========= #}
+{% macro fio(i, n) %}
+<div class="fio"><div class="trilho"></div><div class="cheio" style="width:{{ (100 * i / n)|round(1) }}%"></div><div class="ponto" style="left:{{ (100 * i / n)|round(1) }}%"></div></div>
+{% endmacro %}
+
+{# ========= objeto recortado (hero object) com sombra pré-renderizada e oclusão por duas cópias ========= #}
+{% macro objeto_html(o) %}
+{% set est = 'left:' ~ o.x ~ 'px;top:' ~ o.y ~ 'px;width:' ~ o.w ~ 'px;' %}
+{% if o.modo == 'atras' %}
+  {# cópia 1: parte sobre a cena, na frente; cópia 2: parte sobre o painel, atrás do painel (oclusão) #}
+  <div class="objeto" data-layer="objeto" style="{{ est }}z-index:3;clip-path:inset(0 0 0 {{ (o.divisa_px - o.x)|int }}px)">{% if o.sombra %}<img class="sombra" src="{{ o.sombra }}" alt="">{% endif %}<img src="{{ o.src }}" alt=""></div>
+  <div class="objeto" data-layer="objeto" style="{{ est }}z-index:0;clip-path:inset(0 {{ (o.x + o.w - o.divisa_px)|int }}px 0 0)">{% if o.sombra %}<img class="sombra" src="{{ o.sombra }}" alt="">{% endif %}<img src="{{ o.src }}" alt=""></div>
+{% else %}
+  <div class="objeto cruza" data-layer="objeto" style="{{ est }}">{% if o.sombra %}<img class="sombra" src="{{ o.sombra }}" alt="">{% endif %}<img src="{{ o.src }}" alt=""></div>
+{% endif %}
+{% endmacro %}
+
+{# =====================================================================================================================
+   VARIANTES DE LAYOUT (frente 4). A variante "a" de cada tipo é o corpo original acima; as daqui entram só por receita
+   (`receitas[].variantes`) ou por `paginas: [{tipo, variante}]`. Cada uma cita a página da régua que a inspirou
+   (regua/paginas/<id>.jpg). Só tokens: escala 230/96/64/36/24/16, espaço 8 pt, grid 12 col, safe area 96, sem filter CSS.
+   ===================================================================================================================== #}
+
+{# A1 CAPA b: foto em bloco + nome gigante sobre fundo de cor. Régua: amazonia-niv-03 (foto como bloco ao lado do título
+   condensado gigante) e saudade-07 (fundo de cor chapada, tipo sem véu). Painel 7/12, bloco nas colunas 8 a 12. #}
+{% macro capa_b(k, cena, logo, data_fmt) %}
+<section class="pagina capa capa-b" style="--divisa:58.333%" data-dominante="titulo">
+  {% if cena %}<div class="cena bloco" data-layer="cena"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '50% 40%' }}" alt=""></div>{% endif %}
+  {% if cena and cena.rotulo %}<div class="etiqueta">{{ cena.rotulo }}</div>{% endif %}
+  <div class="painel" data-layer="tipo" style="justify-content:space-between">
+    <span class="micro">Mídia kit de patrocínio {{ k.evento.data_inicio[:4] }}</span>
+    <div>
+      <h1 class="display heroi" data-fit>{{ k.evento.nome }}</h1>
+      <p class="corpo-g" style="font-weight:700;margin-top:var(--e-5);max-width:880px">{{ k.tese.frase }}</p>
+      <p class="corpo" style="color:var(--texto);margin-top:var(--e-3)">{{ data_fmt }} · {% if k.evento.local %}{{ k.evento.local }}, {% endif %}{{ k.evento.cidade }}{% if k.evento.uf %}/{{ k.evento.uf }}{% endif %}</p>
+    </div>
+  </div>
+  {% if cena and cena.credito %}<div class="credito">{{ cena.credito|e }}</div>{% endif %}
+</section>
+{% endmacro %}
+
+{# A1 CAPA c: lettering central + faixa diagonal na cor. Régua: levinrun-01 (logo central sobre foto escurecida, data em
+   microlabel) e praia-delas-01 (faixas em diagonal como assinatura). A faixa corre a 12°, o mesmo ângulo da máscara diagonal. #}
+{% macro capa_c(k, cena, logo, data_fmt) %}
+<section class="pagina capa capa-c" data-dominante="lettering">
+  {% if cena %}<div class="full" data-layer="cena"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '50% 40%' }}" alt=""></div>{% endif %}
+  <div class="veu leve" data-layer="veu"></div><div class="veu base" data-layer="veu"></div>
+  {% if cena and cena.rotulo %}<div class="etiqueta">{{ cena.rotulo }}</div>{% endif %}
+  <div class="faixa-diag" data-layer="forma"><span class="faixa-txt">{{ data_fmt }} · {{ k.evento.cidade }}{% if k.evento.uf %}/{{ k.evento.uf }}{% endif %} · Mídia kit de patrocínio {{ k.evento.data_inicio[:4] }}</span></div>
+  <div class="painel inteiro" data-layer="tipo" style="justify-content:center;align-items:center;text-align:center;padding-bottom:280px">
+    {% if logo %}<img class="lettering-central" src="{{ logo.src }}" alt="">{% else %}<h1 class="display heroi" style="max-width:1500px" data-fit>{{ k.evento.nome }}</h1>{% endif %}
+    <p class="corpo-g" style="font-weight:700;margin-top:var(--e-5);max-width:1100px">{{ k.tese.frase }}</p>
+  </div>
+  {% if cena and cena.credito %}<div class="credito">{{ cena.credito|e }}</div>{% endif %}
+</section>
+{% endmacro %}
+
+{# A2 MANIFESTO b: só tipografia, citação grande sobre fundo de cor (ou papel, na receita de fundo papel). Régua:
+   saudade-05 (manifesto em texto corrido sobre amarelo chapado) e semjuizo-02 (página só de tipografia). #}
+{% macro manifesto_b(k, simbolo) %}
+<section class="pagina manifesto-b" data-dominante="titulo">
+  <div class="painel inteiro" data-layer="tipo" style="justify-content:center;padding-left:248px">
+    <div style="display:flex;align-items:center"><span class="traco" style="margin-left:-152px;width:128px;margin-right:var(--e-3)"></span><span class="micro">Manifesto</span></div>
+    <p class="citacao aspas" style="margin-top:var(--e-5)" data-fit>“{{ k.manifesto.frase|safe }}”</p>
+    <h2 class="display assina">{{ k.manifesto.titulo.replace("|", " ") }}</h2>
+  </div>
+</section>
+{% endmacro %}
+
+{# A6 PÚBLICO b: um número gigante + lista do resto, com a foto em bloco ao lado. Régua: saudade-18 (dois números grandes
+   e mais nada) e amazonia-niv-07 (perfil em lista curta ao lado de foto em bloco). #}
+{% macro publico_b(k, cena, cards, genero) %}
+<section class="pagina publico-b" style="--divisa:58.333%" data-dominante="numero">
+  {% if cena %}<div class="cena bloco" data-layer="cena"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '60% 40%' }}" alt=""></div>{% endif %}
+  <div class="painel" data-layer="tipo" style="justify-content:center">
+    <h2 class="display titulo-m duas" data-fit>{{ duas(k.publico.titulo or 'Perfil de|público') }}</h2>
+    {% if cards %}{% set h = cards[0] %}
+    <div class="numero heroi-num">{{ h.valor_fmt }}</div>
+    <span class="micro">{{ h.rotulo }} · {{ estado(h) }}</span>
+    <ul class="lista-num">
+      {% for c in cards[1:] %}<li><span class="n">{{ c.valor_fmt }}</span><span class="r">{{ c.rotulo }}<br><span class="e">{{ estado(c) }}</span></span></li>{% endfor %}
+      {% for g in genero or [] %}<li><span class="n">{{ g.pct }}%</span><span class="r">{{ g.rotulo }}</span></li>{% endfor %}
+    </ul>
+    {% elif k.publico.descricao %}<p class="corpo-g" style="margin-top:var(--e-5)">{{ k.publico.descricao }}</p>{% endif %}
+  </div>
+</section>
+{% endmacro %}
+
+{# A13 ATIVO diagonal: painel + cena cortada em diagonal de 12° com um fio na cor acompanhando o corte. Régua:
+   praia-delas-02 e praia-delas-04 (máscara em paralelogramo sobre preto). #}
+{% macro ativo_diagonal(n, a, cena, numerar=True) %}
+<section class="pagina m-diagonal" data-dominante="cena">
+  <div class="cena" data-layer="cena"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '50% 50%' }}" alt=""></div>
+  <div class="borda-diag" data-layer="forma"></div>
+  {% if cena.rotulo %}<div class="etiqueta">{{ cena.rotulo }}</div>{% endif %}
+  <div class="painel" data-layer="tipo" style="padding-top:72px">
+    {% if numerar %}<div class="fantasma-linha"><span class="traco"></span><span class="fantasma">{{ '%02d' % n }}</span></div>{% endif %}
+    <h2 class="display titulo duas" style="margin-top:8px" data-fit>{{ duas(a.titulo) }}</h2>
+    <p class="corpo" style="margin-top:var(--e-5);max-width:520px">{{ a.texto|safe }}</p>
+    <div class="caixa" style="margin-top:auto;max-width:600px"><div class="lista-ponto">{{ a.aplicacoes|join(' · ') }}</div><span class="micro">{{ a.micro or 'Aplicações' }}</span></div>
+  </div>
+  {% if cena.credito %}<div class="credito">{{ cena.credito|e }}</div>{% endif %}
+</section>
+{% endmacro %}
+
+{# A15 ATIVO sangria: cena full-bleed, véu só na base, título no canto inferior esquerdo e texto à direita. Régua:
+   corre-por-elas-14 (backdrop em sangria com véu na base e caixa de contorno). #}
+{% macro ativo_sangria(n, a, cena, numerar=True) %}
+<section class="pagina ativo-sangria" data-dominante="cena">
+  <div class="full" data-layer="cena"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '50% 40%' }}" alt=""></div>
+  <div class="veu sangria-base" data-layer="veu"></div>
+  {% if cena.rotulo %}<div class="etiqueta">{{ cena.rotulo }}</div>{% endif %}
+  <div class="painel inteiro" data-layer="tipo" style="flex-direction:row;align-items:flex-end;gap:var(--calha)">
+    <div style="flex:0 0 888px">{% if numerar %}<span class="micro">{{ '%02d' % n }}</span>{% endif %}<h2 class="display titulo duas" style="margin-top:var(--e-2)" data-fit>{{ duas(a.titulo) }}</h2></div>
+    <div style="flex:1">
+      <p class="corpo" style="color:var(--texto)">{{ a.texto|safe }}</p>
+      <div class="caixa" style="margin-top:var(--e-4)"><div class="lista-ponto">{{ a.aplicacoes|join(' · ') }}</div><span class="micro">{{ a.micro or 'Aplicações' }}</span></div>
+    </div>
+  </div>
+  {% if cena.credito %}<div class="credito">{{ cena.credito|e }}</div>{% endif %}
+</section>
+{% endmacro %}
+
+{# A12 DIVISOR b: a mesma frase numa placa entre duas faixas de pattern. Régua: levinrun-02 (frase-tese centralizada entre
+   faixas de logo repetido) e levinrun-06. Sem pattern na página, as faixas ficam lisas com fio na cor. #}
+{% macro divisor_b(titulo, subtitulo) %}
+<section class="pagina divisor-b" data-dominante="titulo">
+  <div class="painel inteiro placa" data-layer="tipo" style="justify-content:center;align-items:center;text-align:center">
+    <h2 class="display titulo-m duas" style="max-width:1500px" data-fit>{{ duas(titulo) }}</h2>
+    {% if subtitulo %}<p class="sub-caixa" style="margin-top:var(--e-5);max-width:1100px;font-size: var(--t-4);line-height:1.3;text-wrap:balance">{{ subtitulo }}</p>{% endif %}
+  </div>
+</section>
+{% endmacro %}
+
+{# A12 DIVISOR c: número gigante como forma (quantos pontos de exposição vêm a seguir) ao lado do título. Régua:
+   levinrun-04 ("5KM & 10KM" em condensada gigante) e semjuizo-04 (página só de tipografia). O número é a contagem do
+   inventário, não um dado novo. #}
+{% macro divisor_c(titulo, subtitulo, k) %}
+{% set dv = (k.divisor_inventario or {}) %}
+<section class="pagina divisor-c" data-dominante="numero">
+  <div class="painel inteiro" data-layer="tipo" style="justify-content:center">
+    <div class="divisor-c-linha">
+      <div class="numero num-forma">{{ dv.numero or ('%02d' % (k.inventario|length)) }}</div>
+      <div>
+        <span class="micro">{{ dv.rotulo_numero or 'pontos de exposição' }}</span>
+        <h2 class="display titulo-m duas" style="margin-top:var(--e-2);max-width:1080px" data-fit>{{ duas(titulo) }}</h2>
+        {% if subtitulo %}<p class="corpo" style="margin-top:var(--e-4);max-width:880px">{{ subtitulo }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{# A20 COTA b: preço-herói centralizado numa faixa da cor, ladeado por INVESTIMENTO; nome e disponibilidade em cima,
+   direitos em duas colunas embaixo. Régua: levinrun-14 (R$ 50.000 como herói sobre pincelada). #}
+{% macro cota_b(c) %}
+<section class="pagina cota-b" data-dominante="preco">
+  <div class="painel inteiro" data-layer="tipo" style="align-items:center;justify-content:center;text-align:center">
+    <span class="micro">Cota</span>
+    <h2 class="nome display">{{ c.nome }}</h2>
+    <span class="micro apagado" style="margin-top:var(--e-2)">Disponibilidade: {{ '%02d' % c.quantidade }} {% if c.quantidade == 1 %}cota{% else %}cotas{% endif %}</span>
+    <div class="preco-linha"><span class="micro">Investimento</span><span class="fio-faixa"></span><div class="preco preco-heroi">R$ {{ '{:,.0f}'.format(c.preco).replace(',', '.') }}</div><span class="fio-faixa"></span><span class="micro">Investimento</span></div>
+    {% if c.frase %}<p class="corpo" style="max-width:1000px;color:var(--texto)">{{ c.frase }}</p>{% endif %}
+    <div class="direitos-2col" data-fit>
+      <span class="micro">A marca terá direito a:</span>
+      <ul>{% for e in c.entregaveis %}<li>{{ e }}</li>{% endfor %}</ul>
+      {% if c.exclusividade %}<div class="excl">Exclusividade de {{ c.exclusividade.categoria }} até {{ c.exclusividade.ate }}</div>{% endif %}
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{# A20 COTA c: o painel vira bloco claro de papel, a cena fica do lado com a máscara da receita. Régua: levinrun-17
+   (a mesma cota em fundo claro) e levinrun-18 (lista de direitos em papel). #}
+{% macro cota_c(c, cena, icones) %}
+<section class="pagina cota-c" style="--divisa:var(--divisa-cota)" data-dominante="preco">
+  {% if cena %}<div class="cena" data-layer="cena"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '70% 30%' }}" alt=""></div>{% endif %}
+  {% if cena and cena.rotulo %}<div class="etiqueta">{{ cena.rotulo }}</div>{% endif %}
+  <div class="painel bloco-claro" data-layer="tipo" style="padding-top:80px">
+    <div class="cota-cab">
+      <div class="cota-nome"><span class="pill solido">Cota</span><div class="nome">{{ c.nome }}</div></div>
+      <div class="invest"><span class="micro">Investimento</span><div class="preco">R$ {{ '{:,.0f}'.format(c.preco).replace(',', '.') }}</div><div class="qtd">{{ c.quantidade }} {% if c.quantidade == 1 %}cota disponível{% else %}cotas disponíveis{% endif %}</div></div>
+    </div>
+    {% if c.frase %}<p class="corpo" style="margin-top:var(--e-3);max-width:760px;color:var(--texto)">{{ c.frase }}</p>{% endif %}
+    <div class="cota-corpo">
+      <div class="trilho-icones">{% for ic in icones %}{% if not loop.first %}<div class="lig"></div>{% endif %}<div class="ic">{{ icone(ic) }}</div>{% endfor %}</div>
+      <div class="direitos" data-fit>
+        <h3>Direitos e contrapartidas:</h3>
+        <ul>{% for e in c.entregaveis %}<li>{{ e }}</li>{% endfor %}</ul>
+        {% if c.exclusividade %}<div class="excl">Exclusividade de {{ c.exclusividade.categoria }} até {{ c.exclusividade.ate }}</div>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% if cena and cena.credito %}<div class="credito">{{ cena.credito|e }}</div>{% endif %}
+</section>
+{% endmacro %}
+
+{# A26 CONTATO b: fechamento como convite em frase grande, contatos numa linha embaixo. Régua: levinrun-22 ("Vamos
+   colocar sua marca no ritmo da cidade") e amazonia-niv-14 ("Vamos construir juntos"). Frase em `acao.convite`. #}
+{% macro contato_b(k, cena, logo) %}
+<section class="pagina contato-b" data-dominante="titulo">
+  {% if cena %}<div class="full" data-layer="cena"><img src="{{ cena.src }}" style="object-position:{{ cena.foco or '50% 40%' }}" alt=""></div><div class="veu leve" data-layer="veu"></div><div class="veu sangria-base" data-layer="veu"></div>{% endif %}
+  <div class="painel inteiro" data-layer="tipo" style="justify-content:center;align-items:center;text-align:center">
+    <span class="micro branco">{{ k.acao.convite_micro or 'Próximo passo' }}</span>
+    <h2 class="display titulo duas" style="max-width:1500px;margin-top:var(--e-3)" data-fit>{{ duas(k.acao.convite or 'Vamos construir||juntos') }}</h2>
+    <div class="contato-linha">
+      {% for p in k.acao.pessoas %}<div><div class="quem">{{ p.nome }}</div><div class="como">{{ p.telefone }}</div></div>{% endfor %}
+      {% if k.acao.email %}<div><div class="quem">E-mail</div><div class="como">{{ k.acao.email }}</div></div>{% endif %}
+    </div>
+  </div>
+  {% if logo %}<img class="logo-canto" src="{{ logo.src }}" alt="" style="height:96px">{% endif %}
+</section>
+{% endmacro %}

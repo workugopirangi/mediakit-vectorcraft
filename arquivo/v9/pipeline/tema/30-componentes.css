@@ -1,0 +1,227 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #444; }
+body { font-family: var(--fonte-corpo); color: var(--texto); -webkit-font-smoothing: antialiased; }
+
+/* ---------- página e painéis ---------- */
+.pagina { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: var(--escuro); page-break-after: always; break-after: page; }
+.pagina.papel { background: var(--papel); color: #111; --texto: #111; --texto-suave: rgba(0,0,0,.7); --texto-apagado: rgba(0,0,0,.45); --fantasma: rgba(0,0,0,.08); }
+
+.painel { position: absolute; top: 0; bottom: 0; left: 0; width: var(--divisa); padding: var(--margem) var(--e-5) var(--margem) var(--margem); display: flex; flex-direction: column; z-index: 2; }  /* largura útil do Corre por Elas p.11 ≈ 656 px */
+.painel::after { content: ""; position: absolute; top: 0; bottom: 0; right: -1px; width: 1px; background: rgba(255,255,255,.12); }
+.painel.direita { left: auto; right: 0; }
+.painel.direita::after { right: auto; left: -1px; }
+.painel.inteiro { width: 100%; }
+.painel.inteiro::after { display: none; }
+.cena { position: absolute; top: 0; bottom: 0; right: 0; left: var(--divisa); overflow: hidden; }
+.cena.esquerda { left: 0; right: var(--divisa); }
+.cena img, .full img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.full { position: absolute; inset: 0; }
+
+/* véus */
+.veu { position: absolute; inset: 0; pointer-events: none; }
+.veu.tingido { background: linear-gradient(90deg, color-mix(in srgb, var(--marca) 72%, #000 10%) 0%, color-mix(in srgb, var(--marca) 55%, transparent) 50%, color-mix(in srgb, var(--marca) 35%, transparent) 100%); mix-blend-mode: multiply; }
+.veu.escuro { background: linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.55) 45%, rgba(0,0,0,.25) 100%); }
+.veu.base { background: linear-gradient(0deg, rgba(0,0,0,.92) 0%, rgba(0,0,0,.6) 32%, rgba(0,0,0,0) 62%); }
+.veu.leve { background: rgba(0,0,0,.42); }
+.veu.painel-fade { background: linear-gradient(in oklab 90deg, var(--escuro) 0%, var(--escuro) 42%, color-mix(in oklab, var(--escuro) 85%, transparent) 52%, color-mix(in oklab, var(--escuro) 40%, transparent) 62%, rgba(0,0,0,0) 72%); }
+[data-direcao="performance"] .veu.tingido { background: linear-gradient(90deg, rgba(0,0,0,.85), rgba(0,0,0,.35)); mix-blend-mode: normal; }
+[data-direcao="territorio"] .veu.tingido { background: linear-gradient(180deg, color-mix(in srgb, var(--escuro) 70%, transparent), color-mix(in srgb, var(--escuro) 35%, transparent)); mix-blend-mode: normal; }
+
+/* ---------- tipografia ---------- */
+.display { font-family: var(--fonte-display); font-weight: var(--peso-display); text-transform: uppercase; line-height: var(--lh-display, .96); letter-spacing: var(--track-display, .02em); text-wrap: balance; }
+.titulo, .titulo-m { font-size: var(--t-2); }
+.duas .cor { color: var(--marca); }
+.titulo.duas, .titulo-m.duas { white-space: nowrap; }
+.card .numero { white-space: nowrap; }
+.sub-caixa { font-family: var(--fonte-titulo); font-weight: 400; text-transform: uppercase; font-size: var(--t-sub); line-height: 1.05; letter-spacing: .01em; }
+.corpo { font-size: var(--t-5); line-height: var(--lh-corpo); color: var(--texto-suave); max-width: 60ch; text-wrap: pretty; }
+.corpo-g { font-size: var(--t-4); line-height: 1.3; color: var(--texto); text-wrap: pretty; }
+.corpo b, .corpo strong { color: var(--texto); font-weight: 700; }
+.corpo .cor { color: var(--marca); font-weight: 700; }
+.corpo-m { font-size: var(--t-5); line-height: var(--lh-corpo); color: var(--texto-suave); max-width: 60ch; text-wrap: pretty; }
+.pequeno { font-size: var(--t-pequeno); line-height: 1.4; }
+.micro { font-family: var(--fonte-corpo); font-size: var(--t-6); letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--marca); white-space: nowrap; }
+.micro.branco { color: var(--texto); }
+.micro.apagado { color: var(--texto-apagado); }
+.traco { display: inline-block; width: 52px; height: 2px; background: var(--marca); vertical-align: middle; margin-right: 18px; }
+.traco.branco { background: var(--texto); }
+
+/* numeral fantasma */
+.fantasma-linha { display: flex; align-items: center; }
+.fantasma-linha .traco { width: 48px; margin-right: 0; }
+.fantasma { font-family: var(--fonte-display); font-weight: var(--peso-display); font-size: var(--t-heroi); line-height: .85; color: var(--fantasma); letter-spacing: -.02em; }
+
+/* ---------- caixas ---------- */
+.caixa { border: 1.5px solid var(--linha); border-radius: var(--raio); padding: 32px 36px; background: transparent; }
+.caixa.branca { border-color: rgba(255,255,255,.85); }
+.caixa .micro { margin-top: 10px; display: block; }
+.caixa .lista-ponto { font-size: var(--t-corpo); font-weight: 700; }
+.pill { display: inline-block; padding: 12px 28px; border: 1.5px solid var(--marca); border-radius: 999px; font-weight: 700; font-size: var(--t-corpo); line-height: 1; }
+.pill.solido { background: var(--branco); color: #111; border-color: var(--branco); font-family: var(--fonte-display); font-weight: var(--peso-display); text-transform: uppercase; border-radius: 10px; padding: 10px 26px; font-size: var(--t-3); }
+.pill.pequeno { font-size: var(--t-corpo-m); padding: 10px 22px; }
+.pills { display: flex; gap: 20px; flex-wrap: wrap; }
+
+/* ---------- cards de número ---------- */
+.cards { display: flex; gap: 28px; }
+.card { border: 1.5px solid var(--marca); border-radius: var(--raio); padding: 44px 24px 36px; width: 350px; min-height: 470px; display: flex; flex-direction: column; align-items: center; text-align: center; background: rgba(0,0,0,.35); }
+.card .icone { width: 70px; height: 70px; color: var(--marca); margin-bottom: 36px; }
+.card .icone svg { width: 100%; height: 100%; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.card .numero { font-family: var(--fonte-display); font-weight: var(--peso-display); font-size: var(--t-numero); line-height: .9; margin-top: auto; }
+.card .numero.texto { font-size: var(--t-4); text-transform: uppercase; line-height: 1.05; white-space: normal; }
+.card .label { margin-top: 26px; font-size: var(--t-pequeno); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; line-height: 1.3; }
+.card .estado { margin-top: var(--e-1); font-size: var(--t-6); letter-spacing: .1em; text-transform: uppercase; color: var(--texto-apagado); font-weight: 400; white-space: nowrap; }
+.card.meta { border-style: dashed; }
+.card.meta .numero { color: var(--marca); }
+
+.caixas4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.caixa-num { border: 1.5px solid var(--marca); border-radius: var(--raio); padding: 26px 30px; display: flex; align-items: center; gap: 24px; }
+.caixa-num .icone { width: 54px; height: 54px; color: var(--marca); flex: none; }
+.caixa-num .icone svg { width: 100%; height: 100%; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+.caixa-num .numero { font-family: var(--fonte-display); font-weight: var(--peso-display); font-size: var(--t-3); line-height: 1; }
+.caixa-num .label { font-size: var(--t-6); letter-spacing: .08em; text-transform: uppercase; color: var(--marca); font-weight: 700; margin-top: 6px; }
+.caixa-num .estado { font-size: var(--t-6); letter-spacing: .12em; text-transform: uppercase; color: var(--texto-apagado); margin-top: 4px; }
+
+/* barras (gênero) */
+.barras .linha-b { margin-top: 26px; }
+.barras .rot { display: flex; justify-content: space-between; font-size: var(--t-corpo); font-weight: 700; }
+.barras .rot span:last-child { font-weight: 400; font-size: var(--t-pequeno); color: var(--texto-suave); }
+.barras .trilho { position: relative; height: 10px; background: rgba(255,255,255,.9); border-radius: 999px; margin-top: 14px; }
+.barras .cheio { position: absolute; left: 0; top: 0; bottom: 0; background: var(--marca); border-radius: 999px; }
+.barras .knob { position: absolute; top: 50%; width: 20px; height: 20px; border-radius: 50%; background: var(--branco); border: 3px solid var(--marca); transform: translate(-50%, -50%); }
+
+/* ---------- cota ---------- */
+.cota-cab { display: flex; align-items: flex-start; gap: 64px; }
+.cota-nome .pill.solido { margin-bottom: 14px; display: inline-block; }
+.cota-nome .nome { font-family: var(--fonte-display); font-weight: var(--peso-display); text-transform: uppercase; font-size: var(--t-3); line-height: .95; color: var(--marca); }
+.invest { border: 1.5px solid rgba(255,255,255,.55); padding: 20px 34px; margin-top: 6px; }
+.invest .micro { color: var(--texto); letter-spacing: .3em; font-weight: 400; }
+.invest .preco { font-family: var(--fonte-display); font-weight: var(--peso-display); font-size: var(--t-4); line-height: 1; margin-top: var(--e-1); white-space: nowrap; }
+.invest .qtd { font-size: var(--t-6); letter-spacing: .14em; text-transform: uppercase; color: var(--texto-apagado); margin-top: 8px; }
+.cota-corpo { display: grid; grid-template-columns: 130px 1fr; gap: 24px; margin-top: 40px; flex: 1; }
+.trilho-icones { display: flex; flex-direction: column; align-items: center; padding-top: 14px; }
+.trilho-icones .ic { width: 110px; height: 110px; border: 2px solid var(--marca); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--texto); }
+.trilho-icones .ic svg { width: 54px; height: 54px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.trilho-icones .lig { width: 0; height: 48px; border-left: 2px dashed var(--marca); opacity: .8; }
+.direitos { border: 1.5px solid var(--marca); border-radius: 32px; padding: 40px 44px; font-size: var(--t-corpo-m); }
+.direitos h3 { font-size: var(--t-4); color: var(--marca); font-weight: 700; margin-bottom: 22px; }
+.direitos li { list-style: none; position: relative; padding-left: 30px; font-size: 1em; line-height: 1.35; margin-bottom: 16px; }
+.direitos li::before { content: ""; position: absolute; left: 6px; top: 13px; width: 9px; height: 9px; border-radius: 50%; background: var(--marca); }
+.direitos .excl { margin-top: 10px; font-size: var(--t-pequeno); color: var(--marca); font-weight: 700; }
+/* --acento-curva: a cor do arco tracejado da cota (padrão, a da marca). O kit que já tem herói na cota pode apagar o
+   ornamento pelo tema-projeto.css com --acento-curva: transparent (teste da AME, 09/10: a cota passava de 8 papéis de cor) */
+.acento-curva { position: absolute; left: -200px; bottom: -200px; width: 420px; height: 420px; border: 2px dashed var(--acento-curva, var(--marca)); border-radius: 50%; opacity: .5; }
+
+/* ---------- inventário em colunas (Levinrun) ---------- */
+.inv-colunas { display: grid; grid-template-columns: 1fr 1fr; gap: var(--e-4) var(--e-7); margin-top: var(--e-5); font-size: var(--t-4); }
+.inv-item .nome { font-family: var(--fonte-display); font-weight: var(--peso-display); text-transform: uppercase; font-size: 1em; line-height: .98; }
+.inv-item .nome .cor { color: var(--marca); }
+.inv-item .desc { margin-top: var(--e-1); font-size: var(--t-5); color: var(--texto-suave); max-width: 560px; }
+
+/* ---------- miniatura ---------- */
+.miniatura { width: 380px; border: 1.5px solid var(--marca); border-radius: var(--raio); overflow: hidden; }
+/* 180 px: a miniatura fica no pé da página do ativo topo; com 210, uma fonte de linha mais alta passava a caixa 0,5 px da
+   página e o PDF jogava a legenda fora (o texto sumia do PDF e continuava no PNG; teste do exemplo, 09/10) */
+.miniatura img { width: 100%; height: 180px; object-fit: cover; display: block; }
+.miniatura .leg { padding: 14px 18px 18px; }
+.miniatura .leg .micro { font-size: var(--t-6); }
+.miniatura .leg .t { font-size: var(--t-5); font-weight: 700; margin-top: 6px; }
+
+/* ---------- capa, rodapé, etiquetas ---------- */
+.linha-rodape { position: absolute; left: var(--margem); right: 36%; bottom: 96px; height: 1px; background: rgba(255,255,255,.6); }
+.credito { position: absolute; right: var(--margem); bottom: 36px; font-size: var(--t-6); color: var(--texto-apagado); letter-spacing: .04em; }
+.etiqueta { position: absolute; top: var(--margem); right: var(--margem); padding: var(--e-1) var(--e-2); border-radius: 999px; background: var(--escuro); border: 1.5px solid var(--marca); color: #fff; font-size: var(--t-6); letter-spacing: .12em; text-transform: uppercase; font-weight: 700; z-index: 5; }
+.capa .lettering { width: 38vw; height: auto; max-height: 380px; object-fit: contain; object-position: left bottom; }
+.capa .nome-display { font-size: var(--t-2); max-width: 1000px; }
+.capa .doc { position: absolute; right: var(--margem); bottom: 72px; font-size: var(--t-4); font-weight: 700; line-height: 1.25; }
+.logo-canto { position: absolute; right: var(--margem); bottom: 72px; height: 130px; width: auto; z-index: 3; }
+
+/* ---------- auto-ajuste ---------- */
+[data-fit] { overflow: clip; overflow-clip-margin: .3em; } /* hidden cortava o acento da maiúscula com line-height .9 ("PUBLICO", 08/10/2026); clip com margem mantém a medida e deixa o acento */
+
+/* ---------- vertical (3 telas 1080×1920) ---------- */
+.pagina.vertical { width: 1080px; height: 1920px; }
+.vertical .painel { width: 100%; }
+.vertical .painel::after { display: none; }
+.vertical .titulo { font-size: var(--t-2); }
+.vertical .cards { flex-wrap: wrap; }
+.vertical .card { width: calc(50% - 14px); min-height: 380px; }
+
+/* ---------- grão (pesquisa r2): PNG de 512 px gerado pelo tratar.py, embutido pelo render.py em --grao.
+   Filtro SVG/CSS rasteriza a região no PDF e perde texto; PNG em tile com blend nativo (soft-light) não. ---------- */
+.pagina:not(.papel)::after { content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1; opacity: .5; mix-blend-mode: soft-light; background-image: var(--grao); background-size: 512px 512px; }
+.painel, .full, .cena, .veu { z-index: auto; }
+.painel { z-index: 2; }
+
+/* véus em oklab com 3+ paradas (scrim), nunca 2 paradas (guia B) */
+.veu.tingido { background: linear-gradient(in oklab 90deg, color-mix(in oklab, var(--marca) 78%, #000 8%) 0%, color-mix(in oklab, var(--marca) 66%, transparent) 45%, color-mix(in oklab, var(--marca) 58%, transparent) 100%); mix-blend-mode: multiply; }
+.veu.escuro { background: linear-gradient(in oklab 90deg, rgba(0,0,0,.70) 0%, rgba(0,0,0,.52) 30%, rgba(0,0,0,.30) 60%, rgba(0,0,0,.12) 100%); }
+.veu.base { background: linear-gradient(in oklab 0deg, rgba(0,0,0,.60) 0%, rgba(0,0,0,.42) 22%, rgba(0,0,0,.18) 45%, rgba(0,0,0,0) 64%); }
+
+/* ---------- assinatura "fio": linha de progresso da marca que atravessa o deck ---------- */
+.fio { position: absolute; left: 0; right: 0; bottom: 40px; height: 2px; z-index: 4; pointer-events: none; }
+.fio .trilho { position: absolute; inset: 0; background: rgba(255,255,255,.14); }
+.fio .cheio { position: absolute; left: 0; top: 0; bottom: 0; background: var(--marca); }
+.fio .ponto { position: absolute; top: 50%; width: 10px; height: 10px; border-radius: 50%; background: var(--marca); transform: translate(-50%, -50%); }
+.pagina.papel .fio .trilho { background: rgba(0,0,0,.12); }
+
+/* ---------- modo fundo (exportação PPTX editável): esconde texto, mantém cena e formas ---------- */
+.sem-texto h1, .sem-texto h2, .sem-texto h3, .sem-texto p, .sem-texto li, .sem-texto .micro, .sem-texto .numero, .sem-texto .label, .sem-texto .estado,
+.sem-texto .preco, .sem-texto .qtd, .sem-texto .nome, .sem-texto .fantasma, .sem-texto .lista-ponto, .sem-texto .credito, .sem-texto .doc, .sem-texto .rot, .sem-texto .t { visibility: hidden !important; }
+.sem-texto .pill.solido, .sem-texto .etiqueta { color: transparent !important; }  /* mantém o fundo do pill, esconde só o texto */
+
+/* ---------- tipografia editorial (pesquisa r2) ---------- */
+.numero, .preco, .caixa-num .numero, .card .numero { font-variant-numeric: tabular-nums lining-nums; }
+.aspas { text-indent: -.42em; }           /* pontuação pendurada à mão: hanging-punctuation não existe no Chromium */
+p, li { text-wrap: pretty; }               /* evita órfãs (Chrome 117+) */
+.quebra { /* um único elemento fora do grid por página, declarado: data-break="true" */ }
+
+/* ---------- camadas (pesquisa r2: fundo → cena → véu → forma → tipo → objeto) ---------- */
+[data-layer="fundo"] { z-index: 0; } [data-layer="cena"] { z-index: 0; } [data-layer="veu"] { z-index: 1; } [data-layer="forma"] { z-index: 2; } [data-layer="tipo"] { z-index: 2; } [data-layer="objeto"] { z-index: 3; }
+.painel > * { position: relative; z-index: 4; }   /* texto sempre acima do objeto que cruza a divisa */
+
+/* ---------- objeto recortado (hero object) ---------- */
+.objeto { position: absolute; pointer-events: none; }
+.objeto img { display: block; width: 100%; height: auto; }
+.objeto .sombra { position: absolute; left: 0; width: 100%; bottom: -8%; opacity: .95; }
+.objeto.atras-painel { clip-path: inset(0 0 0 0); }       /* cópia 1: só a parte sobre a cena (direita da divisa) */
+.objeto.cruza { z-index: 3; }
+
+/* ---------- cota v4: foto inteira + painel que desvanece (Corre por Elas p.17) ---------- */
+.pagina.cota .cena { left: 0; }
+.pagina.cota .painel::after { display: none; }
+
+/* ---------- selo: microlabel sobre foto clara, com fundo (contraste garantido sem véu na página inteira) ---------- */
+.selo { display: inline-flex; align-items: center; gap: var(--e-2); padding: var(--e-1) var(--e-2); background: color-mix(in oklab, var(--escuro) 78%, transparent); border-radius: 999px; }
+.selo .traco { margin: 0; }
+
+/* ---------- gráfico de barras vetorial (página prova; Corre por Elas p.6) ----------
+   HTML puro: grade, eixo e barras são caixas, o texto continua texto no PDF. Posições vêm do render.py (montar_grafico). */
+.graficos { display: grid; grid-template-columns: 1fr 1fr; gap: var(--e-3); margin-top: var(--e-3); flex: 1; min-height: 0; }
+.grafico { border-radius: var(--raio); padding: var(--e-4) var(--e-4) var(--e-3); display: flex; flex-direction: column; min-height: 0; }
+.graf-cab { display: flex; align-items: baseline; justify-content: space-between; gap: var(--e-3); }
+.graf-tit { font-size: var(--t-5); font-weight: 700; }
+.graf-leg { display: flex; gap: var(--e-3); font-size: var(--t-6); color: var(--texto-suave); white-space: nowrap; }
+.graf-leg span { display: inline-flex; align-items: center; gap: var(--e-1); }
+.graf-leg i { width: 16px; height: 16px; border-radius: 3px; background: var(--marca); }
+.graf-leg .s1 i { background: color-mix(in oklab, var(--marca) 55%, var(--escuro)); }
+.graf-corpo { flex: 1; min-height: 0; display: grid; grid-template-columns: 96px 1fr; grid-template-rows: 1fr auto; column-gap: var(--e-2); margin-top: var(--e-5); }
+.graf-eixo { position: relative; }
+.graf-eixo span { position: absolute; right: 0; transform: translateY(50%); font-size: var(--t-6); line-height: 1; color: var(--texto-suave); font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; }
+.graf-plot { position: relative; display: flex; align-items: stretch; gap: var(--e-3); padding: 0 var(--e-2); }
+.graf-grade { position: absolute; left: 0; right: 0; height: 1px; background: rgba(255,255,255,.10); }
+.graf-grade.base { background: rgba(255,255,255,.40); }
+.graf-cat { flex: 1; position: relative; display: flex; justify-content: center; align-items: flex-end; gap: var(--e-1); }
+.graf-barra { position: relative; width: 56%; max-width: 120px; min-height: 2px; background: var(--marca); }
+.graf-cat .graf-barra:not(:only-child) { width: 40%; }
+.graf-barra.s1 { background: color-mix(in oklab, var(--marca) 55%, var(--escuro)); }
+.graf-val { position: absolute; left: 50%; bottom: 100%; transform: translate(-50%, -8px); font-size: var(--t-5); font-weight: 700; line-height: 1; color: var(--texto); white-space: nowrap; font-variant-numeric: tabular-nums lining-nums; }
+.graf-rots { display: flex; gap: var(--e-3); padding: var(--e-2) var(--e-2) 0; }
+.graf-rots span { flex: 1; text-align: center; font-size: var(--t-6); color: var(--texto-suave); line-height: 1.3; }
+
+/* A5 território: regiões em colunas, cidade em display; A25 quem já esteve: mural de logos em cartão claro (logos de patrocinador
+   costumam ser pretos e somem no painel escuro) */
+.regioes { display: flex; gap: var(--e-5); margin-top: var(--e-6); }
+.regiao .cidade { white-space: nowrap; }
+.regiao .cidade { font-family: var(--fonte-titulo); font-weight: var(--peso-display); text-transform: uppercase; font-size: var(--t-4); line-height: 1.2; margin-top: var(--e-1); color: var(--texto); }
+.mural-logos { position: absolute; top: var(--margem); bottom: var(--margem); right: var(--margem); left: calc(var(--divisa) + var(--e-5)); background: var(--papel); border-radius: var(--raio); padding: var(--e-6); display: flex; align-items: center; justify-content: center; }
+.mural-logos img { max-width: 100%; max-height: 100%; object-fit: contain; }

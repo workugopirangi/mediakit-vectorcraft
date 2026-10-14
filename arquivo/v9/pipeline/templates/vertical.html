@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR" data-direcao="{{ direcao }}"{% if receita %} data-receita="{{ receita.id }}" data-fundo="{{ fundo }}" data-mascara="{{ mascara }}"{% endif %}>
+<head><meta charset="utf-8"><title>{{ k.evento.nome }} | síntese</title>
+<style>{{ css }}</style>
+<style>:root { --grao: url({{ grao }}); }</style>
+<style>:root { --marca: {{ k.marca.cor_primaria or '#E8307A' }}; {% if k.marca.cor_fundo_escuro %}--escuro: {{ k.marca.cor_fundo_escuro }};{% endif %}
+  {# tipografia da marca: espelho do bloco do kit.html (sem ele, a direção principal caía nas fontes-padrão do tema e o PDF vertical embutia Helvetica) #}
+  {% if direcao == (k.marca.direcao or "causa") %}
+  {% if k.marca.fonte_display %}--fonte-display: "{{ k.marca.fonte_display }}", "{{ k.marca.fonte_corpo or 'FreeSans' }}", "FreeSans", sans-serif;{% endif %}
+  {% if k.marca.fonte_titulo %}--fonte-titulo: "{{ k.marca.fonte_titulo }}", "{{ k.marca.fonte_corpo or 'FreeSans' }}", "FreeSans", sans-serif;{% elif k.marca.fonte_display %}--fonte-titulo: "{{ k.marca.fonte_display }}", "FreeSans", sans-serif;{% endif %}
+  {% endif %}
+  {% if k.marca.fonte_corpo %}--fonte-corpo: "{{ k.marca.fonte_corpo }}", "FreeSans", "Liberation Sans", sans-serif;{% endif %}
+  {% if k.marca.peso_display %}--peso-display: {{ k.marca.peso_display }};{% endif %}
+}</style>{% if receita_css %}
+<style>{{ receita_css }}</style>{% endif %}
+<style>@page { size: 1080px 1920px; margin: 0; }</style>
+</head>
+<body>
+{% import 'arquetipos.html' as A %}
+{% set capa = (paginas|selectattr('tipo','equalto','capa')|first) %}
+{% set pub = (paginas|selectattr('tipo','equalto','publico')|first) %}
+{% set cotas = paginas|selectattr('tipo','equalto','cota')|list %}
+{% set principal = (cotas|selectattr('cota.principal')|first) or cotas[0] %}
+{% set contato = (paginas|selectattr('tipo','equalto','contato')|first) %}
+
+{# tela 1: capa + tese #}
+<section class="pagina vertical capa">
+  {% if capa.cena %}<div class="full"><img src="{{ capa.cena.src }}" style="object-position:{{ capa.cena.foco or '50% 40%' }}" alt=""></div>{% endif %}
+  <div class="veu tingido"></div><div class="veu base"></div>
+  <div class="painel inteiro" style="justify-content:flex-end;padding-bottom:160px">
+    {% if capa.logo %}<img class="lettering" src="{{ capa.logo.src }}" alt="" style="height:260px">{% else %}<h1 class="display" style="font-size: var(--t-2)">{{ k.evento.nome }}</h1>{% endif %}
+    <p class="corpo" style="color:var(--texto);font-weight:700;font-size: var(--t-4);margin-top:40px">{{ k.tese.frase }}</p>
+    <p class="display" style="font-size: var(--t-4);margin-top:40px;text-transform:none;font-family:var(--fonte-titulo)">{{ data_fmt }}</p>
+    <p class="corpo" style="color:var(--texto);margin-top:8px">{{ k.evento.cidade }}{% if k.evento.uf %}/{{ k.evento.uf }}{% endif %}</p>
+  </div>
+  <div class="doc" style="bottom:72px;right:auto;left:96px">Mídia Kit de Patrocínio {{ k.evento.data_inicio[:4] }}</div>
+</section>
+
+{# tela 2: números + cota principal #}
+<section class="pagina vertical">
+  <div class="painel inteiro" style="padding-top:120px">
+    <h2 class="display duas" style="font-size: var(--t-3)">{{ A.duas((k.publico or {}).get('titulo') or 'Perfil de|público') }}</h2>
+    {% if pub %}<div class="cards" style="margin-top:48px">{% for c in pub.cards %}{# valor em texto: mesma regra do horizontal (arquetipos.html): caixa alta, corpo menor, quebra de linha #}{% set txt = c.valor is string and c.valor|length > 6 %}<div class="card{% if c.tipo == 'meta' %} meta{% endif %}" style="min-height:300px"><div class="icone">{{ A.icone(c.icone) }}</div><div class="numero{% if txt %} texto{% endif %}"{% if not txt %} style="font-size: var(--t-3)"{% endif %}>{{ c.valor_fmt }}</div><div class="label">{{ c.rotulo }}</div><div class="estado">{{ A.estado(c) }}</div></div>{% endfor %}</div>{% endif %}
+    <div style="margin-top:auto">
+      <div class="cota-cab"><div class="cota-nome"><span class="pill solido" style="font-size: var(--t-4)">Cota</span><div class="nome" style="font-size: var(--t-3)">{{ principal.cota.nome }}</div></div><div class="invest"><span class="micro">Investimento</span><div class="preco" style="font-size: var(--t-3)">R$ {{ '{:,.0f}'.format(principal.cota.preco).replace(',', '.') }}</div><div class="qtd">{{ principal.cota.quantidade }} {% if principal.cota.quantidade == 1 %}cota{% else %}cotas{% endif %}{% if cotas|length > 1 %} · mais {{ cotas|length - 1 }} a partir de R$ {{ '{:,.0f}'.format(cotas|map(attribute='cota.preco')|min).replace(',', '.') }}{% endif %}</div></div></div>
+      <div class="direitos" style="margin-top:36px" data-fit><h3>Direitos e contrapartidas:</h3><ul>{% for e in principal.cota.entregaveis[:5] %}<li>{{ e }}</li>{% endfor %}</ul></div>
+    </div>
+  </div>
+</section>
+
+{# tela 3: contato #}
+<section class="pagina vertical">
+  {% if contato.cena %}<div class="full"><img src="{{ contato.cena.src }}" style="object-position:{{ contato.cena.foco or '50% 40%' }}" alt=""></div><div class="veu leve"></div>{% endif %}
+  <div class="painel inteiro" style="justify-content:center;align-items:center;text-align:center">
+    {% if contato.logo %}<img src="{{ contato.logo.src }}" alt="" style="height:220px;max-width:700px;object-fit:contain">{% else %}<div class="display" style="font-size: var(--t-2)">{{ k.evento.nome }}</div>{% endif %}
+    <div style="width:300px;height:1px;background:rgba(255,255,255,.85);margin:60px 0"></div>
+    {% for p in k.acao.pessoas %}<div class="display" style="font-size: var(--t-4);font-family:var(--fonte-titulo);text-transform:none;margin-bottom:8px">{{ p.nome }}</div><div class="display" style="font-size: var(--t-4);font-family:var(--fonte-titulo);text-transform:none;margin-bottom:40px">{{ p.telefone }}</div>{% endfor %}
+    {% if k.acao.email %}<div class="corpo" style="color:var(--texto);font-size: var(--t-4);font-weight:700">{{ k.acao.email }}</div>{% endif %}
+    {% if k.acao.proximo_passo %}<div class="caixa branca" style="margin-top:72px;max-width:820px"><p class="corpo" style="color:var(--texto);font-weight:600">{{ k.acao.proximo_passo }}</p></div>{% endif %}
+  </div>
+</section>
+</body></html>

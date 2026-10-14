@@ -1,0 +1,534 @@
+{
+ "_leia": "Pares display + corpo prontos. 'titulo' é a família do subtítulo quando difere do display (null = usa o display). Todas as famílias estão em fontes.json com acentos_ptbr true.",
+ "pares": [
+  {
+   "id": "p01",
+   "display": "Anton",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Barlow",
+   "humor": [
+    "esporte",
+    "urbano"
+   ],
+   "porque": "Condensada pesada para corrida de rua com texto de apoio seco e legível.",
+   "evitar_com": "serifas finas ao lado, o peso da Anton esmaga"
+  },
+  {
+   "id": "p02",
+   "display": "Bebas Neue",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Work Sans",
+   "humor": [
+    "esporte",
+    "festa"
+   ],
+   "porque": "Caixa alta limpa e enérgica, corpo neutro que não disputa atenção."
+  },
+  {
+   "id": "p03",
+   "display": "League Gothic",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Inter",
+   "humor": [
+    "esporte",
+    "urbano",
+    "causa"
+   ],
+   "porque": "Condensada elegante e alta, Inter garante leitura em tabelas e regulamento."
+  },
+  {
+   "id": "p04",
+   "display": "Fjalla One",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Hanken Grotesk",
+   "humor": [
+    "esporte",
+    "natureza"
+   ],
+   "porque": "Condensada humanista, boa para trilha e aventura; corpo amigável."
+  },
+  {
+   "id": "p05",
+   "display": "Big Shoulders Display",
+   "peso_display": 800,
+   "titulo": null,
+   "corpo": "DM Sans",
+   "humor": [
+    "esporte",
+    "urbano",
+    "causa"
+   ],
+   "porque": "Ombros largos de cartaz industrial com corpo geométrico suave."
+  },
+  {
+   "id": "p06",
+   "display": "Saira Extra Condensed",
+   "peso_display": 800,
+   "titulo": "Saira Condensed",
+   "corpo": "Manrope",
+   "humor": [
+    "esporte",
+    "tecnologia"
+   ],
+   "porque": "Linha técnica de placar e cronometragem, corpo moderno."
+  },
+  {
+   "id": "p07",
+   "display": "Sofia Sans Extra Condensed",
+   "peso_display": 800,
+   "titulo": null,
+   "corpo": "Onest",
+   "humor": [
+    "esporte",
+    "praia",
+    "urbano"
+   ],
+   "porque": "Condensada solar e arredondada, Onest mantém o tom leve."
+  },
+  {
+   "id": "p08",
+   "display": "Staatliches",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Montserrat",
+   "humor": [
+    "retro",
+    "urbano",
+    "festa"
+   ],
+   "porque": "Letreiro de cinema antigo com corpo geométrico clássico."
+  },
+  {
+   "id": "p09",
+   "display": "Oswald",
+   "peso_display": 700,
+   "titulo": null,
+   "corpo": "Lexend",
+   "humor": [
+    "natureza",
+    "causa",
+    "esporte"
+   ],
+   "porque": "Condensada de jornal esportivo e corpo de leitura fácil para todos os públicos."
+  },
+  {
+   "id": "p10",
+   "display": "Antonio",
+   "peso_display": 700,
+   "titulo": null,
+   "corpo": "Instrument Sans",
+   "humor": [
+    "causa",
+    "urbano"
+   ],
+   "porque": "Condensada firme e séria, corpo discreto para causas e institucional."
+  },
+  {
+   "id": "p11",
+   "display": "Teko",
+   "peso_display": 700,
+   "titulo": null,
+   "corpo": "Rubik",
+   "humor": [
+    "esporte",
+    "tecnologia"
+   ],
+   "porque": "Quadrada e rápida, Rubik de cantos suaves equilibra a dureza."
+  },
+  {
+   "id": "p12",
+   "display": "Barlow Condensed",
+   "peso_display": 800,
+   "titulo": null,
+   "corpo": "Barlow",
+   "humor": [
+    "esporte",
+    "urbano",
+    "tecnologia"
+   ],
+   "porque": "Mesma família em duas larguras: sistema coeso para prova de rua."
+  },
+  {
+   "id": "p13",
+   "display": "Archivo Expanded",
+   "peso_display": 800,
+   "titulo": null,
+   "corpo": "Archivo",
+   "humor": [
+    "esporte",
+    "causa",
+    "urbano"
+   ],
+   "porque": "Largura expandida no título, Archivo normal no texto, coeso e institucional."
+  },
+  {
+   "id": "p14",
+   "display": "Unbounded",
+   "peso_display": 800,
+   "titulo": null,
+   "corpo": "Hanken Grotesk",
+   "humor": [
+    "tecnologia",
+    "festa",
+    "urbano"
+   ],
+   "porque": "Arredondada e larga, atual; corpo calmo para contrastar."
+  },
+  {
+   "id": "p15",
+   "display": "Krona One",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Inter",
+   "humor": [
+    "tecnologia",
+    "luxo"
+   ],
+   "porque": "Larga e sofisticada, corpo neutro evita excesso."
+  },
+  {
+   "id": "p16",
+   "display": "Lexend Zetta",
+   "peso_display": 700,
+   "titulo": null,
+   "corpo": "Lexend",
+   "humor": [
+    "tecnologia",
+    "causa"
+   ],
+   "porque": "Largura máxima no título, mesma família no corpo para leitura confortável."
+  },
+  {
+   "id": "p17",
+   "display": "Anybody Expanded",
+   "peso_display": 900,
+   "titulo": null,
+   "corpo": "Schibsted Grotesk",
+   "humor": [
+    "esporte",
+    "festa",
+    "urbano"
+   ],
+   "porque": "Muito larga e ousada, corpo editorial segura a página."
+  },
+  {
+   "id": "p18",
+   "display": "Mattone",
+   "peso_display": 900,
+   "titulo": null,
+   "corpo": "Familjen Grotesk",
+   "humor": [
+    "urbano",
+    "tecnologia"
+   ],
+   "porque": "Tijolo largo e pesado, com grotesca de caráter no texto."
+  },
+  {
+   "id": "p19",
+   "display": "Michroma",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Space Grotesk",
+   "humor": [
+    "tecnologia",
+    "esporte"
+   ],
+   "porque": "Estética de painel e cronômetro, par técnico.",
+   "evitar_com": "textos longos em caixa alta, a Bungee cansa"
+  },
+  {
+   "id": "p20",
+   "display": "Bungee",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Rubik",
+   "humor": [
+    "urbano",
+    "festa",
+    "retro"
+   ],
+   "porque": "Placa vertical de rua com corpo informal e arredondado."
+  },
+  {
+   "id": "p21",
+   "display": "Rubik Mono One",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Work Sans",
+   "humor": [
+    "festa",
+    "urbano"
+   ],
+   "porque": "Bloco monoespaçado forte para cartaz de festival."
+  },
+  {
+   "id": "p22",
+   "display": "Russo One",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Tomorrow",
+   "humor": [
+    "esporte",
+    "tecnologia"
+   ],
+   "porque": "Cara de automobilismo e e-sports, corpo técnico."
+  },
+  {
+   "id": "p23",
+   "display": "Kanit",
+   "peso_display": 800,
+   "titulo": null,
+   "corpo": "Outfit",
+   "humor": [
+    "esporte",
+    "praia",
+    "urbano"
+   ],
+   "porque": "Sans esportiva e firme, com Outfit mantendo a leveza de verão."
+  },
+  {
+   "id": "p24",
+   "display": "Syne",
+   "peso_display": 800,
+   "titulo": null,
+   "corpo": "DM Sans",
+   "humor": [
+    "urbano",
+    "festa",
+    "luxo"
+   ],
+   "porque": "Título excêntrico de galeria e corpo geométrico limpo."
+  },
+  {
+   "id": "p25",
+   "display": "Archivo Black",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Work Sans",
+   "humor": [
+    "esporte",
+    "urbano"
+   ],
+   "porque": "Peso máximo do Archivo com corpo de baixo contraste."
+  },
+  {
+   "id": "p26",
+   "display": "Bricolage Grotesque",
+   "peso_display": 800,
+   "titulo": null,
+   "corpo": "Plus Jakarta Sans",
+   "humor": [
+    "festa",
+    "causa",
+    "praia"
+   ],
+   "porque": "Título cheio de personalidade, corpo simpático."
+  },
+  {
+   "id": "p27",
+   "display": "Fraunces",
+   "peso_display": 800,
+   "titulo": null,
+   "corpo": "Hanken Grotesk",
+   "humor": [
+    "luxo",
+    "natureza",
+    "festa"
+   ],
+   "porque": "Serifa macia e calorosa para evento gastronômico ou trilha premium."
+  },
+  {
+   "id": "p28",
+   "display": "Playfair Display",
+   "peso_display": 700,
+   "titulo": null,
+   "corpo": "Inter",
+   "humor": [
+    "luxo",
+    "retro"
+   ],
+   "porque": "Alto contraste clássico, corpo neutro para legibilidade."
+  },
+  {
+   "id": "p29",
+   "display": "DM Serif Display",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "DM Sans",
+   "humor": [
+    "luxo",
+    "festa"
+   ],
+   "porque": "Serifa de revista com sans do mesmo desenho geométrico."
+  },
+  {
+   "id": "p30",
+   "display": "Instrument Serif",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Instrument Sans",
+   "humor": [
+    "luxo",
+    "causa"
+   ],
+   "porque": "Serifa condensada fina e sans irmã: elegância contida."
+  },
+  {
+   "id": "p31",
+   "display": "Gloock",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Manrope",
+   "humor": [
+    "luxo",
+    "natureza",
+    "retro"
+   ],
+   "porque": "Serifa de alto impacto com corpo moderno e arejado."
+  },
+  {
+   "id": "p32",
+   "display": "Young Serif",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Work Sans",
+   "humor": [
+    "natureza",
+    "causa",
+    "retro"
+   ],
+   "porque": "Serifa amigável e quente, corpo prático para texto longo."
+  },
+  {
+   "id": "p33",
+   "display": "Bodoni Moda",
+   "peso_display": 700,
+   "titulo": null,
+   "corpo": "Red Hat Display",
+   "humor": [
+    "luxo",
+    "festa"
+   ],
+   "porque": "Moda e passarela: contraste extremo com corpo limpo."
+  },
+  {
+   "id": "p34",
+   "display": "Libre Caslon Display",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Lora",
+   "humor": [
+    "luxo",
+    "retro",
+    "natureza"
+   ],
+   "porque": "Clássico editorial, Lora dá corpo literário."
+  },
+  {
+   "id": "p35",
+   "display": "Alfa Slab One",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Barlow",
+   "humor": [
+    "retro",
+    "esporte",
+    "urbano"
+   ],
+   "porque": "Serifa de placa de beisebol e rodeio, corpo de apoio enxuto."
+  },
+  {
+   "id": "p36",
+   "display": "Abril Fatface",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Epilogue",
+   "humor": [
+    "retro",
+    "festa",
+    "luxo"
+   ],
+   "porque": "Capa de revista dos anos 50 com sans moderna."
+  },
+  {
+   "id": "p37",
+   "display": "Shrikhand",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Outfit",
+   "humor": [
+    "festa",
+    "praia",
+    "retro"
+   ],
+   "porque": "Letra gorda e inclinada de verão, corpo leve."
+  },
+  {
+   "id": "p38",
+   "display": "Pacifico",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Montserrat",
+   "humor": [
+    "praia",
+    "retro"
+   ],
+   "porque": "Letreiro de surf em manuscrita, corpo geométrico claro."
+  },
+  {
+   "id": "p39",
+   "display": "Bowlby One",
+   "peso_display": 400,
+   "titulo": null,
+   "corpo": "Sora",
+   "humor": [
+    "festa",
+    "esporte",
+    "retro"
+   ],
+   "porque": "Pesada e cheia, par moderno e arejado no texto."
+  },
+  {
+   "id": "p40",
+   "display": "Fredoka",
+   "peso_display": 700,
+   "titulo": null,
+   "corpo": "Onest",
+   "humor": [
+    "causa",
+    "praia",
+    "festa"
+   ],
+   "porque": "Arredondada amigável para evento infantil ou beneficente."
+  },
+  {
+   "id": "p41",
+   "display": "Tomorrow",
+   "peso_display": 800,
+   "titulo": null,
+   "corpo": "Inter",
+   "humor": [
+    "tecnologia",
+    "esporte"
+   ],
+   "porque": "Técnica com cantos cortados, corpo neutro de apoio."
+  },
+  {
+   "id": "p42",
+   "display": "Sora",
+   "peso_display": 800,
+   "titulo": null,
+   "corpo": "Lora",
+   "humor": [
+    "tecnologia",
+    "luxo",
+    "natureza"
+   ],
+   "porque": "Sans geométrica no título e serifa de leitura no corpo, contraste inesperado."
+  }
+ ]
+}

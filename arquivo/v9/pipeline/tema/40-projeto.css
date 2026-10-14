@@ -1,0 +1,3 @@
+/* 40-projeto.css — sobrescritas por projeto (camada "expression"). Fica vazio na skill; o render.py também lê
+   <pasta-do-cliente>/tema-projeto.css se existir: é o único lugar onde um kit pode mudar visual sem mexer na biblioteca.
+   Regra: só tokens (cores, divisa, raio, máscara, assinatura). Nada de layout novo aqui. */

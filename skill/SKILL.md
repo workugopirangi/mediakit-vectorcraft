@@ -1,6 +1,6 @@
 ---
-name: gerar-mediakit-vc
-description: Gera mídia kit de patrocínio da Motion Perform em PDF 16:9 montado no VectorCraft, dirigido por uma referência do repertório. Use quando o Ugo pedir mídia kit, deck de patrocínio ou proposta de cota para um evento ou para uma marca. Versão em teste ao lado da gerar-mediakit-motion (v9) até a comparação cega.
+name: gerar-mediakit-motion
+description: Gera mídia kit de patrocínio da Motion Perform em PDF 16:9 montado no VectorCraft (v10), dirigido por uma referência do repertório. Use quando o Ugo pedir mídia kit, deck de patrocínio ou proposta de cota para um evento ou para uma marca. Só roda no Mac do Ugo.
 ---
 
 # Gerar mídia kit (rota VectorCraft)

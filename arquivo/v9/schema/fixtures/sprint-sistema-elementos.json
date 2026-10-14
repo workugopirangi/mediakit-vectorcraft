@@ -1,0 +1,39 @@
+{
+  "_leia": "Fixture da Sprint Ubatuba Run 2027 (kit real, pasta CLIENTES/SPRINT UBATUBA RUN/MEDIAKIT/sprint-2027, arquivos de imagem fora do git em acervo/elementos/). Use para testes das frentes A, B e C. Caso real de falha a reproduzir: receita r3 usa cota variante b; o elemento medalha-alada em x1380 y560 w420 cobre a lista de direitos ('durante e depois') e o QA atual passa. Depois da Frente A tem de reprovar; a mesma medalha na cota a (r1) passa.",
+  "kit": "sprint-2027",
+  "cliente": "SPRINT UBATUBA RUN",
+  "sistema_elementos": {
+    "motivos": [
+      {"id": "asa", "origem": "simbolo", "descricao": "a asa do logo da Sprint: velocidade e a escultura-photo point", "fonte": "acervo:logo"},
+      {"id": "penas", "origem": "simbolo", "descricao": "as penas da asa como módulo repetível"},
+      {"id": "pista", "origem": "esporte", "descricao": "linhas de pista e percurso na orla"},
+      {"id": "medalha", "origem": "esporte", "descricao": "a medalha que o atleta leva para casa"},
+      {"id": "ondas-serra", "origem": "territorio", "descricao": "Serra do Mar descendo até o mar de Ubatuba"},
+      {"id": "folha-amendoeira", "origem": "territorio", "descricao": "amendoeira-da-praia da orla"}
+    ],
+    "familias": [
+      {"id": "gravura-ouro", "meio": "traco", "estilo": "fine gold line engraving, single weight 2px strokes, no fills, no shading, flat metallic gold ink on transparent background", "paleta": ["#D4A64A"], "traco_px": 2, "luz": null, "ancora": "penas-asa", "aprovada": null},
+      {"id": "meio-tom-mar", "meio": "meio-tom", "estilo": "two-tone halftone print, coarse dot screen, sea blue ink on transparent background, beach poster feel", "paleta": ["#2067AA", "#F4EADB"], "traco_px": null, "luz": null, "ancora": "ondas-serra", "aprovada": null},
+      {"id": "objeto-dourado", "meio": "foto-objeto", "estilo": "photoreal product photo, warm early morning side light from the left, soft contact shadow, gold and black palette, isolated on transparent background", "paleta": ["#D09050", "#281805"], "traco_px": null, "luz": "esquerda", "ancora": "medalha-alada", "aprovada": null}
+    ],
+    "constantes": [
+      {"tipo": "grao"},
+      {"tipo": "microtexto", "texto_de": "personalizado", "texto": "SPRINT UBATUBA RUN · 14.03.2027 · UBATUBA/SP · 2ª EDIÇÃO", "encaixe": "borda-base", "exceto": ["projecao"]},
+      {"tipo": "selo", "texto_de": "personalizado", "texto": "SPRINT UBATUBA RUN · 2ª EDIÇÃO · 2027 ·", "encaixe": null, "exceto": ["prova", "cota", "projecao"]}
+    ],
+    "receitas": {
+      "r1": {"familia": "gravura-ouro", "motivos": ["asa", "penas", "pista"], "pattern": "penas-asa"},
+      "r2": {"familia": "meio-tom-mar", "motivos": ["ondas-serra", "folha-amendoeira", "pista"], "pattern": "ondas-serra"},
+      "r3": {"familia": "objeto-dourado", "motivos": ["medalha", "asa", "pista"], "pattern": null}
+    },
+    "excecoes": {}
+  },
+  "elementos": [
+    {"id": "penas-asa", "papel": "pattern", "tipo": "pattern", "formato": "png", "familia": "gravura-ouro", "motivo": "penas", "arquivo": "acervo/elementos/penas-asa-traco.png", "kit_origem": "sprint-2027", "exclusivo_cliente": "SPRINT UBATUBA RUN", "gerado": true, "rota": "codex-alfa", "prompt": "acervo/elementos/penas-asa.prompt.txt", "escala_tile": 420, "opacidade": 0.12},
+    {"id": "ondas-serra", "papel": "pattern", "tipo": "pattern", "formato": "png", "familia": "meio-tom-mar", "motivo": "ondas-serra", "arquivo": "acervo/elementos/ondas-serra-traco.png", "kit_origem": "sprint-2027", "exclusivo_cliente": null, "gerado": true, "rota": "codex-alfa", "prompt": "acervo/elementos/ondas-serra.prompt.txt", "escala_tile": 480, "opacidade": 0.14},
+    {"id": "pena-dourada", "papel": "heroi", "tipo": "objeto", "formato": "png", "familia": "objeto-dourado", "motivo": "penas", "arquivo": "acervo/elementos/pena-dourada.png", "kit_origem": "sprint-2027", "exclusivo_cliente": "SPRINT UBATUBA RUN", "gerado": true, "rota": "codex-alfa", "aspecto": "alto"},
+    {"id": "folha-amendoeira", "papel": "heroi", "tipo": "objeto", "formato": "png", "familia": "objeto-dourado", "motivo": "folha-amendoeira", "arquivo": "acervo/elementos/folha-amendoeira.png", "kit_origem": "sprint-2027", "exclusivo_cliente": null, "gerado": true, "rota": "codex-alfa", "aspecto": "quadrado"},
+    {"id": "medalha-alada", "papel": "heroi", "tipo": "objeto", "formato": "png", "familia": "objeto-dourado", "motivo": "medalha", "arquivo": "acervo/elementos/medalha-alada.png", "kit_origem": "sprint-2027", "exclusivo_cliente": "SPRINT UBATUBA RUN", "gerado": true, "rota": "codex-alfa", "aspecto": "quadrado", "x": 1380, "y": 560, "w": 420, "rot": -8, "camada": "frente", "paginas": ["cota:Naming"]},
+    {"id": "tenis-usado", "papel": "heroi", "tipo": "objeto", "formato": "png", "familia": "objeto-dourado", "motivo": "pista", "arquivo": "acervo/elementos/tenis-usado.png", "kit_origem": "sprint-2027", "exclusivo_cliente": null, "gerado": true, "rota": "codex-alfa", "aspecto": "largo"}
+  ]
+}

@@ -1,0 +1,680 @@
+{
+ "origem": "Sprint Ubatuba Run, saida/plano-elementos-<receita>.json gravado pelo render em 09/10/2026 (só os heróis e apoios de cada página, com id, papel, encaixe, camada, w, h e sha256). Prova do qa_conjunto.alturas_inconsistentes: o mesmo elemento em tamanhos diferentes (a asa de 560x327 na capa e 284x166 no público).",
+ "receitas": {
+  "r1": {
+   "receita": "r1",
+   "paginas": [
+    {
+     "n": 1,
+     "rotulo": "capa:c",
+     "elementos": [
+      {
+       "id": "asa-gravura",
+       "papel": "heroi",
+       "encaixe": "canto-sup-esq",
+       "camada": "frente",
+       "w": 560.0,
+       "h": 326.8,
+       "sha256": "0aa5844c09ed40d0e0e1f20cef6ffc57e1886f951899a5e2ac80f6142953222c"
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "rotulo": "manifesto:a",
+     "elementos": [
+      {
+       "id": "cronometro-gravura",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 384.5,
+       "h": 526.4,
+       "sha256": "0b701a42c0b1b76f13105da81c901741f5715101475efd35ddee64aaf921470a"
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "rotulo": "projecao",
+     "elementos": []
+    },
+    {
+     "n": 4,
+     "rotulo": "publico:a",
+     "elementos": [
+      {
+       "id": "asa-gravura",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 283.5,
+       "h": 165.5,
+       "sha256": "0aa5844c09ed40d0e0e1f20cef6ffc57e1886f951899a5e2ac80f6142953222c"
+      }
+     ]
+    },
+    {
+     "n": 5,
+     "rotulo": "historico_logos",
+     "elementos": [
+      {
+       "id": "cronometro-gravura",
+       "papel": "heroi",
+       "encaixe": "canto-inf-esq",
+       "camada": "frente",
+       "w": 234.4,
+       "h": 320.9,
+       "sha256": "0b701a42c0b1b76f13105da81c901741f5715101475efd35ddee64aaf921470a"
+      }
+     ]
+    },
+    {
+     "n": 6,
+     "rotulo": "territorio",
+     "elementos": [
+      {
+       "id": "percurso-r1",
+       "papel": "heroi",
+       "encaixe": "sobre-cena",
+       "camada": "frente",
+       "w": 600.0,
+       "h": 280.0,
+       "sha256": "3b158b5d8d4bc55fb20c2c678991137d3bcdfdd12f3a9de3ec12df6ac0ab5fa8"
+      }
+     ]
+    },
+    {
+     "n": 7,
+     "rotulo": "prova",
+     "elementos": []
+    },
+    {
+     "n": 8,
+     "rotulo": "divisor:b",
+     "elementos": [
+      {
+       "id": "asas-par-gravura",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 560.0,
+       "h": 394.2,
+       "sha256": "5c64a231d214b7bbeb753d5acfb5cec1916716348e3310af646ec3c9187ff1e4"
+      }
+     ]
+    },
+    {
+     "n": 9,
+     "rotulo": "ativo:diagonal",
+     "elementos": []
+    },
+    {
+     "n": 10,
+     "rotulo": "ativo:topo",
+     "elementos": []
+    },
+    {
+     "n": 11,
+     "rotulo": "ativo:sangria",
+     "elementos": []
+    },
+    {
+     "n": 12,
+     "rotulo": "ativo:diagonal",
+     "elementos": []
+    },
+    {
+     "n": 13,
+     "rotulo": "ativo:painel",
+     "elementos": []
+    },
+    {
+     "n": 14,
+     "rotulo": "ativo:sangria",
+     "elementos": []
+    },
+    {
+     "n": 15,
+     "rotulo": "divisor_cotas",
+     "elementos": [
+      {
+       "id": "asas-par-gravura",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 560.0,
+       "h": 394.2,
+       "sha256": "5c64a231d214b7bbeb753d5acfb5cec1916716348e3310af646ec3c9187ff1e4"
+      }
+     ]
+    },
+    {
+     "n": 16,
+     "rotulo": "cota:a",
+     "elementos": [
+      {
+       "id": "cronometro-gravura",
+       "papel": "heroi",
+       "encaixe": "sobre-cena",
+       "camada": "frente",
+       "w": 306.8,
+       "h": 420.0,
+       "sha256": "0b701a42c0b1b76f13105da81c901741f5715101475efd35ddee64aaf921470a"
+      }
+     ]
+    },
+    {
+     "n": 17,
+     "rotulo": "cota:a",
+     "elementos": [
+      {
+       "id": "asas-par-gravura",
+       "papel": "heroi",
+       "encaixe": "sobre-cena",
+       "camada": "frente",
+       "w": 420.0,
+       "h": 295.7,
+       "sha256": "5c64a231d214b7bbeb753d5acfb5cec1916716348e3310af646ec3c9187ff1e4"
+      }
+     ]
+    },
+    {
+     "n": 18,
+     "rotulo": "cota:a",
+     "elementos": [
+      {
+       "id": "pena-gravura",
+       "papel": "heroi",
+       "encaixe": "sobre-cena",
+       "camada": "frente",
+       "w": 173.6,
+       "h": 420.0,
+       "sha256": "b52d12b21d013f60faaf8fdc6f0f7d4ba5a3c8d3e0b66d6e18c128bbb969e7e9"
+      }
+     ]
+    },
+    {
+     "n": 19,
+     "rotulo": "cota:a",
+     "elementos": [
+      {
+       "id": "tenis-gravura",
+       "papel": "heroi",
+       "encaixe": "sobre-cena",
+       "camada": "frente",
+       "w": 420.0,
+       "h": 201.8,
+       "sha256": "904ef5430dba4e205d0b92d84d61911764c581f915700e2c667b55a0087494a3"
+      }
+     ]
+    },
+    {
+     "n": 20,
+     "rotulo": "contato:a",
+     "elementos": [
+      {
+       "id": "pena-gravura",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 217.5,
+       "h": 526.4,
+       "sha256": "b52d12b21d013f60faaf8fdc6f0f7d4ba5a3c8d3e0b66d6e18c128bbb969e7e9"
+      }
+     ]
+    }
+   ]
+  },
+  "r2": {
+   "receita": "r2",
+   "paginas": [
+    {
+     "n": 1,
+     "rotulo": "capa:a",
+     "elementos": [
+      {
+       "id": "amendoeira-adesivo",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 450.2,
+       "h": 480.7,
+       "sha256": "f28638983add40f91f06324cb69ad0488bf4c8103caca29228a2e9e3b3b7f65a"
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "rotulo": "manifesto:b",
+     "elementos": [
+      {
+       "id": "cronometro-adesivo",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 202.4,
+       "h": 266.5,
+       "sha256": "3cf9c970d55227d7560a4d8cf9baa066892f7b3cab08f59aa0870e0054541e66"
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "rotulo": "projecao",
+     "elementos": []
+    },
+    {
+     "n": 4,
+     "rotulo": "publico:b",
+     "elementos": [
+      {
+       "id": "cronometro-adesivo",
+       "papel": "heroi",
+       "encaixe": "sobre-cena",
+       "camada": "frente",
+       "w": 454.5,
+       "h": 598.5,
+       "sha256": "3cf9c970d55227d7560a4d8cf9baa066892f7b3cab08f59aa0870e0054541e66"
+      }
+     ]
+    },
+    {
+     "n": 5,
+     "rotulo": "historico_logos",
+     "elementos": [
+      {
+       "id": "folha-adesivo",
+       "papel": "heroi",
+       "encaixe": "canto-inf-esq",
+       "camada": "frente",
+       "w": 274.1,
+       "h": 283.5,
+       "sha256": "5be0eb19e206387b36f9787eb2a3ed45068183238c0e26662ca0b790fef77966"
+      }
+     ]
+    },
+    {
+     "n": 6,
+     "rotulo": "territorio",
+     "elementos": [
+      {
+       "id": "cronometro-adesivo",
+       "papel": "heroi",
+       "encaixe": "sobre-cena",
+       "camada": "frente",
+       "w": 454.5,
+       "h": 598.5,
+       "sha256": "3cf9c970d55227d7560a4d8cf9baa066892f7b3cab08f59aa0870e0054541e66"
+      }
+     ]
+    },
+    {
+     "n": 7,
+     "rotulo": "prova",
+     "elementos": []
+    },
+    {
+     "n": 8,
+     "rotulo": "divisor:c",
+     "elementos": [
+      {
+       "id": "folha-adesivo",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 397.3,
+       "h": 411.0,
+       "sha256": "5be0eb19e206387b36f9787eb2a3ed45068183238c0e26662ca0b790fef77966"
+      }
+     ]
+    },
+    {
+     "n": 9,
+     "rotulo": "ativo:painel",
+     "elementos": []
+    },
+    {
+     "n": 10,
+     "rotulo": "ativo:topo",
+     "elementos": []
+    },
+    {
+     "n": 11,
+     "rotulo": "ativo:painel",
+     "elementos": []
+    },
+    {
+     "n": 12,
+     "rotulo": "ativo:sangria",
+     "elementos": []
+    },
+    {
+     "n": 13,
+     "rotulo": "ativo:painel",
+     "elementos": []
+    },
+    {
+     "n": 14,
+     "rotulo": "ativo:topo",
+     "elementos": []
+    },
+    {
+     "n": 15,
+     "rotulo": "divisor_cotas",
+     "elementos": [
+      {
+       "id": "folha-adesivo",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 508.8,
+       "h": 526.4,
+       "sha256": "5be0eb19e206387b36f9787eb2a3ed45068183238c0e26662ca0b790fef77966"
+      }
+     ]
+    },
+    {
+     "n": 16,
+     "rotulo": "cota:c",
+     "elementos": [
+      {
+       "id": "onda-adesivo",
+       "papel": "heroi",
+       "encaixe": "sobre-cena",
+       "camada": "frente",
+       "w": 420.0,
+       "h": 325.5,
+       "sha256": "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451"
+      }
+     ]
+    },
+    {
+     "n": 17,
+     "rotulo": "cota:c",
+     "elementos": [
+      {
+       "id": "percurso-r2",
+       "papel": "heroi",
+       "encaixe": "sobre-cena",
+       "camada": "frente",
+       "w": 420.0,
+       "h": 196.0,
+       "sha256": "fafb587ce6e1fd6ec5db031f811fe6fe0c2b1b653dbf9b5462bc973622b748fe"
+      }
+     ]
+    },
+    {
+     "n": 18,
+     "rotulo": "cota:c",
+     "elementos": [
+      {
+       "id": "onda-adesivo",
+       "papel": "heroi",
+       "encaixe": "sobre-cena",
+       "camada": "frente",
+       "w": 420.0,
+       "h": 325.5,
+       "sha256": "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451"
+      }
+     ]
+    },
+    {
+     "n": 19,
+     "rotulo": "cota:c",
+     "elementos": [
+      {
+       "id": "tenis-adesivo",
+       "papel": "heroi",
+       "encaixe": "sobre-cena",
+       "camada": "frente",
+       "w": 420.0,
+       "h": 211.8,
+       "sha256": "dc053764c623e5bae247bbfefbccbbd49d41489c0a20e82f9a3c4053c66a37f8"
+      }
+     ]
+    },
+    {
+     "n": 20,
+     "rotulo": "contato:b",
+     "elementos": [
+      {
+       "id": "onda-adesivo",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 411.0,
+       "h": 318.5,
+       "sha256": "01f16651fc17740c3aeb9327db36adacf73fe5965408f98e8c78232b2e420451"
+      }
+     ]
+    }
+   ]
+  },
+  "r3": {
+   "receita": "r3",
+   "paginas": [
+    {
+     "n": 1,
+     "rotulo": "capa:a",
+     "elementos": [
+      {
+       "id": "asa-escultura",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 560.0,
+       "h": 395.2,
+       "sha256": "4d7fa9b7bdee04fd636be2e7abb1c19278b22391ce34907cc4f07f6fded756cf"
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "rotulo": "manifesto:b",
+     "elementos": [
+      {
+       "id": "medalha-alada",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 318.1,
+       "h": 302.5,
+       "sha256": "b0a417688dad344133e1a39252477868d862adb938e907d543d556b93928f790"
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "rotulo": "projecao",
+     "elementos": []
+    },
+    {
+     "n": 4,
+     "rotulo": "publico:a",
+     "elementos": [
+      {
+       "id": "asa-escultura",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 235.5,
+       "h": 166.2,
+       "sha256": "4d7fa9b7bdee04fd636be2e7abb1c19278b22391ce34907cc4f07f6fded756cf"
+      }
+     ]
+    },
+    {
+     "n": 5,
+     "rotulo": "historico_logos",
+     "elementos": [
+      {
+       "id": "medalha-alada",
+       "papel": "heroi",
+       "encaixe": "canto-inf-esq",
+       "camada": "frente",
+       "w": 318.1,
+       "h": 302.5,
+       "sha256": "b0a417688dad344133e1a39252477868d862adb938e907d543d556b93928f790"
+      }
+     ]
+    },
+    {
+     "n": 6,
+     "rotulo": "territorio",
+     "elementos": [
+      {
+       "id": "numeral-02",
+       "papel": "heroi",
+       "encaixe": "sobre-cena",
+       "camada": "frente",
+       "w": 600.0,
+       "h": 348.4,
+       "sha256": "a5430ec99a257b7b8e92128e401c1dad236bf28110edd47ad534ce3d4cde3ba6"
+      }
+     ]
+    },
+    {
+     "n": 7,
+     "rotulo": "prova",
+     "elementos": []
+    },
+    {
+     "n": 8,
+     "rotulo": "divisor:a",
+     "elementos": [
+      {
+       "id": "numeral-02",
+       "papel": "heroi",
+       "encaixe": "canto-inf-dir",
+       "camada": "frente",
+       "w": 465.1,
+       "h": 270.1,
+       "sha256": "a5430ec99a257b7b8e92128e401c1dad236bf28110edd47ad534ce3d4cde3ba6"
+      }
+     ]
+    },
+    {
+     "n": 9,
+     "rotulo": "ativo:sangria",
+     "elementos": []
+    },
+    {
+     "n": 10,
+     "rotulo": "ativo:topo",
+     "elementos": []
+    },
+    {
+     "n": 11,
+     "rotulo": "ativo:sangria",
+     "elementos": []
+    },
+    {
+     "n": 12,
+     "rotulo": "ativo:painel",
+     "elementos": []
+    },
+    {
+     "n": 13,
+     "rotulo": "ativo:sangria",
+     "elementos": []
+    },
+    {
+     "n": 14,
+     "rotulo": "ativo:painel",
+     "elementos": []
+    },
+    {
+     "n": 15,
+     "rotulo": "divisor_cotas",
+     "elementos": [
+      {
+       "id": "medalha-alada",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 490.5,
+       "h": 466.5,
+       "sha256": "b0a417688dad344133e1a39252477868d862adb938e907d543d556b93928f790"
+      }
+     ]
+    },
+    {
+     "n": 16,
+     "rotulo": "cota:b",
+     "elementos": [
+      {
+       "id": "percurso-r3",
+       "papel": "heroi",
+       "encaixe": "canto-sup-esq",
+       "camada": "frente",
+       "w": 420.0,
+       "h": 196.0,
+       "sha256": "ba8f42ca591a0eb2a38d09c40419861a52395792d3a09146738e43582f6693bf"
+      }
+     ]
+    },
+    {
+     "n": 17,
+     "rotulo": "cota:b",
+     "elementos": [
+      {
+       "id": "pena-dourada",
+       "papel": "heroi",
+       "encaixe": "canto-sup-esq",
+       "camada": "frente",
+       "w": 256.0,
+       "h": 240.6,
+       "sha256": "beba8f82453c06fc61295f8e01f777818c65e4f88a6c4451ccdbab738970e85f"
+      }
+     ]
+    },
+    {
+     "n": 18,
+     "rotulo": "cota:b",
+     "elementos": [
+      {
+       "id": "percurso-r3",
+       "papel": "heroi",
+       "encaixe": "canto-sup-esq",
+       "camada": "frente",
+       "w": 420.0,
+       "h": 196.0,
+       "sha256": "ba8f42ca591a0eb2a38d09c40419861a52395792d3a09146738e43582f6693bf"
+      }
+     ]
+    },
+    {
+     "n": 19,
+     "rotulo": "cota:b",
+     "elementos": [
+      {
+       "id": "pena-dourada",
+       "papel": "heroi",
+       "encaixe": "canto-sup-esq",
+       "camada": "frente",
+       "w": 348.8,
+       "h": 327.8,
+       "sha256": "beba8f82453c06fc61295f8e01f777818c65e4f88a6c4451ccdbab738970e85f"
+      }
+     ]
+    },
+    {
+     "n": 20,
+     "rotulo": "contato:b",
+     "elementos": [
+      {
+       "id": "tenis-usado",
+       "papel": "heroi",
+       "encaixe": "canto-sup-dir",
+       "camada": "frente",
+       "w": 560.0,
+       "h": 271.5,
+       "sha256": "a87dcd3c61bd06b6beea362788d27f7a8f39ae445945664e2c07f3e7d57b5741"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

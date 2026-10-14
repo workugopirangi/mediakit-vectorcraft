@@ -1,0 +1,1237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "mediakit.json (mk-2.0 e mk-2.1)",
+  "description": "Tudo que entra no mídia kit. Um número só renderiza se estiver em `provas` com edição e tipo. Uma foto só renderiza com direito de uso. Uma cota só renderiza com preço, quantidade e entregáveis.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "cliente",
+    "evento",
+    "tese",
+    "provas",
+    "inventario",
+    "cotas",
+    "acervo",
+    "marca",
+    "acao"
+  ],
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "mk-2.0",
+        "mk-2.1"
+      ],
+      "description": "mk-2.1 = mk-2.0 mais os campos opcionais da camada de acabamento (direcao_criativa, formato_base, receitas[].fontes.lettering e, em schema/elementos.schema.json, composicao.acabamento, efeito, recurso, papel acabamento, material e a âncora registro). Kit mk-2.0 continua válido e renderiza como antes."
+    },
+    "cliente": {
+      "type": "object",
+      "required": [
+        "nome"
+      ],
+      "properties": {
+        "nome": {
+          "type": "string"
+        },
+        "razao_social": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "contato_patrocinio": {
+          "type": "object",
+          "properties": {
+            "nome": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "whatsapp": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "email": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "evento": {
+      "type": "object",
+      "required": [
+        "nome",
+        "cidade",
+        "data_inicio"
+      ],
+      "properties": {
+        "nome": {
+          "type": "string"
+        },
+        "edicao_numero": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "data_inicio": {
+          "type": "string",
+          "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$",
+          "description": "AAAA-MM-DD; AAAA-MM ou AAAA enquanto o cliente não fechou o dia (o QA avisa e a capa mostra só o que existe)"
+        },
+        "data_fim": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "horario": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "local": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cidade": {
+          "type": "string"
+        },
+        "uf": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "modalidades": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "formato": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "periodicidade": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "proposito": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "diferenciais": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "primeira_edicao": {
+          "type": "boolean",
+          "description": "true quando não há histórico realizado"
+        },
+        "modalidade_sistema": {
+          "enum": [
+            "corrida de rua",
+            "trail",
+            "ciclismo",
+            "triathlon",
+            "arena",
+            "futebol"
+          ],
+          "description": "eixo de modalidade da gramática §7"
+        }
+      }
+    },
+    "tese": {
+      "type": "object",
+      "required": [
+        "frase",
+        "o_que_a_marca_compra"
+      ],
+      "properties": {
+        "frase": {
+          "type": "string",
+          "description": "Uma frase. É o título da página 2 e aparece na vertical."
+        },
+        "o_que_a_marca_compra": {
+          "type": "string"
+        },
+        "publico_encontra_marca": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Em que momento e situação o público encontra a marca."
+        }
+      }
+    },
+    "publico": {
+      "type": "object",
+      "properties": {
+        "descricao": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "segmentos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "tipo",
+              "descricao"
+            ],
+            "properties": {
+              "tipo": {
+                "enum": [
+                  "inscritos",
+                  "acompanhantes",
+                  "espectadores",
+                  "digital"
+                ]
+              },
+              "descricao": {
+                "type": "string"
+              },
+              "prova_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "titulo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "genero": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "required": [
+              "rotulo",
+              "pct"
+            ],
+            "properties": {
+              "rotulo": {
+                "type": "string"
+              },
+              "pct": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "provas": {
+      "type": "array",
+      "description": "Todo número do kit. O template só mostra o que está aqui.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "rotulo",
+          "valor",
+          "edicao",
+          "tipo",
+          "fonte"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "rotulo": {
+            "type": "string",
+            "description": "O que o número é: inscritos, finishers, seguidores, cidades, patrocinadores."
+          },
+          "valor": {
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "unidade": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "edicao": {
+            "type": "string",
+            "description": "Ano ou nome da edição. 'esta edição' para meta e projeção."
+          },
+          "tipo": {
+            "enum": [
+              "realizado",
+              "informado",
+              "meta",
+              "projecao",
+              "proxy"
+            ]
+          },
+          "fonte": {
+            "type": "string",
+            "description": "organizador | pesquisa:<url> | documento:<arquivo>"
+          },
+          "destaque": {
+            "type": "boolean",
+            "description": "true para os 3 ou 4 números que merecem página de prova."
+          },
+          "nota": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "icone": {
+            "enum": [
+              "seta",
+              "pessoas",
+              "mais",
+              "alvo",
+              "olho",
+              "pessoa",
+              "cursor",
+              "coracao",
+              "grafico"
+            ]
+          }
+        }
+      }
+    },
+    "historico": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "edicao"
+        ],
+        "properties": {
+          "edicao": {
+            "type": "string"
+          },
+          "data": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "local": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "prova_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "patrocinadores": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "marca"
+              ],
+              "properties": {
+                "marca": {
+                  "type": "string"
+                },
+                "o_que_fez": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "pode_citar": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "inventario": {
+      "type": "array",
+      "description": "Onde a marca aparece. Cada item vira uma linha da página de inventário.",
+      "items": {
+        "type": "object",
+        "required": [
+          "ativo",
+          "onde"
+        ],
+        "properties": {
+          "ativo": {
+            "type": "string"
+          },
+          "onde": {
+            "type": "string"
+          },
+          "capacidade": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "prova_possivel": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "foto_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "grupo": {
+            "enum": [
+              "fisico",
+              "digital",
+              "experiencia",
+              "direitos",
+              "pos_evento"
+            ]
+          },
+          "titulo": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "\"Sua marca|na largada\" colore na mesma linha; \"Sua marca||na largada\" quebra e colore (só título longo)"
+          },
+          "texto": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "4 a 6 linhas, até 380 caracteres"
+          },
+          "aplicacoes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "micro": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "rótulo da caixa; padrão Aplicações"
+          },
+          "cena_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "layout": {
+            "enum": [
+              "painel",
+              "topo"
+            ]
+          },
+          "mini_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "cotas": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "nome",
+          "preco",
+          "quantidade",
+          "entregaveis",
+          "aprovada_por"
+        ],
+        "properties": {
+          "nome": {
+            "type": "string"
+          },
+          "preco": {
+            "type": "number"
+          },
+          "quantidade": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "entregaveis": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "exclusividade": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "required": [
+              "categoria",
+              "ate"
+            ],
+            "properties": {
+              "categoria": {
+                "type": "string"
+              },
+              "ate": {
+                "type": "string"
+              }
+            }
+          },
+          "principal": {
+            "type": "boolean"
+          },
+          "aprovada_por": {
+            "enum": [
+              "cliente",
+              "motion"
+            ]
+          },
+          "aprovada_em": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "frase": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "icones": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "camisa",
+                "megafone",
+                "balao",
+                "tenis",
+                "alvo",
+                "olho",
+                "pessoas"
+              ]
+            }
+          },
+          "cena_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "territorio": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "território físico da cota: naming da distância, pórtico, kit"
+          }
+        }
+      }
+    },
+    "condicoes": {
+      "type": "object",
+      "properties": {
+        "nao_incluso": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "depende_da_marca": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "observacoes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "acervo": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "arquivo",
+          "funcao",
+          "direito_uso"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "arquivo": {
+            "type": "string",
+            "description": "Caminho relativo à pasta do cliente."
+          },
+          "funcao": {
+            "enum": [
+              "capa",
+              "manifesto",
+              "projecao",
+              "publico",
+              "historico",
+              "local",
+              "ativo",
+              "cotas",
+              "cota",
+              "contato",
+              "lettering",
+              "logo",
+              "simbolo",
+              "logo_patrocinador",
+              "acento"
+            ]
+          },
+          "direito_uso": {
+            "type": "boolean"
+          },
+          "credito": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "edicao": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "gerada": {
+            "type": "boolean"
+          },
+          "rotulo": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Obrigatório quando gerada=true. Ex.: 'Visualização ilustrativa'."
+          },
+          "legenda": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "foco": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "CSS object-position, ex. '50% 30%'."
+          },
+          "composta": {
+            "type": "boolean",
+            "description": "true quando lettering/placeholder foi aplicado pelo compor.py"
+          },
+          "fonte": {
+            "type": "string",
+            "description": "Origem de foto de biblioteca pública (pipeline/imagens_web.py): unsplash | pexels."
+          },
+          "autor": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "description": "Página da foto na biblioteca pública."
+          },
+          "licenca": {
+            "type": "string",
+            "description": "Ex.: Unsplash License. Foto de biblioteca pública sem licença, autor e URL não entra."
+          },
+          "url_licenca": {
+            "type": "string"
+          },
+          "id_foto": {
+            "type": "string",
+            "description": "ID da foto, o mesmo registrado no ledger e em historico-kits.json."
+          },
+          "obtida_em": {
+            "type": "string"
+          },
+          "paineis": {
+            "type": "string",
+            "description": "Caminho (relativo à pasta do kit) do JSON que o compor.py recebeu em --lote para esta cena: cada item com `quad` [x1,y1,...,x4,y4] em px desta imagem. O render leva cada painel à página pelo object-fit/object-position e ele vira zona vendável: obstáculo para o encaixe e FALHA no QA se um elemento cobrir mais de 2% dele."
+          }
+        }
+      }
+    },
+    "marca": {
+      "type": "object",
+      "required": [
+        "direcao",
+        "assinatura"
+      ],
+      "properties": {
+        "logo_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cor_primaria": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "hex"
+        },
+        "cor_secundaria": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cor_fundo_escuro": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fonte_display": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fonte_corpo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "direcao": {
+          "enum": [
+            "causa",
+            "performance",
+            "territorio"
+          ]
+        },
+        "assinatura": {
+          "enum": [
+            "fio",
+            "numeral",
+            "lettering"
+          ],
+          "description": "um elemento-assinatura por deck (guia C)"
+        },
+        "estilo_cena": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "bloco de estilo fixo das cenas: hora, luz, lente, paleta"
+        }
+      }
+    },
+    "acao": {
+      "type": "object",
+      "required": [
+        "quem",
+        "canal"
+      ],
+      "properties": {
+        "quem": {
+          "type": "string"
+        },
+        "canal": {
+          "type": "string"
+        },
+        "valido_ate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "proximo_passo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pessoas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "nome",
+              "telefone"
+            ],
+            "properties": {
+              "nome": {
+                "type": "string"
+              },
+              "telefone": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "pendencias": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "manifesto": {
+      "type": "object",
+      "properties": {
+        "titulo": {
+          "type": "string",
+          "description": "duas linhas com |"
+        },
+        "subtitulo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "frase": {
+          "type": "string",
+          "description": "HTML simples permitido (<b>)"
+        }
+      }
+    },
+    "prova": {
+      "type": "object",
+      "properties": {
+        "titulo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "nota": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "obrigatória quando houver prova proxy"
+        },
+        "rodape": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "graficos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "titulo",
+              "series"
+            ],
+            "properties": {
+              "titulo": {
+                "type": "string"
+              },
+              "legenda": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "nomes das séries quando cada item traz `valores` (barras agrupadas)"
+              },
+              "escala": {
+                "enum": ["linear", "log"],
+                "description": "padrão: log quando o maior valor passa de 20 vezes o menor"
+              },
+              "series": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "rotulo",
+                    "valor"
+                  ],
+                  "properties": {
+                    "rotulo": {
+                      "type": "string"
+                    },
+                    "valor": {
+                      "type": "number"
+                    },
+                    "valores": {
+                      "type": "array",
+                      "items": {"type": "number"},
+                      "description": "barras agrupadas, na ordem de `legenda`; `valor` continua sendo a primeira"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "divisor_inventario": {
+      "type": "object",
+      "properties": {
+        "titulo": {
+          "type": "string"
+        },
+        "subtitulo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "cotas_intro": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "paginas": {
+      "type": "array",
+      "description": "opcional (piloto): o render gera só estas páginas, nesta ordem. Cada item é um tipo (capa, manifesto, projecao, publico, prova, territorio, historico_logos, divisor, ativo_painel, ativo_topo, inventario_colunas, divisor_cotas, cota, contato; `ativo` pega o próximo ativo) ou {tipo, variante}. Tipos repetidos pegam a próxima página daquele tipo. Com paginas, as regras de ordem do qa.py viram aviso.",
+      "items": {
+        "anyOf": [
+          {"type": "string"},
+          {"type": "object", "required": ["tipo"], "properties": {"tipo": {"type": "string"}, "variante": {"type": "string"}}}
+        ]
+      }
+    },
+    "receitas": {
+      "type": "array",
+      "maxItems": 3,
+      "description": "opcional: até 3 receitas; com elas o render gera kit-<id>.pdf por receita em vez das 3 direções. O qa.py reprova duas receitas que coincidem em mais de 2 dos eixos {display, corpo, paleta.marca, fundo, mascara, pattern, variante de capa}. Paleta: `texto` é o corpo claro sobre o `escuro`; no papel, a tinta é o `escuro`.",
+      "items": {
+        "type": "object",
+        "required": ["id", "fontes", "paleta"],
+        "properties": {
+          "id": {"type": "string"},
+          "nome": {"type": "string"},
+          "ideia": {"type": "string"},
+          "fontes": {"type": "object", "required": ["display", "corpo"], "properties": {"display": {"type": "string"}, "peso_display": {"type": "integer"}, "titulo": {"type": ["string", "null"]}, "corpo": {"type": "string"}, "lettering": {"type": "string", "description": "opcional (mk-2.1): família da tipografia expressiva (eco, texto em curva, numeral-eco); vazio = display. Nome de fonte com arquivo em --fontes, no mesmo formato fechado de display e corpo"}}},
+          "paleta": {"type": "object", "required": ["marca", "escuro", "papel", "texto"], "properties": {"marca": {"type": "string"}, "escuro": {"type": "string"}, "papel": {"type": "string"}, "texto": {"type": "string"}, "apoio": {"type": "string"}}},
+          "fundo": {"enum": ["escuro", "papel", "cor"]},
+          "mascara": {"enum": ["reto", "diagonal", "arredondado", "sangria"]},
+          "pattern": {"type": ["string", "null"], "description": "id de um elemento com papel pattern"},
+          "pattern_paginas": {"type": "array", "items": {"type": "string"}},
+          "variantes": {
+            "type": "object",
+            "properties": {
+              "capa": {"enum": ["a", "b", "c"]},
+              "manifesto": {"enum": ["a", "b"]},
+              "publico": {"enum": ["a", "b"]},
+              "ativo": {"type": "array", "items": {"enum": ["painel", "topo", "diagonal", "sangria"]}, "description": "uma por ativo com cena, na ordem do inventário"},
+              "divisor": {"enum": ["a", "b", "c"]},
+              "cota": {"enum": ["a", "b", "c"]},
+              "contato": {"enum": ["a", "b"]}
+            }
+          }
+        }
+      }
+    },
+    "objetos": {
+      "type": "array",
+      "description": "hero objects recortados (pesquisa r2): brief completo antes de buscar/gerar",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "pagina",
+          "classe",
+          "funcao",
+          "arquivo",
+          "sombra",
+          "x",
+          "y",
+          "w",
+          "modo",
+          "luz"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "pagina": {
+            "type": "string",
+            "description": "\"cota:<nome>\" | \"capa\" | \"divisor\""
+          },
+          "classe": {
+            "enum": [
+              "atleta",
+              "produto",
+              "equipamento"
+            ]
+          },
+          "funcao": {
+            "type": "string"
+          },
+          "arquivo": {
+            "type": "string"
+          },
+          "sombra": {
+            "type": "string",
+            "description": "PNG da sombra (tratar.py sombra)"
+          },
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "w": {
+            "type": "number"
+          },
+          "modo": {
+            "enum": [
+              "atras",
+              "frente"
+            ]
+          },
+          "divisa_px": {
+            "type": "number"
+          },
+          "direcao": {
+            "type": "string"
+          },
+          "luz": {
+            "type": "string"
+          },
+          "partes_cortadas": {
+            "type": "string"
+          },
+          "resolucao_min": {
+            "type": "number"
+          },
+          "recorte": {
+            "type": "string",
+            "description": "birefnet-portrait | isnet-general-use | cliente | sintetico; higgsfield só como registro de kit antigo (saiu da skill em 09/10/2026)"
+          },
+          "temperatura_igualada": {
+            "type": "boolean"
+          },
+          "gerada": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "direcao_criativa": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "opcional (mk-2.1): a direção da camada de acabamento do kit inteiro (references/10-acabamento.md). Sem ela o kit renderiza como antes. As regras além do schema (família proibida usada, fio condutor curto, teto abaixo do padrão, poucas famílias) estão em pipeline/acabamento.py.",
+      "properties": {
+        "consulta": {
+          "type": "string",
+          "description": "caminho relativo à pasta do kit do registro da consulta ao repertório (consulta-repertorio.json)"
+        },
+        "recursos": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 9,
+          "description": "os recursos de acabamento escolhidos para o kit; páginas e elementos citam o `id`",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "familia",
+              "referencia",
+              "principio",
+              "rota"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9-]*$"
+              },
+              "familia": {
+                "enum": [
+                  "ornamento-identidade",
+                  "pattern-textura",
+                  "sobreposicao-recorte",
+                  "profundidade-3d",
+                  "tratamento-imagem",
+                  "tipografia-expressiva",
+                  "acabamento-borda",
+                  "composicao-hibrida"
+                ]
+              },
+              "referencia": {
+                "type": "string",
+                "description": "de onde veio: id do repertório ou da consulta"
+              },
+              "principio": {
+                "type": "string",
+                "minLength": 8,
+                "description": "a relação copiada da referência, nunca a forma"
+              },
+              "rota": {
+                "enum": [
+                  "codigo",
+                  "imagem",
+                  "hibrido"
+                ]
+              },
+              "motivo": {
+                "type": "string",
+                "description": "id de sistema_elementos.motivos"
+              },
+              "nao_copiar": {
+                "type": "string",
+                "description": "o que da referência fica de fora"
+              }
+            }
+          }
+        },
+        "nao_usa": {
+          "type": "array",
+          "description": "famílias proibidas neste kit: página que usa recurso de uma delas é FALHA",
+          "items": {
+            "enum": [
+              "ornamento-identidade",
+              "pattern-textura",
+              "sobreposicao-recorte",
+              "profundidade-3d",
+              "tratamento-imagem",
+              "tipografia-expressiva",
+              "acabamento-borda",
+              "composicao-hibrida"
+            ]
+          }
+        },
+        "intensidade": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "padrao",
+            "teto"
+          ],
+          "description": "0 nenhuma, 1 sutil, 2 presente, 3 marcante; `acabamento.intensidade` da página vence o padrão",
+          "properties": {
+            "padrao": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "teto": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            }
+          }
+        },
+        "fio_condutor": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "motivo",
+            "papeis"
+          ],
+          "description": "o motivo que atravessa o kit e o papel dele em cada página (rótulo de página, como em `composicao`)",
+          "properties": {
+            "motivo": {
+              "type": "string"
+            },
+            "papeis": {
+              "type": "object",
+              "additionalProperties": {
+                "enum": [
+                  "contrapeso",
+                  "selo",
+                  "separador",
+                  "estrutura",
+                  "eco",
+                  "textura",
+                  "moldura"
+                ]
+              }
+            }
+          }
+        },
+        "repete_entre_paginas": {
+          "type": "array",
+          "description": "ids de recurso que repetem do mesmo jeito entre páginas (a unidade do kit)",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "formato_base": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "versao",
+        "sha256"
+      ],
+      "description": "opcional (mk-2.1): o formato de que o kit partiu, com versão e o sha256 do arquivo do formato. O que o kit declara vence o formato.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{1,40}$"
+        },
+        "versao": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    }
+  }
+}

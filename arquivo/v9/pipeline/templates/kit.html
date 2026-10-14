@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR" data-direcao="{{ direcao }}"{% if receita %} data-receita="{{ receita.id }}" data-fundo="{{ fundo }}" data-mascara="{{ mascara }}"{% endif %}>
+<head>
+<meta charset="utf-8">
+<title>{{ k.evento.nome }} | Mídia kit de patrocínio</title>
+<style>{{ css }}</style>
+<style>:root { --grao: url({{ grao }}); }</style>
+<style>
+:root {
+  --marca: {{ k.marca.cor_primaria or '#E8307A' }};
+  {% if k.marca.cor_fundo_escuro %}--escuro: {{ k.marca.cor_fundo_escuro }};{% endif %}
+  {# display e título da marca só na direção principal: nas outras, cada direção mostra a própria tipografia (as 3 saíam iguais, 08/10/2026) #}
+  {% if direcao == (k.marca.direcao or "causa") %}
+  {% if k.marca.fonte_display %}--fonte-display: "{{ k.marca.fonte_display }}", "{{ k.marca.fonte_corpo or 'FreeSans' }}", "FreeSans", sans-serif;{% endif %}
+  {% if k.marca.fonte_titulo %}--fonte-titulo: "{{ k.marca.fonte_titulo }}", "{{ k.marca.fonte_corpo or 'FreeSans' }}", "FreeSans", sans-serif;{% elif k.marca.fonte_display %}--fonte-titulo: "{{ k.marca.fonte_display }}", "FreeSans", sans-serif;{% endif %}
+  {% endif %}
+  {% if k.marca.fonte_corpo %}--fonte-corpo: "{{ k.marca.fonte_corpo }}", "FreeSans", "Liberation Sans", sans-serif;{% endif %}
+  {% if k.marca.peso_display %}--peso-display: {{ k.marca.peso_display }};{% endif %}
+}
+</style>{% if receita_css %}
+<style>/* receita: vence a direção */ {{ receita_css }}</style>{% endif %}
+</head>
+<body class="{{ 'sem-texto' if sem_texto else '' }}">
+{% import 'arquetipos.html' as A %}
+{% set numerar = (paginas|selectattr('tipo','in',['ativo_painel','ativo_topo'])|list|length) >= 2 %}
+{% for p in paginas %}
+  {% if p.tipo == 'capa' %}{{ A.capa(k, p.cena, p.logo, data_fmt, p.variante or 'a') }}
+  {% elif p.tipo == 'manifesto' %}{{ A.manifesto(k, p.cena, p.simbolo, p.variante or 'a') }}
+  {% elif p.tipo == 'projecao' %}{{ A.projecao(k, p.cena) }}
+  {% elif p.tipo == 'publico' %}{{ A.publico(k, p.cena, p.cards, p.genero, p.variante or 'a') }}
+  {% elif p.tipo == 'territorio' %}{{ A.territorio(p.territorio, p.cena) }}
+  {% elif p.tipo == 'historico_logos' %}{{ A.historico_logos(p.historico, p.logos) }}
+  {% elif p.tipo == 'prova' %}{{ A.prova(k, p.caixas, p.nota, p.graficos) }}
+  {% elif p.tipo == 'divisor' %}{{ A.divisor(p.titulo, p.subtitulo, p.variante or 'a', k) }}
+  {% elif p.tipo == 'ativo_painel' %}{{ A.ativo_painel(p.n, p.ativo, p.cena, numerar, p.variante or 'a') }}
+  {% elif p.tipo == 'ativo_topo' %}{{ A.ativo_topo(p.n, p.ativo, p.cena, p.mini, numerar) }}
+  {% elif p.tipo == 'inventario_colunas' %}{{ A.inventario_colunas(k, p.itens) }}
+  {% elif p.tipo == 'divisor_cotas' %}{{ A.divisor_cotas(k, p.cena, p.simbolo) }}
+  {% elif p.tipo == 'cota' %}{{ A.cota(p.cota, p.cena, p.icones, p.objeto, p.variante or 'a') }}
+  {% elif p.tipo == 'contato' %}{{ A.contato(k, p.cena, p.logo, p.variante or 'a') }}
+  {% endif %}
+{% endfor %}
+</body>
+</html>

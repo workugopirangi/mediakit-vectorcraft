@@ -20,16 +20,28 @@ def versao_instalada(repo):
                           check=True).stdout.strip()
 
 
+_REMEDIO = "Rode scripts/montar_vectorcraft.sh para voltar à versão testada."
+
+
 def conferir_versao(repo=None):
     repo = Path(repo or config.VC_REPO)
+    if not (repo / ".git").exists():
+        raise VCError(f"Não achei o VectorCraft em {repo}. {_REMEDIO}")
     tem, quer = versao_instalada(repo), versao_travada()
     if tem != quer:
-        raise VCError(f"VectorCraft em {repo} está no commit {tem[:10]}, mas o testado é {quer[:10]}. "
-                      f"Rode scripts/montar_vectorcraft.sh para voltar à versão testada.")
+        raise VCError(f"VectorCraft em {repo} está no commit {tem[:10]}, mas o testado é {quer[:10]}. {_REMEDIO}")
+    sujo = subprocess.run(["git", "-C", str(repo), "status", "--porcelain", "--untracked-files=no"],
+                          capture_output=True, text=True).stdout.strip()
+    if sujo:
+        raise VCError(f"VectorCraft em {repo} tem alteração não gravada no código ({len(sujo.splitlines())} arquivo(s)). "
+                      f"{_REMEDIO}")
 
 
 class VC:
     def __init__(self, read_root="/", write_root="/"):
+        conferir_versao()
+        if not Path(config.VC_CLI).exists():
+            raise VCError(f"Não achei o programa do VectorCraft em {config.VC_CLI}. {_REMEDIO}")
         self.p = subprocess.Popen([str(config.VC_CLI), "mcp", "--headless", "--automation-read-root", read_root,
                                    "--automation-write-root", write_root],
                                   stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,

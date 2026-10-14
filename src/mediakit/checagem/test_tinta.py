@@ -29,3 +29,13 @@ def test_texto_sobre_texto_acusa(tmp_path):
     r = tinta.sobreposicoes(pdf)
     assert len(r) == 1
     assert r[0]["pagina"] == 1 and "30.000" in r[0]["a"] + r[0]["b"]
+
+
+def test_dois_textos_na_mesma_linha_encostando_acusa(tmp_path):
+    pdf = _pdf(tmp_path, [(50, 200, "PREÇO", 60), (180, 200, "COTA", 60)])
+    assert len(tinta.sobreposicoes(pdf)) == 1
+
+
+def test_texto_fora_da_pagina_nao_conta(tmp_path):
+    pdf = _pdf(tmp_path, [(1500, 200, "FORA", 60), (1505, 205, "FORA", 60), (50, 200, "dentro", 40)])
+    assert tinta.sobreposicoes(pdf) == []

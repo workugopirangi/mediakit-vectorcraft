@@ -30,7 +30,12 @@ def registrar(peca, arquivo, marca, kit, ambiente="", raiz=None):
     if peca not in ORDEM:
         raise ValueError(f"peça '{peca}' não está na lista: {', '.join(ORDEM)}")
     base = _raiz(raiz)
-    destino = base / peca / f"{_slug(marca)}-{_slug(kit)}{Path(arquivo).suffix}"
+    nome, ext = f"{_slug(marca)}-{_slug(kit)}", Path(arquivo).suffix
+    destino, n = base / peca / f"{nome}{ext}", 1
+    dados = Path(arquivo).read_bytes()
+    while destino.exists() and destino.read_bytes() != dados:   # outra cena da mesma peça: não apaga, numera
+        n += 1
+        destino = base / peca / f"{nome}-{n}{ext}"
     destino.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(arquivo, destino)
     rel = str(destino.relative_to(base))

@@ -44,3 +44,23 @@ def test_monta_e_exporta_um_pdf(tmp_path):
     finally:
         v.close()
     assert len(fitz.open(pdf)) == 1
+
+
+def test_clone_com_alteracao_nao_gravada_para(tmp_path, monkeypatch):
+    r = _repo_falso(tmp_path)
+    monkeypatch.setattr(vc, "versao_travada", lambda: vc.versao_instalada(r))
+    (r / "a.txt").write_text("mexido")
+    with pytest.raises(vc.VCError, match="alteração não gravada"):
+        vc.conferir_versao(r)
+
+
+def test_clone_ausente_da_frase(tmp_path):
+    with pytest.raises(vc.VCError, match="montar_vectorcraft.sh"):
+        vc.conferir_versao(tmp_path / "nao-existe")
+
+
+def test_programa_ausente_da_frase(tmp_path, monkeypatch):
+    monkeypatch.setattr(vc.config, "VC_CLI", tmp_path / "nao-existe")
+    monkeypatch.setattr(vc, "conferir_versao", lambda repo=None: None)
+    with pytest.raises(vc.VCError, match="montar_vectorcraft.sh"):
+        vc.VC()

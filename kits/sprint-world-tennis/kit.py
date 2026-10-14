@@ -369,7 +369,7 @@ def p_convite(P):
     for x in (300, 1620):
         raia(P, x)
     head(P, 960, 420, "Vamos largar\njuntos?", 180, W, "juntos?", R, COND, 168, -10, "center")
-    for k, (n, v) in enumerate([("FILIPE", "(11) 98012-0229"), ("CRISTIANE", "(12) 98122-2033"), ("E-MAIL", "contato@uuhull.com")]):
+    for k, (n, v) in enumerate([("FILIPE", "(11) 98012-0329"), ("CRISTIANE", "(12) 98122-2033"), ("E-MAIL", "contato@uuhull.com")]):
         x = 470 + k * 350
         P.text(x + 140, 720, n, BOLD, 17, R, tracking=200, justify="center")
         P.text(x + 140, 764, v, BOLD, 28, W, justify="center")

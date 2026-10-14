@@ -296,3 +296,16 @@ if __name__ == "__main__":
                 falhas += 1; print("FALHOU", nome, e)
     print("PROVAS:", "VERDES" if not falhas else f"{falhas} FALHA(S)")
     sys.exit(1 if falhas else 0)
+
+
+def test_saida_igual_a_entrada_recusa_e_preserva_a_foto(tmp_path):
+    import subprocess, sys
+    from PIL import Image
+    foto = tmp_path / "foto.jpg"
+    Image.new("RGB", (20, 20), (200, 10, 10)).save(foto)
+    antes = foto.read_bytes()
+    for saida in (foto, tmp_path / "recorte.jpg"):
+        r = subprocess.run([sys.executable, "-m", "mediakit.ferramentas.recortar", str(foto), str(saida), "--classe", "produto"],
+                           capture_output=True, text=True)
+        assert r.returncode == 64, r.stderr
+    assert foto.read_bytes() == antes

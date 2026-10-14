@@ -33,7 +33,8 @@ while [ $# -gt 0 ]; do
     *) POS+=("$1"); shift;;
   esac
 done
-[ ${#POS[@]} -ge 3 ] && [ ${#POS[@]} -le 4 ] || uso
+[ ${#POS[@]} -le 3 ] || { echo "a instrução extra não vai mais na linha de comando (um \$(...) ali já roda no seu shell): grave-a num arquivo e use --descricao-de <arquivo>" >&2; exit 64; }
+[ ${#POS[@]} -eq 3 ] || uso
 PASTA="${POS[0]}"; ID="${POS[1]}"; ORIGEM="${POS[2]}"; EXTRA=""
 id_valido "$ID" || { echo "id inválido: $ID (só a-z, 0-9 e hífen, sem começar por hífen)" >&2; exit 64; }
 if [ ${#POS[@]} -eq 4 ]; then

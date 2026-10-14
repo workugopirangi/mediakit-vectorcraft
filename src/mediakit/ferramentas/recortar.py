@@ -201,6 +201,11 @@ def main():
                   f"modelo: cada um tem de 170 MB a 1 GB e baixar é decisão do Ugo. Instalados: {', '.join(instalados()) or 'nenhum'}. "
                   "Rode com --modelo <um deles> ou peça a autorização do download", file=sys.stderr)
             sys.exit(2)
+    # A saída nunca pode apagar a foto do cliente: só PNG (o recorte tem transparência), nunca a própria entrada.
+    if Path(a.saida).suffix.lower() != ".png" or Path(a.saida).resolve() == Path(a.entrada).resolve():
+        print("a saída tem de ser um .png diferente da foto de entrada (a foto do cliente não pode ser sobrescrita)",
+              file=sys.stderr)
+        sys.exit(64)
     trancar_download()
     entrada = Image.open(a.entrada).convert("RGB")
     recorte = remove(entrada, session=new_session(modelo), post_process_mask=True)

@@ -49,3 +49,12 @@ def test_falha_chama_uma_vez_registra_falha_e_manda_perguntar(tmp_path):
     assert (tmp_path / "chamadas").read_text().count("chamado") == 1
     assert [g["resultado"] for g in json.loads((acervo / "cota.json").read_text())] == ["falha"]
     assert "pergunte ao Ugo" in r.stderr
+
+
+def test_instrucao_na_linha_de_comando_recusa(tmp_path):
+    import subprocess, os
+    from pathlib import Path
+    script = Path(__file__).parent / "cena_limpar.sh"
+    r = subprocess.run(["bash", str(script), str(tmp_path), "c-x", str(tmp_path / "o.png"), "texto extra"],
+                       capture_output=True, text=True, env=dict(os.environ))
+    assert r.returncode == 64 and "--descricao-de" in r.stderr

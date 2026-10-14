@@ -67,3 +67,23 @@ def test_cli_le_avisos_de_foto_ao_lado_do_pdf(tmp_path):
     assert "p2: f4.jpg: 37 ppi" in r.stdout
     assert "asfalto.jpg" in r.stdout and "aceito" in r.stdout
     assert r.stdout.count("- aviso") == 1
+
+
+def test_sobreposicao_aceita_sai_das_falhas(tmp_path, monkeypatch):
+    import json
+    monkeypatch.setattr(checar, "_validar_arquivo", lambda pdf: (True, "0 falha(s)"))
+    pdf = _pdf(tmp_path, [(50, 200, "R$ 30.000", 120), (52, 205, "1 cota disponível.", 40)])
+    (tmp_path / "sobreposicoes-aceitas.json").write_text(json.dumps(
+        [{"pagina": 1, "a": "R$ 30.000", "b": "1 cota disponível.", "motivo": "letreiro entrelaçado de propósito"}]))
+    r = checar.checar(pdf, _ficha(tmp_path))
+    assert r["falhas"] == []
+    assert any("entrelaçado" in a for a in r["aceitos"])
+
+
+def test_sobreposicao_aceita_em_outra_pagina_nao_vale(tmp_path, monkeypatch):
+    import json
+    monkeypatch.setattr(checar, "_validar_arquivo", lambda pdf: (True, "0 falha(s)"))
+    pdf = _pdf(tmp_path, [(50, 200, "R$ 30.000", 120), (52, 205, "1 cota disponível.", 40)])
+    (tmp_path / "sobreposicoes-aceitas.json").write_text(json.dumps(
+        [{"pagina": 2, "a": "R$ 30.000", "b": "1 cota disponível.", "motivo": "x"}]))
+    assert checar.checar(pdf, _ficha(tmp_path))["falhas"] != []

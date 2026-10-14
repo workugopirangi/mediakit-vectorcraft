@@ -13,11 +13,11 @@ def montar(nome, paginas, saida_pdf, saida_vc, pw=1920, ph=1080, gap=2000, escal
     proprio = vc is None
     vc = vc or VC()
     ex = vc.ex
-    retornos, avisos = {}, []
+    retornos, avisos, aceitas = {}, [], []
     try:
         ex("file.new", {"name": nome, "width": pw, "height": ph, "units": "Pixels"})
         for n, fn in enumerate(paginas):
-            retornos[fn.__name__] = fn(Pagina(ex, n, pw, ph, gap, avisos))
+            retornos[fn.__name__] = fn(Pagina(ex, n, pw, ph, gap, avisos, aceitas))
         for n in range(len(paginas)):
             ex("select.allOnArtboard", {"artboard": n})
             ex("object.scale", {"sx": escala, "sy": escala, "origin": [n * gap, 0], "strokes": True, "corners": True})
@@ -28,6 +28,8 @@ def montar(nome, paginas, saida_pdf, saida_vc, pw=1920, ph=1080, gap=2000, escal
         ex("file.saveAs", {"path": str(saida_vc)})
         # Ao lado do PDF, para a checagem (outro processo) mostrar ao Ugo qual foto ficou abaixo da régua.
         (Path(saida_pdf).parent / "avisos-foto.json").write_text(json.dumps(avisos, ensure_ascii=False, indent=1) + "\n")
+        (Path(saida_pdf).parent / "sobreposicoes-aceitas.json").write_text(
+            json.dumps(aceitas, ensure_ascii=False, indent=1) + "\n")
     finally:
         if proprio:
             vc.close()

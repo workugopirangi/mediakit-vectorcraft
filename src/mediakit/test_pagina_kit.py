@@ -48,3 +48,16 @@ def test_foto_pequena_vira_aviso_ao_lado_do_pdf(tmp_path):
     assert [(a["arquivo"], a["aceito"]) for a in avisos] == [("asfalto.jpg", "textura de fundo"), ("f4.jpg", None)]
     assert avisos[1]["ppi"] == 37 and avisos[1]["pagina"] == 1
     assert r["avisos_foto"] == avisos
+
+
+def test_aceitar_sobreposicao_grava_ao_lado_do_pdf(tmp_path):
+    import json
+
+    def p_letreiro(P):
+        P.text(96, 300, "Quem está", size=200, color="#000000")
+        P.text(300, 430, "em campo", size=200, color="#000000")
+        P.aceitar_sobreposicao("Quem está", "em campo", "letreiro entrelaçado (Japa)")
+
+    kit.montar("t", [p_letreiro], tmp_path / "t.pdf", tmp_path / "t.vectorcraft")
+    assert json.loads((tmp_path / "sobreposicoes-aceitas.json").read_text()) == [
+        {"pagina": 1, "a": "Quem está", "b": "em campo", "motivo": "letreiro entrelaçado (Japa)"}]

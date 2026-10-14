@@ -30,12 +30,18 @@ def bounds(ex, oid):
 
 
 class Pagina:
-    def __init__(self, ex, idx, pw=1920, ph=1080, gap=2000, avisos=None):
+    def __init__(self, ex, idx, pw=1920, ph=1080, gap=2000, avisos=None, aceitas=None):
         self.ex, self.i, self.pw, self.ph = ex, idx, pw, ph
         self.avisos = avisos if avisos is not None else []
+        self.aceitas = aceitas if aceitas is not None else []
         self.ox = idx * gap
         if idx > 0:
             ex("artboard.new", {"x": self.ox, "y": 0, "width": pw, "height": ph})
+
+    def aceitar_sobreposicao(self, a, b, motivo):
+        """Declara que o texto a encosta no texto b de propósito (ex.: letreiro cursivo entrelaçado). A checagem
+        pela tinta mostra isso como aceito, com o motivo, em vez de falha."""
+        self.aceitas.append({"pagina": self.i + 1, "a": a, "b": b, "motivo": motivo})
 
     def _pintar(self, oid, fill=None, stroke=None, sw=None, opacity=None):
         ex = self.ex

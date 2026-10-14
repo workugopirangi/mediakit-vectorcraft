@@ -10,3 +10,6 @@ receitas/R60/pg-*.png
 arquivo/v9/bancada/
 arquivo/v9/exemplos/
 arquivo/v9/fontes-livres/
+
+# Transcrição de podcast de terceiros: só no disco (direito autoral)
+docs/pesquisas/**/*.srt

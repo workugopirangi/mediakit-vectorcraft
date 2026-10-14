@@ -1,5 +1,7 @@
 # 1. Entender
+- Antes de tudo: o briefing comercial do kit está na seção 3 do guia `COFRE_MEDIAKIT/memoria-mediakit/ESTRATÉGIA DE PATROCÍNIO.md`. Se o projeto passou pela R1 da captação, leia a folha preenchida (`COMERCIAL/PATROCÍNIOS/16 FOLHA R1 E DIAGNÓSTICO DO ORGANIZADOR.md`) e complete só o que o guia acrescenta (meses até o evento, as 2 ou 3 pernas fortes, identidade fixa, renda com pesquisa, print das redes, resultado medido dos patrocinadores anteriores).
 - Leia o briefing, o kit antigo do cliente (se houver) e a pasta de fotos. Liste cada número com a fonte; o que o organizador informou é "informado", o que ele espera é "meta".
-- Se for para uma marca: pesquise a marca no site oficial (cores, slogan, o que ela já apoia) e baixe o logo oficial em PNG para `acervo/logo-<marca>.png`. Afirmação da própria marca que não dá para conferir não entra.
+- Se for para uma marca: diagnóstico pela seção 4 do guia (tipo de marca da seção 2, política de patrocínio publicada, a razão única para procurar esta marca, a função do evento no portfólio dela). Se a marca já passou por P4 da captação, use a ficha de lá. Baixe o logo oficial em PNG para `acervo/logo-<marca>.png`. Afirmação da própria marca que não dá para conferir não entra; o objetivo da marca é hipótese até a conversa com ela.
+- Arquivos oficiais do cliente que não podem mudar (logo, camisa, medalha) vão para `acervo/oficial-<ano>/` e entram no kit sem alteração de desenho.
 - Meça as fotos do cliente (`sips -g pixelWidth -g pixelHeight`): foto com menos de 1920 px de largura não vai em página cheia.
 - Procure marca concorrente e resíduo de captura nas fotos (logo de outra marca de material esportivo, selo de rede social) e anote para recortar.

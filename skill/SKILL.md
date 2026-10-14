@@ -16,6 +16,9 @@ Comandos rodam de dentro do projeto com `scripts/py` (o Python da v10, já com o
 - Cada imagem gerada gasta cota: nunca regerar sozinho.
 - **Toda referência que o Ugo mandar, em qualquer momento, entra na biblioteca na hora:** `python3 -m mediakit.referencias adicionar <id> "<de onde veio>" <arquivos>`.
 
+## O guia comercial
+O kit vende quando mostra **como a marca entra, por que isso importa para ela, o que ela faz lá e como se mede**; contar o evento não vende. Regras, cotas, sequência de páginas, copy e revisão comercial: `COFRE_MEDIAKIT/memoria-mediakit/ESTRATÉGIA DE PATROCÍNIO.md` (seção 0 diz qual parte ler em cada passo). Evidência por trás dele: `02 PESQUISAS/NEGÓCIOS/VENDAS/` no cofre. Em projeto de captação, o playbook de `COMERCIAL/PATROCÍNIOS/` vence onde decidir diferente.
+
 ## As quatro bibliotecas
 - Referências: o repertório do cofre (`python3 -m mediakit.referencias listar`).
 - Receitas: técnicas do VectorCraft provadas (`receitas/indice-*.md`).

@@ -1,0 +1,255 @@
+{
+ "summary": "As fontes que sobreviveram à verificação mostram que marcas maduras avaliam patrocínio com critérios explícitos: aderência de marca e público, áreas proibidas, momento estratégico, estatura do projeto, um papel de patrocinador que vá além do logo, ativação em vários canais, exclusividade de categoria e antecedência (a British Airways pede no mínimo 6 meses). A mensuração é o ponto fraco do lado das marcas. No estudo ANA/MASB de 2018 (EUA), só 37% tinham processo padronizado para medir retorno e só 40% colocavam metas de mensuração no contrato. Por isso, uma proposta que já chega com plano de mensuração por objetivos (ROO) ocupa um espaço vazio. Renato Politi (Sponsorium, VP de Desenvolvimento de Negócios para a América Latina) defende ROO em vez de ROI, e o caso CIBC mostra mensuração em várias dimensões, em que exposição de mídia é só uma parte. Para a skill, o efeito prático é este: o mídia kit precisa responder aos critérios de decisão da marca, tratar a ativação como custo separado da cota e entregar indicadores por objetivo sem prometer causalidade de venda. A base verificada é estreita (uma marca, um estudo americano de 2018, uma entrevista de Politi de 2015) e serve como ponto de partida, não como regra universal.",
+ "findings": [
+  {
+   "claim": "Marcas maduras julgam pedidos de patrocínio com um checklist publicado. O exemplo verificado é o da British Airways: elementos de britanidade, aderência aos valores da marca, público-alvo, áreas proibidas (temas extremos ou violentos, esportes radicais, assuntos politicamente sensíveis), antecedência mínima de 6 meses para ativar, aderência à estratégia de marketing do momento, estatura suficiente para aparecer ao lado da marca, um papel de patrocinador que agregue valor próprio, direitos que permitam ativar em vários canais e exclusividade de categoria (ser a única companhia aérea ou marca de viagem). Aplicação para a Motion: o mídia kit deve responder a cada um desses critérios genéricos (aderência, público, momento, papel, canais, exclusividade, prazo) de forma explícita.",
+   "confidence": "medium",
+   "sources": [
+    "https://www.britishairways.com/content/en/nz/information/about-ba/sponsorship/sponsorship-criteria",
+    "https://www.britishairways.com/content/en-ca/information/about-ba/sponsorship/sponsorship-criteria"
+   ],
+   "evidence": "Fonte primária (política publicada pela própria BA), confirmada em várias versões regionais por trecho de busca. A leitura direta falhou porque o site devolveu uma página de espera. Votos: 3-0, 3-0, 2-1 e 3-0. A BA diz que a antecedência 'should' ser de 6 meses e trata cada item como critério avaliado, não como corte automático. A página não tem data e é de uma única empresa britânica."
+  },
+  {
+   "claim": "No lado das marcas, a mensuração costuma ser fraca. No estudo ANA/MASB de 2018 (EUA, cerca de 182 respondentes), só 37% tinham processo padronizado para medir o retorno do patrocínio (53% não tinham, 10% não sabiam) e só 40% incluíam metas de mensuração no contrato com o organizador, o que os próprios profissionais de marketing viam como oportunidade perdida. Aplicação para a Motion (interpretação nossa): a proposta deve trazer o plano de mensuração e a sugestão de cláusula de indicadores, porque isso preenche uma lacuna real.",
+   "confidence": "medium",
+   "sources": [
+    "https://www.ana.net/content/show/id/pr-2018-sponsorship-measurement"
+   ],
+   "evidence": "Release primário da ANA de 10/07/2018 com as frases literais. Votos de 2-1. As edições anteriores do mesmo levantamento acharam 42% (2010) e 46% (2013), o que mostra consistência. Os dados são americanos e têm 8 anos. Levar isso para o Brasil é extrapolação nossa."
+  },
+  {
+   "claim": "As marcas separam métricas de ROI (retorno financeiro do investimento total, retorno financeiro da exposição de mídia, vendas de produto ou serviço) de métricas de ROO, o retorno sobre objetivos (lembrança da marca, lembrança do patrocínio, atitude em relação à marca, exposição total de mídia, exposição em redes sociais). Aplicação: o mídia kit deve organizar os indicadores nesses dois grupos e deixar claro quais o organizador consegue medir e quais dependem de dados da marca.",
+   "confidence": "medium",
+   "sources": [
+    "https://www.ana.net/content/show/id/pr-2018-sponsorship-measurement"
+   ],
+   "evidence": "Release ANA/MASB de 2018, voto 3-0. Mostra as métricas mais usadas pelos respondentes, não uma prática universal: como só 37% têm processo padronizado, a divisão nem sempre é aplicada de forma consistente."
+  },
+  {
+   "claim": "Renato Politi (Sponsorium) defende medir patrocínio por ROO, com metas quantitativas ou qualitativas, e não por ROI, que segundo ele é impossível de determinar com precisão no curto prazo. Ele cita o caso do banco CIBC nos Jogos Pan-Americanos: três anos de planejamento da mensuração, com engajamento de funcionários (RH), promoções nas agências, vendas de produtos novos, aquisição de clientes, percepção de marca, relacionamento com clientes atuais, envolvimento com a comunidade e exposição de mídia. Para ele, a exposição de mídia, que era a métrica mais usada no Brasil na época, foi só uma parte da avaliação. No Sponsors Brasil 2025, Paul Pednault (CEO da Sponsorium) deu uma palestra com o título 'O Caminho Mais Curto para o ROI é o ROO'. Aplicação: os indicadores do kit devem partir dos objetivos da marca e cobrir várias dimensões, sem se apoiar só em alcance ou mídia espontânea.",
+   "confidence": "medium",
+   "sources": [
+    "https://www.meioemensagem.com.br/olimpiadas/ativar-e-preciso",
+    "https://propmark.com.br/tailor-made/conteudo-de-marca/executivos-discutem-tendencias-em-patrocinios-no-sponsors-brasil-2025/"
+   ],
+   "evidence": "Entrevista em formato pergunta e resposta na Meio & Mensagem (publicada originalmente em novembro de 2015, no ar desde 25/07/2016), votos 3-0. A matéria da Propmark (27/02/2025) só confirma o título da palestra de Pednault e não detalha método nenhum. O caso CIBC vem apenas de Politi, cuja empresa atendia o banco: há interesse comercial e não achamos documento do próprio CIBC."
+  },
+  {
+   "claim": "Perfil de Renato Politi confirmado: VP de Desenvolvimento de Negócios para a América Latina na Sponsorium (consultoria canadense de avaliação e gestão de patrocínios), com cerca de 20 anos de experiência em marketing, comunicação e mercado editorial. Em fevereiro de 2025 ele participou, no Sponsors Brasil, do painel 'A importância do Patrocínio Social alinhado aos objetivos de marca', ao lado de Laís Musetti (Braskem) e Tatiana Bizzi (Instituto Alcoa).",
+   "confidence": "high",
+   "sources": [
+    "https://www.sponsor.com/team/renato-politi/",
+    "https://propmark.com.br/tailor-made/conteudo-de-marca/executivos-discutem-tendencias-em-patrocinios-no-sponsors-brasil-2025/",
+    "https://www.meioemensagem.com.br/olimpiadas/ativar-e-preciso"
+   ],
+   "evidence": "Página oficial da equipe Sponsorium mais duas fontes independentes da imprensa de mercado, todas com votos 3-0. A matéria da Propmark está em seção de conteúdo de marca e não relata o que foi dito no painel, só o tema."
+  },
+  {
+   "claim": "A ativação é um custo separado da cota e costuma ser maior do que ela. Na pesquisa IEG/Performance Research de 2012, os patrocinadores gastavam em média US$ 1,70 em ativação para cada US$ 1 de cota. Mais de 20% não gastavam nada com ativação nem mediam se o retorno melhorava, e 86% diziam precisar cada vez mais de resultados validados. No mercado circula a máxima de US$ 3 de ativação para cada US$ 1 de cota. Politi diz que essa proporção não é fixa: é menor em eventos pequenos e chega a 1:3 para uma multinacional na Olimpíada. Aplicação: o kit deve avisar a marca que a cota não cobre todo o custo e, quando possível, oferecer ativações pré-desenhadas com custo estimado.",
+   "confidence": "low",
+   "sources": [
+    "https://www.easm.net/download/2015/easm2EASM-2015-286-R1-827.pdf",
+    "https://www.meioemensagem.com.br/olimpiadas/ativar-e-preciso"
+   ],
+   "evidence": "Votos 3-0, mas o dado da IEG chega por um resumo acadêmico (EASM 2015), não pelo relatório original. Ele tem 14 anos e vem sobretudo de grandes patrocinadores da América do Norte. A máxima de 1:3 é de 2015/2016 e é apresentada como regra de mercado que Politi relativiza. Ondas posteriores da IEG/ESP relataram cerca de 2,2:1 (fonte não reverificada aqui). Use como ordem de grandeza datada, não como referência atual."
+  },
+  {
+   "claim": "Existe uma hierarquia de força das evidências de resultado. Para Crompton (2004), a medida ideal são as vendas (tráfego, leads, faturamento); a intenção de compra é 'útil'; equivalência de mídia e estudos de lembrança são 'comuns, mas falhos'. Walliser (revisão de 2003, citada como 2005) observou que a grande maioria das avaliações mede lembrança, poucas medem imagem e pouquíssimas medem intenção de compra. Aplicação: o kit não deve vender valoração por equivalência de mídia como prova de retorno e deve oferecer, quando der, indicadores mais próximos de comportamento (cadastro, cupom, lead, teste de produto).",
+   "confidence": "low",
+   "sources": [
+    "https://www.easm.net/download/2007/ac0602bd28730038def06115c93d2bb2.pdf"
+   ],
+   "evidence": "Citação de segunda mão num resumo de congresso de 2 páginas (McCarthy, EASM 2007), com votos de 3-0 e 2-1. O ano do Walliser está errado na fonte: a lista de referências traz 2003. É um referencial conceitual antigo, ainda citado, que não descreve a prática atual."
+  },
+  {
+   "claim": "Do ponto de vista da marca, a decisão de patrocínio se divide em perguntas: que projetos patrocinar, que ativos garantir, quanto pagar de cota e quanto investir em ativação. Um checklist de praticante (Ian Malcolm, Lumency, webinar da Association of Canadian Advertisers em 08/02/2022) avalia eficiência de alcance do público-alvo, mix de ativos, meta de gasto com ativação, aderência à marca, risco de reputação e valoração. Aplicação: estruturar o mídia kit para responder a essas perguntas na ordem em que a marca decide.",
+   "confidence": "low",
+   "sources": [
+    "https://acaweb.ca/en/events/fundamentals-of-sponsorship-webinar-series-how-to-evaluate-sponsorship-opportunities/"
+   ],
+   "evidence": "Página de divulgação de um webinar (fonte secundária), votos 3-0. O apresentador vende software de gestão de patrocínio. É o checklist de um único praticante, não um padrão do setor, e a lista de perguntas não é exaustiva."
+  }
+ ],
+ "caveats": "A base verificada é estreita e quase toda estrangeira. Os critérios de decisão vêm de uma única marca (British Airways, política sem data, lida por trechos de busca porque o site estava fora). Os números de mensuração vêm de uma pesquisa americana de 2018 e de dados da IEG de 2012 citados de segunda mão. As ideias de Politi vêm de uma única entrevista de 2015/2016. Não há fonte verificada com dados do mercado brasileiro atual, de marcas regionais ou pequenas, nem de eventos esportivos de participação (corridas, por exemplo). A pesquisa não verificou vários pontos pedidos no briefing: transcrições de podcasts e vídeos de Politi com marcação de tempo, quem influencia e quem decide dentro da marca, objeções típicas, precificação de cotas, desenho de exclusividade e naming rights, diferenças por porte e categoria de empresa. Seis afirmações foram refutadas e não devem entrar na skill: que Politi trouxe a SiS ao Brasil, o dado de 78% sobre resultados validados, os padrões de ativação de grandes contra pequenos patrocinadores (EASM 2015) e o ranking de benefícios mais valiosos da IEG via Sportcal. A Propmark é conteúdo de marca, e o caso CIBC é contado por um fornecedor do próprio CIBC. Tudo o que estiver marcado como 'Aplicação para a Motion' é interpretação nossa, não afirmação das fontes.",
+ "openQuestions": [
+  "Quais critérios e quais processos de aprovação (marketing, comercial, jurídico, compliance, diretoria) as marcas brasileiras de porte médio e regional usam de fato para patrocinar eventos esportivos de participação, e qual antecedência elas exigem?",
+  "O que Renato Politi defende em podcasts, palestras e posts mais recentes (2023 a 2026) sobre escolha, gestão e mensuração de patrocínios, com links e marcação de tempo verificáveis?",
+  "Qual é a proporção atual entre gasto com ativação e valor da cota, e quais métodos de precificação de cotas são usados no Brasil para eventos pequenos e médios?",
+  "Quais indicadores de ROO um organizador iniciante consegue entregar de forma confiável (cadastro, cupom, pesquisa pós-evento, leads), e como apresentá-los sem prometer resultado de venda?"
+ ],
+ "refuted": [
+  {
+   "claim": "Politi trouxe ao Brasil a SiS, empresa britânica especializada em mensuração de patrocínios e pesquisa de mídia. Isso indica experiência direta com métodos de medição de retorno de patrocínio.",
+   "vote": "1-2",
+   "source": "https://www.sponsor.com/team/renato-politi/"
+  },
+  {
+   "claim": "78% of respondents said validated sponsorship results have become more important to them. Credible, verifiable reporting is a growing decision factor.",
+   "vote": "0-3",
+   "source": "https://www.ana.net/content/show/id/pr-2018-sponsorship-measurement"
+  },
+  {
+   "claim": "Large regional or national firms sponsoring national or international properties spent more on activation, chose activations that could be measured for ROI, and often did not ask the property for help designing activations.",
+   "vote": "0-3",
+   "source": "https://www.easm.net/download/2015/easm2EASM-2015-286-R1-827.pdf"
+  },
+  {
+   "claim": "Smaller regional or local sponsors focused their in-game or on-site activation on a single element, added social media or traditional advertising, tracked the return on activation, and worked closely with properties to design activations aimed at the firm's objectives.",
+   "vote": "1-2",
+   "source": "https://www.easm.net/download/2015/easm2EASM-2015-286-R1-827.pdf"
+  },
+  {
+   "claim": "In an IEG/Performance Research survey of nearly 200 sponsorship decision-makers, the most valuable sponsorship benefits were category exclusivity, on-site signage, title of a proprietary area, and identification in the property's media buys.",
+   "vote": "0-3",
+   "source": "https://www.sportcal.com/?p=10974"
+  },
+  {
+   "claim": "Sponsors rated post-event reports and fulfillment audits as the most valuable services a property provides.",
+   "vote": "1-2",
+   "source": "https://www.sportcal.com/?p=10974"
+  }
+ ],
+ "unverified": [],
+ "sources": [
+  {
+   "url": "https://powersponsorship.com/how-do-sponsors-evaluate-sponsorship-proposals/",
+   "quality": "blog",
+   "angle": "Lógica de decisão das marcas (practitioner/brand-side)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://www.sportcal.com/?p=10974",
+   "quality": "secondary",
+   "angle": "Lógica de decisão das marcas (practitioner/brand-side)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://www.warc.com/Content/5ae4572f-9116-4c16-9c0b-ca17eb394855",
+   "quality": "unreliable",
+   "angle": "Lógica de decisão das marcas (practitioner/brand-side)",
+   "claimCount": 0
+  },
+  {
+   "url": "https://acaweb.ca/en/events/fundamentals-of-sponsorship-webinar-series-how-to-evaluate-sponsorship-opportunities/",
+   "quality": "secondary",
+   "angle": "Lógica de decisão das marcas (practitioner/brand-side)",
+   "claimCount": 4
+  },
+  {
+   "url": "https://www.britishairways.com/content/en/nz/information/about-ba/sponsorship/sponsorship-criteria",
+   "quality": "primary",
+   "angle": "Lógica de decisão das marcas (practitioner/brand-side)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://sponsorship.sportbusiness.com/2016/05/interview-with-john-kristick-global-chief-executive-esp-properties/",
+   "quality": "unreliable",
+   "angle": "Lógica de decisão das marcas (practitioner/brand-side)",
+   "claimCount": 0
+  },
+  {
+   "url": "https://www.meioemensagem.com.br/olimpiadas/ativar-e-preciso",
+   "quality": "secondary",
+   "angle": "Renato Politi (fonte primária)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://www.sponsor.com/team/renato-politi/",
+   "quality": "primary",
+   "angle": "Renato Politi (fonte primária)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://propmark.com.br/tailor-made/conteudo-de-marca/executivos-discutem-tendencias-em-patrocinios-no-sponsors-brasil-2025/",
+   "quality": "secondary",
+   "angle": "Renato Politi (fonte primária)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://www.ana.net/content/show/id/pr-2018-sponsorship-measurement",
+   "quality": "primary",
+   "angle": "Mensuração ROO vs ROI (acadêmico/técnico)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://www.easm.net/download/2015/easm2EASM-2015-286-R1-827.pdf",
+   "quality": "primary",
+   "angle": "Mensuração ROO vs ROI (acadêmico/técnico)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://www.easm.net/download/2007/ac0602bd28730038def06115c93d2bb2.pdf",
+   "quality": "primary",
+   "angle": "Mensuração ROO vs ROI (acadêmico/técnico)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://www.ticketfairy.com/blog/bespoke-over-bronze-silver-gold-designing-outcome-based-festival-sponsorships-not-tiers.md",
+   "quality": "blog",
+   "angle": "Cotas, inventário e precificação (implementação)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://sponsorshipcollective.com/why-you-should-avoid-tiered-sponsorship-levels-and-what-to-do-instead/",
+   "quality": "blog",
+   "angle": "Cotas, inventário e precificação (implementação)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://www.optimy.com/glossary/sponsorship-tiers",
+   "quality": "blog",
+   "angle": "Cotas, inventário e precificação (implementação)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://sponsorship.com/wp-content/uploads/2026/09/Is-Your-Naming-Rights-Partnership-Delivering-the-Value-It-Should_.pdf",
+   "quality": "secondary",
+   "angle": "Cotas, inventário e precificação (implementação)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://tseentertainment.com/maximizing-returns-valuing-sponsorship-assets-effectively/",
+   "quality": "blog",
+   "angle": "Cotas, inventário e precificação (implementação)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://sponsorshipcollective.com/how-to-determine-sponsorship-levels/",
+   "quality": "blog",
+   "angle": "Cotas, inventário e precificação (implementação)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://maquinadoesporte.com.br/running/centauro-substitui-netshoes-e-sera-dona-dos-naming-rights-dos-10k-da-maratona-do-rio-ate-2031/",
+   "quality": "secondary",
+   "angle": "Mercado brasileiro e eventos esportivos (regional/recente)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://propmark.com.br/?p=120952",
+   "quality": "secondary",
+   "angle": "Mercado brasileiro e eventos esportivos (regional/recente)",
+   "claimCount": 5
+  },
+  {
+   "url": "https://www.meioemensagem.com.br/marketing/netshoes-patrocinara-a-sao-silvestre-por-tres-anos",
+   "quality": "secondary",
+   "angle": "Mercado brasileiro e eventos esportivos (regional/recente)",
+   "claimCount": 5
+  }
+ ],
+ "stats": {
+  "angles": 5,
+  "sourcesFetched": 21,
+  "claimsExtracted": 94,
+  "claimsVerified": 25,
+  "confirmed": 19,
+  "killed": 6,
+  "unverified": 0,
+  "afterSynthesis": 8,
+  "urlDupes": 0,
+  "budgetDropped": 9,
+  "agentCalls": 103
+ }
+}

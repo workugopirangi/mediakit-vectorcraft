@@ -20,11 +20,9 @@ def test_foto_no_tamanho_certo_nao_avisa(tmp_path):
 
 
 def test_avisa_foto_esticada(tmp_path):
-    fotos.AVISOS.clear()
     r = fotos.preparar_foto(_foto(tmp_path, 739, 980), tmp_path / "o.jpg", 1920, 1080)
     assert r["ppi"] < 96
     assert "f.jpg" in r["aviso"] and "ppi" in r["aviso"]
-    assert fotos.AVISOS == [r["aviso"]]
 
 
 def test_nao_amplia_alem_do_original(tmp_path):

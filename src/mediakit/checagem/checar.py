@@ -1,5 +1,6 @@
 """As camadas automáticas da checagem (conteúdo, arquivo, tinta) num relatório só; e o prompt do revisor independente.
 Uso: python3 -m mediakit.checagem.checar <pdf> <ficha.md>   (sai 1 se houver falha)"""
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -28,9 +29,21 @@ def checar(pdf, ficha, avisos_foto=()):
     return {"falhas": falhas, "avisos": avisos, "arquivo": saida}
 
 
+def avisos_de_foto(pdf):
+    """Lê o avisos-foto.json que o kit.montar grava ao lado do PDF: (avisos, aceitos), já em frase."""
+    p = Path(pdf).parent / "avisos-foto.json"
+    itens = json.loads(p.read_text()) if p.exists() else []
+    frase = lambda a: (f"p{a['pagina']}: {a['arquivo']}: {a['ppi']} ppi numa caixa de {a['caixa'][0]} × {a['caixa'][1]} "
+                       f"(régua {config.PPI_MINIMO})")
+    return ([frase(a) for a in itens if not a.get("aceito")],
+            [f"{frase(a)}, aceito: {a['aceito']}" for a in itens if a.get("aceito")])
+
+
 def relatorio_md(r):
     linhas = ["## Checagem automática", "", f"Falhas: {len(r['falhas'])} · Avisos: {len(r['avisos'])}", ""]
     linhas += [f"- FALHA {f}" for f in r["falhas"]] + [f"- aviso {a}" for a in r["avisos"]]
+    if r.get("aceitos"):
+        linhas += ["", "### Imagens abaixo da régua, aceitas de propósito", ""] + [f"- {a}" for a in r["aceitos"]]
     linhas += ["", "### Arquivo (validar_pdf)", "", "```", r["arquivo"], "```"]
     return "\n".join(linhas) + "\n"
 
@@ -44,6 +57,8 @@ def prompt_revisor(paginas_dir, ficha, referencias, logo):
 if __name__ == "__main__":
     if len(sys.argv) != 3:
         sys.exit("uso: python3 -m mediakit.checagem.checar <pdf> <ficha.md>")
-    res = checar(sys.argv[1], sys.argv[2])
+    fotos_avisos, aceitos = avisos_de_foto(sys.argv[1])
+    res = checar(sys.argv[1], sys.argv[2], fotos_avisos)
+    res["aceitos"] = aceitos
     print(relatorio_md(res))
     sys.exit(1 if res["falhas"] else 0)

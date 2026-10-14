@@ -6,8 +6,6 @@ from PIL import Image, ImageEnhance, ImageOps
 
 from mediakit import config
 
-AVISOS = []
-
 
 def ppi_na_pagina(px_largura, unidades_largura):
     polegadas = unidades_largura * config.ESCALA_PDF / 72
@@ -46,5 +44,4 @@ def preparar_foto(origem, destino, w, h, modo="bw", foco=(0.5, 0.5), rastro=0, e
     if ppi < config.PPI_MINIMO:
         aviso = (f"{Path(origem).name}: {ppi:.0f} ppi numa caixa de {w:.0f} × {h:.0f} (régua {config.PPI_MINIMO}). "
                  f"Use uma caixa menor, outra foto, ou aceite com o Ugo.")
-        AVISOS.append(aviso)
     return {"caminho": Path(destino), "ppi": round(ppi, 1), "aviso": aviso}

@@ -1,4 +1,10 @@
 """Primitivas de página sobre o VectorCraft. Cada Pagina é um artboard; coordenadas em unidades da página (1920 × 1080)."""
+from pathlib import Path
+
+from PIL import Image
+
+from mediakit import config
+from mediakit.fotos import ppi_na_pagina
 
 PRETO, BRANCO = "#000000", "#FFFFFF"
 NEGRITO = ("Helvetica Neue", "Bold")
@@ -24,8 +30,9 @@ def bounds(ex, oid):
 
 
 class Pagina:
-    def __init__(self, ex, idx, pw=1920, ph=1080, gap=2000):
+    def __init__(self, ex, idx, pw=1920, ph=1080, gap=2000, avisos=None):
         self.ex, self.i, self.pw, self.ph = ex, idx, pw, ph
+        self.avisos = avisos if avisos is not None else []
         self.ox = idx * gap
         if idx > 0:
             ex("artboard.new", {"x": self.ox, "y": 0, "width": pw, "height": ph})
@@ -61,7 +68,15 @@ class Pagina:
         s = "M" + " L".join(f"{self.ox + x:.2f},{y:.2f}" for x, y in pts)
         return s + (" Z" if closed else "")
 
-    def image(self, file, x, y, w, h):
+    def image(self, file, x, y, w, h, aceito=None):
+        """Põe a imagem na caixa w × h e mede a resolução que ela terá no PDF. Abaixo de 96 ppi vira aviso
+        (ou registro de "aceito", com o motivo, quando a imagem é baixa de propósito: textura, cena gerada)."""
+        with Image.open(file) as im:
+            ppi = ppi_na_pagina(im.size[0], w)
+        nome = Path(file).name
+        if ppi < config.PPI_MINIMO and not any(a["arquivo"] == nome and a["pagina"] == self.i + 1 for a in self.avisos):
+            self.avisos.append({"arquivo": nome, "pagina": self.i + 1, "ppi": round(ppi), "caixa": [round(w), round(h)],
+                                "aceito": aceito})
         oid = self.ex("file.place", {"path": str(file), "link": False})["ids"][0]
         self.ex("select.set", {"ids": [oid]})
         self.ex("object.setBounds", {"x": self.ox + x, "y": y, "width": w, "height": h, "reference": 0})

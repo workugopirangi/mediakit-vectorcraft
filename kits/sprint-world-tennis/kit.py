@@ -65,7 +65,7 @@ def raia(P, x, y0=0, y1=PH, w=6):
 
 
 def fundo(P):
-    P.image(asfalto(), 0, 0, PW, PH)
+    P.image(asfalto(), 0, 0, PW, PH, aceito="textura de fundo (ruído)")
 
 
 def faixa(P, y, ang=-4, cor=R, tcor=K):
@@ -214,7 +214,8 @@ def p_pilares(P):
 
 def p_portico(P):
     img, rota = cena("c-portico-wt-composta.png", "c-portico-wt-gerada.png")
-    P.image(foto(os.path.basename(img), "portico-final", PW, PH, "none", (0.5, 0.45), raiz=AC), 0, 0, PW, PH)
+    P.image(foto(os.path.basename(img), "portico-final", PW, PH, "none", (0.5, 0.45), raiz=AC), 0, 0, PW, PH,
+            aceito="cena gerada pela IA (o gerador entrega no máximo 1672 px)" if rota == "gerada" else None)
     P.rect(0, 800, PW, 280, K, opacity=86)
     head(P, 96, 905, "A largada é World Tennis.", 92, W, "World Tennis.", R)
     P.text(96, 960, "Testeira do pórtico de largada e chegada, embaixo do cronômetro: o momento mais fotografado da prova.", MED, 26, W)
@@ -227,7 +228,8 @@ def p_estande(P):
     img, rota = cena("c-tendas-wt-composta.png", "c-estande-wt-gerada.png")
     P.rect(0, 0, PW, PH, K)
     fundo(P)
-    P.image(foto(os.path.basename(img), "estande-final", 1240, PH, "none", (0.6, 0.5), raiz=AC), 680, 0, 1240, PH)
+    P.image(foto(os.path.basename(img), "estande-final", 1240, PH, "none", (0.6, 0.5), raiz=AC), 680, 0, 1240, PH,
+            aceito="cena gerada pela IA (o gerador entrega no máximo 1672 px)" if rota == "gerada" else None)
     raia(P, 676)
     P.text(96, 150, "02 · PROJEÇÃO", BOLD, 13, R, tracking=180)
     head(P, 96, 300, "A Pop Up\nWorld Tennis\nna arena.", 104, W, "World Tennis", R, COND, 98)
@@ -365,5 +367,6 @@ if __name__ == "__main__":
                    os.path.join(saida, "sprint-world-tennis.vectorcraft"), vc=vc)
     vc.close()
     print(r["pdf"], r["segundos"], "s", "rotas:", {k: v for k, v in r["retornos"].items() if v})
-    for aviso in fotos.AVISOS:
-        print("aviso de foto:", aviso)
+    for a in r["avisos_foto"]:
+        if not a["aceito"]:
+            print(f"aviso de foto: p{a['pagina']} {a['arquivo']} {a['ppi']} ppi")

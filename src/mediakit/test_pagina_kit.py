@@ -28,3 +28,23 @@ def test_monta_duas_paginas(tmp_path):
     assert "30.000" in d[1].get_text()
     assert r["retornos"]["p_um"] == "ok-1"
     assert (tmp_path / "t.vectorcraft").exists()
+
+
+def test_foto_pequena_vira_aviso_ao_lado_do_pdf(tmp_path):
+    import json
+    from PIL import Image
+    pequena = tmp_path / "f4.jpg"
+    Image.new("RGB", (739, 980)).save(pequena)
+    fundo = tmp_path / "asfalto.jpg"
+    Image.new("RGB", (1600, 900)).save(fundo)
+
+    def p_fotos(P):
+        P.image(fundo, 0, 0, 1920, 1080, aceito="textura de fundo")
+        P.image(pequena, 0, 0, 1920, 1080)
+        P.image(pequena, 1100, 150, 700, 930)
+
+    r = kit.montar("t", [p_fotos], tmp_path / "t.pdf", tmp_path / "t.vectorcraft")
+    avisos = json.loads((tmp_path / "avisos-foto.json").read_text())
+    assert [(a["arquivo"], a["aceito"]) for a in avisos] == [("asfalto.jpg", "textura de fundo"), ("f4.jpg", None)]
+    assert avisos[1]["ppi"] == 37 and avisos[1]["pagina"] == 1
+    assert r["avisos_foto"] == avisos

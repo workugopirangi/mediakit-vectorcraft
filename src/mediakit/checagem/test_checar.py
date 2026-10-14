@@ -52,3 +52,18 @@ def test_prompt_revisor_sem_lacuna_e_sem_travessao(tmp_path):
     s = checar.prompt_revisor(tmp_path, tmp_path / "ficha.md", [tmp_path / "ref1", tmp_path / "ref2"], tmp_path / "logo.png")
     assert "{" not in s and "\N{EM DASH}" not in s and "\N{EN DASH}" not in s
     assert str(tmp_path / "ref2") in s
+
+
+def test_cli_le_avisos_de_foto_ao_lado_do_pdf(tmp_path):
+    import json, subprocess, sys, os
+    pdf = _pdf(tmp_path, [(50, 200, "R$ 30.000", 60)])
+    (tmp_path / "avisos-foto.json").write_text(json.dumps([
+        {"arquivo": "f4.jpg", "pagina": 2, "ppi": 37, "caixa": [1920, 1080], "aceito": None},
+        {"arquivo": "asfalto.jpg", "pagina": 1, "ppi": 80, "caixa": [1920, 1080], "aceito": "textura de fundo"}]))
+    env = dict(os.environ, PYTHONPATH="src", MEDIAKIT_VALIDAR_PDF=str(tmp_path / "validar_ok.py"))
+    (tmp_path / "validar_ok.py").write_text("print('0 falha(s)')")
+    r = subprocess.run([sys.executable, "-m", "mediakit.checagem.checar", str(pdf), str(_ficha(tmp_path))], env=env,
+                       capture_output=True, text=True)
+    assert "p2: f4.jpg: 37 ppi" in r.stdout
+    assert "asfalto.jpg" in r.stdout and "aceito" in r.stdout
+    assert r.stdout.count("- aviso") == 1

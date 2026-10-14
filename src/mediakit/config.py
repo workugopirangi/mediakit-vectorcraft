@@ -12,8 +12,8 @@ def _caminho(var, padrao):
 VC_REPO = _caminho("MEDIAKIT_VC_REPO", "~/Developer/vectorcraft")
 VC_CLI = _caminho("MEDIAKIT_VC_CLI", str(VC_REPO / "target" / "release" / "vectorcraft-cli"))
 VERSAO_VC = RAIZ / "vectorcraft" / "VERSAO"
-# validar_pdf.py é da v9 (somente leitura até a junção, Task 14).
-VALIDAR_PDF = _caminho("MEDIAKIT_VALIDAR_PDF", "~/.agents/skills/gerar-mediakit-motion/pipeline/validar_pdf.py")
+# validar_pdf.py veio da v9 (cópia em src/mediakit/ferramentas/).
+VALIDAR_PDF = _caminho("MEDIAKIT_VALIDAR_PDF", str(RAIZ / "src" / "mediakit" / "ferramentas" / "validar_pdf.py"))
 COFRE_MEDIAKIT = _caminho("MEDIAKIT_COFRE",
                           "~/Developer/UGO's Second Brain/01 EMPRESAS/MOTION PERFORM/SISTEMAS/GERAR MEDIAKIT")
 

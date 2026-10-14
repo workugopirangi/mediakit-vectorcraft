@@ -33,12 +33,38 @@ def test_aprovada_mas_apagada_volta_para_composta(tmp_path):
 
 
 def test_marcar_preserva_as_outras(tmp_path):
+    (tmp_path / "a.png").write_bytes(b"a")
     cenas.marcar(tmp_path, "a.png", "usar")
     cenas.marcar(tmp_path, "b.png", "descartar")
-    assert json.loads((tmp_path / "escolha-cenas.json").read_text()) == {"a.png": "usar", "b.png": "descartar"}
+    e = json.loads((tmp_path / "escolha-cenas.json").read_text())
+    assert {k: v["decisao"] for k, v in e.items()} == {"a.png": "usar", "b.png": "descartar"}
+
+
+def test_aprovar_arquivo_que_nao_existe_recusa(tmp_path):
+    import pytest
+    with pytest.raises(FileNotFoundError):
+        cenas.marcar(tmp_path, "nao-existe.png", "usar")
 
 
 def test_registra_cota(tmp_path):
     assert cenas.registrar_geracao(tmp_path, "c-portico", "2026-10-13T14:33") == 1
     assert cenas.registrar_geracao(tmp_path, "camisa", "2026-10-13T14:48") == 2
     assert [g["id"] for g in cenas.geracoes(tmp_path)] == ["c-portico", "camisa"]
+
+
+def test_cena_refeita_perde_a_aprovacao(tmp_path):
+    a = _arquivos(tmp_path)
+    cenas.marcar(a, "c-gerada.png", "usar")
+    (a / "c-gerada.png").write_bytes(b"outra imagem")
+    assert cenas.escolher_cena(a, "c-composta.png", "c-gerada.png")[1] == "composta"
+
+
+def test_aprovacao_antiga_sem_hash_nao_vale(tmp_path):
+    a = _arquivos(tmp_path)
+    (a / "escolha-cenas.json").write_text(json.dumps({"c-gerada.png": "usar"}))
+    assert cenas.escolher_cena(a, "c-composta.png", "c-gerada.png")[1] == "composta"
+
+
+def test_registrar_falha_entra_na_cota(tmp_path):
+    cenas.registrar_geracao(tmp_path, "c-x", "2026-10-14T10:00", resultado="falha")
+    assert cenas.geracoes(tmp_path)[0]["resultado"] == "falha"

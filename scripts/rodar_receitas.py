@@ -1,37 +1,25 @@
-"""Roda todas as receitas na versão travada do VectorCraft. Prova de que trocar a versão não quebrou nada.
-Uso: python3 scripts/rodar_receitas.py [--gravar-base]"""
+"""Roda todas as receitas na versão travada do VectorCraft e compara com a linha de base.
+Uso: python3 scripts/rodar_receitas.py [--gravar-base]
+Sai 1 se alguma receita que rodava parou de rodar. "Desenha diferente" não para nada: vai para o Ugo olhar."""
 import json
-import subprocess
 import sys
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(RAIZ / "src"))
+from mediakit import receitas  # noqa: E402
+
 BASE = RAIZ / "receitas" / "_linha-de-base.json"
 
-
-def rodar():
-    res = {}
-    for t in sorted((RAIZ / "receitas").glob("R*/teste.py")):
-        try:
-            r = subprocess.run([sys.executable, str(t)], cwd=t.parent, capture_output=True, text=True, timeout=120)
-            res[t.parent.name] = r.returncode == 0
-        except subprocess.TimeoutExpired:
-            res[t.parent.name] = False
-        print(t.parent.name, "ok" if res[t.parent.name] else "FALHOU", flush=True)
-    # As receitas regravam o PDF de prova; devolve os que o Ugo viu (os gerados agora são reproduzíveis).
-    # Só os arquivos de saída: o código das receitas não pode voltar atrás.
-    subprocess.run(["git", "-C", str(RAIZ), "checkout", "--", ":(glob)receitas/**/*.pdf", ":(glob)receitas/**/*.png"],
-                   check=False)
-    return res
-
-
 if __name__ == "__main__":
-    res = rodar()
+    res = receitas.rodar(RAIZ / "receitas")
+    rodam = sum(r["roda"] for r in res.values())
+    mudaram = [k for k, r in res.items() if r["mudou"]]
     if "--gravar-base" in sys.argv:
-        BASE.write_text(json.dumps(res, indent=1, sort_keys=True) + "\n")
-        print(f"linha de base: {sum(res.values())} de {len(res)} rodam")
+        BASE.write_text(json.dumps({k: r["roda"] for k, r in res.items()}, indent=1, sort_keys=True) + "\n")
+        print(f"linha de base: {rodam} de {len(res)} rodam")
         sys.exit(0)
-    base = json.loads(BASE.read_text())
-    quebradas = [k for k, ok in base.items() if ok and not res.get(k)]
-    print(f"{sum(res.values())} de {len(res)} rodam; quebradas desde a base: {quebradas or 'nenhuma'}")
-    sys.exit(1 if quebradas else 0)
+    q = receitas.quebradas(json.loads(BASE.read_text()), res)
+    print(f"{rodam} de {len(res)} rodam; quebradas desde a base: {q or 'nenhuma'}; "
+          f"desenham diferente (olhe): {mudaram or 'nenhuma'}")
+    sys.exit(1 if q else 0)

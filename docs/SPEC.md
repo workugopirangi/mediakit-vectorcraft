@@ -57,13 +57,22 @@ Até 3 voltas de correção. O que for decisão do Ugo (cota, uso de imagem de t
 - **Skill:** `SKILL.md` curto, um arquivo por passo, carregado só quando o passo chega.
 - Fontes: qualquer fonte instalada no Mac (risco de licença registrado uma vez).
 
-## 7. Junção com a v9 (aguardando o fim da sessão v9)
+## 7. Junção com a v9 (feita em 14/10/2026)
 
-A sessão v9 ainda está rodando em 13/10. Esta seção só se preenche quando ela terminar, a partir do resultado final. Já se sabe:
+A sessão v9 terminou em 14/10 e o estudo v2 dela foi gravado no cofre. O Ugo decidiu enxugar: entra só o que os três kits bons mostraram que faltava; o resto fica na v9 e só entra se um kit real pedir.
 
-- **Sai:** a rota HTML (`render.py`, `prova_pdf.py`, efeitos CSS, `exportar_pptx.py`).
-- **Candidatos a aproveitar, a confirmar:** geração pelo Codex (`codex_gerar.sh`, `cena.sh`), `compor.py` (rota de reserva do logo), `recortar.py`, `tratar.py`, `validar_pdf.py`, repertório v2, `formato.py`, `medir_kit.py`, revisor independente, golden.
-- **A decidir com o Ugo:** etapa 3b de direção criativa e os 43 grafismos (viram receitas do VectorCraft ou saem).
+| Da v9 | Na v10 | Por quê |
+|---|---|---|
+| Repertório (87 referências, padrões, recursos, análises v1 e v2, recortes) | Biblioteca de referências, lida no cofre, sem cópia | Uma biblioteca só; referência nova entra direto no cofre |
+| `recortar.py` (tirar fundo) | Entrou (`src/mediakit/ferramentas/`) | O VectorCraft não tira fundo |
+| `cena_limpar.sh` (tirar letra inventada) | Entrou, com uma tentativa e cota registrada | Ataca o logo fantasma |
+| `contact_sheet.py` (folha cega, antes e depois) | Entrou, reescrita sobre PDF | Teste cego e comparação de versões |
+| `codex_gerar.sh` | Entrou na Tarefa 10 | Base de toda geração |
+| `validar_pdf.py` | Usado no lugar, pelo `config` | Checagem do arquivo |
+| Efeitos de foto, patterns, colar logo, objetos, paleta, fontes, fotos de banco, formatos, busca do repertório, régua | Ficam na v9 | Equivalentes na v10 (tratamento de foto, receitas do VectorCraft, gerador de cena) ou raros |
+| Rota HTML (render, camadas, encaixes, composição, prova de CSS, PPTX) | Sai | A v10 monta no VectorCraft |
+
+Biblioteca de objetos da Motion (`MARKETING/BIBLIOTECA DE OBJETOS`): o Ugo quer que seja a mesma do carrossel; a ligação fica para quando a v10 gerar o primeiro objeto.
 
 ## 8. Como a v10 prova que é melhor (antes de substituir a v9)
 

@@ -40,3 +40,37 @@ def test_id_invalido_recusa(tmp_path):
     rep, reg = _repertorio(tmp_path)
     with pytest.raises(ValueError, match="id"):
         referencias.adicionar("../fora", [], "x", rep, reg)
+
+
+def test_sem_arquivo_recusa_sem_criar_pasta(tmp_path):
+    rep, reg = _repertorio(tmp_path)
+    with pytest.raises(ValueError, match="nenhum arquivo"):
+        referencias.adicionar("vazia", [], "x", rep, reg)
+    assert not (rep / "capturas" / "vazia").exists()
+
+
+def test_formato_nao_suportado_recusa_antes(tmp_path):
+    rep, reg = _repertorio(tmp_path)
+    heic = tmp_path / "print.heic"
+    heic.write_bytes(b"x")
+    with pytest.raises(ValueError, match="HEIC|formato"):
+        referencias.adicionar("do-iphone", [heic], "x", rep, reg)
+    assert not (rep / "capturas" / "do-iphone").exists()
+
+
+def test_arquivo_quebrado_nao_deixa_pasta_pela_metade(tmp_path):
+    rep, reg = _repertorio(tmp_path)
+    boa = tmp_path / "a.png"
+    Image.new("RGB", (5, 5)).save(boa)
+    quebrado = tmp_path / "b.pdf"
+    quebrado.write_bytes(b"isto nao e pdf")
+    with pytest.raises(Exception):
+        referencias.adicionar("meio", [boa, quebrado], "x", rep, reg)
+    assert not (rep / "capturas" / "meio").exists()
+    assert referencias.adicionar("meio", [boa], "x", rep, reg).exists()
+
+
+def test_id_com_quebra_de_linha_recusa(tmp_path):
+    rep, reg = _repertorio(tmp_path)
+    with pytest.raises(ValueError, match="id"):
+        referencias.adicionar("abc\n", [], "x", rep, reg)

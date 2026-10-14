@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Copiado da v9 (commit 6003ce2) em 14/10/2026.
+# Copiado da v9 (commit 1a5db3f) em 14/10/2026.
 # cena_limpar.sh: recebe uma imagem do CLIENTE (render de IA ou foto) com texto errado ou logo deformado e devolve a
 # mesma cena com os painéis LISOS, sem nenhum texto. O lettering real entra depois pelo compor.py (aprendizado 7):
 # assim a grafia sai certa sempre, em vez de pedir ao gerador para "corrigir" letras, que ele erra de novo.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copiado da v9 (commit 6003ce2) em 14/10/2026.
+# Copiado da v9 (commit f19adae) em 14/10/2026.
 """
 recortar.py: remoção de fundo por classe de objeto (pesquisa r2, seção e), com refinamento de borda.
 
